@@ -184,9 +184,28 @@
           </figure>
         </article>
 
-        <article class="showcase reverse" id="hpc" data-focus="systems">
+        <article class="showcase" id="autoencoder" data-focus="systems ml">
           <div class="showcase-copy">
             <p class="showcase-kicker"><span>04</span> ML Systems</p>
+            <h3>Sparse Autoencoder Training</h3>
+            <p class="hook">24.73× faster · same loss</p>
+            <p class="subtitle">One epoch on a 13,714-gene autoencoder. Full credit for the assignment was 10×.</p>
+            <div class="tech-row">
+              <span class="chip">C++</span><span class="chip">AVX</span><span class="chip">Adam</span><span class="chip">Multithreading</span>
+            </div>
+            <p><a class="arrow-link" href="work/autoencoder.html">View case study <span>→</span></a></p>
+          </div>
+          <div class="perf" aria-label="Course credit line compared with the posted speedup">
+            <div class="bar-label"><span>Full credit</span><span>10×</span></div>
+            <div class="track"><i style="width:40%"></i></div>
+            <div class="bar-label"><span>Posted</span><span>24.73×</span></div>
+            <div class="track accent"><i></i></div>
+          </div>
+        </article>
+
+        <article class="showcase reverse" id="hpc" data-focus="systems">
+          <div class="showcase-copy">
+            <p class="showcase-kicker"><span>05</span> ML Systems</p>
             <h3>High-Performance Sparse Matrix Multiplication</h3>
             <p class="hook">68.78× speedup · 1st place · 6/6 correct</p>
             <p class="subtitle">Packed CSR, OpenMP, and SIMD on a 296 MB dataset.</p>
@@ -227,13 +246,13 @@
       <section class="section research-band" id="research">
         <p class="section-label">02 — Research</p>
         <h2 class="section-title">Research &amp; publications</h2>
-        <p class="section-lead">AI for Earth observation, and one published study on clinical interpretability.</p>
+        <p class="section-lead">Ongoing Earth-observation research, and a separate published paper on clinical explainability.</p>
         <div class="research-grid research-feature" data-focus="geo ml">
           <div>
-            <p class="showcase-kicker">Current research</p>
+            <p class="showcase-kicker">Ongoing research · not published</p>
             <h3>AI for Earth Observation</h3>
             <p class="subtitle">Grand Valley State University · Graduate Research Assistant</p>
-            <p>Vegetation-stress monitoring from satellite time series: what the landscape should look like, and where it does not.</p>
+            <p>Satellite time series used to estimate an expected vegetation state, then map where the landscape departs from it. This work is still in progress. It is not a paper.</p>
             <div class="mini-flow">
               <span>Time series</span><i>→</i><span>Representation</span><i>→</i><span>Expected state</span><i>→</i><span>Anomaly</span><i>→</i><span>Map</span>
             </div>
@@ -248,11 +267,11 @@
         </div>
 
         <article class="pub" id="publications">
-          <p class="showcase-kicker">Published research · Co-author</p>
-          <p class="hook">2026 · Springer · ICR'26 · Berlin</p>
+          <p class="showcase-kicker">Published paper · Co-author</p>
+          <p class="hook">Springer · ICR'26 · Berlin</p>
           <h3>Towards Clinically Interpretable Heart Disease Prediction: A Comparative Analysis of Explainability Methods for Machine Learning Models</h3>
           <p>Firas Frouja · Mahdi Bedoui · Mortadha Ghnimi</p>
-          <p class="subtitle">Lecture Notes in Networks and Systems, pp. 305–314. A comparison of SHAP and LIME across heart-disease models.</p>
+          <p class="subtitle">A separate study from the Earth-observation work. With Firas Frouja and Mahdi Bedoui, it compares SHAP and LIME across heart-disease models: where the explanations agree, where they diverge, and what that means if a clinician has to trust the result. Lecture Notes in Networks and Systems, pp. 305–314.</p>
           <p class="pub-links">
             <a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Paper <span>→</span></a>
             <a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">DOI <span>→</span></a>
@@ -291,8 +310,7 @@
         </ol>
       </section>
 
-      <section class="section" id="about">
-        <p class="section-label">04 — About</p>
+      <section class="section about-section" id="about">
         <div class="about-grid">
           <div>
             <img class="about-photo" src="assets/hero/portrait.jpg" alt="" width="280" height="350">
@@ -313,14 +331,15 @@
         </div>
       </section>
 
-      <section class="section" id="recognition">
+      <section class="section credits-section" id="recognition">
         <p class="section-label">Selected recognition</p>
-        <ul class="recognition">
-          <li><strong>1st place</strong> ML competition · 93.4% accuracy</li>
-          <li><strong>1st place</strong> HPC leaderboard · 68.78× speedup · 6/6 correct</li>
-          <li><strong>Springer publication</strong> · ICR'26 · co-author</li>
-          <li><strong>Merit Graduate Assistantship</strong> · Grand Valley State University</li>
-          <li><strong>Top-ranked</strong> B.S. graduate · Faculty of Science of Bizerte</li>
+        <ul class="credits">
+          <li><strong>1st place</strong><span>ML competition · 93.4% accuracy</span></li>
+          <li><strong>1st place</strong><span>HPC leaderboard · 68.78× · 6/6 correct</span></li>
+          <li><strong>24.73×</strong><span>Autoencoder epoch · same loss</span></li>
+          <li><strong>Springer</strong><span>ICR'26 · Berlin · co-author</span></li>
+          <li><strong>Merit assistantship</strong><span>Grand Valley State University</span></li>
+          <li><strong>Top-ranked</strong><span>B.S. graduate · Faculty of Science of Bizerte</span></li>
         </ul>
       </section>
 
@@ -339,16 +358,12 @@
       </section>
 
       <footer class="footer">
-        <div>
-          <strong>Mortadha Ghnimi</strong><br>
-          AI/ML Engineer &amp; Graduate Researcher
-        </div>
+        <p>© <span id="year"></span> Mortadha Ghnimi</p>
         <nav aria-label="Footer">
-          <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="mailto:ghnimim@mail.gvsu.edu">Email</a>
         </nav>
-        <p>© <span id="year"></span> Mortadha Ghnimi</p>
       </footer>
     </div>
   </main>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparse Autoencoder Training | Mortadha Ghnimi</title>
+  <meta name="description" content="24.73× faster than the course baseline on one epoch of a 13,714-gene autoencoder, with the same loss.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <a class="nav-brand" href="../index.html">Mortadha Ghnimi</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-panel" id="site-nav">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#research">Research &amp; Publications</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+      </nav>
+      <div class="nav-side">
+        <a class="nav-contact" href="../index.html#contact">Contact</a>
+        <a data-resume-link href="../resume.html">Resume</a>
+        <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap prose">
+    <header class="page-hero">
+      <a class="back" href="../index.html#work">← Selected work</a>
+      <div class="badge-row" style="margin-top:1rem"><span class="badge done">Course result</span></div>
+      <h1>Sparse Autoencoder Training</h1>
+      <p class="subtitle">One epoch, same loss as the reference, 24.73× faster than the course baseline.</p>
+      <div class="metrics">
+        <div><strong>24.73×</strong><span>Posted speedup</span></div>
+        <div><strong>10×</strong><span>Full credit</span></div>
+        <div><strong>2.28 s</strong><span>Versus 56.49 s</span></div>
+      </div>
+    </header>
+    <h2>Problem</h2>
+    <p>The assignment is one epoch of an autoencoder on a single-cell matrix: 2,700 cells by 13,714 genes, only 6.17% nonzero. The network is 13,714 → 256 → 32 → 256 → 13,714, trained with Adam in batches of 256. The grade is the speedup of that epoch against the course baseline on the same machine. The trained model still has to match the reference loss.</p>
+    <h2>What I built</h2>
+    <p>I kept the same model and the same loss, and changed the implementation one step at a time. The posted entry runs the epoch in 2.28 seconds on an Intel i5-11300H with 4 threads. Five timed runs landed between 2.22 and 2.40 seconds. The baseline on that machine took 56.49 seconds.</p>
+    <h2>Architecture</h2>
+    <div class="diagram">
+      <div class="flow">
+        <div class="flow-step"><b>01</b> Sparse input, 13,714 genes</div>
+        <div class="flow-step"><b>02</b> 256 → 32 → 256</div>
+        <div class="flow-step"><b>03</b> Dense reconstruction, 13,714</div>
+        <div class="flow-step"><b>04</b> Adam, batch size 256</div>
+      </div>
+    </div>
+    <h2>Engineering decisions</h2>
+    <p>Each number below is a posted score after that change, not a guess.</p>
+    <ul>
+      <li>Skipping zeros in the first layer: 1.54×. The last layer is dense, so sparsity alone does not carry the epoch.</li>
+      <li>Four threads: 3.55×.</li>
+      <li>Separating the weights from the Adam moments: 6.73×.</li>
+      <li>Blocking the last layer and using 256-bit vectors: 10.33×, which clears the full-credit line.</li>
+      <li>Splitting the 13,714 outputs into width-16 AVX panels, and running the forward pass and both gradients on each panel together: 23.20×.</li>
+      <li>Keeping 16 gradient outputs in registers: 24.73×.</li>
+    </ul>
+    <p>A horizontal dot product on the same gradient still matched the loss and scored 20.78×, so I left it off the board.</p>
+    <h2>Results</h2>
+    <p>24.73× versus the course baseline, with the same loss as the reference. Full credit was 10×. This is a course measurement on one laptop, not a public benchmark.</p>
+    <h2>Stack</h2>
+    <div class="tech-row"><span class="chip">C++</span><span class="chip">AVX</span><span class="chip">Adam</span><span class="chip">Multithreading</span></div>
+    <h2>What I learned</h2>
+    <p>The first layer is sparse. The last layer is not. The large jump came from how that dense reconstruction and its gradients were laid out, not from skipping zeros.</p>
+    <h2>Links</h2>
+    <p>No public repository is linked for this assignment.</p>
+    <div class="related">
+      <p><a class="arrow-link" href="hpc.html">Related · Sparse matrix multiplication <span>→</span></a></p>
+      <p><a class="back" href="../index.html#work">← Back to work</a></p>
+    </div>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

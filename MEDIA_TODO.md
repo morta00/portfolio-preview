@@ -11,7 +11,7 @@ Public pages must not mention these filenames.
 - Crop: the product frame only. No browser chrome, no desktop
 - Hide: API keys, tokens, private datasets, account email
 
-### HPC leaderboard
+### HPC leaderboard — sparse matrix multiplication
 - File: `assets/projects/hpc/leaderboard.webp`
 - Size: about 1600×900, 16:9
 - Show: your row, rank, 68.78×, and 6/6 correct
