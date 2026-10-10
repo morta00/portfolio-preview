@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sparse Matrix Multiplication | Mortadha Ghnimi</title>
   <meta name="description" content="High-performance sparse matrix multiplication: 68.78× geometric-mean speedup and 6/6 correctness.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
@@ -15,13 +16,13 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     <div class="nav-panel" id="site-nav">
       <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html#work">Selected Work</a>
-        <a href="../index.html#research">Research</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#research">Research &amp; Publications</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
       </nav>
       <div class="nav-side">
+        <a class="nav-contact" href="../index.html#contact">Contact</a>
         <a data-resume-link href="../resume.html">Resume</a>
         <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -69,7 +70,7 @@
       <div class="bar-label"><span>Optimized</span><span>68.78×</span></div>
       <div class="track accent"><i></i></div>
     </div>
-    <h2>Technical decisions</h2>
+    <h2>Engineering decisions</h2>
     <p>CSR keeps only the nonzero values. Tiling and alignment are there so the dense dimension stays in cache. OpenMP splits rows. SIMD and prefetching only help after the layout is fixed, so they came after the packed format.</p>
     <h2 id="results">Results</h2>
     <p>#1 on the leaderboard. 68.78× geometric-mean speedup. Correct on 6 of 6 evaluated matrix widths. I am not listing per-matrix timings because those breakdowns are not included here.</p>
@@ -79,6 +80,10 @@
     <p>The large speedup came from the data layout and the memory path, not from a clever arithmetic trick.</p>
     <h2>Links</h2>
     <p>No public repository is linked yet.</p>
+    <div class="related">
+      <p><a class="arrow-link" href="kaggle.html">Related · Image classification <span>→</span></a></p>
+      <p><a class="back" href="../index.html#work">← Back to work</a></p>
+    </div>
   </main>
   <script src="../js/main.js"></script>
 </body>

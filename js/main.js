@@ -4,6 +4,14 @@
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  applySiteUrl();
+
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('is-open');
@@ -40,6 +48,7 @@
   initResumeLinks();
   initEmailButtons();
   initCounts();
+  initBars();
   initFilters();
   initOpportunity();
 })();
@@ -54,6 +63,17 @@ function initFilters() {
   const buttons = document.querySelectorAll('[data-filter]');
   const items = document.querySelectorAll('[data-focus]');
   if (!buttons.length) return;
+  const countable = document.querySelectorAll('.showcase[data-focus], .card[data-focus], .research-feature[data-focus]');
+  buttons.forEach((button) => {
+    const key = button.dataset.filter;
+    const count = key === 'all'
+      ? countable.length
+      : [...countable].filter((item) => (item.dataset.focus || '').split(/\s+/).includes(key)).length;
+    const mark = document.createElement('span');
+    mark.className = 'filter-count';
+    mark.textContent = String(count);
+    button.appendChild(mark);
+  });
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.dataset.filter;
@@ -76,87 +96,58 @@ function depthPrefix() {
   return location.pathname.includes('/work/') ? '../' : '';
 }
 
+function applySiteUrl() {
+  const configured = window.SITE && window.SITE.siteUrl;
+  const preview = location.pathname.includes('/portfolio-preview');
+  const base = configured || (location.origin + (preview ? '/portfolio-preview' : ''));
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = base.replace(/\/$/, '') + '/';
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', base.replace(/\/$/, '') + '/');
+  document.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach((meta) => {
+    const value = meta.getAttribute('content') || '';
+    if (value && !value.startsWith('http')) {
+      meta.setAttribute('content', base.replace(/\/$/, '') + '/' + value.replace(/^\//, ''));
+    }
+  });
+}
+
 function initHeroMedia() {
   const root = document.querySelector('[data-hero-media]');
   if (!root) return;
-  const stage = root.querySelector('.hero-stage');
+  const img = document.getElementById('hero-portrait');
   const fallback = root.querySelector('.hero-fallback');
-  const play = root.querySelector('.play');
-  const live = root.querySelector('.hero-status');
+  const play = root.querySelector('.intro-play');
+  const dialog = document.getElementById('intro-modal');
+  const video = document.getElementById('intro-video');
   const prefix = depthPrefix();
-  const videoList = (root.dataset.video || 'assets/media/hero-intro.mp4')
-    .split(',')
-    .map((item) => prefix + item.trim());
-  const posters = (root.dataset.posters || 'assets/hero/portrait.jpg,assets/hero/portrait.png,assets/hero/portrait.webp')
-    .split(',')
-    .map((item) => prefix + item.trim());
+  const videoUrl = prefix + (root.dataset.video || 'assets/media/hero-intro.mp4');
 
-  const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function showImage(src) {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = 'Mortadha Ghnimi';
-    stage.insertBefore(img, fallback);
-    fallback.hidden = true;
-    if (play) play.hidden = true;
+  if (img && fallback) {
+    img.addEventListener('error', () => {
+      img.hidden = true;
+      fallback.hidden = false;
+    });
   }
 
-  function showVideo(src) {
-    const video = document.createElement('video');
-    video.src = src;
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
-    video.preload = 'metadata';
-    video.setAttribute('aria-label', 'Muted preview of Mortadha Ghnimi introduction');
-    stage.insertBefore(video, fallback);
-    fallback.hidden = true;
-    if (motionOK) video.play().catch(() => {});
-    if (play) {
+  if (!play || !dialog || !video) return;
+  if (!window.SITE || !window.SITE.heroIntro) return;
+  fetch(videoUrl, { method: 'HEAD' })
+    .then((res) => {
+      const type = res.headers.get('content-type') || '';
+      if (!res.ok || type.includes('text/html')) return;
       play.hidden = false;
-      play.disabled = false;
       play.addEventListener('click', () => {
-        video.muted = false;
-        video.controls = true;
+        if (!video.getAttribute('src')) video.src = videoUrl;
+        if (typeof dialog.showModal === 'function') dialog.showModal();
         video.play();
-        if (live) live.textContent = 'Playing introduction with sound.';
       });
-    }
-  }
-
-  function tryVideo(index) {
-    if (index >= videoList.length) {
-      tryPosters(0);
-      return;
-    }
-    fetch(videoList[index], { method: 'HEAD' })
-      .then((res) => {
-        const type = res.headers.get('content-type') || '';
-        if (res.ok && (type.includes('video') || videoList[index].endsWith('.mp4'))) {
-          showVideo(videoList[index]);
-          return;
-        }
-        tryVideo(index + 1);
-      })
-      .catch(() => tryVideo(index + 1));
-  }
-
-  tryVideo(0);
-
-  function tryPosters(index) {
-    if (index >= posters.length) {
-      if (play) {
-        play.disabled = true;
-        play.setAttribute('aria-label', 'Introduction video is not added yet');
-      }
-      return;
-    }
-    const img = new Image();
-    img.onload = () => showImage(posters[index]);
-    img.onerror = () => tryPosters(index + 1);
-    img.src = posters[index];
-  }
+      dialog.addEventListener('close', () => video.pause());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+    })
+    .catch(() => {});
 }
 
 function initProjectMedia() {
@@ -176,6 +167,7 @@ function initProjectMedia() {
 }
 
 function initResumeLinks() {
+  if (!window.SITE || !window.SITE.resumePdf) return;
   const prefix = depthPrefix();
   const pdf = prefix + 'assets/Mortadha_Ghnimi_Resume.pdf';
   fetch(pdf, { method: 'HEAD' })
@@ -237,4 +229,23 @@ function initCounts() {
     });
   }, { threshold: 0.6 });
   nodes.forEach((node) => io.observe(node));
+}
+
+function initBars() {
+  const tracks = document.querySelectorAll('.track.accent');
+  if (!tracks.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const grow = (track) => track.classList.add('is-grown');
+  if (reduce || !('IntersectionObserver' in window)) {
+    tracks.forEach(grow);
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      grow(entry.target);
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.5 });
+  tracks.forEach((track) => io.observe(track));
 }

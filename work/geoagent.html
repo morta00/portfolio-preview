@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GeoAgent | Mortadha Ghnimi</title>
   <meta name="description" content="GeoAgent is an in-progress agentic AI platform for multi-step research and data-analysis workflows.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
 </head>
@@ -15,13 +16,13 @@
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     <div class="nav-panel" id="site-nav">
       <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html#work">Selected Work</a>
-        <a href="../index.html#research">Research</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#research">Research &amp; Publications</a>
         <a href="../index.html#experience">Experience</a>
         <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
       </nav>
       <div class="nav-side">
+        <a class="nav-contact" href="../index.html#contact">Contact</a>
         <a data-resume-link href="../resume.html">Resume</a>
         <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -66,13 +67,7 @@
         <span class="chip">RAG</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">MCP tools</span><span class="chip">Human approval</span>
       </div>
     </div>
-    <div class="media-frame" data-future-asset="assets/projects/geoagent/preview.png" data-alt="GeoAgent product interface" style="margin-top:1rem">
-      <div class="media-copy">
-        <p>Product interface preview coming soon</p>
-        <span>assets/projects/geoagent/preview.png</span>
-      </div>
-    </div>
-    <h2>Technical decisions</h2>
+    <h2>Engineering decisions</h2>
     <p>The stack is chosen so planning, retrieval, and data access stay separate: LangGraph for the workflow, MCP for tools, FastAPI for the service boundary, PostgreSQL and pgvector for state and retrieval, and Docker for running the pieces together.</p>
     <h2>Current progress</h2>
     <p>Design and implementation are underway. I will replace this section with measured results only after the evaluation framework has numbers worth reporting. No accuracy, latency, or user metrics are claimed yet.</p>
@@ -82,6 +77,10 @@
     <p>How to keep an agent inspectable: separate planning from execution, make tool use visible, and require a check before a result is treated as an answer.</p>
     <h2>Links</h2>
     <p>No public GitHub repository yet. A repository link will be added here when the project is ready to share.</p>
+    <div class="related">
+      <p><a class="arrow-link" href="asjai.html">Related · AI Automation Platform <span>→</span></a></p>
+      <p><a class="back" href="../index.html#work">← Back to work</a></p>
+    </div>
   </main>
   <script src="../js/main.js"></script>
 </body>
