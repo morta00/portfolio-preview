@@ -79,20 +79,10 @@ function initOpportunity() {
 
 function initFilters() {
   const buttons = document.querySelectorAll('[data-filter]');
-  const items = document.querySelectorAll('[data-focus]');
+  const work = document.getElementById('work');
+  const items = work ? work.querySelectorAll('[data-focus]') : document.querySelectorAll('[data-focus]');
   if (!buttons.length) return;
-  const countable = document.querySelectorAll('.showcase[data-focus], .card[data-focus], .research-feature[data-focus]');
-  buttons.forEach((button) => {
-    const key = button.dataset.filter;
-    const count = key === 'all'
-      ? countable.length
-      : [...countable].filter((item) => (item.dataset.focus || '').split(/\s+/).includes(key)).length;
-    const mark = document.createElement('span');
-    mark.className = 'filter-count';
-    mark.textContent = String(count);
-    button.appendChild(mark);
-  });
-  buttons.forEach((button) => {
+    buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.dataset.filter;
       buttons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));

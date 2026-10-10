@@ -1,11 +1,7 @@
-/* Public site switches.
-   showOpportunityStatus: false hides the Summer 2027 line.
-   siteUrl: leave empty to use the current address (works at / and /portfolio-preview/).
-   sitemap.xml and robots.txt currently point at /portfolio-preview/.
-   If this folder becomes the root site, update those two files and the resume portfolio link. */
+/* Public site switches. */
 window.SITE = {
   showOpportunityStatus: true,
-  siteUrl: "",
+  siteUrl: "https://morta00.github.io/portfolio-preview/",
   heroIntro: false,
-  resumePdf: false
+  resumePdf: true
 };
