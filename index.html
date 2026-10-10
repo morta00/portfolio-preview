@@ -66,7 +66,6 @@
         <figure class="hero-media" data-hero-media data-video="assets/media/hero-intro.mp4" data-poster="assets/hero/portrait.jpg">
           <div class="hero-stage">
             <img id="hero-portrait" src="assets/hero/portrait.jpg" alt="Portrait of Mortadha Ghnimi" width="1024" height="682">
-            <button class="intro-play" type="button" hidden>▶ 30-sec introduction</button>
             <div class="hero-fallback hero-identity" hidden>
               <p class="identity-mark" aria-hidden="true">MG</p>
               <p class="identity-role">AI/ML Engineer</p>
@@ -83,14 +82,14 @@
 
     <section class="proof" aria-label="Selected results">
       <a href="#vision">
-        <strong>#1</strong>
+        <strong>1st Place</strong>
         <em>ML Competition</em>
         <span>93.4% accuracy</span>
       </a>
       <a href="#hpc">
         <strong data-count="68.78" data-decimals="2" data-suffix="×">68.78×</strong>
         <em>HPC Speedup</em>
-        <span>#1 leaderboard · 6/6 correct</span>
+        <span>1st place leaderboard · 6/6 correct</span>
       </a>
       <a href="#publications">
         <strong>Published</strong>
@@ -105,17 +104,18 @@
     </section>
 
     <div class="wrap">
-      <section class="section" id="work">
-        <p class="section-label">Portfolio</p>
+      <section class="section section-paper" id="work">
+        <p class="section-label">01 — Selected work</p>
         <h2 class="section-title">Selected work</h2>
+        <p class="section-lead">Projects where research meets engineering.</p>
         <div class="filters">
           <span class="filter-label" id="filter-label">Explore by focus</span>
           <div class="filter-row" role="group" aria-labelledby="filter-label">
           <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter-btn" data-filter="agentic" aria-pressed="false">AI Agents</button>
+          <button type="button" class="filter-btn" data-filter="agentic" aria-pressed="false">Agents</button>
           <button type="button" class="filter-btn" data-filter="ml" aria-pressed="false">ML</button>
           <button type="button" class="filter-btn" data-filter="cv" aria-pressed="false">Computer Vision</button>
-          <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data Science</button>
+          <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
           <button type="button" class="filter-btn" data-filter="geo" aria-pressed="false">GeoAI</button>
           <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">Systems</button>
           </div>
@@ -124,16 +124,16 @@
         <article class="showcase" id="geoagent" data-focus="agentic data systems">
           <div class="showcase-copy">
             <p class="showcase-kicker"><span>01</span> Agentic AI</p>
-            <div class="badge-row"><span class="badge progress">Active build</span></div>
             <h3>GeoAgent</h3>
-            <p class="subtitle">An autonomous AI platform for multi-step research and data-analysis workflows combining planning, tool selection, retrieval, Python analytics, SQL, verification, and persistent state.</p>
-            <p class="note">Active build · evaluation framework in progress</p>
+            <p class="project-line">Agentic research and data analysis platform</p>
+            <p class="subtitle">Plans a task, chooses tools, checks the result, and writes a grounded report.</p>
+            <p class="hook">Active build · evaluation in progress</p>
             <div class="tech-row">
-              <span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span>
+              <span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">FastAPI</span>
             </div>
-            <p><a class="arrow-link" href="work/geoagent.html">Explore GeoAgent <span>→</span></a></p>
+            <p><a class="arrow-link" href="work/geoagent.html">View case study <span>→</span></a></p>
           </div>
-          <div class="diagram" aria-label="Simplified GeoAgent flow">
+          <div class="diagram flow-board" aria-label="Simplified GeoAgent flow">
             <div class="mini-flow">
               <span>User</span><i>→</i><span>Plan</span><i>→</i><span>Tools</span><i>→</i><span>Verify</span><i>→</i><span>Report</span>
             </div>
@@ -146,42 +146,37 @@
         <article class="showcase reverse" id="asjai" data-focus="agentic systems data">
           <div class="showcase-copy">
             <p class="showcase-kicker"><span>02</span> Applied AI</p>
-            <div class="badge-row">
-              <span class="badge done">Private deployed system</span>
-              <span class="badge progress">Active development</span>
-            </div>
             <h3>AI Automation Platform</h3>
-            <p class="subtitle">Asjai Lou Casting. A private AI-powered commerce and knowledge platform connecting e-commerce operations, customer workflows, fulfillment, and grounded AI-assisted knowledge retrieval.</p>
-            <p class="note">Confidential client system. Product UI withheld.</p>
+            <p class="project-line">Asjai Lou Casting</p>
+            <p class="subtitle">A private system connecting commerce, fulfillment, and grounded knowledge retrieval.</p>
+            <p class="hook">Deployed · still being extended</p>
             <div class="tech-row">
               <span class="chip">RAG</span><span class="chip">APIs</span><span class="chip">Webhooks</span><span class="chip">Automation</span>
             </div>
-            <p><a class="arrow-link" href="work/asjai.html">View platform case study <span>→</span></a></p>
+            <p><a class="arrow-link" href="work/asjai.html">View case study <span>→</span></a></p>
           </div>
           <div class="diagram" aria-label="Asjai platform flow">
             <div class="flow">
-              <div class="flow-step"><b>01</b> Commerce · Shopify / TikTok Shop</div>
-              <div class="flow-step"><b>02</b> API + webhook layer</div>
-              <div class="flow-step"><b>03</b> Workflow automation</div>
+              <div class="flow-step"><b>01</b> Commerce</div>
+              <div class="flow-step"><b>02</b> API and webhooks</div>
+              <div class="flow-step"><b>03</b> Automation</div>
               <div class="flow-step"><b>04</b> Customer platform</div>
               <div class="flow-step"><b>05</b> Knowledge / RAG</div>
             </div>
+            <p class="caption">Product UI withheld for client confidentiality.</p>
           </div>
         </article>
 
         <article class="showcase" id="vision" data-focus="ml cv">
           <div class="showcase-copy">
             <p class="showcase-kicker"><span>03</span> Computer Vision</p>
-            <div class="metrics">
-              <div><strong>1st</strong><span>Place</span></div>
-              <div><strong>93.4%</strong><span>Accuracy</span></div>
-            </div>
-            <h3>Multiclass Image Classification</h3>
-            <p class="subtitle">A three-CNN ensemble trained from scratch, combining WideResNet and ResNet-110.</p>
+            <h3>1st Place Multiclass Image Classification</h3>
+            <p class="hook">1st place · 93.4% accuracy</p>
+            <p class="subtitle">WideResNet and ResNet-110, trained from scratch and combined.</p>
             <div class="tech-row">
               <span class="chip">WideResNet</span><span class="chip">ResNet-110</span><span class="chip">Pseudo-labeling</span><span class="chip">TTA</span>
             </div>
-            <p><a class="arrow-link" href="work/kaggle.html">See winning approach <span>→</span></a></p>
+            <p><a class="arrow-link" href="work/kaggle.html">View case study <span>→</span></a></p>
           </div>
           <figure class="figure-card">
             <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing Mortadha Ghnimi in first place with a score of 0.934" loading="lazy">
@@ -192,16 +187,13 @@
         <article class="showcase reverse" id="hpc" data-focus="systems">
           <div class="showcase-copy">
             <p class="showcase-kicker"><span>04</span> ML Systems</p>
-            <div class="metrics">
-              <div><strong>68.78×</strong><span>Speedup</span></div>
-              <div><strong>6/6</strong><span>Correct</span></div>
-            </div>
-            <h3>Sparse Matrix Multiplication</h3>
-            <p class="subtitle">#1 on the leaderboard. Packed CSR, OpenMP, SIMD, and cache-aware tiling on a 296 MB transcriptomics dataset.</p>
+            <h3>High-Performance Sparse Matrix Multiplication</h3>
+            <p class="hook">68.78× speedup · 1st place · 6/6 correct</p>
+            <p class="subtitle">Packed CSR, OpenMP, and SIMD on a 296 MB dataset.</p>
             <div class="tech-row">
               <span class="chip">C++</span><span class="chip">OpenMP</span><span class="chip">SIMD</span><span class="chip">Packed CSR</span>
             </div>
-            <p><a class="arrow-link" href="work/hpc.html">View optimization case study <span>→</span></a></p>
+            <p><a class="arrow-link" href="work/hpc.html">View case study <span>→</span></a></p>
           </div>
           <div class="perf" aria-label="Baseline compared with the optimized kernel">
             <div class="bar-label"><span>Baseline</span><span>1×</span></div>
@@ -211,43 +203,42 @@
           </div>
         </article>
 
-        <h3 class="section-title" id="more-projects" style="font-size:2rem;margin-top:2.5rem">More work</h3>
-        <div class="cards">
-          <a class="card" id="fraud" data-focus="ml data" href="work/fraud.html">
-            <img class="card-shot" src="assets/fraud/roc-curves.png" alt="ROC curves for the healthcare fraud models" loading="lazy">
-            <span class="badge done">Data science</span>
-            <h3>Healthcare Provider Fraud Detection</h3>
-            <p>0.946 ROC-AUC · 74 engineered features · four model families · cost-sensitive decisions.</p>
-          </a>
-          <a class="card" data-focus="agentic systems" href="work/gymbox.html">
-            <img class="card-shot" src="assets/gymbox/screens/boxai.png" alt="Box AI chat inside the GymBox app" loading="lazy">
-            <span class="badge done">Applied AI</span>
-            <h3>GymBox + Box AI</h3>
-            <p>Retrieval coach inside a React Native app, with FastAPI, FAISS, and Gemma. Real screens and a demo.</p>
-          </a>
-          <a class="card" data-focus="cv ml" href="work/wildlife.html">
-            <span class="badge done">Computer vision</span>
-            <h3>Wildlife Computer Vision</h3>
-            <p>Custom CNNs classifying 10 forest animal species, with data augmentation.</p>
-          </a>
+        <div class="more-work" id="more-projects">
+          <h3>More work</h3>
+          <div class="cards">
+            <a class="card" id="fraud" data-focus="ml data" href="work/fraud.html">
+              <img class="card-shot" src="assets/fraud/roc-curves.png" alt="ROC curves for the healthcare fraud models" loading="lazy">
+              <h3>Cost-Sensitive Healthcare Fraud Detection</h3>
+              <p>0.946 ROC-AUC · 74 features · four model families.</p>
+            </a>
+            <a class="card" data-focus="agentic systems" href="work/gymbox.html">
+              <img class="card-shot" src="assets/gymbox/screens/boxai.png" alt="Box AI chat inside the GymBox app" loading="lazy">
+              <h3>GymBox AI</h3>
+              <p>A retrieval coach for training and nutrition, inside a React Native app.</p>
+            </a>
+            <a class="card" data-focus="cv ml" href="work/wildlife.html">
+              <h3>Wildlife Computer Vision</h3>
+              <p>Custom CNNs for 10 forest species.</p>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="section section-quiet" id="research">
-        <p class="section-label">Current research</p>
-        <h2 class="section-title">Research &amp; Publications</h2>
-        <p class="section-lead">AI systems for Earth observation, explainability, and real-world decision support.</p>
+      <section class="section research-band" id="research">
+        <p class="section-label">02 — Research</p>
+        <h2 class="section-title">Research &amp; publications</h2>
+        <p class="section-lead">AI for Earth observation, and one published study on clinical interpretability.</p>
         <div class="research-grid research-feature" data-focus="geo ml">
           <div>
-            <div class="badge-row"><span class="badge progress">Current research</span></div>
-            <h3 class="section-title" style="font-size:2.2rem">AI for Earth Observation</h3>
+            <p class="showcase-kicker">Current research</p>
+            <h3>AI for Earth Observation</h3>
             <p class="subtitle">Grand Valley State University · Graduate Research Assistant</p>
-            <p>Developing AI-based vegetation-stress monitoring from multisensor satellite time series, with emphasis on temporal representation learning, expected vegetation state, and geospatial anomaly detection.</p>
-            <div class="tech-row">
-              <span class="chip">Remote Sensing</span><span class="chip">Temporal Foundation Models</span><span class="chip">Multimodal AI</span><span class="chip">Geospatial ML</span>
-            </div>
+            <p>Vegetation-stress monitoring from satellite time series: what the landscape should look like, and where it does not.</p>
             <div class="mini-flow">
-              <span>Satellite time series</span><i>→</i><span>Representation</span><i>→</i><span>Expected state</span><i>→</i><span>Anomaly</span><i>→</i><span>Map</span>
+              <span>Time series</span><i>→</i><span>Representation</span><i>→</i><span>Expected state</span><i>→</i><span>Anomaly</span><i>→</i><span>Map</span>
+            </div>
+            <div class="tech-row">
+              <span class="chip">Remote sensing</span><span class="chip">Temporal models</span><span class="chip">Geospatial ML</span>
             </div>
           </div>
           <div class="maps">
@@ -257,56 +248,51 @@
         </div>
 
         <article class="pub" id="publications">
-          <p class="section-label">Published research · Co-author</p>
-          <p class="showcase-kicker">2026 · Springer · ICR'26</p>
+          <p class="showcase-kicker">Published research · Co-author</p>
+          <p class="hook">2026 · Springer · ICR'26 · Berlin</p>
           <h3>Towards Clinically Interpretable Heart Disease Prediction: A Comparative Analysis of Explainability Methods for Machine Learning Models</h3>
           <p>Firas Frouja · Mahdi Bedoui · Mortadha Ghnimi</p>
-          <p class="subtitle">Fifth International Conference on Innovations in Computing Research (ICR'26), Berlin. Lecture Notes in Networks and Systems, pp. 305–314.</p>
-          <p>Comparative evaluation of SHAP and LIME across multiple heart-disease prediction models, examining consistency and clinical interpretability.</p>
-          <p>
+          <p class="subtitle">Lecture Notes in Networks and Systems, pp. 305–314. A comparison of SHAP and LIME across heart-disease models.</p>
+          <p class="pub-links">
             <a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Paper <span>→</span></a>
-            &nbsp;&nbsp;
             <a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">DOI <span>→</span></a>
           </p>
         </article>
       </section>
 
       <section class="section" id="experience">
-        <p class="section-label">Timeline</p>
+        <p class="section-label">03 — Experience</p>
         <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-          <article class="job">
-            <p class="when">2026 — Present</p>
-            <div>
-              <h3>Graduate Research Assistant</h3>
-              <p class="where">Grand Valley State University</p>
-              <p>Vegetation-stress monitoring from multisensor satellite time series.</p>
-              <div class="tech-row"><span class="chip quiet">Remote sensing</span><span class="chip quiet">Time series</span><span class="chip quiet">Earth observation</span></div>
-            </div>
-          </article>
-          <article class="job">
-            <p class="when">May — Aug 2026</p>
-            <div>
-              <h3>AI &amp; Automation Intern</h3>
-              <p class="where">Asjai Lou Casting · Remote / New York</p>
-              <p>Private commerce and knowledge platform. Deployed, and still being extended.</p>
-              <p><a class="arrow-link" href="work/asjai.html">View private AI platform case study <span>→</span></a></p>
-            </div>
-          </article>
-          <article class="job">
-            <p class="when">2025</p>
-            <div>
-              <h3>AI &amp; Mobile Developer</h3>
-              <p class="where">Smart It Partner · Tunis</p>
-              <p>RAG assistant and recommendations in a React Native app, plus wildlife computer vision.</p>
-              <p><a class="arrow-link" href="work/gymbox.html">View GymBox + Box AI <span>→</span></a></p>
-            </div>
-          </article>
-        </div>
+        <p class="section-lead">From product engineering to applied AI research.</p>
+        <ol class="story">
+          <li>
+            <p class="phase">2025 · Building products</p>
+            <h3>AI &amp; Mobile Developer</h3>
+            <p class="where">Smart It Partner · Tunis</p>
+            <p>A retrieval assistant and recommendations inside a production gym app, plus wildlife computer vision.</p>
+            <p class="keywords">RAG · Recommendations · Computer vision</p>
+            <p><a class="arrow-link" href="work/gymbox.html">View GymBox AI <span>→</span></a></p>
+          </li>
+          <li>
+            <p class="phase">2026 · Applied AI</p>
+            <h3>AI &amp; Automation Intern</h3>
+            <p class="where">Asjai Lou Casting · Remote / New York</p>
+            <p>A deployed commerce and knowledge platform, with agentic pieces still in development.</p>
+            <p class="keywords">APIs · Webhooks · RAG · Deployment</p>
+            <p><a class="arrow-link" href="work/asjai.html">View the platform <span>→</span></a></p>
+          </li>
+          <li class="is-current">
+            <p class="phase">2026 — Present · Research</p>
+            <h3>Graduate Research Assistant</h3>
+            <p class="where">Grand Valley State University</p>
+            <p>Vegetation-stress monitoring from multisensor satellite time series.</p>
+            <p class="keywords">Remote sensing · Temporal AI · Geospatial ML</p>
+          </li>
+        </ol>
       </section>
 
       <section class="section" id="about">
-        <p class="section-label">About</p>
+        <p class="section-label">04 — About</p>
         <div class="about-grid">
           <div>
             <img class="about-photo" src="assets/hero/portrait.jpg" alt="" width="280" height="350">
@@ -330,8 +316,8 @@
       <section class="section" id="recognition">
         <p class="section-label">Selected recognition</p>
         <ul class="recognition">
-          <li><strong>#1</strong> ML competition · 93.4% accuracy</li>
-          <li><strong>#1</strong> HPC leaderboard · 68.78× speedup · 6/6 correct</li>
+          <li><strong>1st place</strong> ML competition · 93.4% accuracy</li>
+          <li><strong>1st place</strong> HPC leaderboard · 68.78× speedup · 6/6 correct</li>
           <li><strong>Springer publication</strong> · ICR'26 · co-author</li>
           <li><strong>Merit Graduate Assistantship</strong> · Grand Valley State University</li>
           <li><strong>Top-ranked</strong> B.S. graduate · Faculty of Science of Bizerte</li>

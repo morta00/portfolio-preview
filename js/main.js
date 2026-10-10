@@ -51,7 +51,25 @@
   initBars();
   initFilters();
   initOpportunity();
+  initNavSpy();
 })();
+
+function initNavSpy() {
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const items = links
+    .map((link) => ({ link, el: document.querySelector(link.getAttribute('href')) }))
+    .filter((item) => item.el);
+  if (!items.length) return;
+  const mark = () => {
+    let current = null;
+    items.forEach((item) => {
+      if (item.el.getBoundingClientRect().top < 140) current = item;
+    });
+    links.forEach((link) => link.classList.toggle('is-current', current && link === current.link));
+  };
+  mark();
+  window.addEventListener('scroll', mark, { passive: true });
+}
 
 function initOpportunity() {
   const el = document.querySelector('[data-opportunity]');
