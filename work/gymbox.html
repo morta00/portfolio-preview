@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymBox + Box AI | Mortadha Ghnimi</title>
+  <meta name="description" content="Retrieval-based fitness coach integrated into the GymBox React Native app, with a FastAPI backend.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <a class="nav-brand" href="../index.html">Mortadha Ghnimi</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-panel" id="site-nav">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-side">
+        <a data-resume-link href="../resume.html">Resume</a>
+        <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap prose">
+    <header class="page-hero">
+      <a class="back" href="../index.html#work">← Selected work</a>
+      <div class="badge-row" style="margin-top:1rem"><span class="badge done">Completed</span></div>
+      <h1>GymBox + Box AI</h1>
+      <p>At Smart It Partner I built Box AI, a retrieval-based coach for training and nutrition questions inside a React Native gym app, and worked on the surrounding member experience.</p>
+    </header>
+    <h2>What I built</h2>
+    <ul>
+      <li>Chat interface in the mobile app and the FastAPI service behind it</li>
+      <li>Retrieval over fitness and nutrition material, then generation with Gemma</li>
+      <li>FAISS for similarity search</li>
+      <li>Member activity on the home screen, QR gym access, profile analytics, and the in-app shop</li>
+    </ul>
+    <h2>Architecture</h2>
+    <div class="diagram">
+      <div class="flow">
+        <div class="flow-step"><b>01</b> Domain documents</div>
+        <div class="flow-step"><b>02</b> Chunk and embed</div>
+        <div class="flow-step"><b>03</b> FAISS retrieval</div>
+        <div class="flow-step"><b>04</b> Gemma</div>
+        <div class="flow-step"><b>05</b> Mobile chat API</div>
+      </div>
+    </div>
+    <div class="video-wrap" style="margin-top:1rem">
+      <video controls playsinline preload="none" poster="../assets/gymbox/screens/boxai.png">
+        <source src="../assets/gymbox/videos/gymbox-boxai-chat.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="gallery" style="margin-top:1rem">
+      <figure><img src="../assets/gymbox/screens/boxai.png" alt="Box AI chat screen" loading="lazy"><figcaption>Box AI</figcaption></figure>
+      <figure><img src="../assets/gymbox/screens/home-dashboard.png" alt="GymBox home dashboard" loading="lazy"><figcaption>Home</figcaption></figure>
+      <figure><img src="../assets/gymbox/screens/profile-dashboard.png" alt="GymBox profile activity" loading="lazy"><figcaption>Profile</figcaption></figure>
+    </div>
+    <h2>Stack</h2>
+    <div class="tech-row"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">FAISS</span><span class="chip">Gemma</span><span class="chip">RAG</span></div>
+    <h2>Links</h2>
+    <p>
+      <a class="text-link" href="https://github.com/morta00/GymBox" target="_blank" rel="noopener noreferrer">GymBox repository</a>
+      ·
+      <a class="text-link" href="https://github.com/morta00/BoxAi" target="_blank" rel="noopener noreferrer">Box AI repository</a>
+    </p>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

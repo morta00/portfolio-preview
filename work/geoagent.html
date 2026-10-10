@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoAgent | Mortadha Ghnimi</title>
+  <meta name="description" content="GeoAgent is an in-progress agentic AI platform for multi-step research and data-analysis workflows.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <a class="nav-brand" href="../index.html">Mortadha Ghnimi</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <div class="nav-panel" id="site-nav">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html#work">Selected Work</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-side">
+        <a data-resume-link href="../resume.html">Resume</a>
+        <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap prose">
+    <header class="page-hero">
+      <a class="back" href="../index.html#work">← Selected work</a>
+      <div class="badge-row" style="margin-top:1rem"><span class="badge progress">In progress</span></div>
+      <h1>GeoAgent</h1>
+      <p class="subtitle">Agentic AI research and data-analysis platform</p>
+    </header>
+    <h2>Overview</h2>
+    <p>GeoAgent is an autonomous AI platform I am building for multi-step research and data-analysis workflows. The goal is a system that can plan, choose tools, execute, verify, and write a grounded report, with retrieval, Python analytics, and SQL available inside the workflow.</p>
+    <h2>Problem</h2>
+    <p>Useful analysis rarely fits in one model call. A researcher has to retrieve context, query data, run code, check the result, and only then write the answer. GeoAgent is the attempt to put that loop into an explicit agent workflow instead of a single chat prompt.</p>
+    <h2>What I am building</h2>
+    <p>There is no public repository for GeoAgent yet, so I am not listing these pieces as finished. They are the parts currently being built:</p>
+    <ul>
+      <li>Planner, executor, and verifier roles</li>
+      <li>Tool calling and a tool router</li>
+      <li>RAG over stored context</li>
+      <li>Persistent workflow state</li>
+      <li>Failure recovery and replanning</li>
+      <li>Human approval for sensitive actions</li>
+      <li>Grounded reporting</li>
+      <li>Python analytics and SQL analysis</li>
+      <li>An evaluation framework</li>
+    </ul>
+    <h2 id="architecture">Architecture</h2>
+    <div class="diagram">
+      <div class="flow">
+        <div class="flow-step"><b>01</b> User request</div>
+        <div class="flow-step"><b>02</b> Planner</div>
+        <div class="flow-step"><b>03</b> Tool router</div>
+        <div class="flow-step"><b>04</b> Executor</div>
+        <div class="flow-step"><b>05</b> Verifier</div>
+        <div class="flow-step"><b>06</b> Report</div>
+      </div>
+      <div class="side-tools">
+        <span class="chip">RAG</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">MCP tools</span><span class="chip">Human approval</span>
+      </div>
+    </div>
+    <div class="media-frame" data-future-asset="assets/projects/geoagent/preview.png" data-alt="GeoAgent product interface" style="margin-top:1rem">
+      <div class="media-copy">
+        <p>Product interface preview coming soon</p>
+        <span>assets/projects/geoagent/preview.png</span>
+      </div>
+    </div>
+    <h2>Technical decisions</h2>
+    <p>The stack is chosen so planning, retrieval, and data access stay separate: LangGraph for the workflow, MCP for tools, FastAPI for the service boundary, PostgreSQL and pgvector for state and retrieval, and Docker for running the pieces together.</p>
+    <h2>Current progress</h2>
+    <p>Design and implementation are underway. I will replace this section with measured results only after the evaluation framework has numbers worth reporting. No accuracy, latency, or user metrics are claimed yet.</p>
+    <h2>Stack</h2>
+    <div class="tech-row"><span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">pgvector</span><span class="chip">Docker</span><span class="chip">RAG</span><span class="chip">SQL</span></div>
+    <h2>What this is forcing me to learn</h2>
+    <p>How to keep an agent inspectable: separate planning from execution, make tool use visible, and require a check before a result is treated as an answer.</p>
+    <h2>Links</h2>
+    <p>No public GitHub repository yet. A repository link will be added here when the project is ready to share.</p>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>
