@@ -65,7 +65,7 @@ function initNavSpy() {
   const mark = () => {
     let current = null;
     const activationLine = Math.min(window.innerHeight * 0.38, 300);
-    items.forEach((item) => {
+    [...items].sort((a, b) => a.el.offsetTop - b.el.offsetTop).forEach((item) => {
       if (item.el.getBoundingClientRect().top < activationLine) current = item;
     });
     links.forEach((link) => link.classList.toggle('is-current', current && link === current.link));
