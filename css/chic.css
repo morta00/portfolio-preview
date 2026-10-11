@@ -621,6 +621,25 @@
 }
 .expertise-recognition { border-top-color: rgba(24, 31, 26, .13); }
 
+/* The sticky navigation keeps its light treatment over Research. */
+.nav.is-research,
+.nav.is-research.is-scrolled {
+  color: #202620;
+  background: rgba(244, 241, 233, .97);
+  border-bottom-color: rgba(24, 31, 26, .12);
+}
+.nav.is-research .nav-brand,
+.nav.is-research .nav-links a,
+.nav.is-research .nav-side a { color: #505a51; }
+.nav.is-research .nav-links a:hover,
+.nav.is-research .nav-side a:hover,
+.nav.is-research .nav-links a.is-current { color: #202620; }
+.nav.is-research .nav-links a.is-current { text-decoration-color: #78927e; }
+.nav.is-research .nav-contact { border-color: rgba(24, 31, 26, .2); color: #202620 !important; }
+.nav.is-research .nav-toggle { background: #f4f1e9; border-color: rgba(24, 31, 26, .16); }
+.nav.is-research .nav-toggle span { background: #202620; }
+.nav.is-research .nav-panel { background: rgba(244, 241, 233, .98); border-bottom-color: rgba(24, 31, 26, .12); }
+
 @media (max-width: 899px) {
   .research-portfolio .publication-layout { grid-template-columns: 1fr; }
   .research-portfolio .publication-copy-v8 h2 { font-size: clamp(2.8rem, 9vw, 4.5rem); }
