@@ -6,9 +6,9 @@
   }));
 
   const descriptions = {
-    ai: 'I build and deploy AI applications that connect language models, retrieval, and APIs to real workflows—from commerce automation to mobile AI experiences.',
-    research: 'I study vegetation stress with multisensor satellite time series, temporal representations, and held-out evaluation.',
-    systems: 'I build backend services and optimize ML workloads with C++, SIMD, and OpenMP.'
+    ai: {title: 'From models to working applications.', text: 'I connect language models, retrieval, and APIs in deployed commerce tools and mobile AI experiences.', tags: ['Retrieval & agents', 'API integration', 'Deployment']},
+    research: {title: 'From satellite data to useful signals.', text: 'I study vegetation stress with satellite time series and temporal representations, testing on years the model has never seen.', tags: ['Earth observation', 'Temporal modeling', 'Held-out evaluation']},
+    systems: {title: 'From bottlenecks to faster systems.', text: 'I build backend services and optimize ML workloads with C++, SIMD, and OpenMP.', tags: ['Backend services', 'Parallel computing', 'ML performance']}
   };
   document.querySelectorAll('[data-focus-output]').forEach(button => {
     button.addEventListener('click', () => {
@@ -17,7 +17,15 @@
         item.classList.toggle('is-active', active);
         item.setAttribute('aria-pressed', String(active));
       });
-      document.getElementById('focus-output').textContent = descriptions[button.dataset.focusOutput];
+      const focus = descriptions[button.dataset.focusOutput];
+      document.getElementById('focus-title').textContent = focus.title;
+      document.getElementById('focus-output').textContent = focus.text;
+      const tags = document.getElementById('focus-tags');
+      tags.replaceChildren(...focus.tags.map(label => {
+        const tag = document.createElement('span');
+        tag.textContent = label;
+        return tag;
+      }));
     });
   });
 
