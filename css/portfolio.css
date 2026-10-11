@@ -98,3 +98,5 @@ html{scroll-snap-type:none!important;scroll-padding-top:0!important}section[id],
 @keyframes hero-layer-drift{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(-3deg) translateY(3px)}}
 @keyframes hero-back-drift{0%,100%{transform:rotate(4deg)}50%{transform:rotate(6deg) translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.hero-stage{transform:none;will-change:auto}.hero-media:before{transform:rotate(-5deg)}.hero-media:after{transform:rotate(4deg)}.hero-socials a:hover{transform:none}}
+
+.nav-brand{display:inline-flex;align-items:center}.nav-brand .brand-mark{display:block;width:58px;height:38px;object-fit:contain;transition:opacity .2s}.nav-brand:hover .brand-mark{opacity:.75}.contact-monogram img{display:block;width:94px;height:58px;object-fit:contain}.nav-brand:focus-visible{outline:2px solid var(--green);outline-offset:5px;border-radius:4px}
