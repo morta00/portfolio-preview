@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/chic.css?v=8">
+  <link rel="stylesheet" href="css/chic.css?v=11">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -202,85 +202,54 @@
       </section>
     </section>
 
-    <section class="research-portfolio" id="research" aria-label="Research">
-    <section class="research-screen-v9" aria-labelledby="current-research-title">
-      <div class="wrap research-v9">
-        <header class="research-head-v9">
+    <section class="research-portfolio research-reorg" id="research" aria-labelledby="research-overview-title">
+      <div class="wrap research-reorg-inner">
+        <header class="research-reorg-head">
           <div>
             <p class="section-label">02 / Research</p>
-            <h2 id="current-research-title">Monitoring vegetation stress from space.</h2>
+            <h2 id="research-overview-title">Research in the field and in print.</h2>
           </div>
-          <div class="research-head-note">
-            <span class="research-status-v9"><i></i> Research in progress</span>
-            <p>Estimate expected vegetation health from satellite history and environmental context, then flag unusual drops. Training and validation use 2022–2025; 2026 remains an unseen test year.</p>
-          </div>
+          <p>Two connected parts of my research work: satellite-based vegetation monitoring and published work on explainable medical AI.</p>
         </header>
 
-        <div class="research-body-v9">
-          <div class="research-map-v9">
-            <img class="research-map-overview" src="assets/research/anomaly-overview.png" alt="Regional vegetation anomaly overview" loading="lazy">
-            <div class="research-map-label">
-              <span>ANOMALY OVERVIEW</span>
-              <strong>Expected vegetation state → deviation map</strong>
+        <div class="research-reorg-grid">
+          <article class="research-feature-card" aria-labelledby="satellite-title">
+            <div class="research-feature-image">
+              <img src="assets/research/anomaly-overview.png" alt="Satellite overview highlighting vegetation anomalies along the coast" loading="lazy">
+              <figure class="research-feature-inset">
+                <img src="assets/research/anomaly-detail.png" alt="Closer view of pixel-level vegetation anomalies" loading="lazy">
+                <figcaption>Pixel-level detail</figcaption>
+              </figure>
+              <span class="research-image-caption">Expected vegetation state <i aria-hidden="true">→</i> deviation map</span>
             </div>
-            <figure class="research-inset-v9">
-              <img src="assets/research/anomaly-detail.png" alt="Pixel-level vegetation anomaly detail" loading="lazy">
-              <figcaption>Pixel-level detail</figcaption>
-            </figure>
-          </div>
+            <div class="research-feature-copy">
+              <div class="research-card-kicker"><span class="research-live-dot"></span> Graduate research · In progress</div>
+              <h3 id="satellite-title">Monitoring vegetation stress from space</h3>
+              <p>Can temporal embeddings and multisensor inputs improve expected NDVI estimates? The model learns normal vegetation patterns, then flags unusual drops.</p>
+              <div class="research-facts" aria-label="Research setup">
+                <span><small>Train + validate</small><strong>2022–2025</strong></span>
+                <span><small>Unseen test</small><strong>2026</strong></span>
+                <span><small>Inputs</small><strong>Sentinel-1/2 · weather · terrain</strong></span>
+              </div>
+            </div>
+          </article>
 
-          <aside class="research-brief-v9">
-            <div class="research-question-v9">
-              <span>Research question</span>
-              <h3>Can temporal embeddings and multisensor inputs improve expected NDVI estimates for vegetation stress monitoring?</h3>
+          <article class="research-paper-card" id="publication" aria-labelledby="publication-title">
+            <div class="research-paper-topline">
+              <p class="section-label">Peer-reviewed publication</p>
+              <span>Springer · ICR’26 · Berlin</span>
             </div>
-
-            <div class="research-data-v9">
-              <div><small>Train / validate</small><strong>2022–2025</strong></div>
-              <div><small>Unseen test</small><strong>2026</strong></div>
-              <div><small>Signal</small><strong>Expected NDVI − observed NDVI</strong></div>
+            <h3 id="publication-title">Towards Clinically Interpretable Heart Disease Prediction</h3>
+            <p class="research-paper-subtitle">A comparative analysis of explainability methods for machine learning models.</p>
+            <p class="research-paper-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
+            <div class="research-method-strip" aria-label="Research methods">
+              <span>Risk prediction</span><i aria-hidden="true">→</i><span>SHAP + LIME</span><i aria-hidden="true">→</i><span>Clinical interpretation</span>
             </div>
-
-            <div class="research-pipeline-v9">
-              <p>PIPELINE</p>
-              <div><span>Observe</span><i>→</i><span>Represent</span><i>→</i><span>Expect</span><i>→</i><span>Detect</span><i>→</i><span>Map</span></div>
-              <small>Sentinel-2 · Sentinel-1 · weather · terrain · temporal embeddings</small>
-            </div>
-          </aside>
+            <p class="research-paper-summary">Comparing how explanation methods reveal model behavior and support more interpretable clinical predictions.</p>
+            <a class="research-paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+          </article>
         </div>
       </div>
-    </section>
-
-    <section class="publication-screen" id="publication" aria-labelledby="publication-title">
-      <div class="wrap viewport-inner publication-layout">
-        <div class="publication-copy-v8">
-          <p class="section-label">03 / Published research</p>
-          <span class="publication-badge">Springer · ICR'26 · Berlin</span>
-          <h2 id="publication-title">Towards Clinically Interpretable Heart Disease Prediction</h2>
-          <p class="publication-subtitle">A Comparative Analysis of Explainability Methods for Machine Learning Models</p>
-          <p class="publication-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
-          <a class="paper-link-v8" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper / DOI ↗</a>
-        </div>
-
-        <div class="publication-visual-v8">
-          <div class="publication-diagram">
-            <p>EXPLAINABILITY PIPELINE</p>
-            <div class="pub-model"><span>01</span><strong>Prediction model</strong><small>Heart-disease risk</small></div>
-            <i>↓</i>
-            <div class="pub-methods">
-              <div><span>02A</span><strong>SHAP</strong><small>Global + local attribution</small></div>
-              <div><span>02B</span><strong>LIME</strong><small>Local explanation</small></div>
-            </div>
-            <i>↓</i>
-            <div class="pub-model outcome"><span>03</span><strong>Clinical interpretation</strong><small>Compare explanation behavior</small></div>
-          </div>
-          <div class="publication-note">
-            <span>Peer-reviewed</span>
-            <p>Co-authored work comparing explanation consistency and clinical interpretability across machine-learning models.</p>
-          </div>
-        </div>
-      </div>
-    </section>
     </section>
 
     <section class="clean-experience" id="experience">
@@ -288,26 +257,38 @@
         <header class="clean-section-head">
           <p class="section-label">04 / Experience</p>
           <div class="clean-title-row">
-            <h2>From product engineering to AI research.</h2>
-            <p>A simple progression: build products, ship applied AI, then go deeper into research.</p>
+            <h2>From product work to AI research.</h2>
+            <p>Building useful systems, from applied AI products to satellite research.</p>
           </div>
         </header>
 
-        <div class="career-story">
-          <article>
-            <div class="career-year">2025</div>
-            <div class="career-role"><p>Product engineering</p><h3>AI & Mobile Developer</h3><span>Smart It Partner · Tunis</span></div>
-            <div class="career-copy"><p>Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p><a href="work/gymbox.html">Related work ↗</a></div>
+        <div class="experience-timeline">
+          <article class="experience-card">
+            <span class="experience-node" aria-hidden="true">01</span>
+            <div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div>
+            <h3>AI & Mobile Developer</h3>
+            <p class="experience-organization">Smart It Partner <span>·</span> Tunis</p>
+            <p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
+            <div class="experience-tags"><span>RAG systems</span><span>Recommendations</span><span>Computer vision</span></div>
+            <a class="experience-link" href="work/gymbox.html">Explore related work <span aria-hidden="true">↗</span></a>
           </article>
-          <article>
-            <div class="career-year">2026</div>
-            <div class="career-role"><p>Applied AI</p><h3>AI & Automation Intern</h3><span>Asjai Lou Casting · Remote / New York</span></div>
-            <div class="career-copy"><p>Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p><a href="work/asjai.html">Platform case study ↗</a></div>
+          <article class="experience-card">
+            <span class="experience-node" aria-hidden="true">02</span>
+            <div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div>
+            <h3>AI & Automation Intern</h3>
+            <p class="experience-organization">Asjai Lou Casting <span>·</span> Remote / New York</p>
+            <p class="experience-description">Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p>
+            <div class="experience-tags"><span>APIs + webhooks</span><span>Commerce automation</span><span>Grounded RAG</span></div>
+            <a class="experience-link" href="work/asjai.html">View the platform case study <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="career-current">
-            <div class="career-year">2026—</div>
-            <div class="career-role"><p>Graduate research</p><h3>Graduate Research Assistant</h3><span>Grand Valley State University</span></div>
-            <div class="career-copy"><p>Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p><a href="#research">Current research ↑</a></div>
+          <article class="experience-card experience-card-current">
+            <span class="experience-node" aria-hidden="true">03</span>
+            <div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026—</span></div>
+            <h3>Graduate Research Assistant</h3>
+            <p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p>
+            <p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
+            <div class="experience-tags"><span>Satellite time series</span><span>Vegetation monitoring</span><span>Temporal representations</span></div>
+            <a class="experience-link" href="#research">See current research <span aria-hidden="true">↑</span></a>
           </article>
         </div>
       </div>
@@ -431,6 +412,6 @@
   </main>
 
   <script src="js/site.config.js"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
