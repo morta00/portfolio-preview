@@ -129,6 +129,29 @@
   tttRestart.addEventListener('click', resetTtt);
   resetTtt();
 
+  // ---------- Compact game tabs ----------
+  const gameTabs = [...document.querySelectorAll('[data-game-tab]')];
+  const gamePanels = [...document.querySelectorAll('[data-game-panel]')];
+
+  function showGame(name, updateHash = true) {
+    gameTabs.forEach((tab) => {
+      const active = tab.dataset.gameTab === name;
+      tab.setAttribute('aria-selected', String(active));
+    });
+    gamePanels.forEach((panel) => {
+      const active = panel.dataset.gamePanel === name;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+    if (updateHash) history.replaceState(null, '', '#' + name);
+  }
+
+  gameTabs.forEach((tab) => tab.addEventListener('click', () => showGame(tab.dataset.gameTab)));
+  hardModeLink.addEventListener('click', () => showGame('hard'));
+
+  const initialGame = location.hash === '#hard' ? 'hard' : 'quick';
+  showGame(initialGame, false);
+
   // ---------- Connect Four: harder challenge ----------
   const ROWS = 6;
   const COLS = 7;
