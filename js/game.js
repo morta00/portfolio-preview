@@ -251,7 +251,7 @@
       gameOver = true;
       humanScore++;
       statusEl.textContent = 'You won.';
-      resultEl.textContent = 'You beat hard mode. Mortadha owes you a coffee.';
+      resultEl.textContent = 'You’ve got the strategy. Let’s build intelligent systems together.';
       render(humanWin);
       return;
     }
