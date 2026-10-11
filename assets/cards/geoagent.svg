@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07152b"/><stop offset="1" stop-color="#0a2337"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#1dd7b2" stop-opacity=".45"/><stop offset="1" stop-color="#1dd7b2" stop-opacity="0"/></radialGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<rect width="1200" height="700" fill="url(#bg)"/>
+<circle cx="600" cy="350" r="260" fill="url(#glow)" opacity=".34"/>
+<g stroke="#2a5b86" stroke-width="3" opacity=".6">
+  <path d="M180 190 H380 L500 300"/><path d="M180 510 H380 L500 400"/>
+  <path d="M1020 190 H820 L700 300"/><path d="M1020 510 H820 L700 400"/>
+</g>
+<g fill="#0a1d35" stroke="#3874a4" stroke-width="3">
+  <rect x="90" y="140" width="180" height="92" rx="18"/><rect x="90" y="468" width="180" height="92" rx="18"/>
+  <rect x="930" y="140" width="180" height="92" rx="18"/><rect x="930" y="468" width="180" height="92" rx="18"/>
+</g>
+<g fill="#76baff" font-family="monospace" font-size="24" text-anchor="middle">
+  <text x="180" y="197">PLAN</text><text x="180" y="525">RETRIEVE</text><text x="1020" y="197">TOOLS</text><text x="1020" y="525">VERIFY</text>
+</g>
+<g>
+  <hexagon/>
+  <circle cx="600" cy="350" r="122" fill="#0b3b3f" stroke="#29d4ad" stroke-width="5"/>
+  <circle cx="600" cy="350" r="90" fill="#0d2439" stroke="#59a7db" stroke-width="2"/>
+  <path d="M548 348h104M600 296v104" stroke="#2fe0bb" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="600" cy="350" r="18" fill="#d9fff5"/>
+</g>
+<g fill="#91d9c7" font-family="sans-serif" text-anchor="middle">
+  <text x="600" y="515" font-size="28" font-weight="700">GEOAGENT</text>
+  <text x="600" y="552" font-size="18" opacity=".72">plan → act → verify → report</text>
+</g>
+<g fill="#1f5278"><circle cx="350" cy="250" r="7"/><circle cx="350" cy="450" r="7"/><circle cx="850" cy="250" r="7"/><circle cx="850" cy="450" r="7"/></g>
+</svg>
