@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<g fill="none" stroke="#b9c9dd" stroke-width="1.2" opacity=".42">
+<path d="M0 95h120v-38h58v-57M120 95h105v55h82M470 0v78h62v62h90M900 95H780v-38h-58v-57M780 95H675v55h-82"/>
+<path d="M0 280h92v-54h74v-74M92 280h114v58h78M900 280h-92v-54h-74v-74M808 280H694v58h-78"/>
+<path d="M0 470h138v-62h88v-68M900 470H762v-62h-88v-68M390 520v-84h-54v-66M510 520v-84h54v-66"/>
+</g>
+<g fill="#d9e2ed" stroke="#9eb2c9" stroke-width="1" opacity=".65">
+<circle cx="120" cy="95" r="4"/><circle cx="178" cy="0" r="4"/><circle cx="307" cy="150" r="4"/>
+<circle cx="780" cy="95" r="4"/><circle cx="722" cy="0" r="4"/><circle cx="593" cy="150" r="4"/>
+<circle cx="92" cy="280" r="4"/><circle cx="284" cy="338" r="4"/><circle cx="808" cy="280" r="4"/><circle cx="616" cy="338" r="4"/>
+<circle cx="138" cy="470" r="4"/><circle cx="762" cy="470" r="4"/><circle cx="390" cy="436" r="4"/><circle cx="510" cy="436" r="4"/>
+</g>
+<g fill="none" stroke="#b9c9dd" stroke-width="1" opacity=".38">
+<rect x="225" y="145" width="14" height="14" rx="2"/><rect x="661" y="145" width="14" height="14" rx="2"/>
+<rect x="206" y="333" width="14" height="14" rx="2"/><rect x="680" y="333" width="14" height="14" rx="2"/>
+</g>
+</svg>
