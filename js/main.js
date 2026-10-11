@@ -100,7 +100,7 @@ function initFilters() {
       });
       const more = document.getElementById('more-projects');
       if (more) {
-        const cards = document.querySelectorAll('.cards .card');
+        const cards = document.querySelectorAll('.clean-more-card, .cards .card');
         const any = [...cards].some((card) => !card.classList.contains('is-hidden'));
         more.classList.toggle('is-hidden', !any);
       }

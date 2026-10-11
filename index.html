@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mortadha Ghnimi | AI/ML Engineer &amp; Graduate Researcher</title>
+  <title>Mortadha Ghnimi | AI/ML Engineer & Graduate Researcher</title>
   <meta name="description" content="AI/ML engineer and graduate researcher building agentic AI systems, computer vision models, geospatial ML, and high-performance AI systems.">
-  <meta property="og:title" content="Mortadha Ghnimi — AI/ML Engineer &amp; Graduate Researcher">
+  <meta property="og:title" content="Mortadha Ghnimi — AI/ML Engineer & Graduate Researcher">
   <meta property="og:description" content="Agentic AI · Computer Vision · Geospatial AI · ML Systems">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://morta00.github.io/portfolio-preview/">
@@ -43,6 +43,7 @@
     <div class="nav-panel" id="site-nav">
       <nav class="nav-links" aria-label="Primary">
         <a href="#work">Work</a>
+        <a href="#challenge">Play</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
@@ -72,38 +73,60 @@
             <a class="text-link" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
         </div>
-        <figure class="hero-media" data-hero-media data-video="assets/media/hero-intro.mp4" data-poster="assets/hero/portrait.jpg">
+        <figure class="hero-media">
           <div class="hero-stage">
             <img id="hero-portrait" src="assets/hero/portrait.jpg" alt="Professional portrait of Mortadha Ghnimi" width="1024" height="682">
-            <div class="hero-fallback" hidden><p class="identity-mark">MG</p><p>AI/ML Engineer &amp; Graduate Researcher</p></div>
           </div>
         </figure>
       </div>
     </section>
 
-    <dialog class="intro-modal" id="intro-modal" aria-label="Introduction video">
-      <form method="dialog"><button class="intro-close" type="submit" aria-label="Close introduction">Close</button></form>
-      <video id="intro-video" controls playsinline preload="none" poster="assets/hero/portrait.jpg"></video>
-    </dialog>
-
     <div class="wrap">
-      <section class="proof" aria-label="Selected evidence">
+      <section class="proof clean-proof" aria-label="Selected evidence">
         <a href="#vision"><strong>1st Place</strong><em>ML Competition</em><span>93.4% accuracy</span></a>
-        <a href="#autoencoder"><strong data-count="24.73" data-decimals="2" data-suffix="×">24.73×</strong><em>Autoencoder Training</em><span>Same loss as reference</span></a>
+        <a href="#autoencoder"><strong>24.73×</strong><em>Autoencoder Training</em><span>Same loss as reference</span></a>
         <a href="#publication"><strong>Published</strong><em>Springer Research</em><span>ICR'26 · Berlin</span></a>
         <a href="#asjai"><strong>Deployed</strong><em>AI Platform</em><span>RAG · APIs · Automation</span></a>
       </section>
     </div>
 
-    <section class="work-shell" id="work">
-      <div class="wrap section">
-        <div class="section-head">
-          <div><p class="section-label">01 / Selected work</p><h2 class="section-title">Work that proves the range.</h2></div>
-          <p class="section-lead">Four flagship projects across agents, applied AI, computer vision, and AI systems. Open a case study for the engineering detail.</p>
+    <section class="build-strip" aria-labelledby="build-title">
+      <div class="wrap build-grid">
+        <div class="build-intro">
+          <p class="section-label">What I build</p>
+          <h2 id="build-title">AI that works beyond the demo.</h2>
+          <p>My strongest work sits where models meet real systems: planning, perception, data, deployment, and performance.</p>
         </div>
+        <article class="build-pillar">
+          <span>01</span>
+          <h3>Agentic & Applied AI</h3>
+          <p>LLM agents, RAG, tool use, automation, APIs, and human-in-the-loop workflows.</p>
+        </article>
+        <article class="build-pillar">
+          <span>02</span>
+          <h3>Machine Learning & Vision</h3>
+          <p>Deep learning, computer vision, data science, evaluation, and model interpretation.</p>
+        </article>
+        <article class="build-pillar">
+          <span>03</span>
+          <h3>AI Systems & Research</h3>
+          <p>High-performance training, geospatial AI, remote sensing, and research-to-production thinking.</p>
+        </article>
+      </div>
+    </section>
 
-        <div class="filters" aria-label="Filter selected work">
-          <span class="filter-label">Explore by focus</span>
+    <section class="clean-work-shell" id="work">
+      <div class="wrap clean-section">
+        <header class="clean-section-head">
+          <p class="section-label">01 / Selected work</p>
+          <div class="clean-title-row">
+            <h2>Selected work.</h2>
+            <p>Four projects that show how I think across AI systems, applied AI, computer vision, and performance engineering.</p>
+          </div>
+        </header>
+
+        <div class="clean-filter-bar" aria-label="Filter selected work">
+          <span>Focus</span>
           <div class="filter-row" role="group" aria-label="Project focus">
             <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
             <button type="button" class="filter-btn" data-filter="agentic" aria-pressed="false">AI Agents</button>
@@ -114,146 +137,218 @@
           </div>
         </div>
 
-        <div class="flagship-list" id="flagship-list">
-          <article class="showcase" id="geoagent" data-focus="agentic data systems">
-            <div class="showcase-copy">
-              <p class="showcase-kicker"><span>01</span> Agentic AI · Active build</p>
+        <div class="clean-projects">
+          <article class="clean-project" id="geoagent" data-focus="agentic data systems">
+            <div class="clean-project-copy">
+              <p class="clean-project-meta">01 · Agentic AI · Active build</p>
               <h3>GeoAgent</h3>
-              <p class="project-line">Agentic research &amp; data analysis platform</p>
-              <p class="subtitle">A multi-step AI system that plans, selects tools, analyzes data, verifies work, and produces grounded reports.</p>
-              <ul class="project-points">
-                <li>Planner → tools → verifier workflow</li>
-                <li>RAG, SQL, Python analytics, MCP</li>
-                <li>Persistent state, recovery, human approval</li>
-              </ul>
-              <div class="tech-row"><span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span></div>
-              <a class="arrow-link" href="work/geoagent.html">Explore GeoAgent <span>→</span></a>
-            </div>
-            <div class="visual-card visual-dark geo-visual" aria-label="Simplified GeoAgent architecture">
-              <div class="visual-label">SYSTEM FLOW</div>
-              <div class="agent-flow"><span>User request</span><i>→</i><span>Plan</span><i>→</i><span>Act</span><i>→</i><span>Verify</span><i>→</i><span>Report</span></div>
-              <div class="agent-tools"><span>RAG</span><span>SQL</span><span>Python</span><span>MCP</span></div>
-              <p>Evaluation framework in progress.</p>
-            </div>
-          </article>
-
-          <article class="showcase reverse" id="asjai" data-focus="agentic data systems">
-            <div class="showcase-copy">
-              <p class="showcase-kicker"><span>02</span> Applied AI · Private deployed system</p>
-              <h3>AI Automation Platform</h3>
-              <p class="project-line">Asjai Lou Casting</p>
-              <p class="subtitle">A deployed commerce and knowledge platform connecting customer workflows, fulfillment, and grounded AI retrieval.</p>
-              <ul class="project-points">
-                <li>Shopify / TikTok Shop + APIs + webhooks</li>
-                <li>Secure onboarding and fulfillment workflows</li>
-                <li>RAG foundation; agentic extension in development</li>
-              </ul>
-              <div class="tech-row"><span>RAG</span><span>APIs</span><span>Webhooks</span><span>Automation</span></div>
-              <a class="arrow-link" href="work/asjai.html">View private-system case study <span>→</span></a>
-            </div>
-            <div class="visual-card commerce-visual" aria-label="Asjai platform architecture">
-              <div class="visual-label">CONFIDENTIALITY-SAFE ARCHITECTURE</div>
-              <div class="commerce-flow">
-                <span>Commerce</span><i>↓</i><span>API + Webhooks</span><i>↓</i><span>Workflow Automation</span><i>↓</i><span>Customer Platform</span><i>↓</i><span>Knowledge + RAG</span>
+              <p class="clean-project-subtitle">Agentic research & data analysis platform</p>
+              <p class="clean-project-desc">A multi-step AI system that plans, selects tools, analyzes data, verifies its work, and produces grounded reports.</p>
+              <div class="clean-project-facts">
+                <span>Planner → tools → verifier</span>
+                <span>RAG + SQL + Python analytics</span>
+                <span>Persistent state + human approval</span>
               </div>
-              <p>Product UI withheld for client confidentiality.</p>
+              <div class="clean-project-bottom">
+                <div class="clean-tags"><span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span></div>
+                <a class="clean-case-link" href="work/geoagent.html">View case study <span>↗</span></a>
+              </div>
+            </div>
+            <div class="clean-project-visual clean-dark geo-clean" aria-label="Simplified GeoAgent flow">
+              <p class="visual-label">SYSTEM FLOW</p>
+              <div class="clean-flow">
+                <span>Request</span><i>→</i><span>Plan</span><i>→</i><span>Act</span><i>→</i><span>Verify</span><i>→</i><span>Report</span>
+              </div>
+              <div class="clean-mini-tags"><span>RAG</span><span>SQL</span><span>Python</span><span>MCP</span></div>
+              <p class="visual-note">Active build · evaluation framework in progress</p>
             </div>
           </article>
 
-          <article class="showcase" id="vision" data-focus="ml cv">
-            <div class="showcase-copy">
-              <p class="showcase-kicker"><span>03</span> Computer Vision · Completed</p>
-              <h3>1st Place Multiclass Image Classification</h3>
-              <div class="project-metric"><strong>93.4%</strong><span>accuracy · 1st place</span></div>
-              <p class="subtitle">A three-CNN ensemble using WideResNet and ResNet-110, trained from scratch for low-resolution multiclass classification.</p>
-              <ul class="project-points"><li>Ensemble learning</li><li>Pseudo-labeling</li><li>Test-time augmentation</li></ul>
-              <div class="tech-row"><span>TensorFlow</span><span>Keras</span><span>WideResNet</span><span>ResNet-110</span></div>
-              <a class="arrow-link" href="work/kaggle.html">See the winning approach <span>→</span></a>
+          <article class="clean-project" id="asjai" data-focus="agentic data systems">
+            <div class="clean-project-copy">
+              <p class="clean-project-meta">02 · Applied AI · Private deployed system</p>
+              <h3>AI Automation Platform</h3>
+              <p class="clean-project-subtitle">Asjai Lou Casting</p>
+              <p class="clean-project-desc">A deployed commerce and knowledge platform connecting customer workflows, fulfillment, secure onboarding, and grounded AI retrieval.</p>
+              <div class="clean-project-facts">
+                <span>Shopify / TikTok Shop integrations</span>
+                <span>APIs + webhooks + workflow automation</span>
+                <span>RAG foundation; agentic extension in development</span>
+              </div>
+              <div class="clean-project-bottom">
+                <div class="clean-tags"><span>RAG</span><span>APIs</span><span>Webhooks</span><span>Automation</span></div>
+                <a class="clean-case-link" href="work/asjai.html">View case study <span>↗</span></a>
+              </div>
             </div>
-            <figure class="visual-card image-visual">
+            <div class="clean-project-visual commerce-clean" aria-label="Asjai platform architecture">
+              <p class="visual-label">PRIVATE SYSTEM</p>
+              <div class="clean-stack-flow"><span>Commerce</span><i>↓</i><span>API + Webhooks</span><i>↓</i><span>Automation</span><i>↓</i><span>Customer Platform</span><i>↓</i><span>Knowledge + RAG</span></div>
+              <p class="visual-note">Product UI withheld for client confidentiality.</p>
+            </div>
+          </article>
+
+          <article class="clean-project" id="vision" data-focus="ml cv">
+            <div class="clean-project-copy">
+              <p class="clean-project-meta">03 · Computer Vision · Completed</p>
+              <h3>1st Place Multiclass Image Classification</h3>
+              <p class="clean-project-desc">A three-CNN ensemble using WideResNet and ResNet-110, trained from scratch for low-resolution multiclass classification.</p>
+              <div class="clean-highlight"><strong>93.4%</strong><span>accuracy · 1st place</span></div>
+              <div class="clean-project-facts">
+                <span>Ensemble learning</span>
+                <span>Pseudo-labeling</span>
+                <span>Test-time augmentation</span>
+              </div>
+              <div class="clean-project-bottom">
+                <div class="clean-tags"><span>TensorFlow</span><span>Keras</span><span>WideResNet</span></div>
+                <a class="clean-case-link" href="work/kaggle.html">See winning approach <span>↗</span></a>
+              </div>
+            </div>
+            <figure class="clean-project-visual leaderboard-clean">
               <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing Mortadha Ghnimi in first place with a score of 0.934" loading="lazy">
               <figcaption><strong>1st place</strong><span>Competition leaderboard · 0.934</span></figcaption>
             </figure>
           </article>
 
-          <article class="showcase reverse" id="autoencoder" data-focus="systems ml">
-            <div class="showcase-copy">
-              <p class="showcase-kicker"><span>04</span> AI Systems · Completed</p>
+          <article class="clean-project" id="autoencoder" data-focus="systems ml">
+            <div class="clean-project-copy">
+              <p class="clean-project-meta">04 · AI Systems · Completed</p>
               <h3>High-Performance Autoencoder Training</h3>
-              <div class="project-metric"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
-              <p class="subtitle">Optimized one training epoch of a 13,714 → 256 → 32 → 256 → 13,714 autoencoder on sparse single-cell transcriptomics data.</p>
-              <ul class="project-points"><li>Adam training loop optimization</li><li>AVX vectorization + multithreading</li><li>Dense reconstruction blocked for cache locality</li></ul>
-              <div class="tech-row"><span>C++</span><span>AVX</span><span>Adam</span><span>Multithreading</span></div>
-              <a class="arrow-link" href="work/autoencoder.html">View AI-systems case study <span>→</span></a>
+              <p class="clean-project-desc">Optimized one training epoch of a 13,714 → 256 → 32 → 256 → 13,714 autoencoder on sparse single-cell transcriptomics data.</p>
+              <div class="clean-highlight"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
+              <div class="clean-project-facts">
+                <span>Adam training loop optimization</span>
+                <span>AVX + multithreading</span>
+                <span>Cache-aware dense reconstruction</span>
+              </div>
+              <div class="clean-project-bottom">
+                <div class="clean-tags"><span>C++</span><span>AVX</span><span>Adam</span><span>Threads</span></div>
+                <a class="clean-case-link" href="work/autoencoder.html">View AI-systems case study <span>↗</span></a>
+              </div>
             </div>
-            <div class="visual-card autoencoder-visual" aria-label="Autoencoder architecture and training speedup">
-              <div class="visual-label">MODEL + SYSTEMS OPTIMIZATION</div>
-              <div class="network-line"><span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span></div>
-              <div class="speed-compare"><div><small>Reference</small><strong>56.49 s</strong></div><i>→</i><div class="accent-box"><small>Optimized</small><strong>2.28 s</strong></div></div>
-              <p>Full-credit threshold: 10× · Posted result: 24.73×</p>
+            <div class="clean-project-visual auto-clean" aria-label="Autoencoder architecture and speedup">
+              <p class="visual-label">MODEL + SYSTEMS</p>
+              <div class="clean-network"><span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span></div>
+              <div class="clean-speed"><div><small>Reference</small><strong>56.49 s</strong></div><i>→</i><div class="accent-speed"><small>Optimized</small><strong>2.28 s</strong></div></div>
             </div>
           </article>
         </div>
 
-        <div class="more-work" id="more-projects">
-          <div class="more-head"><div><p class="section-label">More work</p><h3>Additional evidence, without diluting the flagship story.</h3></div></div>
-          <div class="cards">
-            <a class="card metric-card" data-focus="systems ml" href="work/hpc.html"><div class="card-stage metric-stage"><span>Leaderboard</span><strong>68.78×</strong></div><div class="card-eyebrow">Systems foundation</div><h3>Sparse ML Kernel Optimization</h3><p>1st place leaderboard · 6/6 correct · packed CSR, OpenMP, SIMD.</p></a>
-            <a class="card" id="fraud" data-focus="ml data" href="work/fraud.html"><figure class="card-figure"><img src="assets/fraud/roc-curves.png" alt="ROC curves for healthcare fraud models" loading="lazy"></figure><div class="card-eyebrow">Data science</div><h3>Cost-Sensitive Healthcare Fraud Detection</h3><p>0.946 ROC-AUC · 74 engineered features · cost-sensitive decisions.</p></a>
-            <a class="card" data-focus="agentic systems" href="work/gymbox.html"><figure class="card-figure phone"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox home screen with activity and sleep tracking" loading="lazy"></figure><div class="card-eyebrow">Applied AI</div><h3>GymBox AI</h3><p>RAG-powered training and nutrition assistant integrated into a React Native product.</p></a>
-            <a class="card species-card" data-focus="cv ml" href="work/wildlife.html"><div class="species-stage" aria-hidden="true"><b>10</b><span>Forest species</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="card-eyebrow">Computer vision</div><h3>Wildlife Computer Vision</h3><p>Custom CNNs and data augmentation for 10 forest animal species.</p></a>
+        <div class="clean-more" id="more-projects">
+          <div class="clean-more-head"><p class="section-label">More work</p><h3>Additional evidence, kept intentionally compact.</h3></div>
+          <div class="clean-more-grid">
+            <a class="clean-more-card" data-focus="systems ml" href="work/hpc.html"><span class="more-top">Systems</span><strong>68.78×</strong><h4>Sparse ML Kernel Optimization</h4><p>1st place leaderboard · 6/6 correct · packed CSR, OpenMP, SIMD.</p></a>
+            <a class="clean-more-card" data-focus="ml data" href="work/fraud.html"><span class="more-top">Data Science</span><strong>0.946</strong><h4>Healthcare Fraud Detection</h4><p>74 engineered features · cost-sensitive ML · ROC-AUC 0.946.</p></a>
+            <a class="clean-more-card clean-more-media" data-focus="agentic systems" href="work/gymbox.html"><span class="more-top">Applied AI</span><h4>GymBox AI</h4><p>RAG-powered training and nutrition assistant integrated into a React Native product.</p><span class="more-arrow">View project ↗</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="research-band" id="research">
-      <div class="wrap section anchor-section">
-        <div class="section-head research-head"><div><p class="section-label">02 / Research &amp; publications</p><h2 class="section-title">Research that connects models to real decisions.</h2></div><p class="section-lead">Vegetation-stress monitoring from multisensor satellite time series, in progress at Grand Valley State University.</p></div>
-
-        <article class="research-feature">
-          <div class="research-copy"><p class="showcase-kicker">Current research · Grand Valley State University</p><h3>AI for Earth Observation</h3><p class="subtitle">Developing vegetation-stress monitoring from multisensor satellite time series, with emphasis on temporal representation learning, expected vegetation state, and geospatial anomaly detection.</p><div class="research-tags"><span>Remote Sensing</span><span>Temporal Foundation Models</span><span>Multimodal AI</span><span>Geospatial ML</span></div><div class="research-flow"><span>Satellite time series</span><i>→</i><span>Representation</span><i>→</i><span>Expected state</span><i>→</i><span>Anomaly</span><i>→</i><span>Map</span></div></div>
-          <div class="research-media"><img src="assets/research/anomaly-overview.png" alt="Regional satellite map with detected vegetation anomalies" loading="lazy"><img src="assets/research/anomaly-detail.png" alt="Detailed satellite view of detected vegetation anomalies" loading="lazy"></div>
-        </article>
-
+    <section class="challenge-shell" id="challenge">
+      <div class="wrap challenge-card">
+        <div class="challenge-copy">
+          <p class="section-label">Career fair challenge</p>
+          <h2>Think you can beat my AI?</h2>
+          <p>Try a fast Connect Four challenge against a minimax agent with alpha-beta pruning. It is a playful demo, but the engineering underneath is real classical AI: search, evaluation, pruning, and decision-making under constraints.</p>
+          <div class="challenge-points">
+            <span>Minimax search</span><span>Alpha-beta pruning</span><span>Heuristic evaluation</span>
+          </div>
+          <a class="btn btn-primary challenge-cta" href="play.html">Play the AI challenge →</a>
+          <p class="challenge-joke">If it wins, I’ll count that as one vote for hiring me.</p>
+        </div>
+        <div class="challenge-visual" aria-label="Stylized Connect Four board preview">
+          <div class="mini-board" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span class="ai"></span><span></span><span></span><span></span>
+            <span></span><span></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
+            <span></span><span class="human"></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
+            <span></span><span class="human"></span><span class="ai"></span><span class="ai"></span><span></span><span></span><span></span>
+          </div>
+          <div class="challenge-badge"><strong>YOU</strong><span>vs</span><strong>AI</strong></div>
+        </div>
       </div>
     </section>
 
-    <section class="publication-shell" id="publication">
-      <div class="wrap section anchor-section">
-        <div class="section-head"><div><p class="section-label">Peer-reviewed publication</p><h2 class="section-title">Clinically interpretable heart-disease prediction.</h2></div><p class="section-lead">SHAP and LIME compared across heart-disease prediction models. Springer LNNS, ICR'26, Berlin.</p></div>
-        <article class="publication">
-          <div class="pub-year">SPRINGER · ICR'26 · BERLIN</div>
-          <div class="pub-content"><p class="showcase-kicker">Co-author</p><h3>Towards Clinically Interpretable Heart Disease Prediction: A Comparative Analysis of Explainability Methods for Machine Learning Models</h3><p class="authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p><p class="subtitle">Comparative analysis of SHAP and LIME across heart-disease prediction models, examining explanation consistency and clinical interpretability. Lecture Notes in Networks and Systems, pp. 305–314.</p><a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">View paper / DOI <span>↗</span></a></div>
-        </article>
+    <section class="clean-research" id="research">
+      <div class="wrap clean-section clean-research-wrap">
+        <header class="clean-section-head dark-head">
+          <p class="section-label">02 / Research & publication</p>
+          <div class="clean-title-row">
+            <h2>Research that connects models to real decisions.</h2>
+            <p>Current Earth-observation research plus peer-reviewed work in interpretable machine learning.</p>
+          </div>
+        </header>
+
+        <div class="clean-research-grid">
+          <article class="clean-research-main">
+            <p class="clean-project-meta light-meta">Current research · Grand Valley State University</p>
+            <h3>AI for Earth Observation</h3>
+            <p>Developing vegetation-stress monitoring from multisensor satellite time series, with emphasis on temporal representation learning, expected vegetation state, and geospatial anomaly detection.</p>
+            <div class="clean-research-media"><img src="assets/research/anomaly-overview.png" alt="Regional satellite map with detected vegetation anomalies" loading="lazy"><img src="assets/research/anomaly-detail.png" alt="Detailed satellite view of detected vegetation anomalies" loading="lazy"></div>
+            <div class="clean-research-tags"><span>Remote Sensing</span><span>Temporal Foundation Models</span><span>Multimodal AI</span><span>Geospatial ML</span></div>
+          </article>
+
+          <article class="clean-publication" id="publication">
+            <p class="clean-project-meta light-meta">Peer-reviewed publication · Springer · ICR'26 · Berlin</p>
+            <h3>Towards Clinically Interpretable Heart Disease Prediction</h3>
+            <p class="pub-title">A Comparative Analysis of Explainability Methods for Machine Learning Models</p>
+            <p class="pub-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
+            <p>Comparative analysis of SHAP and LIME across heart-disease prediction models, examining explanation consistency and clinical interpretability.</p>
+            <a class="clean-case-link light-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">View paper / DOI <span>↗</span></a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="experience-shell" id="experience">
-      <div class="wrap section anchor-section">
-        <div class="section-head"><div><p class="section-label">03 / Experience</p><h2 class="section-title">From building products to researching AI systems.</h2></div><p class="section-lead">A progression from product engineering, to deployed applied AI, to graduate research.</p></div>
-        <ol class="journey">
-          <li><div class="journey-step">01</div><p class="phase">2025 · Product engineering</p><h3>AI &amp; Mobile Developer</h3><p class="where">Smart It Partner · Tunis</p><p>Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p><p class="keywords">RAG · Recommendations · Computer Vision</p><a class="arrow-link" href="work/gymbox.html">Related work <span>→</span></a></li>
-          <li><div class="journey-step">02</div><p class="phase">2026 · Applied AI</p><h3>AI &amp; Automation Intern</h3><p class="where">Asjai Lou Casting · Remote / New York</p><p>Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p><p class="keywords">APIs · Webhooks · RAG · Deployment</p><a class="arrow-link" href="work/asjai.html">Platform case study <span>→</span></a></li>
-          <li class="is-current"><div class="journey-step">03</div><p class="phase">2026 — Present · Research</p><h3>Graduate Research Assistant</h3><p class="where">Grand Valley State University</p><p>Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p><p class="keywords">Remote Sensing · Temporal AI · Geospatial ML</p><a class="arrow-link" href="#research">Current research <span>↑</span></a></li>
-        </ol>
+    <section class="clean-experience" id="experience">
+      <div class="wrap clean-section">
+        <header class="clean-section-head">
+          <p class="section-label">03 / Experience</p>
+          <div class="clean-title-row">
+            <h2>From product engineering to AI research.</h2>
+            <p>A simple progression: build products, ship applied AI, then go deeper into research.</p>
+          </div>
+        </header>
+
+        <div class="career-story">
+          <article>
+            <div class="career-year">2025</div>
+            <div class="career-role"><p>Product engineering</p><h3>AI & Mobile Developer</h3><span>Smart It Partner · Tunis</span></div>
+            <div class="career-copy"><p>Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p><a href="work/gymbox.html">Related work ↗</a></div>
+          </article>
+          <article>
+            <div class="career-year">2026</div>
+            <div class="career-role"><p>Applied AI</p><h3>AI & Automation Intern</h3><span>Asjai Lou Casting · Remote / New York</span></div>
+            <div class="career-copy"><p>Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p><a href="work/asjai.html">Platform case study ↗</a></div>
+          </article>
+          <article class="career-current">
+            <div class="career-year">2026—</div>
+            <div class="career-role"><p>Graduate research</p><h3>Graduate Research Assistant</h3><span>Grand Valley State University</span></div>
+            <div class="career-copy"><p>Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p><a href="#research">Current research ↑</a></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="about-shell" id="about">
-      <div class="wrap section anchor-section about-section">
-        <div class="about-grid"><div class="about-photo-wrap"><img class="about-photo" src="assets/hero/portrait.jpg" alt="Mortadha Ghnimi" width="1024" height="682"></div><div><p class="section-label">04 / About</p><h2 class="section-title">Researcher mindset. Engineer execution.</h2><p>I work at the intersection of AI research and engineering — understanding how a model behaves, building the surrounding system, measuring its performance, and turning it into something useful.</p><p>I'm pursuing an M.S. in Artificial Intelligence at Grand Valley State University, where I work as a Graduate Research Assistant.</p></div></div>
-
-        <div class="capabilities" aria-label="Technical capabilities">
-          <div class="cap"><span>01</span><h4>AI / ML</h4><ul><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Hugging Face</li><li>Computer Vision</li></ul></div>
-          <div class="cap"><span>02</span><h4>Agents / GenAI</h4><ul><li>LLMs</li><li>RAG</li><li>LangGraph</li><li>LangChain</li><li>MCP</li><li>Tool Calling</li></ul></div>
-          <div class="cap"><span>03</span><h4>Data</h4><ul><li>Pandas</li><li>NumPy</li><li>SQL</li><li>PostgreSQL</li><li>pgvector</li></ul></div>
-          <div class="cap"><span>04</span><h4>Geospatial</h4><ul><li>Google Earth Engine</li><li>Remote Sensing</li><li>Time-Series Analysis</li></ul></div>
-          <div class="cap"><span>05</span><h4>Backend / Systems</h4><ul><li>FastAPI</li><li>REST APIs</li><li>Docker</li><li>Git</li><li>OpenMP</li><li>SIMD</li></ul></div>
-          <div class="cap"><span>06</span><h4>Languages</h4><ul><li>Python</li><li>C++</li><li>Java</li><li>JavaScript / TypeScript</li><li>SQL</li></ul></div>
+    <section class="clean-about" id="about">
+      <div class="wrap clean-section">
+        <div class="clean-about-top">
+          <div><p class="section-label">04 / About</p><h2>Researcher mindset.<br>Engineer execution.</h2></div>
+          <div class="clean-about-copy"><p>I work at the intersection of AI research and engineering — understanding how a model behaves, building the surrounding system, measuring its performance, and turning it into something useful.</p><p>I'm pursuing an M.S. in Artificial Intelligence at Grand Valley State University, where I work as a Graduate Research Assistant.</p></div>
         </div>
 
-        <div class="recognition"><p class="section-label">Selected recognition</p><div class="recognition-grid"><div><strong>1st Place</strong><span>ML competition · 93.4%</span></div><div><strong>1st Place</strong><span>HPC kernel leaderboard · 68.78×</span></div><div><strong>Springer</strong><span>ICR'26 · Berlin · co-author</span></div><div><strong>Merit GA</strong><span>Grand Valley State University</span></div><div><strong>Top-ranked</strong><span>B.S. graduate · Faculty of Science of Bizerte</span></div></div></div>
+        <div class="clean-capabilities" aria-label="Technical capabilities">
+          <div><span>AI / ML</span><p>PyTorch · TensorFlow · scikit-learn · Hugging Face · Computer Vision</p></div>
+          <div><span>Agents / GenAI</span><p>LLMs · RAG · LangGraph · LangChain · MCP · Tool Calling</p></div>
+          <div><span>Data / Geospatial</span><p>Pandas · NumPy · PostgreSQL · pgvector · Google Earth Engine · Remote Sensing</p></div>
+          <div><span>Backend / Systems</span><p>FastAPI · REST APIs · Docker · Git · OpenMP · SIMD · C++</p></div>
+        </div>
+
+        <div class="clean-recognition">
+          <span>Selected recognition</span>
+          <p>1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
+        </div>
       </div>
     </section>
 

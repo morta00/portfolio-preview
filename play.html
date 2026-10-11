@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat My AI | Mortadha Ghnimi</title>
+  <meta name="description" content="Play Connect Four against Mortadha Ghnimi's minimax AI agent with alpha-beta pruning.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f3f0e8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-page">
+  <main class="game-shell">
+    <div class="game-top">
+      <a class="game-back" href="index.html#challenge">← Back to portfolio</a>
+      <a class="nav-brand" href="index.html">Mortadha Ghnimi</a>
+    </div>
+
+    <div class="game-layout">
+      <section class="game-copy" aria-labelledby="game-title">
+        <p class="game-kicker">Career fair AI challenge</p>
+        <h1 id="game-title">Can you beat my AI?</h1>
+        <p>You play first. The agent searches future board states with minimax, prunes weak branches with alpha-beta pruning, and scores positions using threats, center control, and connected pieces.</p>
+        <div class="game-tech">
+          <div><strong>Search</strong><span>Minimax with alpha-beta pruning</span></div>
+          <div><strong>Evaluation</strong><span>Winning threats, open windows, center control</span></div>
+          <div><strong>Goal</strong><span>Choose the move with the strongest future position</span></div>
+        </div>
+        <p class="game-note">This is classical AI rather than machine learning — a compact demo of search, reasoning, and decision-making.</p>
+      </section>
+
+      <section class="game-panel" aria-label="Connect Four game">
+        <div class="game-status-row">
+          <div class="game-status" id="game-status" aria-live="polite">Your move — choose a column.</div>
+          <div class="game-score"><span>You <b id="human-score">0</b></span><span>AI <b id="ai-score">0</b></span></div>
+        </div>
+        <div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div>
+        <div class="game-legend" aria-hidden="true"><span><i class="game-dot human"></i>You</span><span><i class="game-dot ai"></i>AI</span></div>
+        <div class="game-actions">
+          <p class="game-note">Tap any open column to drop your piece.</p>
+          <button class="btn btn-secondary" id="restart-game" type="button">New game</button>
+        </div>
+        <div class="game-result" id="game-result" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
