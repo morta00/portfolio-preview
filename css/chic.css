@@ -432,3 +432,66 @@
   .research-inset-v9 { width: 42%; min-width: 135px; }
   .research-brief-v9 { gap: 1.1rem; }
 }
+
+/* A confident, direct introduction paired with Boulbaba-style project stories. */
+.hero-shell { background: #f4f1e9; }
+.hero {
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, .78fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  padding: clamp(4.5rem, 9vh, 7rem) 0;
+}
+.hero-copy h1 {
+  max-width: 800px;
+  font: 600 clamp(3.2rem, 6.2vw, 5.8rem)/.99 var(--sans);
+  letter-spacing: -.065em;
+}
+.hero-copy h1 span { display: block; color: #52715f; }
+.hero-copy .eyebrow { color: #52715f; }
+.hero-copy .lede { max-width: 620px; color: #5f675f; }
+.hero-stage {
+  position: relative;
+  border-radius: 18px;
+  background: #e9e7de;
+  box-shadow: 0 24px 64px rgba(31, 40, 33, .11);
+}
+.hero-identity {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: grid;
+  gap: .2rem;
+  padding: .8rem 1rem;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 10px;
+  color: #202720;
+  background: rgba(250, 249, 245, .93);
+  box-shadow: 0 8px 24px rgba(20, 28, 22, .12);
+  backdrop-filter: blur(10px);
+}
+.hero-identity span {
+  color: #647066;
+  font: 500 .62rem var(--mono);
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.hero-identity strong { font-size: .9rem; font-weight: 600; }
+.btn-primary { background: #52715f; }
+.btn-primary:hover { background: #405c4b; }
+.project-feature-copy h2 { font-weight: 600; }
+.project-feature-media { border-radius: 8px; }
+.project-feature-screen { border-top-color: rgba(24, 31, 26, .1); }
+.project-feature-kicker,
+.project-feature-result { border-radius: 5px; }
+.project-case-link { font-weight: 600; }
+
+@media (max-width: 899px) {
+  .hero { gap: 2rem; padding: 4rem 0; }
+  .hero-copy h1 { font-size: clamp(3rem, 7vw, 4.6rem); }
+}
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; gap: 2.25rem; padding: 3.25rem 0 4rem; }
+  .hero-copy h1 { font-size: clamp(2.75rem, 11vw, 4.2rem); }
+  .hero-media { justify-self: stretch; width: 100%; max-width: 480px; }
+  .hero-stage { border-radius: 14px; }
+}
