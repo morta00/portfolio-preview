@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=2">
+  <link rel="stylesheet" href="css/portfolio.css?v=3">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
         <a href="#work">Projects</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="#play">Play</a>
+        <a href="#challenge">Challenge</a>
         <a href="#about">Skills</a>
       </nav>
       <div class="nav-side">
@@ -64,7 +64,6 @@
           <h1>Mortadha<br><span>Ghnimi</span></h1><h2 class="hero-role">AI / Machine Learning Engineer</h2>
           <p class="lede">Building AI systems that connect research with practical applications—from intelligent agents to satellite vegetation monitoring.</p>
           <p class="domains">Agentic AI <span>·</span> Computer Vision <span>·</span> Remote Sensing <span>·</span> ML Systems</p>
-          <p class="status-line" data-opportunity hidden><span class="dot" aria-hidden="true"></span><strong>Open to Summer 2027</strong><span>AI / ML / Research internships</span></p>
           <div class="actions">
             <a class="btn btn-primary" href="#work">View selected work</a>
             <a class="btn btn-secondary" data-resume-link href="resume.html">Download resume</a>
@@ -118,14 +117,14 @@
 
 </div></section>
     <section class="projects-showcase" id="work" aria-label="Selected projects">
-      <header class="wrap projects-showcase-head">
+
+      <section class="project-feature-screen project-first-screen" id="geoagent" aria-labelledby="geoagent-title">      <header class="wrap projects-showcase-head">
         <div>
           <p class="section-label">01 / Featured work</p>
           <h2>Featured Work</h2>
         </div>
         <p>Selected projects across intelligent agents, applied AI, and computer vision.</p>
       </header>
-      <section class="project-feature-screen" id="geoagent" aria-labelledby="geoagent-title">
         <div class="wrap project-feature-grid">
           <a class="project-feature-media" href="work/geoagent.html" aria-label="Open GeoAgent case study">
             <span class="project-feature-kicker">Featured project · 01</span>
@@ -192,7 +191,7 @@
         </div>
       </section>
 
-<section class="project-feature-screen" id="gymbox"><div class="wrap project-feature-grid"><a class="project-feature-media project-feature-screenshot" href="work/gymbox.html" aria-label="Open GymBox case study"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox mobile application dashboard" loading="lazy"></a><div class="project-feature-copy"><p class="project-feature-category">Mobile development · Applied AI</p><h2>GymBox</h2><p class="project-feature-description">A mobile product connecting a fitness experience with AI-assisted recommendations and retrieval-based support.</p><p class="project-capabilities-label">Key capabilities</p><ul class="project-capabilities"><li>Mobile product experience</li><li>Retrieval-augmented AI assistance</li><li>Recommendation workflows</li></ul><div class="project-tech"><span>Mobile</span><span>RAG</span><span>Recommendations</span></div><a class="project-case-link" href="work/gymbox.html">View project & demos <span aria-hidden="true">↗</span></a></div></div></section>      <section class="project-more-screen" aria-labelledby="more-work-title">
+<section class="project-feature-screen" id="gymbox"><div class="wrap project-feature-grid"><a class="mobile-showcase" href="work/gymbox.html" aria-label="Explore GymBox mobile screens and videos"><span class="mobile-glow" aria-hidden="true"></span><figure class="phone-device phone-left"><img src="assets/gymbox/screens/profile-dashboard.png" alt="GymBox profile and activity analytics" loading="lazy"></figure><figure class="phone-device phone-center"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox home and activity dashboard" loading="lazy"></figure><figure class="phone-device phone-right"><img src="assets/gymbox/screens/boxai.png" alt="Box AI fitness assistant conversation" loading="lazy"></figure><span class="mobile-caption">React Native app · Live product screens <span aria-hidden="true">↗</span></span></a><div class="project-feature-copy"><p class="project-feature-category">Mobile development · Applied AI</p><h2>GymBox + Box AI</h2><p class="project-feature-description">A React Native fitness app with an integrated AI coach. I built the chat experience and FastAPI service, with FAISS retrieval and Gemma powering training and nutrition support.</p><p class="project-capabilities-label">Key capabilities</p><ul class="project-capabilities"><li>Mobile product experience</li><li>Retrieval-augmented AI assistance</li><li>Recommendation workflows</li></ul><div class="project-tech"><span>React Native</span><span>FastAPI</span><span>FAISS · Gemma</span></div><a class="project-case-link" href="work/gymbox.html">View project & demos <span aria-hidden="true">↗</span></a></div></div></section>      <section class="project-more-screen" id="engineering" aria-labelledby="more-work-title">
         <div class="wrap project-more-inner">
           <header class="project-more-heading">
             <p class="project-feature-category">More selected work</p>
@@ -294,33 +293,19 @@
         </header>
 
         <div class="experience-timeline">
-<article class="experience-card experience-card-current">
-            <span class="experience-node" aria-hidden="true">01</span>
-            <div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026—</span></div>
-            <h3>Graduate Research Assistant</h3>
-            <p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p>
-            <p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
+<details class="experience-card experience-accordion" open><span class="experience-node" aria-hidden="true">01</span><summary><div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026—</span></div><h3>Graduate Research Assistant</h3><p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
             <div class="experience-tags"><span>Satellite time series</span><span>Vegetation monitoring</span><span>Temporal representations</span></div>
             <a class="experience-link" href="#research">See current research <span aria-hidden="true">↑</span></a>
-          </article>
-<article class="experience-card">
-            <span class="experience-node" aria-hidden="true">02</span>
-            <div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div>
-            <h3>AI & Automation Intern</h3>
-            <p class="experience-organization">Asjai Lou Casting <span>·</span> Remote / New York</p>
-            <p class="experience-description">Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p>
+          </div></details>
+<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">02</span><summary><div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div><h3>AI & Automation Intern</h3><p class="experience-organization">Asjai Lou Casting <span>·</span> Remote / New York</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p>
             <div class="experience-tags"><span>APIs + webhooks</span><span>Commerce automation</span><span>Grounded RAG</span></div>
             <a class="experience-link" href="work/asjai.html">View the platform case study <span aria-hidden="true">↗</span></a>
-          </article>
-<article class="experience-card">
-            <span class="experience-node" aria-hidden="true">03</span>
-            <div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div>
-            <h3>AI & Mobile Developer</h3>
-            <p class="experience-organization">Smart It Partner <span>·</span> Tunis</p>
-            <p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
+          </div></details>
+<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">03</span><summary><div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div><h3>AI & Mobile Developer</h3><p class="experience-organization">Smart It Partner <span>·</span> Tunis</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
             <div class="experience-tags"><span>RAG systems</span><span>Recommendations</span><span>Computer vision</span></div>
             <a class="experience-link" href="work/gymbox.html">Explore related work <span aria-hidden="true">↗</span></a>
-          </article>
+          </div></details>
+<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">04</span><summary><div class="experience-card-top"><p>Network intelligence</p></div><h3>Data Analyst · Network Monitoring</h3><p class="experience-organization">Tunisie Telecom <span>·</span> Tunisia</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Analyzed network-monitoring data to identify service issues, unusual traffic patterns, and signs of potential attacks. Turned operational signals into clear findings to support troubleshooting and network-security investigations.</p><div class="experience-tags"><span>Network monitoring</span><span>Anomaly analysis</span><span>Security signals</span></div></div></details>
         </div>
       </div>
     </section>
@@ -333,81 +318,36 @@
           <p>A focused technical profile across intelligent systems, machine learning, and research engineering.</p>
         </header>
 
-        <div class="toolkit">
-          <div class="toolkit-heading">
-            <div>
-              <p class="section-label">Technical toolkit</p>
-              <h3>Technical Toolkit</h3>
-            </div>
-            <p>Grouped by the work they support rather than by buzzword count.</p>
-          </div>
+<div class="terminal-grid"><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>models.py</span><span class="terminal-language">Python</span></header><pre><code><span class="code-comment"># machine learning & computer vision</span>
+<span class="code-key">import</span> <span class="code-name">torch</span>
+<span class="code-key">import</span> <span class="code-name">tensorflow</span> <span class="code-key">as</span> tf
+<span class="code-key">import</span> <span class="code-name">sklearn</span>
 
-          <div class="skill-tabs" role="tablist" aria-label="Technical skill categories">
-            <button class="skill-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="skill-panel-ai" data-skill-tab="ai">AI & Agents</button>
-            <button class="skill-tab" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-ml" data-skill-tab="ml">ML & Vision</button>
-            <button class="skill-tab" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-data" data-skill-tab="data">Data & Geospatial</button>
-            <button class="skill-tab" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-systems" data-skill-tab="systems">Backend & Systems</button>
-          </div>
+<span class="code-comment"># agents & retrieval</span>
+<span class="code-key">import</span> <span class="code-name">langgraph</span>
+<span class="code-key">import</span> <span class="code-name">langchain</span>
 
-          <div class="skill-panels">
-            <section class="skill-panel is-active" id="skill-panel-ai" role="tabpanel" data-skill-panel="ai">
-              <div class="skill-panel-copy">
-                <span class="skill-panel-kicker">01 / AI & Agents</span>
-                <h4>Intelligent systems that can retrieve, decide, and act.</h4>
-                <p>My applied AI work focuses on grounded generation, multi-step orchestration, tool use, and reliable workflows around the model.</p>
-              </div>
-              <div class="skill-chips">
-                <span>LLMs</span><span>RAG</span><span>LangGraph</span><span>LangChain</span><span>MCP</span><span>Tool Calling</span><span>pgvector</span><span>Human Approval</span>
-              </div>
-            </section>
+focus = [<span class="code-string">"Vision"</span>, <span class="code-string">"RAG"</span>, <span class="code-string">"Tool use"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Model training, evaluation, and agent workflows<span class="terminal-cursor" aria-hidden="true"></span></div></article><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>systems.py</span><span class="terminal-language">Python / C++</span></header><pre><code><span class="code-comment"># data & earth observation</span>
+<span class="code-key">import</span> <span class="code-name">pandas</span> <span class="code-key">as</span> pd
+<span class="code-key">import</span> <span class="code-name">numpy</span> <span class="code-key">as</span> np
+<span class="code-key">import</span> <span class="code-name">ee</span>
 
-            <section class="skill-panel" id="skill-panel-ml" role="tabpanel" data-skill-panel="ml" hidden>
-              <div class="skill-panel-copy">
-                <span class="skill-panel-kicker">02 / ML & Vision</span>
-                <h4>Models measured by evidence, not just demos.</h4>
-                <p>Training, evaluation, ensembling, feature engineering, computer vision, and practical experimentation across structured and visual data.</p>
-              </div>
-              <div class="skill-chips">
-                <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Hugging Face</span><span>Computer Vision</span><span>Ensembles</span><span>Evaluation</span><span>Feature Engineering</span>
-              </div>
-            </section>
+<span class="code-comment"># services & performance</span>
+<span class="code-key">from</span> fastapi <span class="code-key">import</span> <span class="code-name">FastAPI</span>
 
-            <section class="skill-panel" id="skill-panel-data" role="tabpanel" data-skill-panel="data" hidden>
-              <div class="skill-panel-copy">
-                <span class="skill-panel-kicker">03 / Data & Geospatial</span>
-                <h4>From raw observations to spatial and temporal signals.</h4>
-                <p>Data processing for machine learning and Earth observation, including multisensor satellite time series and geospatial analysis.</p>
-              </div>
-              <div class="skill-chips">
-                <span>Pandas</span><span>NumPy</span><span>PostgreSQL</span><span>Google Earth Engine</span><span>Remote Sensing</span><span>Sentinel-1</span><span>Sentinel-2</span><span>Time Series</span>
-              </div>
-            </section>
-
-            <section class="skill-panel" id="skill-panel-systems" role="tabpanel" data-skill-panel="systems" hidden>
-              <div class="skill-panel-copy">
-                <span class="skill-panel-kicker">04 / Backend & Systems</span>
-                <h4>The engineering layer that makes AI usable.</h4>
-                <p>Backend services, APIs, deployment packaging, performance optimization, and low-level systems work around ML workloads.</p>
-              </div>
-              <div class="skill-chips">
-                <span>FastAPI</span><span>REST APIs</span><span>Docker</span><span>Git</span><span>Python</span><span>C++</span><span>OpenMP</span><span>SIMD</span>
-              </div>
-            </section>
-          </div>
-        </div>
-
-        <div class="expertise-recognition">
+stack = [<span class="code-string">"SQL"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"Git"</span>]
+systems = [<span class="code-string">"C++"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Satellite pipelines, APIs, and optimized ML kernels<span class="terminal-cursor" aria-hidden="true"></span></div></article></div><div class="focus-switch"><span>Explore my focus:</span><button type="button" class="is-active" data-focus-output="ai" aria-pressed="true">Applied AI</button><button type="button" data-focus-output="research" aria-pressed="false">Research</button><button type="button" data-focus-output="systems" aria-pressed="false">Systems</button></div><div class="terminal-output" aria-live="polite"><span class="terminal-prompt">❯</span><p id="focus-output">I connect language models with retrieval, tools, and APIs to build usable AI applications.</p></div>        <div class="expertise-recognition">
           <span>Selected recognition</span>
           <p>GVSU Pitch Competition Finalist · 1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
         </div>
       </div>
     </section>
 
-    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
+<section class="career-challenge" id="challenge" aria-labelledby="challenge-title"><div class="wrap challenge-inner"><header class="center-head"><p class="section-label">The career-fair challenge</p><h2 id="challenge-title">Three seconds. One challenge.</h2><p>Stop the clock at exactly 3.00 seconds. Beat the timing bot’s precision.</p></header><div class="challenge-card"><div class="challenge-clock"><span class="challenge-target">TARGET · 3.00 SECONDS</span><div class="timer-display" id="precision-clock" aria-hidden="true">0.00<span>s</span></div><p id="precision-instruction">One button. One shot. Ready?</p><button type="button" class="btn btn-primary timer-button" id="precision-button">Start challenge</button><button type="button" class="timer-reset" id="precision-reset">Reset</button></div><div class="challenge-rival"><span class="rival-label">YOUR CHALLENGER</span><div class="bot-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="27" rx="9"/><path d="M24 6v7M19 31h10"/><circle cx="18" cy="24" r="2"/><circle cx="30" cy="24" r="2"/></svg></div><h3>The timing bot</h3><p>Keep your cool. Trust your timing.</p><div class="precision-scores"><div><span>Your error</span><strong id="human-error">—</strong></div><div><span>Bot error</span><strong id="bot-error">—</strong></div></div><p class="timing-disclosure">A simulated timing rival. Try Connect Four below for an opponent powered by minimax search.</p></div></div><div class="challenge-outcome" id="precision-outcome" aria-live="polite"><p>A little friendly competition. A good conversation starter.</p></div><div class="challenge-links"><a href="#play">Play the search-based AI ↓</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Meet the engineer ↗</a></div></div></section>    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
       <div class="wrap portfolio-play-inner">
         <header class="portfolio-play-head">
-          <div><p class="section-label">06 / Playground</p><h2 id="play-title">Take on the AI.</h2></div>
-          <p>Two games, two search strategies. Start with Tic-Tac-Toe, then test yourself against Connect Four.</p>
+          <div><p class="section-label">06 / Playground</p><h2 id="play-title">Can you beat my AI?</h2></div>
+          <p>Pick a quick match or try Connect Four. Win or lose, let’s build something together.</p>
         </header>
         <div class="game-switch-v4" role="tablist" aria-label="Choose a game">
           <button id="tab-quick" type="button" role="tab" aria-selected="true" aria-controls="panel-quick" data-game-tab="quick">
@@ -452,14 +392,15 @@
     </section>
 
     <section class="contact-shell" id="contact">
-      <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Get in Touch</h2><p>Open to Summer 2027 AI/ML and research internships. Let’s talk about your team, a research idea, or a project.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">ghnimim@mail.gvsu.edu ↗</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
+      <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Get in Touch</h2><p>Let’s talk about AI engineering, applied machine learning, or research. Have a team or a technical challenge in mind? I’d love to hear about it.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">ghnimim@mail.gvsu.edu ↗</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
     </section>
 
     <footer class="wrap footer"><p>© <span id="year"></span> Mortadha Ghnimi</p><p>AI/ML Engineer · Graduate Researcher</p></footer>
   </main>
 
   <script src="js/site.config.js"></script>
-  <script src="js/main.js?v=5"></script>
-  <script src="js/game.js?v=2"></script>
+  <script src="js/main.js?v=6"></script>
+  <script src="js/game.js?v=3"></script>
+  <script src="js/career-fair.js?v=1"></script>
 </body>
 </html>

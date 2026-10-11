@@ -79,15 +79,15 @@
     if (result === 'human') {
       tttHumanScore++;
       tttStatusEl.textContent = 'You won.';
-      tttResultEl.textContent = 'You beat the quick agent. Nice. Now try hard mode.';
+      tttResultEl.textContent = 'You’ve got the strategy. Let’s build intelligent systems together.';
     } else if (result === 'ai') {
       tttAiScore++;
       tttStatusEl.textContent = 'AI wins.';
-      tttResultEl.textContent = 'The AI got three in a row. Want the harder challenge?';
+      tttResultEl.textContent = 'One vote for hiring Mortadha? I’ll take it. Let’s talk AI.';
     } else {
       tttDrawScore++;
       tttStatusEl.textContent = 'Draw.';
-      tttResultEl.textContent = 'A draw is the expected result against perfect play. Try hard mode.';
+      tttResultEl.textContent = 'A strong match. Sounds like we’d make a good team.';
     }
     hardModeLink.classList.add('is-visible');
     renderTtt(win?.line || []);
