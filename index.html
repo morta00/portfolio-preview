@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/chic.css?v=11">
+  <link rel="stylesheet" href="css/chic.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
         <a href="#work">Work</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="play.html">Play</a>
+        <a href="#play">Play</a>
         <a href="#about">About</a>
       </nav>
       <div class="nav-side">
@@ -202,17 +202,16 @@
       </section>
     </section>
 
-    <section class="research-portfolio research-reorg" id="research" aria-labelledby="research-overview-title">
-      <div class="wrap research-reorg-inner">
-        <header class="research-reorg-head">
-          <div>
-            <p class="section-label">02 / Research</p>
-            <h2 id="research-overview-title">Research in the field and in print.</h2>
-          </div>
-          <p>Two connected parts of my research work: satellite-based vegetation monitoring and published work on explainable medical AI.</p>
-        </header>
-
-        <div class="research-reorg-grid">
+    <section class="research-portfolio research-sequence" aria-label="Research and publications">
+      <section class="research-screen-v10" id="research" aria-labelledby="satellite-section-title">
+        <div class="wrap research-screen-inner">
+          <header class="research-screen-head">
+            <div>
+              <p class="section-label">02 / Current research</p>
+              <h2 id="satellite-section-title">Monitoring vegetation stress from space.</h2>
+            </div>
+            <p>Using satellite time series and environmental context to estimate expected vegetation health and detect unusual drops.</p>
+          </header>
           <article class="research-feature-card" aria-labelledby="satellite-title">
             <div class="research-feature-image">
               <img src="assets/research/anomaly-overview.png" alt="Satellite overview highlighting vegetation anomalies along the coast" loading="lazy">
@@ -224,32 +223,53 @@
             </div>
             <div class="research-feature-copy">
               <div class="research-card-kicker"><span class="research-live-dot"></span> Graduate research · In progress</div>
-              <h3 id="satellite-title">Monitoring vegetation stress from space</h3>
-              <p>Can temporal embeddings and multisensor inputs improve expected NDVI estimates? The model learns normal vegetation patterns, then flags unusual drops.</p>
+              <h3 id="satellite-title">Can temporal embeddings and multisensor inputs improve expected NDVI estimates?</h3>
+              <p>The model learns normal vegetation patterns from satellite history, then flags unusual drops. Training and validation use 2022–2025; 2026 remains an unseen test year.</p>
               <div class="research-facts" aria-label="Research setup">
                 <span><small>Train + validate</small><strong>2022–2025</strong></span>
                 <span><small>Unseen test</small><strong>2026</strong></span>
                 <span><small>Inputs</small><strong>Sentinel-1/2 · weather · terrain</strong></span>
               </div>
+              <div class="research-pipeline-v10" aria-label="Research pipeline">
+                <span>Observe</span><i aria-hidden="true">→</i><span>Represent</span><i aria-hidden="true">→</i><span>Estimate</span><i aria-hidden="true">→</i><span>Detect</span>
+              </div>
             </div>
-          </article>
-
-          <article class="research-paper-card" id="publication" aria-labelledby="publication-title">
-            <div class="research-paper-topline">
-              <p class="section-label">Peer-reviewed publication</p>
-              <span>Springer · ICR’26 · Berlin</span>
-            </div>
-            <h3 id="publication-title">Towards Clinically Interpretable Heart Disease Prediction</h3>
-            <p class="research-paper-subtitle">A comparative analysis of explainability methods for machine learning models.</p>
-            <p class="research-paper-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
-            <div class="research-method-strip" aria-label="Research methods">
-              <span>Risk prediction</span><i aria-hidden="true">→</i><span>SHAP + LIME</span><i aria-hidden="true">→</i><span>Clinical interpretation</span>
-            </div>
-            <p class="research-paper-summary">Comparing how explanation methods reveal model behavior and support more interpretable clinical predictions.</p>
-            <a class="research-paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
           </article>
         </div>
-      </div>
+      </section>
+
+      <section class="publication-screen-v10" id="publication" aria-labelledby="publication-title">
+        <div class="wrap publication-screen-inner">
+          <header class="publication-screen-head">
+            <div>
+              <p class="section-label">03 / Published research</p>
+              <h2>Explaining medical AI.</h2>
+            </div>
+            <span class="publication-venue">Springer · ICR’26 · Berlin</span>
+          </header>
+          <article class="research-paper-card research-paper-card-v10">
+            <div class="paper-main-copy">
+              <p class="paper-peer-label">Peer-reviewed publication</p>
+              <h3 id="publication-title">Towards Clinically Interpretable Heart Disease Prediction</h3>
+              <p class="research-paper-subtitle">A comparative analysis of explainability methods for machine learning models.</p>
+              <p class="research-paper-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
+              <p class="research-paper-summary">Co-authored work comparing how explanation methods reveal model behavior and support more interpretable clinical predictions.</p>
+              <a class="research-paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="paper-method-visual" aria-label="Prediction model explained using SHAP and LIME for clinical interpretation">
+              <p>EXPLAINABILITY PIPELINE</p>
+              <div class="paper-method-step"><span>01</span><strong>Prediction model</strong><small>Heart-disease risk</small></div>
+              <i aria-hidden="true">↓</i>
+              <div class="paper-method-pair">
+                <div><span>02A</span><strong>SHAP</strong><small>Global + local attribution</small></div>
+                <div><span>02B</span><strong>LIME</strong><small>Local explanation</small></div>
+              </div>
+              <i aria-hidden="true">↓</i>
+              <div class="paper-method-step paper-method-outcome"><span>03</span><strong>Clinical interpretation</strong><small>Compare explanation behavior</small></div>
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
 
     <section class="clean-experience" id="experience">
@@ -404,6 +424,54 @@
       </div>
     </section>
 
+    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
+      <div class="wrap portfolio-play-inner">
+        <header class="portfolio-play-head">
+          <div><p class="section-label">06 / Playground</p><h2 id="play-title">Take on the AI.</h2></div>
+          <p>Two games, two search strategies. Start with Tic-Tac-Toe, then test yourself against Connect Four.</p>
+        </header>
+        <div class="game-switch-v4" role="tablist" aria-label="Choose a game">
+          <button id="tab-quick" type="button" role="tab" aria-selected="true" aria-controls="panel-quick" data-game-tab="quick">
+            <span class="game-tab-index">01</span><div><strong>Quick match</strong><small>Tic-Tac-Toe · Minimax</small></div>
+          </button>
+          <button id="tab-hard" type="button" role="tab" aria-selected="false" aria-controls="panel-hard" data-game-tab="hard">
+            <span class="game-tab-index">02</span><div><strong>Hard mode</strong><small>Connect Four · Alpha-beta</small></div>
+          </button>
+        </div>
+        <div class="game-stage-v4">
+          <section class="game-panel-wrap is-active" id="panel-quick" role="tabpanel" aria-labelledby="tab-quick" data-game-panel="quick">
+            <div class="game-panel-head-v4">
+              <div><p class="game-kicker">Quick match</p><h3>Three in a row.</h3></div>
+              <div class="game-rule-card"><span>RULE</span><p>You are <strong>X</strong>. Get three in a row before the AI gets three O’s.</p><small>AI: minimax search · perfect play should never lose.</small></div>
+            </div>
+            <div class="game-board-frame ttt-frame">
+              <div class="game-board-main"><div class="ttt-board" id="ttt-board" role="grid" aria-label="Tic-Tac-Toe board"></div></div>
+              <aside class="game-side-panel">
+                <div><p class="game-kicker">Live match</p><h4 id="ttt-status">Your move.</h4><p id="ttt-result">You play first.</p></div>
+                <div class="score-grid score-grid-three"><span><small>You</small><b id="ttt-human-score">0</b></span><span><small>AI</small><b id="ttt-ai-score">0</b></span><span><small>Draws</small><b id="ttt-draw-score">0</b></span></div>
+                <div class="game-side-actions"><button class="btn btn-secondary" id="ttt-restart" type="button">New game</button><button class="btn btn-primary game-next" id="hard-mode-link" type="button">Try hard mode →</button></div>
+              </aside>
+            </div>
+          </section>
+          <section class="game-panel-wrap" id="panel-hard" role="tabpanel" aria-labelledby="tab-hard" data-game-panel="hard" hidden>
+            <div class="game-panel-head-v4">
+              <div><p class="game-kicker">Hard mode</p><h3>Four in a row.</h3></div>
+              <div class="game-rule-card"><span>RULE</span><p>You are the <strong>cream pieces</strong>. Connect four horizontally, vertically, or diagonally.</p><small>AI: depth-limited minimax · alpha-beta pruning · threat evaluation.</small></div>
+            </div>
+            <div class="game-board-frame connect-frame">
+              <div class="connect-main"><div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div><div class="game-legend" aria-hidden="true"><span><i class="game-dot human"></i>You</span><span><i class="game-dot ai"></i>AI</span></div></div>
+              <aside class="game-side-panel">
+                <div><p class="game-kicker">Live match</p><h4 id="game-status" aria-live="polite">Your move.</h4><p>Choose any open column.</p></div>
+                <div class="score-grid"><span><small>You</small><b id="human-score">0</b></span><span><small>AI</small><b id="ai-score">0</b></span></div>
+                <div class="game-result" id="game-result" aria-live="polite"></div>
+                <div class="game-side-actions"><button class="btn btn-secondary" id="restart-game" type="button">New game</button></div>
+              </aside>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-shell" id="contact">
       <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Let's build something useful.</h2><p>Interested in opportunities where AI, machine learning, intelligent systems, and real-world engineering come together.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">Email me</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
     </section>
@@ -412,6 +480,7 @@
   </main>
 
   <script src="js/site.config.js"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
+  <script src="js/game.js?v=2"></script>
 </body>
 </html>
