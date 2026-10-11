@@ -70,12 +70,15 @@ function initNavSpy() {
     });
     links.forEach((link) => link.classList.toggle('is-current', current && link === current.link));
   };
-  const band = document.getElementById('research');
+  const researchBands = ['research', 'publication'].map((id) => document.getElementById(id)).filter(Boolean);
   const syncNavTone = () => {
-    if (!band || !header) return;
-    const rect = band.getBoundingClientRect();
+    if (!researchBands.length || !header) return;
     const navH = header.offsetHeight;
-    header.classList.toggle('is-research', rect.top <= navH + 1 && rect.bottom > navH + 12);
+    const inResearch = researchBands.some((band) => {
+      const rect = band.getBoundingClientRect();
+      return rect.top <= navH + 1 && rect.bottom > navH + 12;
+    });
+    header.classList.toggle('is-research', inResearch);
   };
   mark();
   syncNavTone();
