@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=8">
+  <link rel="stylesheet" href="css/portfolio.css?v=9">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -335,22 +335,26 @@ systems = [<span class="code-string">"C++"</span>, <span class="code-string">"Op
       <span id="challenge" class="challenge-anchor" aria-hidden="true"></span>
       <div class="wrap portfolio-play-inner">
         <header class="portfolio-play-head">
-          <div><p class="section-label">The strategy challenge</p><h2 id="play-title">Your next move?</h2></div>
-          <p>Challenge my AI at Connect Four. A little competition. A chance to build something together.</p>
+          <div><p class="section-label">Play against my AI</p><h2 id="play-title">Can you beat my AI?</h2></div>
+          <p>One board. Two players. Four in a row. You make the first move.</p>
         </header>
         <div class="game-stage-v4">
 <section class="game-panel-wrap is-active" id="panel-hard" aria-labelledby="connect-title">
-            <div class="game-panel-head-v4">
-              <div><p class="game-kicker">Connect Four</p><h3 id="connect-title">Think one move ahead.</h3></div>
-              <div class="game-rule-card"><span>RULE</span><p>You are the <strong>cream pieces</strong>. Connect four horizontally, vertically, or diagonally.</p><small>Built with minimax search, alpha-beta pruning, and threat evaluation.</small></div>
+            <div class="connect-instructions" aria-labelledby="connect-title">
+              <div class="connect-rules-title"><h3 id="connect-title">Connect Four</h3><span>How to play</span></div>
+              <ol class="connect-rules">
+                <li><span class="rule-number" aria-hidden="true">01</span><div><strong>Choose a column</strong><p>Click any space in an open column.</p></div></li>
+                <li><span class="rule-number" aria-hidden="true">02</span><div><strong>Drop your piece</strong><p>Your cream piece falls to the lowest space.</p></div></li>
+                <li><span class="rule-number" aria-hidden="true">03</span><div><strong>Make a line of four</strong><p>Across, down, or diagonally. Beat the green AI.</p></div></li>
+              </ol>
             </div>
             <div class="game-board-frame connect-frame">
               <div class="connect-main"><div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div><div class="game-legend" aria-hidden="true"><span><i class="game-dot human"></i>You</span><span><i class="game-dot ai"></i>AI</span></div></div>
               <aside class="game-side-panel">
-                <div><p class="game-kicker">Live match</p><h4 id="game-status" aria-live="polite">Your move.</h4><p>Choose a column. I search five moves ahead to find my response.</p></div>
+                <div><p class="game-kicker">Live match</p><h4 id="game-status" aria-live="polite">Your move.</h4><p>You play first. Pick a column and make your move.</p></div>
                 <div class="score-grid"><span><small>You</small><b id="human-score">0</b></span><span><small>AI</small><b id="ai-score">0</b></span></div>
                 <div class="game-result" id="game-result" aria-live="polite"></div>
-                <div class="game-side-actions"><button class="btn btn-secondary" id="restart-game" type="button">New game</button></div>
+                <div class="game-side-actions"><button class="btn btn-secondary" id="restart-game" type="button">Play again</button></div><details class="connect-ai-note"><summary>How the AI plays</summary><p>It searches five moves ahead with minimax, uses alpha-beta pruning to skip unnecessary branches, and weighs threats on the board.</p></details>
               </aside>
             </div>
           </section>
