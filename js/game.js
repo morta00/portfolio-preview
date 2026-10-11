@@ -132,21 +132,36 @@
   // ---------- Compact game tabs ----------
   const gameTabs = [...document.querySelectorAll('[data-game-tab]')];
   const gamePanels = [...document.querySelectorAll('[data-game-panel]')];
+  const embeddedGames = Boolean(document.querySelector('[data-embedded-games]'));
 
   function showGame(name, updateHash = true) {
     gameTabs.forEach((tab) => {
       const active = tab.dataset.gameTab === name;
       tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
     });
     gamePanels.forEach((panel) => {
       const active = panel.dataset.gamePanel === name;
       panel.classList.toggle('is-active', active);
       panel.hidden = !active;
     });
-    if (updateHash) history.replaceState(null, '', '#' + name);
+    if (updateHash && !embeddedGames) history.replaceState(null, '', '#' + name);
   }
 
-  gameTabs.forEach((tab) => tab.addEventListener('click', () => showGame(tab.dataset.gameTab)));
+  gameTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => showGame(tab.dataset.gameTab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % gameTabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + gameTabs.length) % gameTabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = gameTabs.length - 1;
+      showGame(gameTabs[next].dataset.gameTab, false);
+      gameTabs[next].focus();
+    });
+  });
   hardModeLink.addEventListener('click', () => showGame('hard'));
 
   const initialGame = location.hash === '#hard' ? 'hard' : 'quick';
