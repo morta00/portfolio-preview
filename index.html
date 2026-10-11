@@ -43,7 +43,7 @@
     <div class="nav-panel" id="site-nav">
       <nav class="nav-links" aria-label="Primary">
         <a href="#work">Work</a>
-        <a href="#challenge">Play</a>
+        <a href="play.html">Play</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
@@ -79,8 +79,6 @@
           </div>
         </figure>
       </div>
-    </section>
-
     <div class="wrap achievement-wrap">
       <section class="achievement-rail" aria-label="Selected evidence">
         <a href="#vision" class="achievement-item">
@@ -103,8 +101,7 @@
           <div><strong>Deployed</strong><em>AI Platform</em><span>RAG · APIs · Automation</span></div>
           <i aria-hidden="true"></i>
         </a>
-      </section>
-    </div>
+      </section></div></section>
 
     <section class="project-grid-shell" id="work">
       <div class="wrap project-grid-section">
@@ -216,104 +213,87 @@
       </div>
     </section>
 
-    <section class="challenge-shell compact-challenge compact-challenge-v2" id="challenge">
-      <div class="wrap compact-challenge-inner">
-        <div class="compact-challenge-copy">
-          <p class="section-label">AI Playground</p>
-          <h2>Beat my AI.</h2>
-          <p>A 20-second recruiter challenge. Start simple, then switch to hard mode.</p>
+    <section class="research-screen" id="research">
+      <div class="wrap viewport-inner research-layout">
+        <div class="research-copy-v8">
+          <p class="section-label">02 / Research</p>
+          <p class="research-kicker">Current thesis research · GVSU</p>
+          <h2>Forecast the healthy state.<br>Flag the deviation.</h2>
+          <p class="research-lede-v8">I am building a leakage-free temporal pipeline for vegetation-stress monitoring from multisensor satellite time series.</p>
+
+          <div class="research-question-v8">
+            <span>Research question</span>
+            <p>Can temporal foundation-model representations improve expected-vegetation estimates before stress becomes visually obvious?</p>
+          </div>
+
+          <div class="research-facts-v8">
+            <div><small>Train / validate</small><strong>2022–2025</strong></div>
+            <div><small>Unseen test</small><strong>2026</strong></div>
+            <div><small>Anomaly signal</small><strong>Expected NDVI − observed NDVI</strong></div>
+          </div>
         </div>
-        <div class="compact-game-links">
-          <a href="play.html#quick" class="compact-game-card">
-            <span>01</span>
-            <div><strong>Tic-Tac-Toe</strong><small>Quick · minimax</small></div>
-            <b>Play →</b>
-          </a>
-          <a href="play.html#hard" class="compact-game-card hard">
-            <span>02</span>
-            <div><strong>Connect Four</strong><small>Hard · alpha-beta</small></div>
-            <b>Play →</b>
-          </a>
+
+        <div class="research-visual-v8">
+          <figure class="research-map-main">
+            <img src="assets/research/anomaly-overview.png" alt="Regional satellite vegetation anomaly overview" loading="lazy">
+            <figcaption><span>01</span> Regional anomaly overview</figcaption>
+          </figure>
+          <figure class="research-map-detail">
+            <img src="assets/research/anomaly-detail.png" alt="Detailed satellite vegetation anomaly view" loading="lazy">
+            <figcaption><span>02</span> Pixel-level anomaly detail</figcaption>
+          </figure>
+          <span class="research-status-v8"><i></i> Research in progress</span>
+        </div>
+
+        <div class="research-pipeline-v8" aria-label="Research pipeline">
+          <div><span>01</span><strong>Observe</strong><small>Sentinel-2 · Sentinel-1 · weather · terrain</small></div>
+          <i>→</i>
+          <div><span>02</span><strong>Represent</strong><small>Temporal embeddings · Presto</small></div>
+          <i>→</i>
+          <div><span>03</span><strong>Expect</strong><small>Healthy vegetation state</small></div>
+          <i>→</i>
+          <div><span>04</span><strong>Detect</strong><small>Expected − observed NDVI</small></div>
+          <i>→</i>
+          <div><span>05</span><strong>Map</strong><small>Weekly stress anomalies</small></div>
         </div>
       </div>
     </section>
 
-    <section class="clean-research" id="research">
-      <div class="wrap clean-section clean-research-wrap">
-        <header class="research-hero-head">
-          <p class="section-label">02 / Research</p>
-          <h2>Forecast the healthy state.<br>Flag the deviation.</h2>
-          <p>My current work asks a simple question: can temporal foundation-model representations make vegetation stress easier to detect before the signal becomes obvious?</p>
-        </header>
-
-        <div class="research-story">
-          <article class="research-system">
-            <div class="research-system-top">
-              <div>
-                <p class="clean-project-meta light-meta">Current thesis research · GVSU</p>
-                <h3>AI for Earth Observation</h3>
-              </div>
-              <span class="research-status"><i></i> Research in progress</span>
-            </div>
-
-            <div class="research-pipeline" aria-label="Research pipeline">
-              <div><span>01</span><strong>Observe</strong><small>Sentinel-2 · Sentinel-1 · weather · terrain</small></div>
-              <i>→</i>
-              <div><span>02</span><strong>Represent</strong><small>Temporal embeddings · Presto / foundation models</small></div>
-              <i>→</i>
-              <div><span>03</span><strong>Expect</strong><small>Estimate healthy vegetation state</small></div>
-              <i>→</i>
-              <div><span>04</span><strong>Detect</strong><small>Expected NDVI − observed NDVI</small></div>
-              <i>→</i>
-              <div><span>05</span><strong>Map</strong><small>Weekly vegetation-stress anomalies</small></div>
-            </div>
-
-            <div class="research-visual-grid">
-              <figure><img src="assets/research/anomaly-overview.png" alt="Regional satellite vegetation anomaly overview" loading="lazy"><figcaption>Regional anomaly overview</figcaption></figure>
-              <figure><img src="assets/research/anomaly-detail.png" alt="Detailed satellite vegetation anomaly view" loading="lazy"><figcaption>Pixel-level anomaly detail</figcaption></figure>
-            </div>
-          </article>
-
-          <aside class="research-method">
-            <p class="visual-label">RESEARCH QUESTION</p>
-            <blockquote>Do temporal representations improve expected-vegetation estimates without leaking future information?</blockquote>
-            <div class="method-row"><span>Protocol</span><strong>Train / validate on 2022–2025</strong></div>
-            <div class="method-row"><span>Unseen test</span><strong>2026 held out</strong></div>
-            <div class="method-row"><span>Signal</span><strong>Expected NDVI − observed NDVI</strong></div>
-            <div class="method-row"><span>Focus</span><strong>Temporal + multimodal vegetation stress</strong></div>
-          </aside>
+    <section class="publication-screen" id="publication">
+      <div class="wrap viewport-inner publication-layout">
+        <div class="publication-copy-v8">
+          <p class="section-label">03 / Published research</p>
+          <span class="publication-badge">Springer · ICR'26 · Berlin</span>
+          <h2>Towards Clinically Interpretable Heart Disease Prediction</h2>
+          <p class="publication-subtitle">A Comparative Analysis of Explainability Methods for Machine Learning Models</p>
+          <p class="publication-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
+          <a class="paper-link-v8" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper / DOI ↗</a>
         </div>
 
-        <article class="paper-feature" id="publication">
-          <div class="paper-copy">
-            <p class="clean-project-meta light-meta">Published · Springer · ICR'26 · Berlin</p>
-            <h3>Towards Clinically Interpretable Heart Disease Prediction</h3>
-            <p class="pub-title">A Comparative Analysis of Explainability Methods for Machine Learning Models</p>
-            <p class="pub-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
-            <a class="paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper / DOI ↗</a>
-          </div>
-          <div class="paper-viz" aria-label="Explainability comparison visual">
-            <p class="visual-label">EXPLAINABILITY COMPARISON</p>
-            <div class="xai-flow">
-              <span class="xai-model">Heart-disease model</span>
-              <i>→</i>
-              <div class="xai-methods"><span>SHAP</span><span>LIME</span></div>
-              <i>→</i>
-              <span class="xai-outcome">Clinical interpretation</span>
+        <div class="publication-visual-v8">
+          <div class="publication-diagram">
+            <p>EXPLAINABILITY PIPELINE</p>
+            <div class="pub-model"><span>01</span><strong>Prediction model</strong><small>Heart-disease risk</small></div>
+            <i>↓</i>
+            <div class="pub-methods">
+              <div><span>02A</span><strong>SHAP</strong><small>Global + local attribution</small></div>
+              <div><span>02B</span><strong>LIME</strong><small>Local explanation</small></div>
             </div>
-            <div class="xai-bars" aria-hidden="true">
-              <span style="--w:82%"></span><span style="--w:64%"></span><span style="--w:48%"></span><span style="--w:31%"></span>
-            </div>
-            <p>Peer-reviewed work comparing explanation behavior and interpretability across predictive models.</p>
+            <i>↓</i>
+            <div class="pub-model outcome"><span>03</span><strong>Clinical interpretation</strong><small>Compare explanation behavior</small></div>
           </div>
-        </article>
+          <div class="publication-note">
+            <span>Peer-reviewed</span>
+            <p>Co-authored work comparing explanation consistency and clinical interpretability across machine-learning models.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="clean-experience" id="experience">
       <div class="wrap clean-section">
         <header class="clean-section-head">
-          <p class="section-label">03 / Experience</p>
+          <p class="section-label">04 / Experience</p>
           <div class="clean-title-row">
             <h2>From product engineering to AI research.</h2>
             <p>A simple progression: build products, ship applied AI, then go deeper into research.</p>
@@ -343,7 +323,7 @@
     <section class="expertise-shell" id="about">
       <div class="wrap expertise-section">
         <header class="expertise-head">
-          <p class="section-label">04 / Skills & Expertise</p>
+          <p class="section-label">05 / Skills & Expertise</p>
           <h2>What I build best.</h2>
           <p>A focused technical profile across intelligent systems, machine learning, and research engineering.</p>
         </header>
