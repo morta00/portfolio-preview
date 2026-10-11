@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=7">
+  <link rel="stylesheet" href="css/portfolio.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +46,7 @@
         <a href="#work">Projects</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
-        <a href="#challenge">Challenge</a>
+        <a href="#play">Challenge</a>
         <a href="#about">Skills</a>
       </nav>
       <div class="nav-side">
@@ -331,44 +331,23 @@ systems = [<span class="code-string">"C++"</span>, <span class="code-string">"Op
 <div><span class="recognition-symbol">06</span><div><small>Faculty of Sciences of Bizerte</small><h3>Top-ranked graduate</h3><p>Computer Science · Ranked first across all bachelor years</p></div></div>
 </div></div></section>
 
-<section class="career-challenge" id="challenge" aria-labelledby="challenge-title"><div class="wrap challenge-inner"><header class="center-head"><p class="section-label">The precision challenge</p><h2 id="challenge-title">Three seconds. One challenge.</h2><p>Stop the clock at exactly 3.00 seconds. Beat the timing bot’s precision.</p></header><div class="challenge-card"><div class="challenge-clock"><span class="challenge-target">TARGET · 3.00 SECONDS</span><div class="timer-display" id="precision-clock" aria-hidden="true">0.00<span>s</span></div><p id="precision-instruction">One button. One shot. Ready?</p><button type="button" class="btn btn-primary timer-button" id="precision-button">Start challenge</button><button type="button" class="timer-reset" id="precision-reset">Reset</button></div><div class="challenge-rival"><span class="rival-label">YOUR CHALLENGER</span><div class="bot-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="27" rx="9"/><path d="M24 6v7M19 31h10"/><circle cx="18" cy="24" r="2"/><circle cx="30" cy="24" r="2"/></svg></div><h3>The timing bot</h3><p>Keep your cool. Trust your timing.</p><div class="precision-scores"><div><span>Your error</span><strong id="human-error">—</strong></div><div><span>Bot error</span><strong id="bot-error">—</strong></div></div><p class="timing-disclosure">A simulated timing rival. Try Connect Four below for an opponent powered by minimax search.</p></div></div><div class="challenge-outcome" id="precision-outcome" aria-live="polite"><p>A little friendly competition. A good conversation starter.</p></div><div class="challenge-links"><a href="#play">Play Tic-Tac-Toe & Connect Four ↓</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Download my resume (PDF) ↗</a></div></div></section>    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
+<section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
+      <span id="challenge" class="challenge-anchor" aria-hidden="true"></span>
       <div class="wrap portfolio-play-inner">
         <header class="portfolio-play-head">
-          <div><p class="section-label">06 / Playground</p><h2 id="play-title">Can you beat my AI?</h2></div>
-          <p>Pick a quick match or try Connect Four. Win or lose, let’s build something together.</p>
+          <div><p class="section-label">The strategy challenge</p><h2 id="play-title">Your next move?</h2></div>
+          <p>Challenge my AI at Connect Four. A little competition. A chance to build something together.</p>
         </header>
-        <div class="game-switch-v4" role="tablist" aria-label="Choose a game">
-          <button id="tab-quick" type="button" role="tab" aria-selected="true" aria-controls="panel-quick" data-game-tab="quick">
-            <span class="game-tab-index">01</span><div><strong>Quick match</strong><small>Tic-Tac-Toe · Minimax</small></div>
-          </button>
-          <button id="tab-hard" type="button" role="tab" aria-selected="false" aria-controls="panel-hard" data-game-tab="hard">
-            <span class="game-tab-index">02</span><div><strong>Hard mode</strong><small>Connect Four · Alpha-beta</small></div>
-          </button>
-        </div>
         <div class="game-stage-v4">
-          <section class="game-panel-wrap is-active" id="panel-quick" role="tabpanel" aria-labelledby="tab-quick" data-game-panel="quick">
+<section class="game-panel-wrap is-active" id="panel-hard" aria-labelledby="connect-title">
             <div class="game-panel-head-v4">
-              <div><p class="game-kicker">Quick match</p><h3>Three in a row.</h3></div>
-              <div class="game-rule-card"><span>RULE</span><p>You are <strong>X</strong>. Get three in a row before the AI gets three O’s.</p><small>AI: minimax search · perfect play should never lose.</small></div>
-            </div>
-            <div class="game-board-frame ttt-frame">
-              <div class="game-board-main"><div class="ttt-board" id="ttt-board" role="grid" aria-label="Tic-Tac-Toe board"></div></div>
-              <aside class="game-side-panel">
-                <div><p class="game-kicker">Live match</p><h4 id="ttt-status">Your move.</h4><p id="ttt-result">You play first.</p></div>
-                <div class="score-grid score-grid-three"><span><small>You</small><b id="ttt-human-score">0</b></span><span><small>AI</small><b id="ttt-ai-score">0</b></span><span><small>Draws</small><b id="ttt-draw-score">0</b></span></div>
-                <div class="game-side-actions"><button class="btn btn-secondary" id="ttt-restart" type="button">New game</button><button class="btn btn-primary game-next" id="hard-mode-link" type="button">Try hard mode →</button></div>
-              </aside>
-            </div>
-          </section>
-          <section class="game-panel-wrap" id="panel-hard" role="tabpanel" aria-labelledby="tab-hard" data-game-panel="hard" hidden>
-            <div class="game-panel-head-v4">
-              <div><p class="game-kicker">Hard mode</p><h3>Four in a row.</h3></div>
-              <div class="game-rule-card"><span>RULE</span><p>You are the <strong>cream pieces</strong>. Connect four horizontally, vertically, or diagonally.</p><small>AI: depth-limited minimax · alpha-beta pruning · threat evaluation.</small></div>
+              <div><p class="game-kicker">Connect Four</p><h3 id="connect-title">Think one move ahead.</h3></div>
+              <div class="game-rule-card"><span>RULE</span><p>You are the <strong>cream pieces</strong>. Connect four horizontally, vertically, or diagonally.</p><small>Built with minimax search, alpha-beta pruning, and threat evaluation.</small></div>
             </div>
             <div class="game-board-frame connect-frame">
               <div class="connect-main"><div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div><div class="game-legend" aria-hidden="true"><span><i class="game-dot human"></i>You</span><span><i class="game-dot ai"></i>AI</span></div></div>
               <aside class="game-side-panel">
-                <div><p class="game-kicker">Live match</p><h4 id="game-status" aria-live="polite">Your move.</h4><p>Choose any open column.</p></div>
+                <div><p class="game-kicker">Live match</p><h4 id="game-status" aria-live="polite">Your move.</h4><p>Choose a column. I search five moves ahead to find my response.</p></div>
                 <div class="score-grid"><span><small>You</small><b id="human-score">0</b></span><span><small>AI</small><b id="ai-score">0</b></span></div>
                 <div class="game-result" id="game-result" aria-live="polite"></div>
                 <div class="game-side-actions"><button class="btn btn-secondary" id="restart-game" type="button">New game</button></div>
@@ -376,6 +355,7 @@ systems = [<span class="code-string">"C++"</span>, <span class="code-string">"Op
             </div>
           </section>
         </div>
+        <div class="challenge-links"><a href="#contact">Let’s build something together ↗</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Download my resume (PDF) ↗</a></div>
       </div>
     </section>
 
@@ -386,7 +366,7 @@ systems = [<span class="code-string">"C++"</span>, <span class="code-string">"Op
 
   <script src="js/site.config.js"></script>
   <script src="js/main.js?v=6"></script>
-  <script src="js/game.js?v=3"></script>
+  <script src="js/connect-four.js?v=1"></script>
   <script src="js/career-fair.js?v=2"></script>
 </body>
 </html>

@@ -61,3 +61,11 @@ html{scroll-snap-type:none!important;scroll-padding-top:0!important}section[id],
 @media(min-width:900px) and (max-height:780px){.project-more-screen,.research-screen-v10,.publication-screen-v10,.expertise-shell,.portfolio-play,.recognition-screen{padding-top:30px}.portfolio-play .portfolio-play-head h2{margin-bottom:8px;font-size:28px}.portfolio-play .portfolio-play-head .section-label{margin-bottom:8px}.portfolio-play .portfolio-play-head>p{font-size:12px}.portfolio-play .game-side-panel h4{font-size:22px}.portfolio-play .ttt-board{width:220px}.portfolio-play .connect-board{width:290px}.portfolio-play .game-panel-head-v4{margin-bottom:8px}.portfolio-play .game-side-panel{padding:12px}.portfolio-play .game-rule-card small{font-size:8px}}
 @media(max-width:680px){.nav.is-research .nav-panel{background:var(--bg);border-bottom-color:var(--line)}.nav.is-research .nav-toggle span{background:var(--ink)}}
 .research-feature-image .research-map-label{bottom:auto;right:auto;height:auto;min-height:0;width:auto;display:inline-block;line-height:1.5}
+
+/* Recognition stays editorial, with a gentle selection response. */
+.recognition-cards>div{transition:transform .22s ease,border-color .22s ease,background-color .22s ease,box-shadow .22s ease}
+.recognition-cards>div:hover{transform:translateY(-4px);border-color:#88b59f;background:#f5faf6;box-shadow:0 12px 28px rgba(28,72,48,.08)}
+.recognition-cards>div:hover .recognition-symbol{background:#d9ede0}
+.portfolio-play{position:relative}.challenge-anchor{position:absolute;top:0;scroll-margin-top:var(--nav-h)}
+.portfolio-play .challenge-links{margin-top:22px}
+@media(prefers-reduced-motion:reduce){.recognition-cards>div{transition:none}.recognition-cards>div:hover{transform:none}}
