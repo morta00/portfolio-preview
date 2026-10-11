@@ -198,33 +198,39 @@
         <div class="more-work" id="more-projects">
           <div class="more-head"><div><p class="section-label">More work</p><h3>Additional evidence, without diluting the flagship story.</h3></div></div>
           <div class="cards">
-            <a class="card metric-card" data-focus="systems ml" href="work/hpc.html"><div class="card-eyebrow">Systems foundation</div><strong class="card-number">68.78×</strong><h3>Sparse ML Kernel Optimization</h3><p>1st place leaderboard · 6/6 correct · packed CSR, OpenMP, SIMD.</p></a>
-            <a class="card" id="fraud" data-focus="ml data" href="work/fraud.html"><img class="card-shot" src="assets/fraud/roc-curves.png" alt="ROC curves for healthcare fraud models" loading="lazy"><div class="card-eyebrow">Data science</div><h3>Cost-Sensitive Healthcare Fraud Detection</h3><p>0.946 ROC-AUC · 74 engineered features · cost-sensitive decisions.</p></a>
-            <a class="card" data-focus="agentic systems" href="work/gymbox.html"><img class="card-shot" src="assets/gymbox/screens/boxai.png" alt="Box AI chat inside the GymBox app" loading="lazy"><div class="card-eyebrow">Applied AI</div><h3>GymBox AI</h3><p>RAG-powered training and nutrition assistant integrated into a React Native product.</p></a>
-            <a class="card text-card" data-focus="cv ml" href="work/wildlife.html"><div class="card-eyebrow">Computer vision</div><div class="wildlife-mark">10</div><h3>Wildlife Computer Vision</h3><p>Custom CNNs and data augmentation for 10 forest animal species.</p></a>
+            <a class="card metric-card" data-focus="systems ml" href="work/hpc.html"><div class="card-stage metric-stage"><span>Leaderboard</span><strong>68.78×</strong></div><div class="card-eyebrow">Systems foundation</div><h3>Sparse ML Kernel Optimization</h3><p>1st place leaderboard · 6/6 correct · packed CSR, OpenMP, SIMD.</p></a>
+            <a class="card" id="fraud" data-focus="ml data" href="work/fraud.html"><figure class="card-figure"><img src="assets/fraud/roc-curves.png" alt="ROC curves for healthcare fraud models" loading="lazy"></figure><div class="card-eyebrow">Data science</div><h3>Cost-Sensitive Healthcare Fraud Detection</h3><p>0.946 ROC-AUC · 74 engineered features · cost-sensitive decisions.</p></a>
+            <a class="card" data-focus="agentic systems" href="work/gymbox.html"><figure class="card-figure phone"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox home screen with activity and sleep tracking" loading="lazy"></figure><div class="card-eyebrow">Applied AI</div><h3>GymBox AI</h3><p>RAG-powered training and nutrition assistant integrated into a React Native product.</p></a>
+            <a class="card species-card" data-focus="cv ml" href="work/wildlife.html"><div class="species-stage" aria-hidden="true"><b>10</b><span>Forest species</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="card-eyebrow">Computer vision</div><h3>Wildlife Computer Vision</h3><p>Custom CNNs and data augmentation for 10 forest animal species.</p></a>
           </div>
         </div>
       </div>
     </section>
 
     <section class="research-band" id="research">
-      <div class="wrap section">
-        <div class="section-head research-head"><div><p class="section-label">02 / Research &amp; publications</p><h2 class="section-title">Research that connects models to real decisions.</h2></div><p class="section-lead">Current Earth-observation research plus peer-reviewed work in interpretable healthcare ML.</p></div>
+      <div class="wrap section anchor-section">
+        <div class="section-head research-head"><div><p class="section-label">02 / Research &amp; publications</p><h2 class="section-title">Research that connects models to real decisions.</h2></div><p class="section-lead">Vegetation-stress monitoring from multisensor satellite time series, in progress at Grand Valley State University.</p></div>
 
         <article class="research-feature">
           <div class="research-copy"><p class="showcase-kicker">Current research · Grand Valley State University</p><h3>AI for Earth Observation</h3><p class="subtitle">Developing vegetation-stress monitoring from multisensor satellite time series, with emphasis on temporal representation learning, expected vegetation state, and geospatial anomaly detection.</p><div class="research-tags"><span>Remote Sensing</span><span>Temporal Foundation Models</span><span>Multimodal AI</span><span>Geospatial ML</span></div><div class="research-flow"><span>Satellite time series</span><i>→</i><span>Representation</span><i>→</i><span>Expected state</span><i>→</i><span>Anomaly</span><i>→</i><span>Map</span></div></div>
           <div class="research-media"><img src="assets/research/anomaly-overview.png" alt="Regional satellite map with detected vegetation anomalies" loading="lazy"><img src="assets/research/anomaly-detail.png" alt="Detailed satellite view of detected vegetation anomalies" loading="lazy"></div>
         </article>
 
-        <article class="publication" id="publication">
+      </div>
+    </section>
+
+    <section class="publication-shell" id="publication">
+      <div class="wrap section anchor-section">
+        <div class="section-head"><div><p class="section-label">Peer-reviewed publication</p><h2 class="section-title">Clinically interpretable heart-disease prediction.</h2></div><p class="section-lead">SHAP and LIME compared across heart-disease prediction models. Springer LNNS, ICR'26, Berlin.</p></div>
+        <article class="publication">
           <div class="pub-year">SPRINGER · ICR'26 · BERLIN</div>
-          <div class="pub-content"><p class="showcase-kicker">Published research · Co-author</p><h3>Towards Clinically Interpretable Heart Disease Prediction: A Comparative Analysis of Explainability Methods for Machine Learning Models</h3><p class="authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p><p class="subtitle">Comparative analysis of SHAP and LIME across heart-disease prediction models, examining explanation consistency and clinical interpretability. Lecture Notes in Networks and Systems, pp. 305–314.</p><a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">View paper / DOI <span>↗</span></a></div>
+          <div class="pub-content"><p class="showcase-kicker">Co-author</p><h3>Towards Clinically Interpretable Heart Disease Prediction: A Comparative Analysis of Explainability Methods for Machine Learning Models</h3><p class="authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p><p class="subtitle">Comparative analysis of SHAP and LIME across heart-disease prediction models, examining explanation consistency and clinical interpretability. Lecture Notes in Networks and Systems, pp. 305–314.</p><a class="arrow-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">View paper / DOI <span>↗</span></a></div>
         </article>
       </div>
     </section>
 
     <section class="experience-shell" id="experience">
-      <div class="wrap section">
+      <div class="wrap section anchor-section">
         <div class="section-head"><div><p class="section-label">03 / Experience</p><h2 class="section-title">From building products to researching AI systems.</h2></div><p class="section-lead">A progression from product engineering, to deployed applied AI, to graduate research.</p></div>
         <ol class="journey">
           <li><div class="journey-step">01</div><p class="phase">2025 · Product engineering</p><h3>AI &amp; Mobile Developer</h3><p class="where">Smart It Partner · Tunis</p><p>Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p><p class="keywords">RAG · Recommendations · Computer Vision</p><a class="arrow-link" href="work/gymbox.html">Related work <span>→</span></a></li>
@@ -235,16 +241,16 @@
     </section>
 
     <section class="about-shell" id="about">
-      <div class="wrap section about-section">
+      <div class="wrap section anchor-section about-section">
         <div class="about-grid"><div class="about-photo-wrap"><img class="about-photo" src="assets/hero/portrait.jpg" alt="Mortadha Ghnimi" width="1024" height="682"></div><div><p class="section-label">04 / About</p><h2 class="section-title">Researcher mindset. Engineer execution.</h2><p>I work at the intersection of AI research and engineering — understanding how a model behaves, building the surrounding system, measuring its performance, and turning it into something useful.</p><p>I'm pursuing an M.S. in Artificial Intelligence at Grand Valley State University, where I work as a Graduate Research Assistant.</p></div></div>
 
         <div class="capabilities" aria-label="Technical capabilities">
-          <div><h4>AI / ML</h4><p>PyTorch · TensorFlow · scikit-learn · Hugging Face · Computer Vision</p></div>
-          <div><h4>Agents / GenAI</h4><p>LLMs · RAG · LangGraph · LangChain · MCP · Tool Calling</p></div>
-          <div><h4>Data</h4><p>Pandas · NumPy · SQL · PostgreSQL · pgvector</p></div>
-          <div><h4>Geospatial</h4><p>Google Earth Engine · Remote Sensing · Time-Series Analysis</p></div>
-          <div><h4>Backend / Systems</h4><p>FastAPI · REST APIs · Docker · Git · OpenMP · SIMD</p></div>
-          <div><h4>Languages</h4><p>Python · C++ · Java · JavaScript / TypeScript · SQL</p></div>
+          <div class="cap"><span>01</span><h4>AI / ML</h4><ul><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Hugging Face</li><li>Computer Vision</li></ul></div>
+          <div class="cap"><span>02</span><h4>Agents / GenAI</h4><ul><li>LLMs</li><li>RAG</li><li>LangGraph</li><li>LangChain</li><li>MCP</li><li>Tool Calling</li></ul></div>
+          <div class="cap"><span>03</span><h4>Data</h4><ul><li>Pandas</li><li>NumPy</li><li>SQL</li><li>PostgreSQL</li><li>pgvector</li></ul></div>
+          <div class="cap"><span>04</span><h4>Geospatial</h4><ul><li>Google Earth Engine</li><li>Remote Sensing</li><li>Time-Series Analysis</li></ul></div>
+          <div class="cap"><span>05</span><h4>Backend / Systems</h4><ul><li>FastAPI</li><li>REST APIs</li><li>Docker</li><li>Git</li><li>OpenMP</li><li>SIMD</li></ul></div>
+          <div class="cap"><span>06</span><h4>Languages</h4><ul><li>Python</li><li>C++</li><li>Java</li><li>JavaScript / TypeScript</li><li>SQL</li></ul></div>
         </div>
 
         <div class="recognition"><p class="section-label">Selected recognition</p><div class="recognition-grid"><div><strong>1st Place</strong><span>ML competition · 93.4%</span></div><div><strong>1st Place</strong><span>HPC kernel leaderboard · 68.78×</span></div><div><strong>Springer</strong><span>ICR'26 · Berlin · co-author</span></div><div><strong>Merit GA</strong><span>Grand Valley State University</span></div><div><strong>Top-ranked</strong><span>B.S. graduate · Faculty of Science of Bizerte</span></div></div></div>

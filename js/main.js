@@ -55,20 +55,28 @@
 })();
 
 function initNavSpy() {
+  const header = document.querySelector('.nav');
   const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const items = links
     .map((link) => ({ link, el: document.querySelector(link.getAttribute('href')) }))
     .filter((item) => item.el);
-  if (!items.length) return;
   const mark = () => {
     let current = null;
     items.forEach((item) => {
-      if (item.el.getBoundingClientRect().top < 140) current = item;
+      if (item.el.getBoundingClientRect().top < 120) current = item;
     });
     links.forEach((link) => link.classList.toggle('is-current', current && link === current.link));
   };
+  const band = document.getElementById('research');
+  const syncNavTone = () => {
+    if (!band || !header) return;
+    const rect = band.getBoundingClientRect();
+    const navH = header.offsetHeight;
+    header.classList.toggle('is-research', rect.top <= navH + 1 && rect.bottom > navH + 12);
+  };
   mark();
-  window.addEventListener('scroll', mark, { passive: true });
+  syncNavTone();
+  window.addEventListener('scroll', () => { mark(); syncNavTone(); }, { passive: true });
 }
 
 function initOpportunity() {
