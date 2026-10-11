@@ -53,6 +53,7 @@
   initOpportunity();
   initNavSpy();
   initSkillTabs();
+  initExperienceReveal();
 })();
 
 function initNavSpy() {
@@ -79,6 +80,30 @@ function initNavSpy() {
   mark();
   syncNavTone();
   window.addEventListener('scroll', () => { mark(); syncNavTone(); }, { passive: true });
+}
+
+
+function initExperienceReveal() {
+  const section = document.querySelector('.clean-experience');
+  const cards = [...document.querySelectorAll('.experience-card')];
+  if (!section || !cards.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    cards.forEach((card) => card.classList.add('is-visible'));
+    return;
+  }
+  section.classList.add('has-motion');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.16 });
+  cards.forEach((card, index) => {
+    card.style.setProperty('--experience-order', String(index));
+    observer.observe(card);
+  });
 }
 
 function initOpportunity() {
