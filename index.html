@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=15">
+  <link rel="stylesheet" href="css/portfolio.css?v=16">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -217,7 +217,7 @@
               <p class="section-label">02 / Current research</p>
               <h2 id="satellite-section-title">Monitoring vegetation stress from space.</h2>
             </div>
-            <p>From satellite data to useful signals: monitoring vegetation stress and testing on years the model has never seen.</p>
+            <p>I build and evaluate satellite time-series models to flag unusual vegetation changes for investigation.</p>
           </header>
           <article class="research-feature-card" aria-labelledby="satellite-title">
             <div class="research-feature-image">
@@ -226,20 +226,18 @@
                 <img src="assets/research/anomaly-detail.png" alt="Closer view of pixel-level vegetation anomalies" loading="lazy">
                 <figcaption>Pixel-level detail</figcaption>
               </figure>
-              <span class="research-map-label">SATELLITE OBSERVATIONS · REAL RESEARCH OUTPUT</span><span class="research-image-caption">Locate the anomaly. Investigate the change.</span>
+              <span class="research-map-label">SATELLITE ANALYSIS · RESEARCH OUTPUT</span><span class="research-image-caption">Red markers highlight vegetation anomalies.</span>
             </div>
             <div class="research-feature-copy">
               <div class="research-card-kicker"><span class="research-live-dot"></span> Graduate research · In progress</div>
-              <h3 id="satellite-title">A seasonal baseline. A signal of stress.</h3>
-              <p>I compare a Random Forest baseline with Presto temporal embeddings and added radar, weather, terrain, and nearby vegetation context. The question: which inputs improve expected NDVI estimates? Training and validation use 2022–2025; 2026 remains an unseen test.</p>
+              <h3 id="satellite-title">Finding changes worth investigating.</h3>
+              <div class="research-story"><div><span class="research-story-label">The question</span><p>Can temporal AI representations improve estimates of how healthy vegetation should behave?</p></div><div><span class="research-story-label">What I built</span><p>A pipeline comparing Random Forest and Presto embeddings, with radar, weather, terrain, and nearby vegetation context. It flags gaps between expected and observed NDVI.</p></div></div>
               <div class="research-facts" aria-label="Research setup">
                 <span><small>Train + validate</small><strong>2022–2025</strong></span>
                 <span><small>Unseen test</small><strong>2026</strong></span>
-                <span><small>Inputs</small><strong>Sentinel-1/2 · weather · terrain</strong></span>
+                <span><small>Study scale</small><strong>12,000 pixels · 4 parks</strong></span>
               </div>
-              <div class="research-pipeline-v10" aria-label="Research pipeline">
-                <span>Observe</span><i aria-hidden="true">→</i><span>Represent</span><i aria-hidden="true">→</i><span>Estimate</span><i aria-hidden="true">→</i><span>Detect</span>
-              </div>
+              <div class="research-finding"><span>Preliminary finding</span><p>Presto provides a modest improvement over the baseline. More input sources have not consistently improved estimates.</p></div>
             </div>
           </article>
         </div>
