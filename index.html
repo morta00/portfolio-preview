@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=4">
+  <link rel="stylesheet" href="css/portfolio.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -195,18 +195,12 @@
         <div class="wrap project-more-inner">
           <header class="project-more-heading">
             <p class="project-feature-category">More selected work</p>
-            <h2 id="more-work-title">Engineering, performance, and applied ML.</h2>
+            <h2 id="more-work-title">Built for accuracy. Engineered for speed.</h2>
           </header>
-          <div class="project-more-list">
-            <a class="project-more-item" id="autoencoder" href="work/autoencoder.html">
-              <span class="project-more-number">04</span><span class="project-more-content"><span class="project-more-name">High-Performance Autoencoder</span><span class="project-more-description">Optimized sparse-data training to finish an epoch 24.73× faster while matching the reference loss.</span><span class="project-more-detail">C++ · AVX · OpenMP</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="project-more-item" id="fraud" href="work/fraud.html">
-              <span class="project-more-number">05</span><span class="project-more-content"><span class="project-more-name">Healthcare Fraud Detection</span><span class="project-more-description">Compared classifiers and cost-aware decisions for rare provider fraud, balancing missed cases against investigation effort.</span><span class="project-more-detail">Cost-sensitive ML · 0.946 ROC-AUC</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="project-more-item" id="hpc" href="work/hpc.html">
-              <span class="project-more-number">06</span><span class="project-more-content"><span class="project-more-name">Sparse ML Kernel Optimization</span><span class="project-more-description">Reworked data layout, cache use, and SIMD execution to speed up a sparse transcriptomics workload.</span><span class="project-more-detail">1st place · 68.78× geometric-mean speedup</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
-            </a>
+          <div class="engineering-gallery">
+            <a class="engineering-card" id="autoencoder" href="work/autoencoder.html"><div class="engineering-visual architecture-thumb"><img src="assets/cards/autoencoder.svg" alt="Autoencoder architecture: 13,714 inputs, 256 hidden units, 32 latent units, 256 hidden units, 13,714 reconstructed outputs" loading="lazy"><span>24.73× faster epoch</span></div><div class="engineering-copy"><p class="project-feature-category">01 / Training systems</p><h3>High-Performance Autoencoder</h3><p>A fixed network. The same reference loss. A training epoch accelerated through sparse operations, SIMD, and careful memory layout.</p><div class="engineering-bottom"><span>C++ · AVX · OpenMP</span><strong>View project ↗</strong></div></div></a>
+            <a class="engineering-card" id="fraud" href="work/fraud.html"><div class="engineering-visual result-thumb"><img src="assets/fraud/roc-curves.png" alt="Actual ROC curves comparing healthcare fraud detection models" loading="lazy"><span>0.946 ROC-AUC</span></div><div class="engineering-copy"><p class="project-feature-category">02 / Applied machine learning</p><h3>Healthcare Fraud Detection</h3><p>Detecting rare provider fraud with 74 engineered features and cost-aware decisions that balance missed cases against investigation effort.</p><div class="engineering-bottom"><span>Classification · Decision costs</span><strong>View results ↗</strong></div></div></a>
+            <a class="engineering-card" id="hpc" href="work/hpc.html"><div class="engineering-visual"><img src="assets/cards/hpc.svg" alt="Sparse machine learning computation optimized with data layout, cache blocking, and SIMD" loading="lazy"><span>68.78× geometric-mean speedup</span></div><div class="engineering-copy"><p class="project-feature-category">03 / Performance engineering</p><h3>Sparse ML Kernel Optimization</h3><p>Turning a sparse transcriptomics workload into an efficient CPU kernel. First place through cache-aware layout and vectorized execution.</p><div class="engineering-bottom"><span>Memory layout · SIMD</span><strong>See the benchmark ↗</strong></div></div></a>
           </div>
         </div>
       </section>
@@ -220,7 +214,7 @@
               <p class="section-label">02 / Current research</p>
               <h2 id="satellite-section-title">Monitoring vegetation stress from space.</h2>
             </div>
-            <p>Using satellite time series and environmental context to estimate expected vegetation health and detect unusual drops.</p>
+            <p>Learning what healthy vegetation should look like—then finding the pixels that depart from that pattern.</p>
           </header>
           <article class="research-feature-card" aria-labelledby="satellite-title">
             <div class="research-feature-image">
@@ -229,12 +223,12 @@
                 <img src="assets/research/anomaly-detail.png" alt="Closer view of pixel-level vegetation anomalies" loading="lazy">
                 <figcaption>Pixel-level detail</figcaption>
               </figure>
-              <span class="research-image-caption">Expected vegetation state <i aria-hidden="true">→</i> deviation map</span>
+              <span class="research-map-label">SATELLITE OBSERVATIONS · REAL RESEARCH OUTPUT</span><span class="research-image-caption">Locate the anomaly. Investigate the change.</span>
             </div>
             <div class="research-feature-copy">
               <div class="research-card-kicker"><span class="research-live-dot"></span> Graduate research · In progress</div>
-              <h3 id="satellite-title">Can temporal embeddings and multisensor inputs improve expected NDVI estimates?</h3>
-              <p>Tests whether temporal embeddings and multisensor data improve expected NDVI estimates. The model learns seasonal patterns from satellite history, then flags unusual drops. Training and validation use 2022–2025; 2026 stays unseen.</p>
+              <h3 id="satellite-title">A seasonal baseline. A signal of stress.</h3>
+              <p>I compare a Random Forest baseline with Presto temporal embeddings and added radar, weather, terrain, and nearby vegetation context. The question: which inputs improve expected NDVI estimates? Training and validation use 2022–2025; 2026 remains an unseen test.</p>
               <div class="research-facts" aria-label="Research setup">
                 <span><small>Train + validate</small><strong>2022–2025</strong></span>
                 <span><small>Unseen test</small><strong>2026</strong></span>
@@ -263,20 +257,10 @@
               <h3 id="publication-title">Towards Clinically Interpretable Heart Disease Prediction</h3>
               <p class="research-paper-subtitle">A comparative analysis of explainability methods for machine learning models.</p>
               <p class="research-paper-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
-              <p class="research-paper-summary">Co-authored work comparing how explanation methods reveal model behavior and support more interpretable clinical predictions.</p>
+              <p class="research-paper-summary">Can different explanation methods agree on what drives a prediction? Our study compares SHAP and LIME across four classifiers to examine consistency in heart-disease risk explanations.</p><div class="publication-topics"><span>Explainable AI</span><span>SHAP + LIME</span><span>4 classifiers</span></div>
               <a class="research-paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="paper-method-visual" aria-label="Prediction model explained using SHAP and LIME for clinical interpretation">
-              <p>EXPLAINABILITY PIPELINE</p>
-              <div class="paper-method-step"><span>01</span><strong>Prediction model</strong><small>Heart-disease risk</small></div>
-              <i aria-hidden="true">↓</i>
-              <div class="paper-method-pair">
-                <div><span>02A</span><strong>SHAP</strong><small>Global + local attribution</small></div>
-                <div><span>02B</span><strong>LIME</strong><small>Local explanation</small></div>
-              </div>
-              <i aria-hidden="true">↓</i>
-              <div class="paper-method-step paper-method-outcome"><span>03</span><strong>Clinical interpretation</strong><small>Compare explanation behavior</small></div>
-            </div>
+            <a class="publication-cover-stage" href="https://link.springer.com/book/10.1007/978-3-032-32636-2" target="_blank" rel="noopener noreferrer" aria-label="View the Springer ICR 2026 proceedings"><span class="publication-cover-tag">PUBLISHED IN THE PROCEEDINGS</span><img src="assets/publication/icr26-cover.jpg" alt="Official cover of Proceedings of the Fifth International Conference on Innovations in Computing Research, Springer" loading="lazy"><span class="publication-cover-caption">Lecture Notes in Networks and Systems<br><strong>Volume 2074 · Chapter 26 · pp. 305–314 ↗</strong></span></a>
           </article>
         </div>
       </section>
@@ -336,14 +320,18 @@ focus = [<span class="code-string">"Vision"</span>, <span class="code-string">"R
 <span class="code-key">from</span> fastapi <span class="code-key">import</span> <span class="code-name">FastAPI</span>
 
 stack = [<span class="code-string">"SQL"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"Git"</span>]
-systems = [<span class="code-string">"C++"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Satellite pipelines, APIs, and optimized ML kernels<span class="terminal-cursor" aria-hidden="true"></span></div></article></div><div class="focus-switch"><span>Explore my focus:</span><button type="button" class="is-active" data-focus-output="ai" aria-pressed="true">Applied AI</button><button type="button" data-focus-output="research" aria-pressed="false">Research</button><button type="button" data-focus-output="systems" aria-pressed="false">Systems</button></div><div class="terminal-output" aria-live="polite"><span class="terminal-prompt">❯</span><p id="focus-output">I connect language models with retrieval, tools, and APIs to build usable AI applications.</p></div>        <div class="expertise-recognition">
-          <span>Selected recognition</span>
-          <p>GVSU Pitch Competition Finalist · 1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
-        </div>
-      </div>
+systems = [<span class="code-string">"C++"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Satellite pipelines, APIs, and optimized ML kernels<span class="terminal-cursor" aria-hidden="true"></span></div></article></div><div class="focus-switch"><span>Explore my focus:</span><button type="button" class="is-active" data-focus-output="ai" aria-pressed="true">Applied AI</button><button type="button" data-focus-output="research" aria-pressed="false">Research</button><button type="button" data-focus-output="systems" aria-pressed="false">Systems</button></div><div class="terminal-output" aria-live="polite"><span class="terminal-prompt">❯</span><p id="focus-output">I connect language models with retrieval, tools, and APIs to build usable AI applications.</p></div>      </div>
     </section>
+    <section class="recognition-screen" id="recognition" aria-labelledby="recognition-title"><div class="wrap"><header class="center-head"><p class="section-label">Selected recognition</p><h2 id="recognition-title">Work that earned its place.</h2><p>Competition results, published research, and academic milestones.</p></header><div class="recognition-cards">
+<a href="work/kaggle.html"><span class="recognition-symbol">01</span><div><small>Machine learning competition</small><h3>1st place</h3><p>Three-model image-classification ensemble · 93.4% test accuracy</p></div><span aria-hidden="true">↗</span></a>
+<a href="work/hpc.html"><span class="recognition-symbol">02</span><div><small>HPC leaderboard</small><h3>1st place</h3><p>Sparse kernel optimization · 68.78× geometric-mean speedup</p></div><span aria-hidden="true">↗</span></a>
+<a href="#publication"><span class="recognition-symbol">03</span><div><small>Peer-reviewed research</small><h3>Springer co-author</h3><p>Explainable medical AI · ICR’26 proceedings</p></div><span aria-hidden="true">↗</span></a>
+<a href="#research"><span class="recognition-symbol">04</span><div><small>GVSU pitch competition</small><h3>Finalist</h3><p>Presenting AI for satellite vegetation monitoring</p></div><span aria-hidden="true">↗</span></a>
+<div><span class="recognition-symbol">05</span><div><small>Grand Valley State University</small><h3>Graduate assistantship</h3><p>Merit-supported graduate study and applied AI research</p></div></div>
+<div><span class="recognition-symbol">06</span><div><small>Faculty of Sciences of Bizerte</small><h3>Top-ranked graduate</h3><p>Computer Science · Ranked first across all bachelor years</p></div></div>
+</div></div></section>
 
-<section class="career-challenge" id="challenge" aria-labelledby="challenge-title"><div class="wrap challenge-inner"><header class="center-head"><p class="section-label">The career-fair challenge</p><h2 id="challenge-title">Three seconds. One challenge.</h2><p>Stop the clock at exactly 3.00 seconds. Beat the timing bot’s precision.</p></header><div class="challenge-card"><div class="challenge-clock"><span class="challenge-target">TARGET · 3.00 SECONDS</span><div class="timer-display" id="precision-clock" aria-hidden="true">0.00<span>s</span></div><p id="precision-instruction">One button. One shot. Ready?</p><button type="button" class="btn btn-primary timer-button" id="precision-button">Start challenge</button><button type="button" class="timer-reset" id="precision-reset">Reset</button></div><div class="challenge-rival"><span class="rival-label">YOUR CHALLENGER</span><div class="bot-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="27" rx="9"/><path d="M24 6v7M19 31h10"/><circle cx="18" cy="24" r="2"/><circle cx="30" cy="24" r="2"/></svg></div><h3>The timing bot</h3><p>Keep your cool. Trust your timing.</p><div class="precision-scores"><div><span>Your error</span><strong id="human-error">—</strong></div><div><span>Bot error</span><strong id="bot-error">—</strong></div></div><p class="timing-disclosure">A simulated timing rival. Try Connect Four below for an opponent powered by minimax search.</p></div></div><div class="challenge-outcome" id="precision-outcome" aria-live="polite"><p>A little friendly competition. A good conversation starter.</p></div><div class="challenge-links"><a href="#play">Play the search-based AI ↓</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Meet the engineer ↗</a></div></div></section>    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
+<section class="career-challenge" id="challenge" aria-labelledby="challenge-title"><div class="wrap challenge-inner"><header class="center-head"><p class="section-label">The precision challenge</p><h2 id="challenge-title">Three seconds. One challenge.</h2><p>Stop the clock at exactly 3.00 seconds. Beat the timing bot’s precision.</p></header><div class="challenge-card"><div class="challenge-clock"><span class="challenge-target">TARGET · 3.00 SECONDS</span><div class="timer-display" id="precision-clock" aria-hidden="true">0.00<span>s</span></div><p id="precision-instruction">One button. One shot. Ready?</p><button type="button" class="btn btn-primary timer-button" id="precision-button">Start challenge</button><button type="button" class="timer-reset" id="precision-reset">Reset</button></div><div class="challenge-rival"><span class="rival-label">YOUR CHALLENGER</span><div class="bot-avatar" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="13" width="32" height="27" rx="9"/><path d="M24 6v7M19 31h10"/><circle cx="18" cy="24" r="2"/><circle cx="30" cy="24" r="2"/></svg></div><h3>The timing bot</h3><p>Keep your cool. Trust your timing.</p><div class="precision-scores"><div><span>Your error</span><strong id="human-error">—</strong></div><div><span>Bot error</span><strong id="bot-error">—</strong></div></div><p class="timing-disclosure">A simulated timing rival. Try Connect Four below for an opponent powered by minimax search.</p></div></div><div class="challenge-outcome" id="precision-outcome" aria-live="polite"><p>A little friendly competition. A good conversation starter.</p></div><div class="challenge-links"><a href="#play">Play Tic-Tac-Toe & Connect Four ↓</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Download my resume (PDF) ↗</a></div></div></section>    <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
       <div class="wrap portfolio-play-inner">
         <header class="portfolio-play-head">
           <div><p class="section-label">06 / Playground</p><h2 id="play-title">Can you beat my AI?</h2></div>
@@ -391,9 +379,7 @@ systems = [<span class="code-string">"C++"</span>, <span class="code-string">"Op
       </div>
     </section>
 
-    <section class="contact-shell" id="contact">
-      <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Get in Touch</h2><p>Let’s talk about AI engineering, applied machine learning, or research. Have a team or a technical challenge in mind? I’d love to hear about it.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">ghnimim@mail.gvsu.edu ↗</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
-    </section>
+    <section class="contact-shell" id="contact" aria-labelledby="contact-title"><div class="wrap contact"><div class="contact-copy"><p class="section-label">Let’s connect</p><h2 id="contact-title">Your next challenge.<br><span>Let’s build it together.</span></h2><p>I build AI applications, evaluate machine learning models, and turn research into working systems. If that fits your team, I’d love to talk.</p><a class="contact-email" href="mailto:ghnimim@mail.gvsu.edu">ghnimim@mail.gvsu.edu <span aria-hidden="true">↗</span></a><div class="contact-links"><a href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a data-resume-link href="assets/Mortadha_Ghnimi_Resume.pdf">Download resume (PDF) ↗</a></div></div><aside class="contact-note"><div class="contact-monogram" aria-hidden="true">MG<span>.</span></div><p>Mortadha Ghnimi</p><span>AI/ML Engineer<br>Graduate Researcher</span><div class="contact-location"><span aria-hidden="true">◎</span> Grand Rapids, Michigan</div><a href="#work">Explore my work ↑</a></aside></div></section>
 
     <footer class="wrap footer"><p>© <span id="year"></span> Mortadha Ghnimi</p><p>AI/ML Engineer · Graduate Researcher</p></footer>
   </main>
