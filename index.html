@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/portfolio.css?v=11">
+  <link rel="stylesheet" href="css/portfolio.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -304,25 +304,30 @@
           <p>A focused technical profile across intelligent systems, machine learning, and research engineering.</p>
         </header>
 
-<div class="terminal-grid"><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>models.py</span><span class="terminal-language">Python</span></header><pre><code><span class="code-comment"># machine learning & computer vision</span>
-<span class="code-key">import</span> <span class="code-name">torch</span>
-<span class="code-key">import</span> <span class="code-name">tensorflow</span> <span class="code-key">as</span> tf
-<span class="code-key">import</span> <span class="code-name">sklearn</span>
-
-<span class="code-comment"># agents & retrieval</span>
-<span class="code-key">import</span> <span class="code-name">langgraph</span>
-<span class="code-key">import</span> <span class="code-name">langchain</span>
-
-focus = [<span class="code-string">"Vision"</span>, <span class="code-string">"RAG"</span>, <span class="code-string">"Tool use"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Model training, evaluation, and agent workflows<span class="terminal-cursor" aria-hidden="true"></span></div></article><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>systems.py</span><span class="terminal-language">Python / C++</span></header><pre><code><span class="code-comment"># data & earth observation</span>
-<span class="code-key">import</span> <span class="code-name">pandas</span> <span class="code-key">as</span> pd
-<span class="code-key">import</span> <span class="code-name">numpy</span> <span class="code-key">as</span> np
-<span class="code-key">import</span> <span class="code-name">ee</span>
-
-<span class="code-comment"># services & performance</span>
+<div class="terminal-grid"><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>models.py</span><span class="terminal-language">AI / ML</span></header><pre><code><span class="code-comment"># model development</span>
+<span class="code-key">import</span> <span class="code-name">torch</span>, <span class="code-name">tensorflow</span>
+<span class="code-key">import</span> <span class="code-name">sklearn</span>, <span class="code-name">xgboost</span>, <span class="code-name">lightgbm</span>
+ 
+<span class="code-comment"># evaluation & explainability</span>
+<span class="code-key">import</span> <span class="code-name">shap</span>, <span class="code-name">lime</span>
+evaluation = [<span class="code-string">"Cross-validation"</span>, <span class="code-string">"ROC-AUC"</span>, <span class="code-string">"F1"</span>]
+modeling = [<span class="code-string">"Vision"</span>, <span class="code-string">"Feature engineering"</span>]
+ 
+<span class="code-comment"># language models, agents & retrieval</span>
+<span class="code-key">import</span> <span class="code-name">langgraph</span>, <span class="code-name">langchain</span>, <span class="code-name">faiss</span>
+workflows = [<span class="code-string">"RAG"</span>, <span class="code-string">"Embeddings"</span>, <span class="code-string">"Tool use"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Train, evaluate, explain, and connect models<span class="terminal-cursor" aria-hidden="true"></span></div></article><article class="terminal-window"><header class="terminal-bar"><span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>systems.py</span><span class="terminal-language">Python / C++</span></header><pre><code><span class="code-comment"># data pipelines & earth observation</span>
+<span class="code-key">import</span> <span class="code-name">pandas</span>, <span class="code-name">numpy</span>, <span class="code-name">ee</span>
+ 
+<span class="code-comment"># APIs, tools & deployment</span>
 <span class="code-key">from</span> fastapi <span class="code-key">import</span> <span class="code-name">FastAPI</span>
-
-stack = [<span class="code-string">"SQL"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"Git"</span>]
-systems = [<span class="code-string">"C++"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Satellite pipelines, APIs, and optimized ML kernels<span class="terminal-cursor" aria-hidden="true"></span></div></article></div>      </div>
+services = [<span class="code-string">"REST APIs"</span>, <span class="code-string">"Webhooks"</span>, <span class="code-string">"MCP"</span>]
+storage = [<span class="code-string">"SQL"</span>, <span class="code-string">"PostgreSQL"</span>, <span class="code-string">"pgvector"</span>]
+delivery = [<span class="code-string">"Docker"</span>, <span class="code-string">"Git"</span>]
+ 
+<span class="code-comment"># performance & reliable evaluation</span>
+languages = [<span class="code-string">"Python"</span>, <span class="code-string">"C++"</span>]
+compute = [<span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>, <span class="code-string">"Sparse kernels"</span>]
+validation = [<span class="code-string">"Temporal splits"</span>, <span class="code-string">"Leakage checks"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Build APIs, ship services, and accelerate workloads<span class="terminal-cursor" aria-hidden="true"></span></div></article></div>      </div>
     </section>
     <section class="recognition-screen" id="recognition" aria-labelledby="recognition-title"><div class="wrap"><header class="center-head"><p class="section-label">Selected recognition</p><h2 id="recognition-title">Work that earned its place.</h2><p>Competition results, published research, and academic milestones.</p></header><div class="recognition-cards">
 <div><span class="recognition-symbol">01</span><div><small>Machine learning competition</small><h3>1st place</h3><p>Three-model image-classification ensemble · 93.4% test accuracy</p></div></div>

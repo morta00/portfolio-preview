@@ -80,3 +80,7 @@ html{scroll-snap-type:none!important;scroll-padding-top:0!important}section[id],
 .project-focus-lead{font-size:15px;line-height:1.5;font-weight:600;color:var(--green);margin:0 0 16px;letter-spacing:-.02em}
 .project-more-heading .section-focus-description{font-size:13px;line-height:1.6;color:#596960;max-width:680px;margin:14px auto 0}
 @media(max-width:680px){.project-focus-lead{font-size:14px}.project-more-heading .section-focus-description{font-size:12px}}
+
+.expertise-shell .terminal-grid{align-items:stretch}.expertise-shell .terminal-window{display:flex;flex-direction:column}.expertise-shell .terminal-window pre{flex:1;font-size:12px;line-height:1.85}.expertise-shell .terminal-footer{margin-top:auto}
+@media(min-width:900px) and (max-height:780px){.expertise-shell .terminal-window pre{font-size:10px;line-height:1.7;padding:16px 20px}}
+@media(max-width:680px){.expertise-shell .terminal-window pre{font-size:10px;line-height:1.9;padding:18px 16px}}
