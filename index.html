@@ -90,159 +90,134 @@
       </section>
     </div>
 
-    <section class="clean-work-shell" id="work">
-      <div class="wrap clean-section">
-        <header class="clean-section-head">
-          <p class="section-label">01 / Selected work</p>
-          <div class="clean-title-row">
-            <h2>Selected work.</h2>
-            <p>Four projects that show how I think across AI systems, applied AI, computer vision, and performance engineering.</p>
+    <section class="project-grid-shell" id="work">
+      <div class="wrap project-grid-section">
+        <header class="project-grid-head">
+          <div>
+            <p class="section-label">01 / Selected work</p>
+            <h2>Projects.</h2>
           </div>
+          <p>Selected systems with measurable outcomes. Click any card for the full case study, architecture, and technical decisions.</p>
         </header>
 
-        <div class="clean-projects">
-          <article class="clean-project" id="geoagent" data-focus="agentic data systems">
-            <div class="clean-project-copy">
-              <p class="clean-project-meta">01 · Agentic AI · Active build</p>
+        <div class="project-card-grid">
+          <a class="project-card" id="geoagent" href="work/geoagent.html" aria-label="Open GeoAgent case study">
+            <div class="project-card-media media-geoagent">
+              <span class="project-badge">Agentic AI</span>
+              <div class="agent-card-flow" aria-hidden="true">
+                <span>PLAN</span><i>→</i><b>GEOAGENT</b><i>→</i><span>VERIFY</span>
+              </div>
+              <div class="media-caption">RAG · SQL · Python · MCP</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>Active build</span><span>2026</span></div>
               <h3>GeoAgent</h3>
-              <p class="clean-project-subtitle">Agentic research & data analysis platform</p>
-              <p class="clean-project-desc">A multi-step AI system that plans, selects tools, analyzes data, verifies its work, and produces grounded reports.</p>
-              <div class="clean-project-facts">
-                <span>Planner → tools → verifier</span>
-                <span>RAG + SQL + Python analytics</span>
-                <span>Persistent state + human approval</span>
-              </div>
-              <div class="clean-project-bottom">
-                <div class="clean-tags"><span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span></div>
-                <a class="clean-case-link" href="work/geoagent.html">View case study <span>↗</span></a>
-              </div>
+              <p>Agentic research and data-analysis platform that plans tasks, selects tools, verifies results, and produces grounded reports.</p>
+              <div class="project-card-tags"><span>Python</span><span>LangGraph</span><span>MCP</span></div>
+              <div class="project-card-foot"><span>Planner · Tools · Verifier</span><b>↗</b></div>
             </div>
-            <div class="clean-project-visual clean-dark geo-clean" aria-label="Simplified GeoAgent flow">
-              <p class="visual-label">SYSTEM FLOW</p>
-              <div class="clean-flow">
-                <span>Request</span><i>→</i><span>Plan</span><i>→</i><span>Act</span><i>→</i><span>Verify</span><i>→</i><span>Report</span>
-              </div>
-              <div class="clean-mini-tags"><span>RAG</span><span>SQL</span><span>Python</span><span>MCP</span></div>
-              <p class="visual-note">Active build · evaluation framework in progress</p>
-            </div>
-          </article>
+          </a>
 
-          <article class="clean-project" id="asjai" data-focus="agentic data systems">
-            <div class="clean-project-copy">
-              <p class="clean-project-meta">02 · Applied AI · Private deployed system</p>
+          <a class="project-card" id="asjai" href="work/asjai.html" aria-label="Open AI Automation Platform case study">
+            <div class="project-card-media media-asjai">
+              <span class="project-badge">Applied AI</span>
+              <div class="asjai-card-flow" aria-hidden="true">
+                <span>Commerce</span><i>+</i><span>APIs</span><i>+</i><span>RAG</span>
+              </div>
+              <div class="media-caption">Private deployed system</div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>Deployed</span><span>2026</span></div>
               <h3>AI Automation Platform</h3>
-              <p class="clean-project-subtitle">Asjai Lou Casting</p>
-              <p class="clean-project-desc">A deployed commerce and knowledge platform connecting customer workflows, fulfillment, secure onboarding, and grounded AI retrieval.</p>
-              <div class="clean-project-facts">
-                <span>Shopify / TikTok Shop integrations</span>
-                <span>APIs + webhooks + workflow automation</span>
-                <span>RAG foundation; agentic extension in development</span>
-              </div>
-              <div class="clean-project-bottom">
-                <div class="clean-tags"><span>RAG</span><span>APIs</span><span>Webhooks</span><span>Automation</span></div>
-                <a class="clean-case-link" href="work/asjai.html">View case study <span>↗</span></a>
-              </div>
+              <p>Commerce and knowledge platform connecting secure onboarding, fulfillment, automation, and grounded AI retrieval.</p>
+              <div class="project-card-tags"><span>RAG</span><span>APIs</span><span>Webhooks</span></div>
+              <div class="project-card-foot"><span>Asjai Lou Casting</span><b>↗</b></div>
             </div>
-            <div class="clean-project-visual commerce-clean" aria-label="Asjai platform architecture">
-              <p class="visual-label">PRIVATE SYSTEM</p>
-              <div class="clean-stack-flow"><span>Commerce</span><i>↓</i><span>API + Webhooks</span><i>↓</i><span>Automation</span><i>↓</i><span>Customer Platform</span><i>↓</i><span>Knowledge + RAG</span></div>
-              <p class="visual-note">Product UI withheld for client confidentiality.</p>
-            </div>
-          </article>
+          </a>
 
-          <article class="clean-project" id="vision" data-focus="ml cv">
-            <div class="clean-project-copy">
-              <p class="clean-project-meta">03 · Computer Vision · Completed</p>
-              <h3>1st Place Multiclass Image Classification</h3>
-              <p class="clean-project-desc">A three-CNN ensemble using WideResNet and ResNet-110, trained from scratch for low-resolution multiclass classification.</p>
-              <div class="clean-highlight"><strong>93.4%</strong><span>accuracy · 1st place</span></div>
-              <div class="clean-project-facts">
-                <span>Ensemble learning</span>
-                <span>Pseudo-labeling</span>
-                <span>Test-time augmentation</span>
-              </div>
-              <div class="clean-project-bottom">
-                <div class="clean-tags"><span>TensorFlow</span><span>Keras</span><span>WideResNet</span></div>
-                <a class="clean-case-link" href="work/kaggle.html">See winning approach <span>↗</span></a>
-              </div>
+          <a class="project-card" id="vision" href="work/kaggle.html" aria-label="Open image classification case study">
+            <div class="project-card-media media-image">
+              <span class="project-badge">Computer Vision</span>
+              <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing first place" loading="lazy">
+              <div class="media-score"><strong>1st Place</strong><span>93.4% accuracy</span></div>
             </div>
-            <figure class="clean-project-visual leaderboard-clean">
-              <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing Mortadha Ghnimi in first place with a score of 0.934" loading="lazy">
-              <figcaption><strong>1st place</strong><span>Competition leaderboard · 0.934</span></figcaption>
-            </figure>
-          </article>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>Competition winner</span><span>2026</span></div>
+              <h3>Multiclass Image Classification</h3>
+              <p>Three-CNN ensemble trained from scratch with advanced augmentation, pseudo-labeling, and test-time augmentation.</p>
+              <div class="project-card-tags"><span>TensorFlow</span><span>WideResNet</span><span>TTA</span></div>
+              <div class="project-card-foot"><span>93.4% · 1st place</span><b>↗</b></div>
+            </div>
+          </a>
 
-          <article class="clean-project" id="autoencoder" data-focus="systems ml">
-            <div class="clean-project-copy">
-              <p class="clean-project-meta">04 · AI Systems · Completed</p>
-              <h3>High-Performance Autoencoder Training</h3>
-              <p class="clean-project-desc">Optimized one training epoch of a 13,714 → 256 → 32 → 256 → 13,714 autoencoder on sparse single-cell transcriptomics data.</p>
-              <div class="clean-highlight"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
-              <div class="clean-project-facts">
-                <span>Adam training loop optimization</span>
-                <span>AVX + multithreading</span>
-                <span>Cache-aware dense reconstruction</span>
+          <a class="project-card" id="autoencoder" href="work/autoencoder.html" aria-label="Open autoencoder performance case study">
+            <div class="project-card-media media-autoencoder">
+              <span class="project-badge">AI Systems</span>
+              <div class="auto-card-net" aria-hidden="true">
+                <span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span>
               </div>
-              <div class="clean-project-bottom">
-                <div class="clean-tags"><span>C++</span><span>AVX</span><span>Adam</span><span>Threads</span></div>
-                <a class="clean-case-link" href="work/autoencoder.html">View AI-systems case study <span>↗</span></a>
-              </div>
+              <div class="media-score"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
             </div>
-            <div class="clean-project-visual auto-clean" aria-label="Autoencoder architecture and speedup">
-              <p class="visual-label">MODEL + SYSTEMS</p>
-              <div class="clean-network"><span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span></div>
-              <div class="clean-speed"><div><small>Reference</small><strong>56.49 s</strong></div><i>→</i><div class="accent-speed"><small>Optimized</small><strong>2.28 s</strong></div></div>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>Performance engineering</span><span>2026</span></div>
+              <h3>High-Performance Autoencoder</h3>
+              <p>Optimized a fixed neural autoencoder training workload with AVX, multithreading, and cache-aware computation.</p>
+              <div class="project-card-tags"><span>C++</span><span>AVX</span><span>Adam</span></div>
+              <div class="project-card-foot"><span>56.49 s → 2.28 s</span><b>↗</b></div>
             </div>
-          </article>
-        </div>
+          </a>
 
-        <div class="clean-more" id="more-projects">
-          <div class="clean-more-head"><p class="section-label">More work</p><h3>Additional evidence, kept intentionally compact.</h3></div>
-          <div class="clean-more-grid">
-            <a class="clean-more-card" data-focus="systems ml" href="work/hpc.html"><span class="more-top">Systems</span><strong>68.78×</strong><h4>Sparse ML Kernel Optimization</h4><p>1st place leaderboard · 6/6 correct · packed CSR, OpenMP, SIMD.</p></a>
-            <a class="clean-more-card" data-focus="ml data" href="work/fraud.html"><span class="more-top">Data Science</span><strong>0.946</strong><h4>Healthcare Fraud Detection</h4><p>74 engineered features · cost-sensitive ML · ROC-AUC 0.946.</p></a>
-            <a class="clean-more-card clean-more-media" data-focus="agentic systems" href="work/gymbox.html"><span class="more-top">Applied AI</span><h4>GymBox AI</h4><p>RAG-powered training and nutrition assistant integrated into a React Native product.</p><span class="more-arrow">View project ↗</span></a>
-          </div>
+          <a class="project-card" href="work/fraud.html" aria-label="Open healthcare fraud detection case study">
+            <div class="project-card-media media-image media-fraud">
+              <span class="project-badge">Data Science</span>
+              <img src="assets/fraud/roc-curves.png" alt="ROC curves from healthcare fraud detection models" loading="lazy">
+              <div class="media-score"><strong>0.946</strong><span>ROC-AUC</span></div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>Cost-sensitive ML</span><span>2026</span></div>
+              <h3>Healthcare Fraud Detection</h3>
+              <p>Provider-level fraud detection using 74 engineered features and cost-aware modeling under severe class imbalance.</p>
+              <div class="project-card-tags"><span>scikit-learn</span><span>Pandas</span><span>ML</span></div>
+              <div class="project-card-foot"><span>74 engineered features</span><b>↗</b></div>
+            </div>
+          </a>
+
+          <a class="project-card" href="work/hpc.html" aria-label="Open sparse kernel optimization case study">
+            <div class="project-card-media media-hpc">
+              <span class="project-badge">HPC</span>
+              <div class="hpc-card-metric"><strong>68.78×</strong><span>geometric-mean speedup</span></div>
+              <div class="hpc-bars" aria-hidden="true"><i style="--h:32%"></i><i style="--h:44%"></i><i style="--h:56%"></i><i style="--h:69%"></i><i style="--h:82%"></i><i style="--h:100%"></i></div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-card-meta"><span>1st place leaderboard</span><span>2026</span></div>
+              <h3>Sparse ML Kernel Optimization</h3>
+              <p>Low-level sparse matrix optimization using packed CSR, OpenMP, SIMD, cache tiling, and specialization.</p>
+              <div class="project-card-tags"><span>C++</span><span>OpenMP</span><span>SIMD</span></div>
+              <div class="project-card-foot"><span>1st place · 6/6 correct</span><b>↗</b></div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="challenge-shell" id="challenge">
-      <div class="wrap challenge-card challenge-card-v2">
-        <div class="challenge-copy">
-          <p class="section-label">Career fair challenge</p>
-          <h2>Pick your challenge.</h2>
-          <p>Start with a 20-second warm-up. If you want the harder version, move to Connect Four and play against a deeper search agent.</p>
-          <div class="challenge-modes">
-            <a class="challenge-mode" href="play.html#quick">
-              <span class="mode-number">01</span>
-              <div><strong>Quick match</strong><small>Tic-Tac-Toe · easy to learn · minimax AI</small></div>
-              <b>Play →</b>
-            </a>
-            <a class="challenge-mode hard" href="play.html#hard">
-              <span class="mode-number">02</span>
-              <div><strong>Hard mode</strong><small>Connect Four · alpha-beta search · deeper planning</small></div>
-              <b>Play →</b>
-            </a>
-          </div>
-          <p class="challenge-joke">If the AI wins, I’ll count that as one vote for hiring me.</p>
+    <section class="challenge-shell compact-challenge" id="challenge">
+      <div class="wrap compact-challenge-inner">
+        <div class="compact-challenge-copy">
+          <p class="section-label">AI Playground</p>
+          <h2>Think you can beat my AI?</h2>
+          <p>Start with the 20-second game. If that feels too easy, switch to hard mode.</p>
         </div>
-        <div class="challenge-duel" aria-label="Two AI game previews">
-          <div class="quick-preview">
-            <p>QUICK MATCH</p>
-            <div class="ttt-preview" aria-hidden="true"><span>×</span><span></span><span>○</span><span></span><span>×</span><span></span><span>○</span><span></span><span>×</span></div>
-          </div>
-          <div class="hard-preview">
-            <p>HARD MODE</p>
-            <div class="mini-board" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span class="ai"></span><span></span><span></span><span></span>
-              <span></span><span></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
-              <span></span><span class="human"></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
-              <span></span><span class="human"></span><span class="ai"></span><span class="ai"></span><span></span><span></span><span></span>
-            </div>
-          </div>
+        <div class="compact-game-links">
+          <a href="play.html#quick" class="compact-game-card">
+            <span>01</span>
+            <div><strong>Quick match</strong><small>Tic-Tac-Toe · minimax</small></div>
+            <b>Play →</b>
+          </a>
+          <a href="play.html#hard" class="compact-game-card hard">
+            <span>02</span>
+            <div><strong>Hard mode</strong><small>Connect Four · alpha-beta</small></div>
+            <b>Play →</b>
+          </a>
         </div>
       </div>
     </section>
