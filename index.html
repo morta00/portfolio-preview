@@ -90,31 +90,6 @@
       </section>
     </div>
 
-    <section class="build-strip" aria-labelledby="build-title">
-      <div class="wrap build-grid">
-        <div class="build-intro">
-          <p class="section-label">What I build</p>
-          <h2 id="build-title">AI that works beyond the demo.</h2>
-          <p>My strongest work sits where models meet real systems: planning, perception, data, deployment, and performance.</p>
-        </div>
-        <article class="build-pillar">
-          <span>01</span>
-          <h3>Agentic & Applied AI</h3>
-          <p>LLM agents, RAG, tool use, automation, APIs, and human-in-the-loop workflows.</p>
-        </article>
-        <article class="build-pillar">
-          <span>02</span>
-          <h3>Machine Learning & Vision</h3>
-          <p>Deep learning, computer vision, data science, evaluation, and model interpretation.</p>
-        </article>
-        <article class="build-pillar">
-          <span>03</span>
-          <h3>AI Systems & Research</h3>
-          <p>High-performance training, geospatial AI, remote sensing, and research-to-production thinking.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="clean-work-shell" id="work">
       <div class="wrap clean-section">
         <header class="clean-section-head">
@@ -124,18 +99,6 @@
             <p>Four projects that show how I think across AI systems, applied AI, computer vision, and performance engineering.</p>
           </div>
         </header>
-
-        <div class="clean-filter-bar" aria-label="Filter selected work">
-          <span>Focus</span>
-          <div class="filter-row" role="group" aria-label="Project focus">
-            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
-            <button type="button" class="filter-btn" data-filter="agentic" aria-pressed="false">AI Agents</button>
-            <button type="button" class="filter-btn" data-filter="ml" aria-pressed="false">Machine Learning</button>
-            <button type="button" class="filter-btn" data-filter="cv" aria-pressed="false">Computer Vision</button>
-            <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
-            <button type="button" class="filter-btn" data-filter="systems" aria-pressed="false">AI Systems</button>
-          </div>
-        </div>
 
         <div class="clean-projects">
           <article class="clean-project" id="geoagent" data-focus="agentic data systems">
@@ -245,59 +208,114 @@
     </section>
 
     <section class="challenge-shell" id="challenge">
-      <div class="wrap challenge-card">
+      <div class="wrap challenge-card challenge-card-v2">
         <div class="challenge-copy">
           <p class="section-label">Career fair challenge</p>
-          <h2>Think you can beat my AI?</h2>
-          <p>Try a fast Connect Four challenge against a minimax agent with alpha-beta pruning. It is a playful demo, but the engineering underneath is real classical AI: search, evaluation, pruning, and decision-making under constraints.</p>
-          <div class="challenge-points">
-            <span>Minimax search</span><span>Alpha-beta pruning</span><span>Heuristic evaluation</span>
+          <h2>Pick your challenge.</h2>
+          <p>Start with a 20-second warm-up. If you want the harder version, move to Connect Four and play against a deeper search agent.</p>
+          <div class="challenge-modes">
+            <a class="challenge-mode" href="play.html#quick">
+              <span class="mode-number">01</span>
+              <div><strong>Quick match</strong><small>Tic-Tac-Toe · easy to learn · minimax AI</small></div>
+              <b>Play →</b>
+            </a>
+            <a class="challenge-mode hard" href="play.html#hard">
+              <span class="mode-number">02</span>
+              <div><strong>Hard mode</strong><small>Connect Four · alpha-beta search · deeper planning</small></div>
+              <b>Play →</b>
+            </a>
           </div>
-          <a class="btn btn-primary challenge-cta" href="play.html">Play the AI challenge →</a>
-          <p class="challenge-joke">If it wins, I’ll count that as one vote for hiring me.</p>
+          <p class="challenge-joke">If the AI wins, I’ll count that as one vote for hiring me.</p>
         </div>
-        <div class="challenge-visual" aria-label="Stylized Connect Four board preview">
-          <div class="mini-board" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span class="ai"></span><span></span><span></span><span></span>
-            <span></span><span></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
-            <span></span><span class="human"></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
-            <span></span><span class="human"></span><span class="ai"></span><span class="ai"></span><span></span><span></span><span></span>
+        <div class="challenge-duel" aria-label="Two AI game previews">
+          <div class="quick-preview">
+            <p>QUICK MATCH</p>
+            <div class="ttt-preview" aria-hidden="true"><span>×</span><span></span><span>○</span><span></span><span>×</span><span></span><span>○</span><span></span><span>×</span></div>
           </div>
-          <div class="challenge-badge"><strong>YOU</strong><span>vs</span><strong>AI</strong></div>
+          <div class="hard-preview">
+            <p>HARD MODE</p>
+            <div class="mini-board" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span class="ai"></span><span></span><span></span><span></span>
+              <span></span><span></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
+              <span></span><span class="human"></span><span class="human"></span><span class="ai"></span><span></span><span></span><span></span>
+              <span></span><span class="human"></span><span class="ai"></span><span class="ai"></span><span></span><span></span><span></span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="clean-research" id="research">
       <div class="wrap clean-section clean-research-wrap">
-        <header class="clean-section-head dark-head">
-          <p class="section-label">02 / Research & publication</p>
-          <div class="clean-title-row">
-            <h2>Research that connects models to real decisions.</h2>
-            <p>Current Earth-observation research plus peer-reviewed work in interpretable machine learning.</p>
-          </div>
+        <header class="research-hero-head">
+          <p class="section-label">02 / Research</p>
+          <h2>Forecast the healthy state.<br>Flag the deviation.</h2>
+          <p>My current work asks a simple question: can temporal foundation-model representations make vegetation stress easier to detect before the signal becomes obvious?</p>
         </header>
 
-        <div class="clean-research-grid">
-          <article class="clean-research-main">
-            <p class="clean-project-meta light-meta">Current research · Grand Valley State University</p>
-            <h3>AI for Earth Observation</h3>
-            <p>Developing vegetation-stress monitoring from multisensor satellite time series, with emphasis on temporal representation learning, expected vegetation state, and geospatial anomaly detection.</p>
-            <div class="clean-research-media"><img src="assets/research/anomaly-overview.png" alt="Regional satellite map with detected vegetation anomalies" loading="lazy"><img src="assets/research/anomaly-detail.png" alt="Detailed satellite view of detected vegetation anomalies" loading="lazy"></div>
-            <div class="clean-research-tags"><span>Remote Sensing</span><span>Temporal Foundation Models</span><span>Multimodal AI</span><span>Geospatial ML</span></div>
+        <div class="research-story">
+          <article class="research-system">
+            <div class="research-system-top">
+              <div>
+                <p class="clean-project-meta light-meta">Current thesis research · GVSU</p>
+                <h3>AI for Earth Observation</h3>
+              </div>
+              <span class="research-status"><i></i> Research in progress</span>
+            </div>
+
+            <div class="research-pipeline" aria-label="Research pipeline">
+              <div><span>01</span><strong>Observe</strong><small>Sentinel-2 · Sentinel-1 · weather · terrain</small></div>
+              <i>→</i>
+              <div><span>02</span><strong>Represent</strong><small>Temporal embeddings · Presto / foundation models</small></div>
+              <i>→</i>
+              <div><span>03</span><strong>Expect</strong><small>Estimate healthy vegetation state</small></div>
+              <i>→</i>
+              <div><span>04</span><strong>Detect</strong><small>Expected NDVI − observed NDVI</small></div>
+              <i>→</i>
+              <div><span>05</span><strong>Map</strong><small>Weekly vegetation-stress anomalies</small></div>
+            </div>
+
+            <div class="research-visual-grid">
+              <figure><img src="assets/research/anomaly-overview.png" alt="Regional satellite vegetation anomaly overview" loading="lazy"><figcaption>Regional anomaly overview</figcaption></figure>
+              <figure><img src="assets/research/anomaly-detail.png" alt="Detailed satellite vegetation anomaly view" loading="lazy"><figcaption>Pixel-level anomaly detail</figcaption></figure>
+            </div>
           </article>
 
-          <article class="clean-publication" id="publication">
-            <p class="clean-project-meta light-meta">Peer-reviewed publication · Springer · ICR'26 · Berlin</p>
+          <aside class="research-method">
+            <p class="visual-label">RESEARCH QUESTION</p>
+            <blockquote>Do temporal representations improve expected-vegetation estimates without leaking future information?</blockquote>
+            <div class="method-row"><span>Protocol</span><strong>Train / validate on 2022–2025</strong></div>
+            <div class="method-row"><span>Unseen test</span><strong>2026 held out</strong></div>
+            <div class="method-row"><span>Signal</span><strong>Expected NDVI − observed NDVI</strong></div>
+            <div class="method-row"><span>Focus</span><strong>Temporal + multimodal vegetation stress</strong></div>
+          </aside>
+        </div>
+
+        <article class="paper-feature" id="publication">
+          <div class="paper-copy">
+            <p class="clean-project-meta light-meta">Published · Springer · ICR'26 · Berlin</p>
             <h3>Towards Clinically Interpretable Heart Disease Prediction</h3>
             <p class="pub-title">A Comparative Analysis of Explainability Methods for Machine Learning Models</p>
             <p class="pub-authors">Firas Frouja · Mahdi Bedoui · <strong>Mortadha Ghnimi</strong></p>
-            <p>Comparative analysis of SHAP and LIME across heart-disease prediction models, examining explanation consistency and clinical interpretability.</p>
-            <a class="clean-case-link light-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">View paper / DOI <span>↗</span></a>
-          </article>
-        </div>
+            <a class="paper-link" href="https://doi.org/10.1007/978-3-032-32636-2_26" target="_blank" rel="noopener noreferrer">Read the paper / DOI ↗</a>
+          </div>
+          <div class="paper-viz" aria-label="Explainability comparison visual">
+            <p class="visual-label">EXPLAINABILITY COMPARISON</p>
+            <div class="xai-flow">
+              <span class="xai-model">Heart-disease model</span>
+              <i>→</i>
+              <div class="xai-methods"><span>SHAP</span><span>LIME</span></div>
+              <i>→</i>
+              <span class="xai-outcome">Clinical interpretation</span>
+            </div>
+            <div class="xai-bars" aria-hidden="true">
+              <span style="--w:82%"></span><span style="--w:64%"></span><span style="--w:48%"></span><span style="--w:31%"></span>
+            </div>
+            <p>Peer-reviewed work comparing explanation behavior and interpretability across predictive models.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -331,21 +349,60 @@
       </div>
     </section>
 
-    <section class="clean-about" id="about">
-      <div class="wrap clean-section">
-        <div class="clean-about-top">
-          <div><p class="section-label">04 / About</p><h2>Researcher mindset.<br>Engineer execution.</h2></div>
-          <div class="clean-about-copy"><p>I work at the intersection of AI research and engineering — understanding how a model behaves, building the surrounding system, measuring its performance, and turning it into something useful.</p><p>I'm pursuing an M.S. in Artificial Intelligence at Grand Valley State University, where I work as a Graduate Research Assistant.</p></div>
+    <section class="profile-tech-shell" id="about">
+      <div class="wrap profile-tech">
+        <header class="tech-heading">
+          <div>
+            <p class="section-label">04 / About · Skills · Activity</p>
+            <h2>Researcher mindset.<br>Engineer execution.</h2>
+          </div>
+          <p>I work at the intersection of AI research and engineering — understanding model behavior, building the surrounding system, measuring performance, and turning it into something useful.</p>
+        </header>
+
+        <div class="terminal-grid" aria-label="Technical skills">
+          <article class="terminal-card">
+            <div class="terminal-bar"><span class="term-dots"><i></i><i></i><i></i></span><b>stack.py</b></div>
+            <div class="terminal-code">
+              <p><em># ai / ml</em></p>
+              <p><span>from</span> ml <span>import</span> <b>(PyTorch, TensorFlow, scikit-learn)</b></p>
+              <p><span>from</span> vision <span>import</span> <b>(Computer_Vision, Hugging_Face)</b></p>
+              <p><em># agents / genai</em></p>
+              <p><span>from</span> agents <span>import</span> <b>(RAG, LangGraph, LangChain, MCP)</b></p>
+              <p><span>from</span> tools <span>import</span> <b>(Tool_Calling, pgvector)</b></p>
+              <p><em># languages</em></p>
+              <p><span>from</span> code <span>import</span> <b>(Python, Cpp, Java, TypeScript, SQL)</b></p>
+              <p class="prompt">&gt;&gt;&gt; <i></i></p>
+            </div>
+          </article>
+
+          <article class="terminal-card">
+            <div class="terminal-bar"><span class="term-dots"><i></i><i></i><i></i></span><b>systems.py</b></div>
+            <div class="terminal-code">
+              <p><em># data / geospatial</em></p>
+              <p><span>from</span> data <span>import</span> <b>(Pandas, NumPy, PostgreSQL)</b></p>
+              <p><span>from</span> geo <span>import</span> <b>(Earth_Engine, Remote_Sensing)</b></p>
+              <p><em># backend / systems</em></p>
+              <p><span>from</span> backend <span>import</span> <b>(FastAPI, REST_APIs, Docker)</b></p>
+              <p><span>from</span> systems <span>import</span> <b>(Git, OpenMP, SIMD)</b></p>
+              <p><em># current identity</em></p>
+              <p><span>role</span> = <b>"AI/ML Engineer + Graduate Researcher"</b></p>
+              <p class="prompt">&gt;&gt;&gt; <i></i></p>
+            </div>
+          </article>
         </div>
 
-        <div class="clean-capabilities" aria-label="Technical capabilities">
-          <div><span>AI / ML</span><p>PyTorch · TensorFlow · scikit-learn · Hugging Face · Computer Vision</p></div>
-          <div><span>Agents / GenAI</span><p>LLMs · RAG · LangGraph · LangChain · MCP · Tool Calling</p></div>
-          <div><span>Data / Geospatial</span><p>Pandas · NumPy · PostgreSQL · pgvector · Google Earth Engine · Remote Sensing</p></div>
-          <div><span>Backend / Systems</span><p>FastAPI · REST APIs · Docker · Git · OpenMP · SIMD · C++</p></div>
+        <div class="github-activity">
+          <div class="github-activity-head">
+            <div><p class="visual-label">PUBLIC GITHUB ACTIVITY</p><h3>Building in public, one square at a time.</h3></div>
+            <a href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">@morta00 ↗</a>
+          </div>
+          <div class="github-chart-wrap">
+            <img src="https://ghchart.rshah.org/0d5b48/morta00" alt="Mortadha Ghnimi GitHub contribution calendar" loading="lazy">
+          </div>
+          <p class="github-note">Public GitHub contribution calendar. Project depth still matters more than streaks — this is simply a live view of ongoing work.</p>
         </div>
 
-        <div class="clean-recognition">
+        <div class="clean-recognition tech-recognition">
           <span>Selected recognition</span>
           <p>1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
         </div>
