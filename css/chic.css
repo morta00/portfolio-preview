@@ -1,24 +1,55 @@
-/* A quiet-luxury finish for the project showcase: warm paper, deep forest,
-   restrained brass, and the same editorial character as the portfolio hero. */
+/* Editorial portfolio screens and image-led project cards. */
 :root {
-  --portfolio-forest: #112b24;
-  --portfolio-forest-soft: #1a3c31;
-  --portfolio-sage: #9fc5b5;
-  --portfolio-brass: #d4bd91;
+  --portfolio-ink: #071326;
+  --portfolio-blue: #68adf0;
+  --portfolio-cyan: #8ee3d0;
 }
 
+/* Give the achievements their own deliberate, full-screen moment. */
+.achievements-screen {
+  min-height: calc(100svh - var(--nav-h));
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-margin-top: var(--nav-h);
+  padding: clamp(3.5rem, 8vh, 6rem) 0;
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(38, 100, 79, .065), transparent 33%),
+    linear-gradient(180deg, #f7f5ef 0%, #f1eee6 100%);
+}
+
+.achievements-screen-inner { width: min(var(--max), calc(100% - 3rem)); }
+.achievements-screen-head { max-width: 780px; margin: 0 auto 3rem; text-align: center; }
+.achievements-screen-head .section-label { margin-bottom: .8rem; }
+.achievements-screen-head h2 {
+  margin: 0;
+  color: var(--ink);
+  font: 400 clamp(3rem, 6vw, 5.4rem)/.94 var(--serif);
+  letter-spacing: -.045em;
+}
+.achievements-screen-head > p:last-child {
+  max-width: 570px;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.achievements-screen .achievement-wrap { padding: 0; }
+.achievements-screen .achievement-rail { gap: .8rem; }
+.achievements-screen .achievement-item { min-height: 190px; }
+
+/* A quiet technical texture behind the project gallery. */
 .projects-showcase {
   color: var(--ink);
-  background-color: #f4f1e9;
+  background-color: #f7f6f2;
   background-image:
-    radial-gradient(ellipse at 18% 14%, rgba(76, 111, 91, .055), transparent 33%),
-    radial-gradient(ellipse at 83% 68%, rgba(76, 111, 91, .045), transparent 32%),
-    linear-gradient(90deg, transparent 49.94%, rgba(51, 78, 64, .035) 50%, transparent 50.06%);
-  background-size: auto, auto, 100% 100%;
+    linear-gradient(rgba(53, 91, 133, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 91, 133, .055) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 15%, rgba(255, 255, 255, .9), transparent 68%);
+  background-size: 150px 150px, 150px 150px, auto;
 }
 
 .project-screen {
-  border-top-color: rgba(45, 71, 57, .11);
+  border-top-color: rgba(29, 49, 73, .11);
 }
 
 .project-screen-head-clean .section-label {
@@ -26,100 +57,96 @@
 }
 
 .project-screen-tagline {
-  color: #67695f !important;
+  color: #60728a !important;
 }
 
 .project-row .project-card {
-  border: 1px solid rgba(17, 43, 36, .74);
-  border-radius: 20px;
-  background: var(--portfolio-forest);
-  box-shadow: 0 18px 46px rgba(24, 43, 34, .13);
+  border: 1px solid #17385f;
+  border-radius: 16px;
+  background: var(--portfolio-ink);
+  box-shadow: 0 18px 45px rgba(18, 43, 76, .14);
   transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
 }
 
 .project-row .project-card:hover {
   transform: translateY(-6px);
-  border-color: #70907d;
-  box-shadow: 0 26px 58px rgba(24, 43, 34, .2);
+  border-color: #4485be;
+  box-shadow: 0 26px 58px rgba(18, 43, 76, .22);
 }
 
 .project-row .project-card:focus-visible {
-  outline-color: #70907d;
+  outline-color: var(--portfolio-blue);
   outline-offset: 5px;
 }
 
 .project-row .project-card-media {
-  border-bottom-color: rgba(227, 235, 226, .12);
-  background: #0d211c;
+  border-bottom-color: #17304e;
+  background: #091a2e;
 }
 
 .project-row .project-card-media::after {
-  background: linear-gradient(to top, rgba(7, 20, 16, .3), transparent 48%);
+  background: linear-gradient(to top, rgba(4, 12, 27, .3), transparent 48%);
 }
 
 .project-row .project-card-media img[src$=".svg"] {
-  filter: hue-rotate(12deg) saturate(.78);
+  filter: saturate(.92) contrast(1.02);
   transition: transform .5s cubic-bezier(.2,.7,.2,1), filter .4s ease;
 }
 
 .project-row .project-card:hover .project-card-media img[src$=".svg"] {
   transform: scale(1.035);
-  filter: hue-rotate(12deg) saturate(.9);
+  filter: saturate(1.08) contrast(1.02);
 }
 
 .project-row .project-badge {
-  border-color: rgba(212, 189, 145, .42);
-  border-radius: 999px;
-  background: rgba(13, 33, 28, .82);
-  color: #e3d2b1;
+  border-color: #2566a8;
+  border-radius: 6px;
+  background: rgba(7, 24, 47, .86);
+  color: var(--portfolio-blue);
   letter-spacing: .12em;
 }
 
 .project-row .media-score span {
-  color: #c2d5c8;
+  color: #91c7ef;
 }
 
 .project-row .project-card-body {
-  background: linear-gradient(155deg, #15352c 0%, #10271f 100%);
+  background: linear-gradient(180deg, #071326 0%, #09172b 100%);
 }
 
 .project-row .project-card h3 {
-  color: #f7f4eb;
-  font-family: var(--serif);
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -.025em;
-  text-transform: none;
+  color: #f8fbff;
+  font: 700 clamp(1rem, 1.15vw, 1.2rem)/1.25 var(--sans);
+  letter-spacing: -.015em;
+  text-transform: uppercase;
 }
 
 .project-card-subtitle {
-  color: #b7cfbf !important;
+  color: #61a9ef !important;
   font-size: .79rem !important;
-  font-style: normal;
-  font-weight: 500;
-  letter-spacing: .015em;
+  font-style: italic;
+  font-weight: 600;
 }
 
 .project-row .project-card-body > p:not(.project-card-subtitle) {
-  color: #d0d9d0;
+  color: #a9b9ce;
 }
 
 .project-row .project-card-tags span {
-  border-color: rgba(159, 197, 181, .26);
-  border-radius: 999px;
-  background: rgba(9, 29, 23, .3);
-  color: #c1d8ca;
-  letter-spacing: .055em;
+  border-color: #204f86;
+  border-radius: 5px;
+  background: #061427;
+  color: #62a9f4;
+  letter-spacing: .04em;
 }
 
 .project-row .project-card-foot {
-  border-top-color: rgba(231, 238, 228, .15);
-  color: #a8b8aa;
+  border-top-color: #1b2a40;
+  color: #7185a0;
 }
 
 .project-row .project-card-foot b {
-  color: var(--portfolio-brass);
+  color: #72b7ff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -132,4 +159,16 @@
   .project-row .project-card:hover .project-card-media img[src$=".svg"] {
     transform: none;
   }
+}
+
+@media (max-width: 899px), (max-height: 719px) {
+  .achievements-screen { min-height: auto; padding: 4rem 0; }
+  .achievements-screen-head { margin-bottom: 1.8rem; text-align: left; }
+  .achievements-screen-head > p:last-child { margin-left: 0; }
+  .achievements-screen .achievement-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .achievements-screen-inner { width: min(100% - 2rem, 760px); }
+  .achievements-screen .achievement-rail { grid-template-columns: 1fr; }
 }
