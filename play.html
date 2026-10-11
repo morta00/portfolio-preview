@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beat My AI | Mortadha Ghnimi</title>
-  <meta name="description" content="Play Connect Four against Mortadha Ghnimi's minimax AI agent with alpha-beta pruning.">
+  <meta name="description" content="Two quick classical-AI games: Tic-Tac-Toe and Connect Four against minimax search agents.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#f3f0e8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,25 +12,62 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="game-page">
+<body class="game-page game-page-v2">
   <main class="game-shell">
     <div class="game-top">
       <a class="game-back" href="index.html#challenge">← Back to portfolio</a>
       <a class="nav-brand" href="index.html">Mortadha Ghnimi</a>
     </div>
 
-    <div class="game-layout">
-      <section class="game-copy" aria-labelledby="game-title">
-        <p class="game-kicker">Career fair AI challenge</p>
-        <h1 id="game-title">Can you beat my AI?</h1>
-        <p>You play first. The agent searches future board states with minimax, prunes weak branches with alpha-beta pruning, and scores positions using threats, center control, and connected pieces.</p>
-        <div class="game-tech">
-          <div><strong>Search</strong><span>Minimax with alpha-beta pruning</span></div>
-          <div><strong>Evaluation</strong><span>Winning threats, open windows, center control</span></div>
-          <div><strong>Goal</strong><span>Choose the move with the strongest future position</span></div>
+    <header class="game-copy">
+      <p class="game-kicker">Career fair AI challenge</p>
+      <h1>Pick your level.</h1>
+      <p>Start with the fast one. If you want a harder challenge, switch to Connect Four.</p>
+    </header>
+
+    <nav class="game-picker" aria-label="Choose a game">
+      <a class="game-choice" href="#quick"><strong>01 · Quick match</strong><span>Tic-Tac-Toe · about 20 seconds</span></a>
+      <a class="game-choice is-hard" href="#hard"><strong>02 · Hard mode</strong><span>Connect Four · deeper search</span></a>
+    </nav>
+
+    <section class="game-section" id="quick" aria-labelledby="quick-title">
+      <div class="game-section-head">
+        <div>
+          <p class="game-kicker">Quick match · Tic-Tac-Toe</p>
+          <h2 id="quick-title">Three in a row.</h2>
         </div>
-        <p class="game-note">This is classical AI rather than machine learning — a compact demo of search, reasoning, and decision-making.</p>
-      </section>
+        <div>
+          <p class="rule-line"><strong>Rule:</strong> You are X. Click any empty square. Get 3 X's in a row before the AI gets 3 O's.</p>
+          <p class="game-note">The AI uses minimax search. It should not lose if it plays perfectly.</p>
+        </div>
+      </div>
+
+      <div class="ttt-layout">
+        <div class="ttt-board" id="ttt-board" role="grid" aria-label="Tic-Tac-Toe board"></div>
+        <aside class="ttt-status">
+          <p class="game-kicker">Live match</p>
+          <h3 id="ttt-status">Your move.</h3>
+          <p id="ttt-result">You play first.</p>
+          <div class="game-score"><span>You <b id="ttt-human-score">0</b></span><span>AI <b id="ttt-ai-score">0</b></span><span>Draws <b id="ttt-draw-score">0</b></span></div>
+          <div class="actions" style="margin-top:1rem">
+            <button class="btn btn-secondary" id="ttt-restart" type="button">New game</button>
+            <a class="btn btn-primary game-next" id="hard-mode-link" href="#hard">Try hard mode →</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="game-section" id="hard" aria-labelledby="hard-title">
+      <div class="game-section-head">
+        <div>
+          <p class="game-kicker">Hard mode · Connect Four</p>
+          <h2 id="hard-title">Four in a row.</h2>
+        </div>
+        <div>
+          <p class="rule-line"><strong>Rule:</strong> You are the cream pieces. Click a column to drop one. Connect 4 pieces horizontally, vertically, or diagonally before the AI does.</p>
+          <p class="game-note">This agent uses depth-limited minimax, alpha-beta pruning, center control, and threat evaluation.</p>
+        </div>
+      </div>
 
       <section class="game-panel" aria-label="Connect Four game">
         <div class="game-status-row">
@@ -45,7 +82,7 @@
         </div>
         <div class="game-result" id="game-result" aria-live="polite"></div>
       </section>
-    </div>
+    </section>
   </main>
   <script src="js/game.js"></script>
 </body>
