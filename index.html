@@ -17,9 +17,9 @@
   <meta name="theme-color" content="#f4f1e9">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/chic.css?v=14">
+  <link rel="stylesheet" href="css/portfolio.css?v=1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -39,15 +39,15 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="nav" id="site-header">
-    <a class="nav-brand" href="#top" aria-label="Mortadha Ghnimi, home">Mortadha Ghnimi</a>
+    <a class="nav-brand" href="#top" aria-label="Mortadha Ghnimi, home">MG<span>.</span></a>
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
     <div class="nav-panel" id="site-nav">
       <nav class="nav-links" aria-label="Primary">
-        <a href="#work">Work</a>
+        <a href="#work">Projects</a>
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#play">Play</a>
-        <a href="#about">About</a>
+        <a href="#about">Skills</a>
       </nav>
       <div class="nav-side">
         <a data-resume-link href="resume.html">Resume</a>
@@ -60,9 +60,9 @@
     <section class="hero-shell" id="top">
       <div class="wrap hero">
         <div class="hero-copy">
-          <p class="eyebrow">AI/ML Engineer · Graduate Researcher</p>
-          <h1>Building intelligent systems <span>from research to deployment.</span></h1>
-          <p class="lede">I'm Mortadha Ghnimi, an AI/ML engineer and graduate researcher pursuing an M.S. in Artificial Intelligence at Grand Valley State University. I build systems across agentic AI, machine learning, computer vision, remote sensing, data science, and high-performance computing.</p>
+          <p class="eyebrow">Hi, I’m Mortadha <span aria-hidden="true">👋</span></p>
+          <h1>Mortadha<br><span>Ghnimi</span></h1><h2 class="hero-role">AI / Machine Learning Engineer</h2>
+          <p class="lede">Building AI systems that connect research with practical applications—from intelligent agents to satellite vegetation monitoring.</p>
           <p class="domains">Agentic AI <span>·</span> Computer Vision <span>·</span> Remote Sensing <span>·</span> ML Systems</p>
           <p class="status-line" data-opportunity hidden><span class="dot" aria-hidden="true"></span><strong>Open to Summer 2027</strong><span>AI / ML / Research internships</span></p>
           <div class="actions">
@@ -74,55 +74,56 @@
         </div>
         <figure class="hero-media">
           <div class="hero-stage">
-            <img id="hero-portrait" src="assets/hero/portrait.jpg" alt="Professional portrait of Mortadha Ghnimi" width="1024" height="682">
+            <img id="hero-portrait" src="assets/hero/pitch-presenting.png" alt="Mortadha Ghnimi presenting at a GVSU pitch competition" width="1024" height="682">
             <div class="hero-identity">
-              <span>M.S. Artificial Intelligence</span>
-              <strong>Graduate Researcher · GVSU</strong>
+              <span>GVSU Pitch Competition · Finalist</span>
+              <strong>M.S. Artificial Intelligence · GVSU</strong>
             </div>
           </div>
         </figure>
       </div>
     </section>
 
-    <section class="achievements-screen" id="highlights" aria-labelledby="highlights-title">
-      <div class="wrap achievements-screen-inner">
-        <header class="achievements-screen-head">
-          <p class="section-label">Selected evidence</p>
-          <h2 id="highlights-title">Measured work. Real outcomes.</h2>
-          <p>A quick look at results across machine learning, systems, research, and applied AI.</p>
-        </header>
-        <section class="achievement-rail" aria-label="Selected achievements">
-        <a href="#vision" class="achievement-item">
-          <span class="achievement-index">01</span>
-          <div><strong>1st Place</strong><em>ML Competition</em><span>93.4% accuracy</span></div>
-          <i aria-hidden="true"></i>
-        </a>
-        <a href="#autoencoder" class="achievement-item">
-          <span class="achievement-index">02</span>
-          <div><strong>24.73×</strong><em>Autoencoder Training</em><span>Same reference loss</span></div>
-          <i aria-hidden="true"></i>
-        </a>
-        <a href="#publication" class="achievement-item">
-          <span class="achievement-index">03</span>
-          <div><strong>Published</strong><em>Springer Research</em><span>ICR'26 · Berlin</span></div>
-          <i aria-hidden="true"></i>
-        </a>
-        <a href="#asjai" class="achievement-item">
-          <span class="achievement-index">04</span>
-          <div><strong>Deployed</strong><em>AI Platform</em><span>RAG · APIs · Automation</span></div>
-          <i aria-hidden="true"></i>
-        </a>
-        </section>
-      </div>
-    </section>
+<section class="build-section"><div class="wrap"><header class="center-head"><h2>What I Build</h2><p>Applied AI, machine learning, and research systems.</p></header>        <div class="expertise-cards" aria-label="Areas of expertise">
+          <article class="expertise-card expertise-card-featured">
+            <div class="expertise-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 3h6v3h2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-2v3H9v-3H7a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h2V3Zm0 6H7v6h2v-2h2v2h2v-2h2v2h2V9h-2v2h-2V9h-2v2H9V9Z"/></svg>
+            </div>
+            <span class="expertise-number">01</span>
+            <h3>Agentic & Applied AI</h3>
+            <p>LLM agents, retrieval, tool use, workflow automation, APIs, and human-in-the-loop systems.</p>
+            <div class="expertise-line"><span>CORE FOCUS</span><i></i></div>
+          </article>
 
+          <article class="expertise-card">
+            <div class="expertise-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-5v2h3v2H7v-2h3v-2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm2 3v6h10V7H7Zm2 1h2v4H9V8Zm4 0h2v2h-2V8Z"/></svg>
+            </div>
+            <span class="expertise-number">02</span>
+            <h3>Machine Learning & Vision</h3>
+            <p>Deep learning, computer vision, data science, model evaluation, and experimentation under real constraints.</p>
+            <div class="expertise-line"><span>MODELS + EVALUATION</span><i></i></div>
+          </article>
+
+          <article class="expertise-card">
+            <div class="expertise-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4V5Zm2 6h12v3H6v-3Zm2 5h8v3H8v-3Z"/></svg>
+            </div>
+            <span class="expertise-number">03</span>
+            <h3>AI Systems & Geospatial Research</h3>
+            <p>High-performance ML, temporal modeling, remote sensing, multimodal data, and research-grade pipelines.</p>
+            <div class="expertise-line"><span>SYSTEMS + RESEARCH</span><i></i></div>
+          </article>
+        </div>
+
+</div></section>
     <section class="projects-showcase" id="work" aria-label="Selected projects">
       <header class="wrap projects-showcase-head">
         <div>
           <p class="section-label">01 / Featured work</p>
-          <h2>Projects built to solve real problems.</h2>
+          <h2>Featured Work</h2>
         </div>
-        <p>A closer look at the systems, experiments, and engineering behind my work.</p>
+        <p>Selected projects across intelligent agents, applied AI, and computer vision.</p>
       </header>
       <section class="project-feature-screen" id="geoagent" aria-labelledby="geoagent-title">
         <div class="wrap project-feature-grid">
@@ -191,7 +192,7 @@
         </div>
       </section>
 
-      <section class="project-more-screen" aria-labelledby="more-work-title">
+<section class="project-feature-screen" id="gymbox"><div class="wrap project-feature-grid"><a class="project-feature-media project-feature-screenshot" href="work/gymbox.html" aria-label="Open GymBox case study"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox mobile application dashboard" loading="lazy"></a><div class="project-feature-copy"><p class="project-feature-category">Mobile development · Applied AI</p><h2>GymBox</h2><p class="project-feature-description">A mobile product connecting a fitness experience with AI-assisted recommendations and retrieval-based support.</p><p class="project-capabilities-label">Key capabilities</p><ul class="project-capabilities"><li>Mobile product experience</li><li>Retrieval-augmented AI assistance</li><li>Recommendation workflows</li></ul><div class="project-tech"><span>Mobile</span><span>RAG</span><span>Recommendations</span></div><a class="project-case-link" href="work/gymbox.html">View project & demos <span aria-hidden="true">↗</span></a></div></div></section>      <section class="project-more-screen" aria-labelledby="more-work-title">
         <div class="wrap project-more-inner">
           <header class="project-more-heading">
             <p class="project-feature-category">More selected work</p>
@@ -282,27 +283,27 @@
       </section>
     </section>
 
-    <section class="clean-experience" id="experience">
+<section class="pitch-section"><div class="wrap pitch-grid"><div class="pitch-photo"><img src="assets/hero/pitch-research.png" alt="Mortadha explaining satellite inputs and AI during his GVSU pitch" loading="lazy"></div><div><p class="section-label">Research communication</p><h2>From satellite data<br>to a story on stage.</h2><p>I presented my satellite vegetation-monitoring research at a GVSU pitch competition, where I was a finalist.</p><span class="recognition-badge">GVSU Pitch Competition · Finalist</span><a class="project-case-link" href="#research">Explore the research ↗</a></div></div></section>    <section class="clean-experience" id="experience">
       <div class="wrap clean-section">
         <header class="clean-section-head">
           <p class="section-label">04 / Experience</p>
           <div class="clean-title-row">
-            <h2>From product work to AI research.</h2>
+            <h2>Experience</h2>
             <p>Building useful systems, from applied AI products to satellite research.</p>
           </div>
         </header>
 
         <div class="experience-timeline">
-          <article class="experience-card">
+<article class="experience-card experience-card-current">
             <span class="experience-node" aria-hidden="true">01</span>
-            <div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div>
-            <h3>AI & Mobile Developer</h3>
-            <p class="experience-organization">Smart It Partner <span>·</span> Tunis</p>
-            <p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
-            <div class="experience-tags"><span>RAG systems</span><span>Recommendations</span><span>Computer vision</span></div>
-            <a class="experience-link" href="work/gymbox.html">Explore related work <span aria-hidden="true">↗</span></a>
+            <div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026—</span></div>
+            <h3>Graduate Research Assistant</h3>
+            <p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p>
+            <p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
+            <div class="experience-tags"><span>Satellite time series</span><span>Vegetation monitoring</span><span>Temporal representations</span></div>
+            <a class="experience-link" href="#research">See current research <span aria-hidden="true">↑</span></a>
           </article>
-          <article class="experience-card">
+<article class="experience-card">
             <span class="experience-node" aria-hidden="true">02</span>
             <div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div>
             <h3>AI & Automation Intern</h3>
@@ -311,14 +312,14 @@
             <div class="experience-tags"><span>APIs + webhooks</span><span>Commerce automation</span><span>Grounded RAG</span></div>
             <a class="experience-link" href="work/asjai.html">View the platform case study <span aria-hidden="true">↗</span></a>
           </article>
-          <article class="experience-card experience-card-current">
+<article class="experience-card">
             <span class="experience-node" aria-hidden="true">03</span>
-            <div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026—</span></div>
-            <h3>Graduate Research Assistant</h3>
-            <p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p>
-            <p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
-            <div class="experience-tags"><span>Satellite time series</span><span>Vegetation monitoring</span><span>Temporal representations</span></div>
-            <a class="experience-link" href="#research">See current research <span aria-hidden="true">↑</span></a>
+            <div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div>
+            <h3>AI & Mobile Developer</h3>
+            <p class="experience-organization">Smart It Partner <span>·</span> Tunis</p>
+            <p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
+            <div class="experience-tags"><span>RAG systems</span><span>Recommendations</span><span>Computer vision</span></div>
+            <a class="experience-link" href="work/gymbox.html">Explore related work <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </div>
@@ -328,47 +329,15 @@
       <div class="wrap expertise-section">
         <header class="expertise-head">
           <p class="section-label">05 / Skills & Expertise</p>
-          <h2>What I build best.</h2>
+          <h2>Skills & Expertise</h2>
           <p>A focused technical profile across intelligent systems, machine learning, and research engineering.</p>
         </header>
-
-        <div class="expertise-cards" aria-label="Areas of expertise">
-          <article class="expertise-card expertise-card-featured">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M9 3h6v3h2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-2v3H9v-3H7a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h2V3Zm0 6H7v6h2v-2h2v2h2v-2h2v2h2V9h-2v2h-2V9h-2v2H9V9Z"/></svg>
-            </div>
-            <span class="expertise-number">01</span>
-            <h3>Agentic & Applied AI</h3>
-            <p>LLM agents, retrieval, tool use, workflow automation, APIs, and human-in-the-loop systems.</p>
-            <div class="expertise-line"><span>CORE FOCUS</span><i></i></div>
-          </article>
-
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M5 4h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-5v2h3v2H7v-2h3v-2H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm2 3v6h10V7H7Zm2 1h2v4H9V8Zm4 0h2v2h-2V8Z"/></svg>
-            </div>
-            <span class="expertise-number">02</span>
-            <h3>Machine Learning & Vision</h3>
-            <p>Deep learning, computer vision, data science, model evaluation, and experimentation under real constraints.</p>
-            <div class="expertise-line"><span>MODELS + EVALUATION</span><i></i></div>
-          </article>
-
-          <article class="expertise-card">
-            <div class="expertise-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4V5Zm2 6h12v3H6v-3Zm2 5h8v3H8v-3Z"/></svg>
-            </div>
-            <span class="expertise-number">03</span>
-            <h3>AI Systems & Geospatial Research</h3>
-            <p>High-performance ML, temporal modeling, remote sensing, multimodal data, and research-grade pipelines.</p>
-            <div class="expertise-line"><span>SYSTEMS + RESEARCH</span><i></i></div>
-          </article>
-        </div>
 
         <div class="toolkit">
           <div class="toolkit-heading">
             <div>
               <p class="section-label">Technical toolkit</p>
-              <h3>Tools I actually use.</h3>
+              <h3>Technical Toolkit</h3>
             </div>
             <p>Grouped by the work they support rather than by buzzword count.</p>
           </div>
@@ -429,7 +398,7 @@
 
         <div class="expertise-recognition">
           <span>Selected recognition</span>
-          <p>1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
+          <p>GVSU Pitch Competition Finalist · 1st Place ML Competition · 1st Place HPC Leaderboard · Springer ICR'26 Co-author · Merit Graduate Assistantship · Top-ranked B.S. graduate</p>
         </div>
       </div>
     </section>
@@ -483,7 +452,7 @@
     </section>
 
     <section class="contact-shell" id="contact">
-      <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Let's build something useful.</h2><p>Interested in opportunities where AI, machine learning, intelligent systems, and real-world engineering come together.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">Email me</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
+      <div class="wrap section"><div class="contact"><p class="section-label">Contact</p><h2>Get in Touch</h2><p>Open to Summer 2027 AI/ML and research internships. Let’s talk about your team, a research idea, or a project.</p><div class="actions"><a class="btn btn-light" href="mailto:ghnimim@mail.gvsu.edu">ghnimim@mail.gvsu.edu ↗</a><a class="btn btn-dark-ghost" href="https://www.linkedin.com/in/mortadha-ghnimi-021183252/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn btn-dark-ghost" href="https://github.com/morta00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn btn-dark-ghost" data-resume-link href="resume.html">Resume</a></div></div></div>
     </section>
 
     <footer class="wrap footer"><p>© <span id="year"></span> Mortadha Ghnimi</p><p>AI/ML Engineer · Graduate Researcher</p></footer>
