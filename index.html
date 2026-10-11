@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/chic.css?v=12">
+  <link rel="stylesheet" href="css/chic.css?v=13">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -117,6 +117,13 @@
     </section>
 
     <section class="projects-showcase" id="work" aria-label="Selected projects">
+      <header class="wrap projects-showcase-head">
+        <div>
+          <p class="section-label">01 / Featured work</p>
+          <h2>Projects built to solve real problems.</h2>
+        </div>
+        <p>A closer look at the systems, experiments, and engineering behind my work.</p>
+      </header>
       <section class="project-feature-screen" id="geoagent" aria-labelledby="geoagent-title">
         <div class="wrap project-feature-grid">
           <a class="project-feature-media" href="work/geoagent.html" aria-label="Open GeoAgent case study">
@@ -126,7 +133,8 @@
           <div class="project-feature-copy">
             <p class="project-feature-category">Agentic AI · Research tools</p>
             <h2 id="geoagent-title">GeoAgent</h2>
-            <p class="project-feature-description">An agentic research and data-analysis platform that plans tasks, selects tools, verifies results, and produces grounded reports.</p>
+            <p class="project-feature-description">A research workspace in development that turns a question, datasets, and papers into a checked analysis. It coordinates retrieval, Python, and SQL through a visible agent workflow.</p>
+            <p class="project-capabilities-label">Key capabilities</p>
             <ul class="project-capabilities">
               <li>Breaks research requests into clear steps</li>
               <li>Chooses tools to retrieve and analyze evidence</li>
@@ -147,7 +155,8 @@
           <div class="project-feature-copy">
             <p class="project-feature-category">Applied AI · Product systems</p>
             <h2 id="asjai-title">AI Automation Platform</h2>
-            <p class="project-feature-description">A commerce and knowledge platform connecting secure onboarding, fulfillment, automation, and grounded AI retrieval.</p>
+            <p class="project-feature-description">A deployed commerce and knowledge platform built during my AI engineering internship. It connects store operations and fulfillment with a curated, searchable knowledge base.</p>
+            <p class="project-capabilities-label">Key capabilities</p>
             <ul class="project-capabilities">
               <li>Connects commerce workflows with backend services</li>
               <li>Uses APIs and webhooks to coordinate actions</li>
@@ -169,7 +178,8 @@
           <div class="project-feature-copy">
             <p class="project-feature-category">Computer vision · Model evaluation</p>
             <h2 id="vision-title">Multiclass Image Classification</h2>
-            <p class="project-feature-description">A three-CNN ensemble trained from scratch, combining stronger augmentation, pseudo-labeling, and test-time augmentation.</p>
+            <p class="project-feature-description">I trained and combined three convolutional networks for a low-resolution image challenge, finishing first with 93.4% test accuracy.</p>
+            <p class="project-capabilities-label">Key capabilities</p>
             <ul class="project-capabilities">
               <li>Trained and evaluated a three-model ensemble</li>
               <li>Used pseudo-labeling and test-time augmentation</li>
@@ -189,13 +199,13 @@
           </header>
           <div class="project-more-list">
             <a class="project-more-item" id="autoencoder" href="work/autoencoder.html">
-              <span class="project-more-number">04</span><span class="project-more-name">High-Performance Autoencoder</span><span class="project-more-detail">24.73× faster training · C++ · AVX</span><span class="project-more-arrow" aria-hidden="true">↗</span>
+              <span class="project-more-number">04</span><span class="project-more-content"><span class="project-more-name">High-Performance Autoencoder</span><span class="project-more-description">Optimized sparse-data training to finish an epoch 24.73× faster while matching the reference loss.</span><span class="project-more-detail">C++ · AVX · OpenMP</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
             </a>
             <a class="project-more-item" id="fraud" href="work/fraud.html">
-              <span class="project-more-number">05</span><span class="project-more-name">Healthcare Fraud Detection</span><span class="project-more-detail">Cost-sensitive ML · 0.946 ROC-AUC</span><span class="project-more-arrow" aria-hidden="true">↗</span>
+              <span class="project-more-number">05</span><span class="project-more-content"><span class="project-more-name">Healthcare Fraud Detection</span><span class="project-more-description">Compared classifiers and cost-aware decisions for rare provider fraud, balancing missed cases against investigation effort.</span><span class="project-more-detail">Cost-sensitive ML · 0.946 ROC-AUC</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
             </a>
             <a class="project-more-item" id="hpc" href="work/hpc.html">
-              <span class="project-more-number">06</span><span class="project-more-name">Sparse ML Kernel Optimization</span><span class="project-more-detail">1st place HPC leaderboard · SIMD</span><span class="project-more-arrow" aria-hidden="true">↗</span>
+              <span class="project-more-number">06</span><span class="project-more-content"><span class="project-more-name">Sparse ML Kernel Optimization</span><span class="project-more-description">Reworked data layout, cache use, and SIMD execution to speed up a sparse transcriptomics workload.</span><span class="project-more-detail">1st place · 68.78× geometric-mean speedup</span></span><span class="project-more-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
