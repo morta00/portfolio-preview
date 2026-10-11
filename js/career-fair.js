@@ -5,30 +5,6 @@
     if (role.open) roles.forEach(other => { if (other !== role) other.open = false; });
   }));
 
-  const descriptions = {
-    ai: {title: 'From models to working applications.', text: 'I connect language models, retrieval, and APIs in deployed commerce tools and mobile AI experiences.', tags: ['Retrieval & agents', 'API integration', 'Deployment']},
-    research: {title: 'From satellite data to useful signals.', text: 'I study vegetation stress with satellite time series and temporal representations, testing on years the model has never seen.', tags: ['Earth observation', 'Temporal modeling', 'Held-out evaluation']},
-    systems: {title: 'From bottlenecks to faster systems.', text: 'I build backend services and optimize ML workloads with C++, SIMD, and OpenMP.', tags: ['Backend services', 'Parallel computing', 'ML performance']}
-  };
-  document.querySelectorAll('[data-focus-output]').forEach(button => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('[data-focus-output]').forEach(item => {
-        const active = item === button;
-        item.classList.toggle('is-active', active);
-        item.setAttribute('aria-pressed', String(active));
-      });
-      const focus = descriptions[button.dataset.focusOutput];
-      document.getElementById('focus-title').textContent = focus.title;
-      document.getElementById('focus-output').textContent = focus.text;
-      const tags = document.getElementById('focus-tags');
-      tags.replaceChildren(...focus.tags.map(label => {
-        const tag = document.createElement('span');
-        tag.textContent = label;
-        return tag;
-      }));
-    });
-  });
-
   const video = document.getElementById('gym-demo-video');
   document.querySelectorAll('[data-demo]').forEach(button => {
     button.addEventListener('click', () => {
