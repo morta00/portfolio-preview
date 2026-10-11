@@ -52,6 +52,7 @@
   initFilters();
   initOpportunity();
   initNavSpy();
+  initSkillTabs();
 })();
 
 function initNavSpy() {
@@ -264,4 +265,43 @@ function initBars() {
     });
   }, { threshold: 0.5 });
   tracks.forEach((track) => io.observe(track));
+}
+
+
+function initSkillTabs() {
+  const tabs = [...document.querySelectorAll('[data-skill-tab]')];
+  const panels = [...document.querySelectorAll('[data-skill-panel]')];
+  if (!tabs.length || !panels.length) return;
+
+  const activate = (key) => {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.skillTab === key;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      const active = panel.dataset.skillPanel === key;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.skillTab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      activate(tabs[next].dataset.skillTab);
+      tabs[next].focus();
+    });
+  });
+
+  activate((tabs.find((tab) => tab.classList.contains('is-active')) || tabs[0]).dataset.skillTab);
 }
