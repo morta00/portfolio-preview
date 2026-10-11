@@ -1,4 +1,135 @@
 (() => {
+  // ---------- Tic-Tac-Toe: quick warm-up ----------
+  const TTT_HUMAN = 'X';
+  const TTT_AI = 'O';
+  const tttBoardEl = document.getElementById('ttt-board');
+  const tttStatusEl = document.getElementById('ttt-status');
+  const tttResultEl = document.getElementById('ttt-result');
+  const tttRestart = document.getElementById('ttt-restart');
+  const tttHumanScoreEl = document.getElementById('ttt-human-score');
+  const tttAiScoreEl = document.getElementById('ttt-ai-score');
+  const tttDrawScoreEl = document.getElementById('ttt-draw-score');
+  const hardModeLink = document.getElementById('hard-mode-link');
+
+  let ttt = Array(9).fill('');
+  let tttLocked = false;
+  let tttOver = false;
+  let tttHumanScore = 0;
+  let tttAiScore = 0;
+  let tttDrawScore = 0;
+
+  const TTT_WINS = [
+    [0,1,2],[3,4,5],[6,7,8],
+    [0,3,6],[1,4,7],[2,5,8],
+    [0,4,8],[2,4,6]
+  ];
+
+  function tttWinner(state) {
+    for (const line of TTT_WINS) {
+      const [a,b,c] = line;
+      if (state[a] && state[a] === state[b] && state[a] === state[c]) return { piece: state[a], line };
+    }
+    return null;
+  }
+
+  function tttAvailable(state) {
+    return state.map((v,i) => v ? -1 : i).filter(i => i !== -1);
+  }
+
+  function tttMinimax(state, isMax) {
+    const win = tttWinner(state);
+    if (win?.piece === TTT_AI) return { score: 10 };
+    if (win?.piece === TTT_HUMAN) return { score: -10 };
+    const moves = tttAvailable(state);
+    if (!moves.length) return { score: 0 };
+
+    let best = { score: isMax ? -Infinity : Infinity, index: moves[0] };
+    for (const index of moves) {
+      const next = state.slice();
+      next[index] = isMax ? TTT_AI : TTT_HUMAN;
+      const result = tttMinimax(next, !isMax);
+      const score = result.score + (isMax ? -0.05 : 0.05);
+      if ((isMax && score > best.score) || (!isMax && score < best.score)) best = { score, index };
+    }
+    return best;
+  }
+
+  function renderTtt(winLine = []) {
+    tttBoardEl.innerHTML = '';
+    ttt.forEach((value, index) => {
+      const cell = document.createElement('button');
+      cell.type = 'button';
+      cell.className = 'ttt-cell' + (value === TTT_AI ? ' is-ai' : '');
+      if (winLine.includes(index)) cell.classList.add('win');
+      cell.textContent = value;
+      cell.disabled = tttLocked || tttOver || Boolean(value);
+      cell.setAttribute('role', 'gridcell');
+      cell.setAttribute('aria-label', value ? `Square ${index + 1}: ${value}` : `Square ${index + 1}: empty`);
+      cell.addEventListener('click', () => tttHumanMove(index));
+      tttBoardEl.appendChild(cell);
+    });
+    tttHumanScoreEl.textContent = String(tttHumanScore);
+    tttAiScoreEl.textContent = String(tttAiScore);
+    tttDrawScoreEl.textContent = String(tttDrawScore);
+  }
+
+  function finishTtt(result) {
+    tttOver = true;
+    const win = tttWinner(ttt);
+    if (result === 'human') {
+      tttHumanScore++;
+      tttStatusEl.textContent = 'You won.';
+      tttResultEl.textContent = 'You beat the quick agent. Nice. Now try hard mode.';
+    } else if (result === 'ai') {
+      tttAiScore++;
+      tttStatusEl.textContent = 'AI wins.';
+      tttResultEl.textContent = 'The AI got three in a row. Want the harder challenge?';
+    } else {
+      tttDrawScore++;
+      tttStatusEl.textContent = 'Draw.';
+      tttResultEl.textContent = 'A draw is the expected result against perfect play. Try hard mode.';
+    }
+    hardModeLink.classList.add('is-visible');
+    renderTtt(win?.line || []);
+  }
+
+  function tttHumanMove(index) {
+    if (tttLocked || tttOver || ttt[index]) return;
+    ttt[index] = TTT_HUMAN;
+    const win = tttWinner(ttt);
+    if (win) return finishTtt('human');
+    if (!tttAvailable(ttt).length) return finishTtt('draw');
+
+    tttLocked = true;
+    tttStatusEl.textContent = 'AI thinking…';
+    renderTtt();
+    window.setTimeout(() => {
+      const move = tttMinimax(ttt, true).index;
+      if (Number.isInteger(move)) ttt[move] = TTT_AI;
+      tttLocked = false;
+      const aiWin = tttWinner(ttt);
+      if (aiWin) return finishTtt('ai');
+      if (!tttAvailable(ttt).length) return finishTtt('draw');
+      tttStatusEl.textContent = 'Your move.';
+      tttResultEl.textContent = 'You are X.';
+      renderTtt();
+    }, 180);
+  }
+
+  function resetTtt() {
+    ttt = Array(9).fill('');
+    tttLocked = false;
+    tttOver = false;
+    tttStatusEl.textContent = 'Your move.';
+    tttResultEl.textContent = 'You play first.';
+    hardModeLink.classList.remove('is-visible');
+    renderTtt();
+  }
+
+  tttRestart.addEventListener('click', resetTtt);
+  resetTtt();
+
+  // ---------- Connect Four: harder challenge ----------
   const ROWS = 6;
   const COLS = 7;
   const HUMAN = 1;
@@ -76,20 +207,18 @@
 
   function humanMove(col) {
     if (locked || gameOver || !isValidColumn(col)) return;
-    const row = dropPiece(board, col, HUMAN);
+    dropPiece(board, col, HUMAN);
     const humanWin = getWinningCells(board, HUMAN);
     if (humanWin.length) {
       gameOver = true;
       humanScore++;
       statusEl.textContent = 'You won.';
-      resultEl.textContent = 'You beat it. Mortadha owes you a coffee.';
+      resultEl.textContent = 'You beat hard mode. Mortadha owes you a coffee.';
       render(humanWin);
       return;
     }
-    if (!validColumns().length) {
-      endDraw();
-      return;
-    }
+    if (!validColumns().length) return endDraw();
+
     locked = true;
     statusEl.textContent = 'AI is thinking…';
     render();
@@ -98,10 +227,7 @@
 
   function aiMove() {
     const choices = validColumns();
-    if (!choices.length) {
-      endDraw();
-      return;
-    }
+    if (!choices.length) return endDraw();
     const { column } = minimax(board, SEARCH_DEPTH, -Infinity, Infinity, true);
     const chosen = choices.includes(column) ? column : choices[Math.floor(choices.length / 2)];
     dropPiece(board, chosen, AI);
@@ -115,10 +241,7 @@
       render(aiWin);
       return;
     }
-    if (!validColumns().length) {
-      endDraw();
-      return;
-    }
+    if (!validColumns().length) return endDraw();
     statusEl.textContent = 'Your move — choose a column.';
     render();
   }
