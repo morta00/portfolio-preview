@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beat My AI | Mortadha Ghnimi</title>
-  <meta name="description" content="Two compact classical-AI games: Tic-Tac-Toe and Connect Four against minimax search agents.">
+  <meta name="description" content="A compact career-fair AI challenge with Tic-Tac-Toe and Connect Four.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#f3f0e8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,51 +12,65 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="game-page game-page-v3">
+<body class="game-page game-page-v4">
   <main class="game-shell">
     <div class="game-top">
       <a class="game-back" href="index.html#challenge">← Back to portfolio</a>
       <a class="nav-brand" href="index.html">Mortadha Ghnimi</a>
     </div>
 
-    <header class="game-copy">
+    <section class="game-hero-v4">
       <div>
-        <p class="game-kicker">Career fair AI challenge</p>
+        <p class="game-kicker">Career Fair AI Challenge</p>
         <h1>Beat my AI.</h1>
       </div>
-      <p>Pick a level. The rules stay visible while you play, and you can switch games at any time.</p>
-    </header>
+      <div class="game-hero-note">
+        <span>Pick a level</span>
+        <p>Start with the 20-second warm-up. Switch to hard mode when you want a deeper search challenge.</p>
+      </div>
+    </section>
 
-    <div class="game-switch" role="tablist" aria-label="Choose a game">
+    <div class="game-switch-v4" role="tablist" aria-label="Choose a game">
       <button id="tab-quick" type="button" role="tab" aria-selected="true" aria-controls="panel-quick" data-game-tab="quick">
-        <strong>01 · Quick match</strong><span>Tic-Tac-Toe · ~20 seconds</span>
+        <span class="game-tab-index">01</span>
+        <div><strong>Quick match</strong><small>Tic-Tac-Toe · Minimax</small></div>
       </button>
       <button id="tab-hard" type="button" role="tab" aria-selected="false" aria-controls="panel-hard" data-game-tab="hard">
-        <strong>02 · Hard mode</strong><span>Connect Four · deeper search</span>
+        <span class="game-tab-index">02</span>
+        <div><strong>Hard mode</strong><small>Connect Four · Alpha-beta</small></div>
       </button>
     </div>
 
-    <div class="game-stage">
+    <div class="game-stage-v4">
       <section class="game-panel-wrap is-active" id="panel-quick" role="tabpanel" aria-labelledby="tab-quick" data-game-panel="quick">
-        <div class="game-section-head">
+        <div class="game-panel-head-v4">
           <div>
             <p class="game-kicker">Quick match</p>
             <h2>Three in a row.</h2>
           </div>
-          <div>
-            <p class="rule-line"><strong>Rule:</strong> You are X. Click any empty square. Get 3 X's in a row before the AI gets 3 O's.</p>
-            <p class="game-note">AI: minimax search. Perfect play should never lose.</p>
+          <div class="game-rule-card">
+            <span>RULE</span>
+            <p>You are <strong>X</strong>. Click any empty square and get <strong>3 in a row</strong> before the AI gets 3 O's.</p>
+            <small>AI: minimax search · perfect play should never lose.</small>
           </div>
         </div>
 
-        <div class="ttt-layout">
-          <div class="ttt-board" id="ttt-board" role="grid" aria-label="Tic-Tac-Toe board"></div>
-          <aside class="ttt-status">
-            <p class="game-kicker">Live match</p>
-            <h3 id="ttt-status">Your move.</h3>
-            <p id="ttt-result">You play first.</p>
-            <div class="game-score"><span>You <b id="ttt-human-score">0</b></span><span>AI <b id="ttt-ai-score">0</b></span><span>Draws <b id="ttt-draw-score">0</b></span></div>
-            <div class="actions" style="margin-top:1rem">
+        <div class="game-board-frame ttt-frame">
+          <div class="game-board-main">
+            <div class="ttt-board" id="ttt-board" role="grid" aria-label="Tic-Tac-Toe board"></div>
+          </div>
+          <aside class="game-side-panel">
+            <div>
+              <p class="game-kicker">Live match</p>
+              <h3 id="ttt-status">Your move.</h3>
+              <p id="ttt-result">You play first.</p>
+            </div>
+            <div class="score-grid score-grid-three">
+              <span><small>You</small><b id="ttt-human-score">0</b></span>
+              <span><small>AI</small><b id="ttt-ai-score">0</b></span>
+              <span><small>Draws</small><b id="ttt-draw-score">0</b></span>
+            </div>
+            <div class="game-side-actions">
               <button class="btn btn-secondary" id="ttt-restart" type="button">New game</button>
               <button class="btn btn-primary game-next" id="hard-mode-link" type="button">Try hard mode →</button>
             </div>
@@ -65,30 +79,43 @@
       </section>
 
       <section class="game-panel-wrap" id="panel-hard" role="tabpanel" aria-labelledby="tab-hard" data-game-panel="hard" hidden>
-        <div class="game-section-head">
+        <div class="game-panel-head-v4">
           <div>
             <p class="game-kicker">Hard mode</p>
             <h2>Four in a row.</h2>
           </div>
-          <div>
-            <p class="rule-line"><strong>Rule:</strong> You are the cream pieces. Click a column to drop one. Connect 4 horizontally, vertically, or diagonally before the AI.</p>
-            <p class="game-note">AI: depth-limited minimax + alpha-beta pruning + threat evaluation.</p>
+          <div class="game-rule-card">
+            <span>RULE</span>
+            <p>You are the <strong>cream pieces</strong>. Click a column and connect <strong>4 pieces</strong> horizontally, vertically, or diagonally.</p>
+            <small>AI: depth-limited minimax · alpha-beta pruning · threat evaluation.</small>
           </div>
         </div>
 
-        <section class="game-panel" aria-label="Connect Four game">
-          <div class="game-status-row">
-            <div class="game-status" id="game-status" aria-live="polite">Your move — choose a column.</div>
-            <div class="game-score"><span>You <b id="human-score">0</b></span><span>AI <b id="ai-score">0</b></span></div>
+        <div class="game-board-frame connect-frame">
+          <div class="connect-main">
+            <div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div>
+            <div class="game-legend" aria-hidden="true">
+              <span><i class="game-dot human"></i>You</span>
+              <span><i class="game-dot ai"></i>AI</span>
+            </div>
           </div>
-          <div class="connect-board" id="connect-board" role="grid" aria-label="Connect Four board"></div>
-          <div class="game-legend" aria-hidden="true"><span><i class="game-dot human"></i>You</span><span><i class="game-dot ai"></i>AI</span></div>
-          <div class="game-actions">
-            <p class="game-note">Click any open column to drop your piece.</p>
-            <button class="btn btn-secondary" id="restart-game" type="button">New game</button>
-          </div>
-          <div class="game-result" id="game-result" aria-live="polite"></div>
-        </section>
+
+          <aside class="game-side-panel">
+            <div>
+              <p class="game-kicker">Live match</p>
+              <h3 id="game-status" aria-live="polite">Your move.</h3>
+              <p>Choose any open column.</p>
+            </div>
+            <div class="score-grid">
+              <span><small>You</small><b id="human-score">0</b></span>
+              <span><small>AI</small><b id="ai-score">0</b></span>
+            </div>
+            <div class="game-result" id="game-result" aria-live="polite"></div>
+            <div class="game-side-actions">
+              <button class="btn btn-secondary" id="restart-game" type="button">New game</button>
+            </div>
+          </aside>
+        </div>
       </section>
     </div>
   </main>
