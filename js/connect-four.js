@@ -114,7 +114,7 @@
       return;
     }
     if (!validColumns().length) return endDraw();
-    statusEl.textContent = 'Your move — choose a column.';
+    statusEl.textContent = 'Your move. Choose a column.';
     render();
   }
 
@@ -245,7 +245,7 @@
     board = createBoard();
     locked = false;
     gameOver = false;
-    statusEl.textContent = 'Your move — choose a column.';
+    statusEl.textContent = 'Your move. Choose a column.';
     resultEl.textContent = '';
     buildBoardUI();
   }

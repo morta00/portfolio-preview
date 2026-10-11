@@ -66,7 +66,7 @@
   const start = () => {
     benchmark = .04 + Math.random() * .14;
     running = true; startedAt = performance.now();
-    humanError.textContent = '—'; botError.textContent = '—';
+    humanError.textContent = 'Not played'; botError.textContent = 'Not played';
     outcome.innerHTML = '<p>Focus on 3.00 seconds. Stop when you’re ready.</p>';
     instruction.textContent = 'Stop the clock at 3.00 seconds.';
     button.textContent = 'Stop the clock';
@@ -76,7 +76,7 @@
   button.addEventListener('click', () => running ? finish() : start());
   reset.addEventListener('click', () => {
     cancelAnimationFrame(frame); running = false;
-    display(0); humanError.textContent = '—'; botError.textContent = '—';
+    display(0); humanError.textContent = 'Not played'; botError.textContent = 'Not played';
     instruction.textContent = 'One button. One shot. Ready?';
     button.textContent = 'Start challenge';button.classList.remove('is-running');clock.classList.remove('is-running');
     outcome.innerHTML = '<p>A little friendly competition. A good conversation starter.</p>';
