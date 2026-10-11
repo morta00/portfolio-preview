@@ -1293,3 +1293,116 @@
   .contact-shell .wrap.section { width: min(100% - 2rem, 760px); }
   .contact { padding: 1.4rem; }
 }
+
+/* Compact, descriptive featured-work cards inspired by the reference portfolio. */
+.projects-showcase-head {
+  width: min(1100px, calc(100% - 3rem));
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, .55fr);
+  align-items: end;
+  gap: 2rem;
+  padding-top: clamp(3rem, 5vw, 4.5rem);
+  padding-bottom: 1.25rem;
+}
+.projects-showcase-head .section-label { margin-bottom: .7rem; color: #52715f; }
+.projects-showcase-head h2 {
+  max-width: 760px;
+  margin: 0;
+  color: #171a17;
+  font: 400 clamp(2.7rem, 4.7vw, 4.4rem)/.98 var(--serif);
+  letter-spacing: -.045em;
+}
+.projects-showcase-head > p {
+  max-width: 390px;
+  margin: 0 0 .25rem;
+  color: #667168;
+  font-size: .92rem;
+  line-height: 1.65;
+}
+.project-feature-screen,
+.project-more-screen {
+  min-height: 0;
+  padding: clamp(2.1rem, 4vw, 3.2rem) 0;
+  scroll-snap-align: none;
+}
+.project-feature-grid {
+  width: min(1100px, calc(100% - 3rem));
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(2rem, 4.5vw, 4rem);
+}
+.project-feature-media {
+  aspect-ratio: 1.48 / 1;
+  max-height: 390px;
+  border-radius: 7px;
+}
+.project-feature-copy { max-width: 520px; }
+.project-feature-category { margin-bottom: .55rem; font-size: .64rem; letter-spacing: .1em; }
+.project-feature-copy h2 { font-size: clamp(2.25rem, 3.4vw, 3.45rem); line-height: 1; }
+.project-feature-description { margin: .8rem 0 .85rem; font-size: .96rem; line-height: 1.62; }
+.project-capabilities-label {
+  margin: .65rem 0 .45rem;
+  color: #52715f;
+  font: 500 .64rem var(--mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.project-capabilities { gap: .5rem 1rem; margin: .5rem 0 .9rem; }
+.project-capabilities li { font-size: .8rem; line-height: 1.42; }
+.project-capabilities li::before { width: 5px; height: 5px; }
+.project-tech { gap: .4rem; margin: .85rem 0; }
+.project-tech span { padding: .32rem .6rem; font-size: .7rem; }
+.project-case-link { font-size: .85rem; }
+.project-more-inner { width: min(1100px, calc(100% - 3rem)); }
+.project-more-heading { max-width: none; margin: 0 0 1.1rem; text-align: left; }
+.project-more-heading .project-feature-category { margin-bottom: .55rem; }
+.project-more-heading h2 { max-width: 720px; font: 400 clamp(2.2rem, 3.4vw, 3.4rem)/1 var(--serif); letter-spacing: -.04em; }
+.project-more-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  border: 0;
+}
+.project-more-item {
+  min-height: 205px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 18px;
+  align-items: start;
+  gap: .75rem;
+  padding: 1.05rem;
+  border: 1px solid rgba(24, 31, 26, .14);
+  border-radius: 7px;
+  background: rgba(255, 254, 250, .66);
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.project-more-item:hover {
+  padding-inline: 1.05rem;
+  border-color: #aab9af;
+  background: #fffefa;
+  transform: translateY(-2px);
+}
+.project-more-number { padding-top: .2rem; }
+.project-more-content { display: grid; gap: .6rem; }
+.project-more-name { color: #202620; font-size: 1rem; line-height: 1.2; }
+.project-more-description { color: #667168; font-size: .82rem; line-height: 1.55; }
+.project-more-detail { color: #52715f; font: 500 .6rem/1.45 var(--mono); letter-spacing: .02em; }
+.project-more-arrow { align-self: start; padding-top: .1rem; }
+
+@media (max-width: 899px) {
+  .projects-showcase-head { width: min(100% - 2rem, 760px); grid-template-columns: 1fr; gap: .75rem; }
+  .project-feature-grid { width: min(100% - 2rem, 760px); }
+  .project-feature-screen, .project-more-screen { padding: 2.6rem 0; }
+  .project-more-inner { width: min(100% - 2rem, 760px); }
+  .project-more-list { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .projects-showcase-head { padding-top: 2.7rem; padding-bottom: .5rem; }
+  .projects-showcase-head h2 { font-size: clamp(2.5rem, 11vw, 3.7rem); }
+  .project-feature-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .project-feature-media { aspect-ratio: 1.5 / 1; max-height: 280px; }
+  .project-feature-copy h2 { font-size: clamp(2.2rem, 10vw, 3rem); }
+  .project-feature-description { font-size: .9rem; }
+  .project-more-heading h2 { font-size: clamp(2.2rem, 9vw, 3rem); }
+  .project-more-list { grid-template-columns: 1fr; }
+  .project-more-item { min-height: 0; padding: .95rem; }
+  .project-more-item:hover { padding-inline: .95rem; }
+}
