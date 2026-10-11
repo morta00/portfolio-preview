@@ -103,158 +103,170 @@
         </a>
       </section></div></section>
 
-    <section class="project-grid-shell" id="work">
-      <div class="wrap project-grid-section">
-        <header class="project-grid-head project-grid-head-v3">
-          <p class="section-label">Projects</p>
-          <div class="project-title-lockup">
-            <h2>Selected work.</h2>
-            <span aria-hidden="true"></span>
+    <section class="projects-showcase" id="work">
+      <section class="project-screen project-screen-one">
+        <div class="wrap project-screen-inner">
+          <header class="project-screen-head">
+            <div>
+              <p class="section-label">01 / Projects</p>
+              <h2>Selected work.</h2>
+            </div>
+            <span class="screen-count">01 / 02</span>
+          </header>
+          <div class="project-row">
+            <a class="project-card" id="geoagent" href="work/geoagent.html" aria-label="Open GeoAgent case study">
+                        <div class="project-card-media media-geoagent">
+                          <span class="project-badge">Agentic AI</span>
+                          <div class="agent-card-flow" aria-hidden="true">
+                            <span>PLAN</span><i>→</i><b>GEOAGENT</b><i>→</i><span>VERIFY</span>
+                          </div>
+                          <div class="media-caption">RAG · SQL · Python · MCP</div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>Active build</span><span>2026</span></div>
+                          <h3>GeoAgent</h3>
+                          <p>Agentic research and data-analysis platform that plans tasks, selects tools, verifies results, and produces grounded reports.</p>
+                          <div class="project-card-tags"><span>Python</span><span>LangGraph</span><span>MCP</span></div>
+                          <div class="project-card-foot"><span>Planner · Tools · Verifier</span><b>↗</b></div>
+                        </div>
+                      </a>
+            <a class="project-card" id="asjai" href="work/asjai.html" aria-label="Open AI Automation Platform case study">
+                        <div class="project-card-media media-asjai">
+                          <span class="project-badge">Applied AI</span>
+                          <div class="asjai-card-flow" aria-hidden="true">
+                            <span>Commerce</span><i>+</i><span>APIs</span><i>+</i><span>RAG</span>
+                          </div>
+                          <div class="media-caption">Private deployed system</div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>Deployed</span><span>2026</span></div>
+                          <h3>AI Automation Platform</h3>
+                          <p>Commerce and knowledge platform connecting secure onboarding, fulfillment, automation, and grounded AI retrieval.</p>
+                          <div class="project-card-tags"><span>RAG</span><span>APIs</span><span>Webhooks</span></div>
+                          <div class="project-card-foot"><span>Asjai Lou Casting</span><b>↗</b></div>
+                        </div>
+                      </a>
+            <a class="project-card" id="vision" href="work/kaggle.html" aria-label="Open image classification case study">
+                        <div class="project-card-media media-image">
+                          <span class="project-badge">Computer Vision</span>
+                          <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing first place" loading="lazy">
+                          <div class="media-score"><strong>1st Place</strong><span>93.4% accuracy</span></div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>Competition winner</span><span>2026</span></div>
+                          <h3>Multiclass Image Classification</h3>
+                          <p>Three-CNN ensemble trained from scratch with advanced augmentation, pseudo-labeling, and test-time augmentation.</p>
+                          <div class="project-card-tags"><span>TensorFlow</span><span>WideResNet</span><span>TTA</span></div>
+                          <div class="project-card-foot"><span>93.4% · 1st place</span><b>↗</b></div>
+                        </div>
+                      </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-screen project-screen-two">
+        <div class="wrap project-screen-inner">
+          <header class="project-screen-head">
+            <div>
+              <p class="section-label">Projects / Continued</p>
+              <h2>More proof.</h2>
+            </div>
+            <span class="screen-count">02 / 02</span>
+          </header>
+          <div class="project-row">
+            <a class="project-card" id="autoencoder" href="work/autoencoder.html" aria-label="Open autoencoder performance case study">
+                        <div class="project-card-media media-autoencoder">
+                          <span class="project-badge">AI Systems</span>
+                          <div class="auto-card-net" aria-hidden="true">
+                            <span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span>
+                          </div>
+                          <div class="media-score"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>Performance engineering</span><span>2026</span></div>
+                          <h3>High-Performance Autoencoder</h3>
+                          <p>Optimized a fixed neural autoencoder training workload with AVX, multithreading, and cache-aware computation.</p>
+                          <div class="project-card-tags"><span>C++</span><span>AVX</span><span>Adam</span></div>
+                          <div class="project-card-foot"><span>56.49 s → 2.28 s</span><b>↗</b></div>
+                        </div>
+                      </a>
+            <a class="project-card" href="work/fraud.html" aria-label="Open healthcare fraud detection case study">
+                        <div class="project-card-media media-image media-fraud">
+                          <span class="project-badge">Data Science</span>
+                          <img src="assets/fraud/roc-curves.png" alt="ROC curves from healthcare fraud detection models" loading="lazy">
+                          <div class="media-score"><strong>0.946</strong><span>ROC-AUC</span></div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>Cost-sensitive ML</span><span>2026</span></div>
+                          <h3>Healthcare Fraud Detection</h3>
+                          <p>Provider-level fraud detection using 74 engineered features and cost-aware modeling under severe class imbalance.</p>
+                          <div class="project-card-tags"><span>scikit-learn</span><span>Pandas</span><span>ML</span></div>
+                          <div class="project-card-foot"><span>74 engineered features</span><b>↗</b></div>
+                        </div>
+                      </a>
+            <a class="project-card" href="work/hpc.html" aria-label="Open sparse kernel optimization case study">
+                        <div class="project-card-media media-hpc">
+                          <span class="project-badge">HPC</span>
+                          <div class="hpc-card-metric"><strong>68.78×</strong><span>geometric-mean speedup</span></div>
+                          <div class="hpc-bars" aria-hidden="true"><i style="--h:32%"></i><i style="--h:44%"></i><i style="--h:56%"></i><i style="--h:69%"></i><i style="--h:82%"></i><i style="--h:100%"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                          <div class="project-card-meta"><span>1st place leaderboard</span><span>2026</span></div>
+                          <h3>Sparse ML Kernel Optimization</h3>
+                          <p>Low-level sparse matrix optimization using packed CSR, OpenMP, SIMD, cache tiling, and specialization.</p>
+                          <div class="project-card-tags"><span>C++</span><span>OpenMP</span><span>SIMD</span></div>
+                          <div class="project-card-foot"><span>1st place · 6/6 correct</span><b>↗</b></div>
+                        </div>
+                      </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="research-screen-v9" id="research">
+      <div class="wrap research-v9">
+        <header class="research-head-v9">
+          <div>
+            <p class="section-label">02 / Research</p>
+            <h2>AI for Earth Observation.</h2>
+          </div>
+          <div class="research-head-note">
+            <span class="research-status-v9"><i></i> Research in progress</span>
+            <p>Vegetation-stress monitoring from multisensor satellite time series, with a leakage-free 2026 holdout.</p>
           </div>
         </header>
 
-        <div class="project-card-grid">
-          <a class="project-card" id="geoagent" href="work/geoagent.html" aria-label="Open GeoAgent case study">
-            <div class="project-card-media media-geoagent">
-              <span class="project-badge">Agentic AI</span>
-              <div class="agent-card-flow" aria-hidden="true">
-                <span>PLAN</span><i>→</i><b>GEOAGENT</b><i>→</i><span>VERIFY</span>
-              </div>
-              <div class="media-caption">RAG · SQL · Python · MCP</div>
+        <div class="research-body-v9">
+          <div class="research-map-v9">
+            <img class="research-map-overview" src="assets/research/anomaly-overview.png" alt="Regional vegetation anomaly overview" loading="lazy">
+            <div class="research-map-label">
+              <span>ANOMALY OVERVIEW</span>
+              <strong>Expected vegetation state → deviation map</strong>
             </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>Active build</span><span>2026</span></div>
-              <h3>GeoAgent</h3>
-              <p>Agentic research and data-analysis platform that plans tasks, selects tools, verifies results, and produces grounded reports.</p>
-              <div class="project-card-tags"><span>Python</span><span>LangGraph</span><span>MCP</span></div>
-              <div class="project-card-foot"><span>Planner · Tools · Verifier</span><b>↗</b></div>
-            </div>
-          </a>
-
-          <a class="project-card" id="asjai" href="work/asjai.html" aria-label="Open AI Automation Platform case study">
-            <div class="project-card-media media-asjai">
-              <span class="project-badge">Applied AI</span>
-              <div class="asjai-card-flow" aria-hidden="true">
-                <span>Commerce</span><i>+</i><span>APIs</span><i>+</i><span>RAG</span>
-              </div>
-              <div class="media-caption">Private deployed system</div>
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>Deployed</span><span>2026</span></div>
-              <h3>AI Automation Platform</h3>
-              <p>Commerce and knowledge platform connecting secure onboarding, fulfillment, automation, and grounded AI retrieval.</p>
-              <div class="project-card-tags"><span>RAG</span><span>APIs</span><span>Webhooks</span></div>
-              <div class="project-card-foot"><span>Asjai Lou Casting</span><b>↗</b></div>
-            </div>
-          </a>
-
-          <a class="project-card" id="vision" href="work/kaggle.html" aria-label="Open image classification case study">
-            <div class="project-card-media media-image">
-              <span class="project-badge">Computer Vision</span>
-              <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing first place" loading="lazy">
-              <div class="media-score"><strong>1st Place</strong><span>93.4% accuracy</span></div>
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>Competition winner</span><span>2026</span></div>
-              <h3>Multiclass Image Classification</h3>
-              <p>Three-CNN ensemble trained from scratch with advanced augmentation, pseudo-labeling, and test-time augmentation.</p>
-              <div class="project-card-tags"><span>TensorFlow</span><span>WideResNet</span><span>TTA</span></div>
-              <div class="project-card-foot"><span>93.4% · 1st place</span><b>↗</b></div>
-            </div>
-          </a>
-
-          <a class="project-card" id="autoencoder" href="work/autoencoder.html" aria-label="Open autoencoder performance case study">
-            <div class="project-card-media media-autoencoder">
-              <span class="project-badge">AI Systems</span>
-              <div class="auto-card-net" aria-hidden="true">
-                <span>13,714</span><i>→</i><span>256</span><i>→</i><b>32</b><i>→</i><span>256</span><i>→</i><span>13,714</span>
-              </div>
-              <div class="media-score"><strong>24.73×</strong><span>faster epoch · same loss</span></div>
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>Performance engineering</span><span>2026</span></div>
-              <h3>High-Performance Autoencoder</h3>
-              <p>Optimized a fixed neural autoencoder training workload with AVX, multithreading, and cache-aware computation.</p>
-              <div class="project-card-tags"><span>C++</span><span>AVX</span><span>Adam</span></div>
-              <div class="project-card-foot"><span>56.49 s → 2.28 s</span><b>↗</b></div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work/fraud.html" aria-label="Open healthcare fraud detection case study">
-            <div class="project-card-media media-image media-fraud">
-              <span class="project-badge">Data Science</span>
-              <img src="assets/fraud/roc-curves.png" alt="ROC curves from healthcare fraud detection models" loading="lazy">
-              <div class="media-score"><strong>0.946</strong><span>ROC-AUC</span></div>
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>Cost-sensitive ML</span><span>2026</span></div>
-              <h3>Healthcare Fraud Detection</h3>
-              <p>Provider-level fraud detection using 74 engineered features and cost-aware modeling under severe class imbalance.</p>
-              <div class="project-card-tags"><span>scikit-learn</span><span>Pandas</span><span>ML</span></div>
-              <div class="project-card-foot"><span>74 engineered features</span><b>↗</b></div>
-            </div>
-          </a>
-
-          <a class="project-card" href="work/hpc.html" aria-label="Open sparse kernel optimization case study">
-            <div class="project-card-media media-hpc">
-              <span class="project-badge">HPC</span>
-              <div class="hpc-card-metric"><strong>68.78×</strong><span>geometric-mean speedup</span></div>
-              <div class="hpc-bars" aria-hidden="true"><i style="--h:32%"></i><i style="--h:44%"></i><i style="--h:56%"></i><i style="--h:69%"></i><i style="--h:82%"></i><i style="--h:100%"></i></div>
-            </div>
-            <div class="project-card-body">
-              <div class="project-card-meta"><span>1st place leaderboard</span><span>2026</span></div>
-              <h3>Sparse ML Kernel Optimization</h3>
-              <p>Low-level sparse matrix optimization using packed CSR, OpenMP, SIMD, cache tiling, and specialization.</p>
-              <div class="project-card-tags"><span>C++</span><span>OpenMP</span><span>SIMD</span></div>
-              <div class="project-card-foot"><span>1st place · 6/6 correct</span><b>↗</b></div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="research-screen" id="research">
-      <div class="wrap viewport-inner research-layout">
-        <div class="research-copy-v8">
-          <p class="section-label">02 / Research</p>
-          <p class="research-kicker">Current thesis research · GVSU</p>
-          <h2>Forecast the healthy state.<br>Flag the deviation.</h2>
-          <p class="research-lede-v8">I am building a leakage-free temporal pipeline for vegetation-stress monitoring from multisensor satellite time series.</p>
-
-          <div class="research-question-v8">
-            <span>Research question</span>
-            <p>Can temporal foundation-model representations improve expected-vegetation estimates before stress becomes visually obvious?</p>
+            <figure class="research-inset-v9">
+              <img src="assets/research/anomaly-detail.png" alt="Pixel-level vegetation anomaly detail" loading="lazy">
+              <figcaption>Pixel-level detail</figcaption>
+            </figure>
           </div>
 
-          <div class="research-facts-v8">
-            <div><small>Train / validate</small><strong>2022–2025</strong></div>
-            <div><small>Unseen test</small><strong>2026</strong></div>
-            <div><small>Anomaly signal</small><strong>Expected NDVI − observed NDVI</strong></div>
-          </div>
-        </div>
+          <aside class="research-brief-v9">
+            <div class="research-question-v9">
+              <span>Research question</span>
+              <h3>Can temporal representations improve expected-vegetation estimates before stress becomes visually obvious?</h3>
+            </div>
 
-        <div class="research-visual-v8">
-          <figure class="research-map-main">
-            <img src="assets/research/anomaly-overview.png" alt="Regional satellite vegetation anomaly overview" loading="lazy">
-            <figcaption><span>01</span> Regional anomaly overview</figcaption>
-          </figure>
-          <figure class="research-map-detail">
-            <img src="assets/research/anomaly-detail.png" alt="Detailed satellite vegetation anomaly view" loading="lazy">
-            <figcaption><span>02</span> Pixel-level anomaly detail</figcaption>
-          </figure>
-          <span class="research-status-v8"><i></i> Research in progress</span>
-        </div>
+            <div class="research-data-v9">
+              <div><small>Train / validate</small><strong>2022–2025</strong></div>
+              <div><small>Unseen test</small><strong>2026</strong></div>
+              <div><small>Signal</small><strong>Expected NDVI − observed NDVI</strong></div>
+            </div>
 
-        <div class="research-pipeline-v8" aria-label="Research pipeline">
-          <div><span>01</span><strong>Observe</strong><small>Sentinel-2 · Sentinel-1 · weather · terrain</small></div>
-          <i>→</i>
-          <div><span>02</span><strong>Represent</strong><small>Temporal embeddings · Presto</small></div>
-          <i>→</i>
-          <div><span>03</span><strong>Expect</strong><small>Healthy vegetation state</small></div>
-          <i>→</i>
-          <div><span>04</span><strong>Detect</strong><small>Expected − observed NDVI</small></div>
-          <i>→</i>
-          <div><span>05</span><strong>Map</strong><small>Weekly stress anomalies</small></div>
+            <div class="research-pipeline-v9">
+              <p>PIPELINE</p>
+              <div><span>Observe</span><i>→</i><span>Represent</span><i>→</i><span>Expect</span><i>→</i><span>Detect</span><i>→</i><span>Map</span></div>
+              <small>Sentinel-2 · Sentinel-1 · weather · terrain · temporal embeddings</small>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
