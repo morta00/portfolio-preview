@@ -1061,3 +1061,296 @@ dialog.intro-modal video { width: 100%; border-radius: 16px; background: #111; }
   .game-panel-wrap .ttt-layout { grid-template-columns:1fr; }
   .game-panel-wrap .ttt-board { max-width:320px; }
 }
+
+
+/* ===== Portfolio V5: card-first presentation, calmer and more polished ===== */
+.project-grid-shell {
+  background:
+    linear-gradient(rgba(54,91,139,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54,91,139,.045) 1px, transparent 1px),
+    #f7f7f4;
+  background-size: 150px 150px;
+  border-top: 1px solid rgba(24,40,62,.08);
+  border-bottom: 1px solid rgba(24,40,62,.08);
+}
+.project-grid-shell::before,
+.project-grid-shell::after { display:none; }
+
+.project-grid-section { padding: clamp(4rem,6vw,5.8rem) 0; }
+
+.project-grid-head-v2 {
+  display:block;
+  margin-bottom:2.25rem;
+  max-width:920px;
+}
+.project-grid-head-v2 .section-label {
+  margin-bottom:.75rem;
+  color:#2d68b2;
+}
+.project-grid-head-v2 h2 {
+  margin:0;
+  font:400 clamp(2.2rem,4vw,3.6rem)/1.03 var(--serif);
+  letter-spacing:-.035em;
+  color:#243853;
+}
+.project-grid-head-v2 > p {
+  margin:.75rem 0 0;
+  max-width:42rem;
+  color:#68798f;
+  font-size:.98rem;
+}
+
+/* Mahdi-inspired card rhythm: visual first, concise copy second, details on click. */
+.project-card-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.35rem;
+  align-items:stretch;
+}
+.project-card {
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #17345a;
+  border-radius:10px;
+  background:#07101f;
+  color:#f7fbff;
+  text-decoration:none;
+  box-shadow:0 14px 38px rgba(27,58,98,.12);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.project-card:hover {
+  transform:translateY(-5px);
+  border-color:#2d6fb8;
+  box-shadow:0 22px 52px rgba(27,58,98,.18);
+}
+.project-card-media {
+  position:relative;
+  min-height:220px;
+  height:220px;
+  padding:1rem;
+  border-bottom:1px solid #1b2d48;
+  background:
+    radial-gradient(340px 190px at 72% 18%,rgba(42,129,201,.28),transparent 60%),
+    linear-gradient(150deg,#0a1830,#0d2b3b 62%,#0d2035);
+}
+.project-card-media::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(79,125,172,.10) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,125,172,.10) 1px,transparent 1px);
+  background-size:38px 38px;
+  mask-image:linear-gradient(to bottom,black,transparent 95%);
+}
+.project-badge {
+  position:absolute;
+  z-index:4;
+  left:.9rem;
+  top:.85rem;
+  padding:.28rem .52rem;
+  border:1px solid rgba(67,145,229,.55);
+  border-radius:4px;
+  background:rgba(10,30,55,.82);
+  color:#67aef7;
+  font:500 .60rem var(--mono);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.media-caption {
+  position:absolute;
+  z-index:4;
+  left:1rem;
+  bottom:.75rem;
+  color:#8ba0ba;
+  font:.62rem var(--mono);
+  letter-spacing:.05em;
+}
+.agent-card-flow,
+.asjai-card-flow,
+.auto-card-net {
+  position:relative;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.42rem;
+  min-height:100%;
+  padding-top:1.1rem;
+}
+.agent-card-flow span,
+.agent-card-flow b,
+.asjai-card-flow span,
+.auto-card-net span,
+.auto-card-net b {
+  border:1px solid rgba(93,161,224,.22);
+  border-radius:8px;
+  padding:.5rem .58rem;
+  background:rgba(14,35,62,.72);
+  color:#a6bed8;
+  font:.58rem var(--mono);
+}
+.agent-card-flow b,
+.auto-card-net b {
+  color:#58e0ba;
+  border-color:rgba(88,224,186,.34);
+  background:rgba(12,59,57,.55);
+  font-weight:500;
+}
+.agent-card-flow i,
+.asjai-card-flow i,
+.auto-card-net i { color:#5f8fbf; font-style:normal; }
+
+.media-asjai {
+  background:
+    radial-gradient(330px 190px at 52% 44%,rgba(48,123,190,.20),transparent 58%),
+    linear-gradient(150deg,#0a1830,#0d2536 62%,#0b2034);
+}
+.media-autoencoder {
+  background:
+    radial-gradient(300px 170px at 55% 50%,rgba(57,179,143,.16),transparent 58%),
+    linear-gradient(150deg,#09172b,#0f263c 62%,#0d2035);
+}
+.media-hpc {
+  background:
+    radial-gradient(300px 180px at 78% 18%,rgba(53,116,185,.24),transparent 60%),
+    linear-gradient(150deg,#0a1830,#0d2639 62%,#0b2035);
+}
+
+.media-image {
+  padding:0;
+  background:#091426;
+}
+.media-image .project-badge { top:.8rem;left:.8rem; }
+.media-image img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  object-position:center top;
+  opacity:.82;
+  filter:saturate(.86) brightness(.78) contrast(1.05);
+}
+.media-image::after {
+  z-index:2;
+  background:linear-gradient(to top,rgba(5,13,27,.9),rgba(5,13,27,.1) 60%,transparent);
+  opacity:1;
+}
+.media-score {
+  position:absolute;
+  z-index:4;
+  left:1rem;
+  bottom:.8rem;
+  display:flex;
+  align-items:baseline;
+  gap:.55rem;
+}
+.media-score strong { color:white; font:400 2.15rem/.9 var(--serif); }
+.media-score span { color:#99adc4; font-size:.68rem; }
+
+.hpc-card-metric { position:relative; z-index:3; margin:4.2rem 0 0 .2rem; }
+.hpc-card-metric strong { display:block; color:white; font:400 3.2rem/.86 var(--serif); }
+.hpc-card-metric span { color:#8ea4bc; font-size:.68rem; }
+.hpc-bars {
+  position:absolute; z-index:2; right:1rem; bottom:1rem;
+  height:98px; width:40%; display:flex; gap:5px; align-items:end;
+}
+.hpc-bars i { flex:1; height:var(--h); border-radius:2px 2px 0 0; background:linear-gradient(#54b7f3,#265a96); }
+
+.project-card-body {
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  padding:1.25rem 1.25rem 1.05rem;
+}
+.project-card-meta {
+  color:#68809f;
+  font:500 .58rem var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.project-card h3 {
+  margin:.75rem 0 .35rem;
+  font:600 1.02rem/1.28 var(--sans);
+  letter-spacing:-.01em;
+  text-transform:uppercase;
+  color:#f6f8fc;
+}
+.project-card p {
+  margin:0;
+  color:#a4b0c2;
+  font-size:.82rem;
+  line-height:1.55;
+}
+.project-card-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem;
+  margin:1rem 0 .85rem;
+}
+.project-card-tags span {
+  padding:.24rem .45rem;
+  border:1px solid #244974;
+  border-radius:4px;
+  color:#66aaf3;
+  background:#0a172a;
+  font:500 .57rem var(--mono);
+  text-transform:uppercase;
+}
+.project-card-foot {
+  margin-top:auto;
+  padding-top:.8rem;
+  border-top:1px solid #1a2940;
+  color:#6d7d95;
+  font:.58rem var(--mono);
+  letter-spacing:.05em;
+}
+.project-card-foot b { color:#6eacf1; font-size:.85rem; }
+
+/* Keep the playful interaction visible but visually secondary. */
+.compact-challenge-v2 {
+  padding:1rem 0;
+  background:#f1f2ef;
+}
+.compact-challenge-v2 .compact-challenge-inner {
+  grid-template-columns:minmax(0,.72fr) minmax(430px,1.28fr);
+  gap:1.5rem;
+}
+.compact-challenge-v2 .compact-challenge-copy h2 {
+  margin:.05rem 0 .25rem;
+  font-size:clamp(2rem,3vw,3rem);
+}
+.compact-challenge-v2 .compact-challenge-copy > p:last-child {
+  font-size:.86rem;
+}
+.compact-challenge-v2 .compact-game-card {
+  min-height:86px;
+  padding:.8rem .9rem;
+  border-radius:12px;
+}
+.compact-challenge-v2 .compact-game-card strong {
+  font-size:1.1rem;
+}
+
+/* Skills section: keep the terminal identity, remove unnecessary visual weight. */
+.profile-tech { padding:clamp(4rem,6vw,5.5rem) 0; }
+.tech-heading { margin-bottom:1.8rem; }
+.tech-heading h2 { font-size:clamp(3rem,5vw,4.8rem); }
+.terminal-card { border-radius:14px; }
+.terminal-code { padding:1.2rem 1.35rem 1.35rem; font-size:.76rem; line-height:1.72; }
+.tech-recognition { margin-top:1.5rem; }
+
+/* The empty GitHub graph was intentionally removed. */
+.github-activity { display:none !important; }
+
+@media (max-width:1100px) {
+  .project-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:760px) {
+  .project-grid-section { padding:3.5rem 0; }
+  .project-card-grid { grid-template-columns:1fr; gap:1rem; }
+  .project-card-media { height:205px; min-height:205px; }
+  .project-card-body { min-height:0; }
+  .compact-challenge-v2 .compact-challenge-inner { grid-template-columns:1fr; }
+  .terminal-grid { grid-template-columns:1fr; }
+}
