@@ -6,7 +6,7 @@
   }));
 
   const descriptions = {
-    ai: 'I connect language models with retrieval, tools, and APIs to build usable AI applications.',
+    ai: 'I build and deploy AI applications that connect language models, retrieval, and APIs to real workflows—from commerce automation to mobile AI experiences.',
     research: 'I study vegetation stress with multisensor satellite time series, temporal representations, and held-out evaluation.',
     systems: 'I build backend services and optimize ML workloads with C++, SIMD, and OpenMP.'
   };
