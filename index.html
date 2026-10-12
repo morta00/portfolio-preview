@@ -35,6 +35,7 @@
   }
   </script>
   <link rel="stylesheet" href="css/geoagent.css?v=4">
+  <link rel="stylesheet" href="css/vision-case.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -176,23 +177,18 @@
 
       <section class="project-feature-screen" id="vision" aria-labelledby="vision-title">
         <div class="wrap project-feature-grid">
-          <a class="project-feature-media project-feature-screenshot" href="work/kaggle.html" aria-label="Open image classification case study">
-            <span class="project-feature-kicker">Featured project · 03</span>
-            <img src="assets/kaggle/leaderboard.png" alt="Competition leaderboard showing first place" loading="lazy">
-            <span class="project-feature-result">1st place · 93.4% accuracy</span>
+          <a class="vision-preview" href="work/kaggle.html" aria-label="Explore the first-place image classification project">
+            <span class="vision-preview-head">Kaggle · Multiclass Classification Challenge (10C-W26) <span aria-hidden="true">↗</span></span>
+            <img src="assets/kaggle/leaderboard.png" alt="Leaderboard for Multiclass Classification Challenge (10C-W26), showing Mortadha Ghnimi in first place with score 0.934" width="799" height="418" loading="lazy">
+            <span class="vision-preview-foot"><strong>1st Place</strong><span>93.4% Competition Test Accuracy</span></span>
           </a>
           <div class="project-feature-copy">
-            <p class="project-feature-category">Computer vision · Model evaluation</p>
-            <h2 id="vision-title">Multiclass Image Classification</h2>
-            <p class="project-feature-description">I trained and combined three convolutional networks for a low-resolution image challenge, finishing first with 93.4% test accuracy.</p>
-            <p class="project-capabilities-label">Key capabilities</p>
-            <ul class="project-capabilities">
-              <li>Trained and evaluated a three-model ensemble</li>
-              <li>Used pseudo-labeling and test-time augmentation</li>
-              <li>Finished first with 93.4% accuracy</li>
-            </ul>
-            <div class="project-tech"><span>TensorFlow</span><span>WideResNet</span><span>TTA</span></div>
-            <a class="project-case-link" href="work/kaggle.html">Explore the case study <span aria-hidden="true">↗</span></a>
+            <p class="vision-card-result">1st Place <span>·</span> 93.4% Competition Test Accuracy</p>
+            <h2 id="vision-title">From-Scratch CNN Ensemble</h2>
+            <p class="project-feature-description">I trained a three-model CNN ensemble from scratch on 16×16 RGB images, without pretrained weights. I combined complementary predictions through pseudo-labeling, test-time augmentation, and weighted probability ensembling.</p>
+            <p class="vision-card-scope">Kaggle · Multiclass Classification Challenge (10C-W26)</p>
+            <div class="project-tech"><span>TensorFlow · Keras</span><span>WideResNet · ResNet</span><span>Computer Vision</span></div>
+            <a class="project-case-link" href="work/kaggle.html">Explore the project <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
