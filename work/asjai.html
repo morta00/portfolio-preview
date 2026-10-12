@@ -8,7 +8,7 @@
   <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/cptk-case.css?v=1">
+  <link rel="stylesheet" href="../css/cptk-case.css?v=2">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -40,9 +40,10 @@
           <div class="cp-story"><span>The problem</span><p>A physical casting guide holds valuable expertise and proprietary directory information. I extended it into a useful digital experience while keeping that information private.</p></div>
           <div class="cp-story"><span>My contribution</span><p>I built the public website, authenticated member application, RAG chatbot, account-activation workflow, admin tools, and verification suite.</p></div>
           <div class="project-tech"><span>TypeScript · React</span><span>Cloudflare Workers · SQLite</span><span>Groq · RAG</span></div>
+          <a class="project-case-link cp-engineering-link" href="#membership">Read the engineering story <span aria-hidden="true">↓</span></a>
           <p class="cptk-private-note">Company project · Private source code</p>
         </div>
-        <figure class="cp-figure cp-storefront"><a href="../assets/cptk/public-storefront.webp" target="_blank" rel="noopener noreferrer" aria-label="View the original public homepage screenshot"><img src="../assets/cptk/public-storefront.webp" alt="CPTK public homepage with the original company branding, Casting Pros To Know book, and private digital companion" width="1200" height="750"></a><figcaption><span>Actual public homepage</span><a href="../assets/cptk/public-storefront.webp" target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption></figure>
+        <figure class="cp-figure cp-storefront"><img src="../assets/cptk/public-storefront.webp" alt="CPTK public homepage with the original company branding, Casting Pros To Know book, and private digital companion" width="1200" height="750"><figcaption><span>Actual public homepage</span></figcaption></figure>
       </div>
     </section>
     <section class="cp-screen" id="membership" aria-labelledby="cp-membership-title">
@@ -52,7 +53,7 @@
           <article><span class="cp-small-label">Visitors</span><h3>Discover the guide</h3><p>I keep the public website focused on general promotional information about the book and companion.</p></article>
           <article><span class="cp-small-label">Registered members</span><h3>Use the purchased collection</h3><p>I give members access to their purchased directory, chatbot, saved references, and preparation tools.</p></article>
         </div>
-        <div class="cp-subhead"><h3>One purchase key. One account.</h3><p>I enforce activation in the database, so account creation and key consumption succeed together.</p></div>
+        <div class="cp-subhead"><h3>One purchase key. One account.</h3><p>I use a transaction and unique constraints because separate check-and-create steps can let repeated requests claim the same purchase. Key consumption and account creation must succeed together.</p></div>
         <ol class="cp-flow" aria-label="Account activation workflow">
           <li><span>01</span><strong>Check the key</strong><p>I validate the purchase key before allowing account creation.</p></li>
           <li><span>02</span><strong>Verify identity</strong><p>I confirm that the identity matches the purchase email.</p></li>
@@ -64,10 +65,10 @@
     </section>
     <section class="cp-screen" id="ai-engineering" aria-labelledby="cp-ai-title">
       <div class="wrap">
-        <header class="cp-section-head"><p class="cp-eyebrow">02 / AI engineering &amp; administration</p><h2 id="cp-ai-title">Authorization comes before generation.</h2><p>I scope retrieval to the member's authorized collection before Groq generates an answer.</p></header>
+        <header class="cp-section-head"><p class="cp-eyebrow">02 / AI engineering &amp; administration</p><h2 id="cp-ai-title">Authorization comes before generation.</h2><p>I apply collection permissions during retrieval, before Groq generates an answer. I enforce access in the application so unauthorized records stay out of the model's context.</p></header>
         <div class="cp-rag-flow" role="group" aria-label="Authorized retrieval and answer validation"><div><span>01 / Retrieve</span><strong>Authorized evidence</strong><p>Only the member's collection enters the retrieval scope.</p></div><span class="cp-flow-arrow" aria-hidden="true">→</span><div><span>02 / Generate</span><strong>Groq response</strong><p>Retrieved evidence supplies the context for the answer.</p></div><span class="cp-flow-arrow" aria-hidden="true">→</span><div><span>03 / Validate</span><strong>Attributed answer</strong><p>Source identifiers are checked before references are retained.</p></div></div>
         <div class="cp-decision-grid">
-          <article><span class="cp-small-label">Grounding &amp; failure handling</span><h3>Keep the answer tied to its sources.</h3><p>I retain source attribution, validate source identifiers, and withhold unsupported claims. If generation fails, I fall back to scoped retrieval so the member can still inspect relevant evidence.</p></article>
+          <article><span class="cp-small-label">Grounding &amp; failure handling</span><h3>Keep the answer tied to its sources.</h3><p>I retain attribution and validate source identifiers against the retrieved evidence. A plausible-looking citation is not enough. I withhold unsupported claims and fall back to scoped retrieval if generation fails, preserving access to evidence without inventing an answer.</p></article>
           <article><span class="cp-small-label">Authorized administration</span><h3>Maintain the directory and approved knowledge.</h3><p>I built tools for authorized admins to add, edit, and archive professional records and approved knowledge. Member access does not grant administrative editing rights.</p></article>
         </div>
       </div>
@@ -80,7 +81,7 @@
             <dl class="cp-metrics"><div><dt>Imported records</dt><dd>181<span>across two collections</span></dd></div><div><dt>Automated checks</dt><dd>65<span>passed</span></dd></div><div><dt>Hosted Groq smoke checks</dt><dd>3<span>generation &amp; citation validation passed</span></dd></div></dl>
             <p class="cp-evidence-copy">I verified account boundaries, purchase identity, private-record access, administrative authorization, and the purchase lifecycle. The three hosted Groq checks exercised generation and citation validation; they are smoke checks, not a reliability benchmark.</p>
           </div>
-          <figure class="cp-figure"><a href="../assets/cptk/engineering-evidence.webp" target="_blank" rel="noopener noreferrer" aria-label="View the engineering test evidence graphic"><img src="../assets/cptk/engineering-evidence.webp" alt="Engineering test evidence graphic showing 65 automated checks passed, account and authorization checks, and three hosted Groq smoke checks" width="1600" height="1000" loading="lazy"></a><figcaption><span>Test evidence graphic · Not an application screenshot</span><a href="../assets/cptk/engineering-evidence.webp" target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption></figure>
+          <figure class="cp-figure"><img src="../assets/cptk/engineering-evidence.webp" alt="Engineering test evidence graphic showing 65 automated checks passed, account and authorization checks, and three hosted Groq smoke checks" width="1600" height="1000" loading="lazy"><figcaption><span>Test evidence graphic · Not an application screenshot</span></figcaption></figure>
         </div>
         <div class="cp-automation"><div><span class="cp-small-label">Implemented &amp; verified</span><h3>Purchase lifecycle with synthetic orders</h3><p>I implemented duplicate-order handling, key issuance, registration, and refund revocation, and verified these paths using synthetic orders.</p></div><div><span class="cp-small-label">Awaiting connection</span><h3>Live commerce and email</h3><p>Live Shopify/TikTok payment processing and email delivery await connection. Synthetic-order verification does not establish a completed live payment integration.</p></div></div>
         <footer class="cp-project-footer"><p>Developed for Asjai Lou Casting. The repository and proprietary source code are private and are not publicly distributed.</p></footer>
