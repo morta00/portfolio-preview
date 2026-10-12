@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GymBox + Box AI | Mortadha Ghnimi</title>
-  <meta name="description" content="Retrieval-based fitness coach integrated into the GymBox React Native app, with a FastAPI backend.">
+  <title>GymBox + BoxAI — Mobile Fitness &amp; AI Coaching | Mortadha Ghnimi</title>
+  <meta name="description" content="A React Native fitness app with integrated AI coaching: FAISS retrieval, Gemma-powered Q&amp;A, and profile-based exercise and meal recommendations through FastAPI.">
   <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=15">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/gymbox-case.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -29,45 +30,74 @@
       </div>
     </div>
   </header>
-  <main id="main" class="wrap prose">
-    <header class="page-hero">
-      <a class="back" href="../index.html#work">← Selected work</a>
-      <div class="badge-row" style="margin-top:1rem"><span class="badge done">Completed</span></div>
-      <h1>GymBox + Box AI</h1>
-      <p>At Smart It Partner I built Box AI, a retrieval-based coach for training and nutrition questions inside a React Native gym app, and worked on the surrounding member experience.</p>
-    </header>
-    <h2>What I built</h2>
-    <ul>
-      <li>Chat interface in the mobile app and the FastAPI service behind it</li>
-      <li>Retrieval over fitness and nutrition material, then generation with Gemma</li>
-      <li>FAISS for similarity search</li>
-      <li>Member activity on the home screen, QR gym access, profile analytics, and the in-app shop</li>
-    </ul>
-    <h2>Architecture</h2>
-    <div class="diagram">
-      <div class="flow">
-        <div class="flow-step"><b>01</b> Domain documents</div>
-        <div class="flow-step"><b>02</b> Chunk and embed</div>
-        <div class="flow-step"><b>03</b> FAISS retrieval</div>
-        <div class="flow-step"><b>04</b> Gemma</div>
-        <div class="flow-step"><b>05</b> Mobile chat API</div>
+  <main id="main" class="gym-case">
+    <section class="gx-hero">
+      <div class="wrap gx-hero-grid">
+        <div class="gx-hero-copy">
+          <a class="back" href="../index.html#gymbox">← Selected work</a>
+          <p class="gx-eyebrow">GymBox + BoxAI / Mobile development &amp; applied AI</p>
+          <h1>Fitness intelligence.<br>Inside the app.</h1>
+          <p class="gx-lead">I built BoxAI, the coaching component inside GymBox, connecting a React Native mobile experience to a Python AI backend for training questions, nutrition guidance, and profile-based exercise and meal recommendations.</p>
+          <div class="gx-actions"><a class="gx-primary" href="#demo">Watch the app</a><a href="https://github.com/morta00/BoxAi" target="_blank" rel="noopener noreferrer">Explore the AI backend ↗</a></div>
+          <p class="gx-role"><strong>My contribution</strong>BoxAI backend and mobile integration, plus member-facing screens in the collaborative GymBox project at Smart It Partner.</p>
+          <div class="project-tech"><span>React Native · TypeScript</span><span>FastAPI · LangChain</span><span>FAISS · Gemma</span></div>
+        </div>
+        <div class="gx-hero-visual">
+          <figure><div class="phone-device"><img src="../assets/gymbox/screens/boxai.png" alt="Actual BoxAI mobile chat showing a question about sleep and recovery and the assistant's answer" width="473" height="1024"></div><figcaption>Ask a training question.</figcaption></figure>
+          <figure><div class="phone-device"><img src="../assets/gymbox/screens/home.png" alt="Actual BoxAI recommendation screen showing an exercise and a meal with duration, calories, and macros" width="473" height="1024"></div><figcaption>Get a plan in the app.</figcaption></figure>
+          <p>Original app captures · Recorded walkthrough below</p>
+        </div>
       </div>
-    </div>
-<section class="gym-product"><h2>The mobile experience</h2><p>Real screens from GymBox: activity tracking, profile analytics, and the Box AI coach.</p><div class="gym-device-gallery"><figure><div class="phone-device"><img src="../assets/gymbox/screens/home-dashboard.png" alt="Activity dashboard" loading="lazy"></div><figcaption>Activity dashboard</figcaption></figure><figure><div class="phone-device"><img src="../assets/gymbox/screens/boxai.png" alt="Box AI coach" loading="lazy"></div><figcaption>Box AI coach</figcaption></figure><figure><div class="phone-device"><img src="../assets/gymbox/screens/profile-dashboard.png" alt="Profile analytics" loading="lazy"></div><figcaption>Profile analytics</figcaption></figure></div><div class="gym-demo-panel"><div><p class="section-label">Product in motion</p><h3>Explore the app.</h3><p>Watch the AI chat, browse the member experience, or see onboarding.</p><div class="demo-buttons" role="group" aria-label="Choose a GymBox demo"><button class="is-active" type="button" data-demo="gymbox-boxai-chat" data-poster="boxai">Box AI chat</button><button type="button" data-demo="gymbox-demo-1" data-poster="home-dashboard">App walkthrough</button><button type="button" data-demo="gymbox-demo-2" data-poster="onboarding">Onboarding</button></div></div><div class="demo-phone phone-device"><video id="gym-demo-video" controls playsinline preload="none" poster="../assets/gymbox/screens/boxai.png" src="../assets/gymbox/videos/gymbox-boxai-chat.mp4"></video></div></div><h3>Commerce and member features</h3><div class="gym-secondary-gallery"><figure><div class="phone-device"><img src="../assets/gymbox/screens/boutique.png" alt="Shop" loading="lazy"></div><figcaption>Shop</figcaption></figure><figure><div class="phone-device"><img src="../assets/gymbox/screens/product.png" alt="Product details" loading="lazy"></div><figcaption>Product details</figcaption></figure><figure><div class="phone-device"><img src="../assets/gymbox/screens/cart.png" alt="Cart" loading="lazy"></div><figcaption>Cart</figcaption></figure><figure><div class="phone-device"><img src="../assets/gymbox/screens/onboarding.png" alt="Member onboarding" loading="lazy"></div><figcaption>Member onboarding</figcaption></figure></div></section>    <h2>Stack</h2>
-    <div class="tech-row"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">FAISS</span><span class="chip">Gemma</span><span class="chip">RAG</span></div>
-    <h2>Links</h2>
-    <p>
-      <a class="text-link" href="https://github.com/morta00/GymBox" target="_blank" rel="noopener noreferrer">GymBox repository</a>
-      ·
-      <a class="text-link" href="https://github.com/morta00/BoxAi" target="_blank" rel="noopener noreferrer">Box AI repository</a>
-    </p>
-    <div class="related">
-      <p><a class="arrow-link" href="asjai.html">Related · AI Automation Platform <span>→</span></a></p>
-      <p><a class="back" href="../index.html#work">← Back to work</a></p>
-    </div>
+    </section>
+    <section class="gx-section" aria-labelledby="gx-product-title">
+      <div class="wrap">
+        <header class="gx-section-head"><p class="gx-eyebrow">01 / The product</p><h2 id="gx-product-title">From a member’s goal to an actionable next step.</h2><p>GymBox brings activity, member profiles, and shopping into one mobile experience. BoxAI adds two ways to get guidance: ask a fitness question, or generate exercise and meal suggestions from the profile collected during onboarding.</p></header>
+        <div class="gx-product-grid">
+          <article><span>Conversational coaching</span><h3>Ask. Retrieve. Respond.</h3><p>The chat sends a question to the FastAPI service. The default retrieval path supplies relevant fitness material to Gemma before the answer returns to the conversation.</p></article>
+          <article><span>Profile-based recommendations</span><h3>A plan the interface can use.</h3><p>Age, sex, height, weight, and goal feed a separate recommendation pipeline. The app displays exercises and meals from a JSON response, including duration, estimated calories, and meal macros.</p></article>
+          <article><span>Member experience</span><h3>AI within the daily workflow.</h3><p>Onboarding, activity and profile dashboards, QR membership access, and the in-app shop give the coaching feature a place within the wider gym experience.</p></article>
+        </div>
+        <div class="gx-screen-grid">
+          <figure><a href="../assets/gymbox/screens/onboarding.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/onboarding.png" alt="GymBox onboarding collecting member height, weight, and gender" width="288" height="624" loading="lazy"></div></a><figcaption><strong>Collect the profile</strong>Onboarding inputs for recommendations.</figcaption></figure>
+          <figure><a href="../assets/gymbox/screens/home.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/home.png" alt="BoxAI exercise and meal recommendation cards" width="473" height="1024" loading="lazy"></div></a><figcaption><strong>Present the plan</strong>Structured output rendered as mobile cards.</figcaption></figure>
+          <figure><a href="../assets/gymbox/screens/home-dashboard.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/home-dashboard.png" alt="GymBox dashboard showing activity, sleep, steps, and distance" width="473" height="1024" loading="lazy"></div></a><figcaption><strong>View daily activity</strong>Activity and sleep in the member dashboard.</figcaption></figure>
+          <figure><a href="../assets/gymbox/screens/profile-dashboard.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/profile-dashboard.png" alt="GymBox profile screen with member information and weekly activity histogram" width="473" height="1024" loading="lazy"></div></a><figcaption><strong>Explore the profile</strong>Member information and activity charts.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <section class="gx-section gx-demo-section" id="demo" aria-labelledby="gx-demo-title">
+      <div class="wrap gym-demo-panel">
+        <div><p class="gx-eyebrow">02 / Recorded demonstration</p><h2 id="gx-demo-title">See the integration in motion.</h2><p>Watch a question move through the BoxAI chat, explore the wider app, or follow member onboarding. These are recordings of the mobile app.</p>
+          <div class="demo-buttons" role="group" aria-label="Choose a recorded GymBox demonstration"><button class="is-active" type="button" data-demo="gymbox-boxai-chat" data-poster="boxai" aria-pressed="true">BoxAI chat · 1:10</button><button type="button" data-demo="gymbox-demo-1" data-poster="home-dashboard" aria-pressed="false">App walkthrough · 1:03</button><button type="button" data-demo="gymbox-demo-2" data-poster="onboarding" aria-pressed="false">Onboarding · 0:14</button></div>
+          <p class="gx-small">Select a recording, then use the player controls to watch. Fullscreen is available in the player.</p>
+        </div>
+        <div class="demo-phone phone-device"><video id="gym-demo-video" aria-label="Recorded GymBox mobile app demonstration" controls playsinline preload="none" poster="../assets/gymbox/screens/boxai.png" src="../assets/gymbox/videos/gymbox-boxai-chat.mp4"></video></div>
+      </div>
+    </section>
+    <section class="gx-section" aria-labelledby="gx-engineering-title">
+      <div class="wrap">
+        <header class="gx-section-head"><p class="gx-eyebrow">03 / Engineering</p><h2 id="gx-engineering-title">Two AI workflows. One mobile integration.</h2><p>I separated knowledge retrieval from recommendation generation so each workflow could return the format the app needs.</p></header>
+        <div class="gx-architecture">
+          <article><h3>Fitness Q&amp;A</h3><p class="gx-route"><code>Mobile chat → POST /ask → Retrieved context → Answer</code></p><ul><li><strong>Prepare the knowledge:</strong> split the fitness corpus into 1,000-character chunks with 200-character overlap.</li><li><strong>Search semantically:</strong> embed with <code>all-MiniLM-L6-v2</code> and retrieve the five closest chunks from a persisted FAISS index.</li><li><strong>Generate with context:</strong> LangChain supplies retrieved material to <code>gemma2-9b-it</code> through Groq. The backend also exposes a dedicated <code>/ask-rag</code> route.</li></ul></article>
+          <article><h3>Exercise &amp; meal recommendations</h3><p class="gx-route"><code>Member profile → POST /recommend → JSON → Mobile cards</code></p><ul><li><strong>Map the mobile profile:</strong> translate stored onboarding fields into the API’s age, sex, weight, height, and goal schema.</li><li><strong>Generate a structured plan:</strong> a separate Llama-based chain requests exercise and meal objects, with calories and meal macros.</li><li><strong>Render usable output:</strong> the service parses JSON and checks required top-level fields; the mobile screen groups exercise and meal cards and respects the meal-suggestion setting.</li></ul></article>
+        </div>
+        <div class="gx-details"><h3>Implementation choices</h3><dl><div><dt>Reusable retrieval index</dt><dd>The backend saves the FAISS index and rebuilds it when the dataset is newer.</dd></div><div><dt>Repeated-question caching</dt><dd>Bounded LRU caches reuse Q&amp;A responses for identical questions.</dd></div><div><dt>Request handling</dt><dd>Query length limits, profile range checks, prompt-level fitness scope, and basic injection-pattern filtering.</dd></div><div><dt>Service diagnostics</dt><dd><code>/health</code> and <code>/dataset-info</code> report component and dataset availability.</dd></div></dl></div>
+      </div>
+    </section>
+    <section class="gx-section" aria-labelledby="gx-contribution-title">
+      <div class="wrap gx-contribution-grid">
+        <div><p class="gx-eyebrow">04 / Contribution &amp; outcome</p><h2 id="gx-contribution-title">AI engineering that reaches the interface.</h2><p>I developed the BoxAI service and connected its chat and recommendation endpoints to GymBox. I also contributed mobile screens for member profiles, login and account flows, and shopping as part of the collaborative app development.</p><p>The result is a demonstrable mobile integration: members can ask training and nutrition questions, and the app can turn profile-based AI output into exercise and meal cards. The screenshots and recordings show the product experience; both repositories expose the implementation.</p><div class="gx-actions"><a href="https://github.com/morta00/BoxAi" target="_blank" rel="noopener noreferrer">BoxAI backend ↗</a><a href="https://github.com/aziz-mokni/GymBox" target="_blank" rel="noopener noreferrer">GymBox mobile app ↗</a></div></div>
+        <aside><p class="gx-eyebrow">Next engineering steps</p><h3>Evaluate, then harden.</h3><p>My next priorities are retrieval and answer-quality evaluation, schema validation for every recommendation field, session-isolated conversations, and authenticated backend deployment with rate limits.</p><p class="gx-small">These are planned improvements. No measured accuracy, latency, adoption, or health outcomes are claimed.</p></aside>
+      </div>
+    </section>
+    <section class="gx-section gx-commerce" aria-labelledby="gx-commerce-title"><div class="wrap"><header class="gx-section-head"><p class="gx-eyebrow">05 / The wider app</p><h2 id="gx-commerce-title">A complete member journey.</h2><p>Product discovery, product details, and the cart complement the coaching and activity experience.</p></header><div class="gx-commerce-grid">
+      <figure><a href="../assets/gymbox/screens/boutique.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/boutique.png" alt="GymBox shop with product categories and supplement listings" width="473" height="1024" loading="lazy"></div></a><figcaption>Product discovery</figcaption></figure>
+      <figure><a href="../assets/gymbox/screens/product.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/product.png" alt="GymBox product details screen with price and description" width="473" height="1024" loading="lazy"></div></a><figcaption>Product details</figcaption></figure>
+      <figure><a href="../assets/gymbox/screens/cart.png" target="_blank" rel="noopener noreferrer"><div class="phone-device"><img src="../assets/gymbox/screens/cart.png" alt="GymBox shopping cart with quantities and total price" width="473" height="1024" loading="lazy"></div></a><figcaption>Shopping cart</figcaption></figure>
+    </div><a class="back gx-return" href="../index.html#gymbox">← Back to selected work</a></div></section>
   </main>
   <script src="../js/site.config.js"></script>
   <script src="../js/main.js"></script>
-  <script src="../js/career-fair.js?v=1"></script>
+  <script src="../js/gymbox-case.js?v=1"></script>
 </body>
 </html>

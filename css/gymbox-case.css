@@ -1,0 +1,40 @@
+/* Scoped GymBox case study; shared portfolio styles stay intact. */
+.gym-case{--gx-accent:#17644f;color:var(--ink)}
+.gx-hero{padding:70px 0 60px;background:linear-gradient(125deg,#f6f8f5,#edf5f3);border-bottom:1px solid var(--line)}
+.gx-hero-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:60px;align-items:center}
+.gx-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--gx-accent);margin:0 0 18px}
+.gx-hero .gx-eyebrow{margin-top:35px}
+.gx-hero h1{font-family:Inter,sans-serif;font-size:clamp(40px,4.5vw,64px);line-height:1.06;letter-spacing:-.055em;font-weight:700;margin:0 0 25px}
+.gx-lead{font-size:17px;line-height:1.8;max-width:620px;color:var(--muted)}
+.gx-actions{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin:26px 0}
+.gx-actions a{font-size:13px;font-weight:600;color:var(--gx-accent);text-underline-offset:5px}
+.gx-actions .gx-primary{display:inline-block;padding:14px 22px;border-radius:8px;background:var(--gx-accent);color:white;text-decoration:none}
+.gx-role{font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:18px;max-width:580px;color:var(--muted)}
+.gx-role strong{display:block;color:var(--ink);margin-bottom:5px}
+.gx-hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:28px 10px 0;align-items:start}
+.gx-hero-visual figure{margin:0;min-width:0}.gx-hero-visual figure:nth-child(2){padding-top:38px}
+.gx-hero-visual .phone-device{width:100%;max-width:225px;aspect-ratio:473/1024;margin:auto;border-radius:28px}
+.gx-hero-visual img{height:auto;object-fit:contain}.gx-hero-visual figcaption{font-size:12px;text-align:center;color:var(--muted);margin-top:15px}
+.gx-hero-visual>p{grid-column:1/-1;font-size:11px;color:var(--muted);text-align:center;margin:0}
+.gx-section{padding:75px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.gx-section-head{max-width:760px;margin-bottom:35px}.gym-case h2{font-family:Inter,sans-serif;font-size:clamp(27px,3vw,40px);line-height:1.2;letter-spacing:-.035em;font-weight:650;margin:0 0 18px}
+.gym-case h3{font-size:20px;line-height:1.3;letter-spacing:-.025em;margin:12px 0}
+.gx-section p,.gx-section li{font-size:15px;line-height:1.8;color:var(--muted)}
+.gx-section .gx-eyebrow{font-size:11px;line-height:1.5;color:var(--gx-accent)}
+.gx-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-bottom:45px}.gx-product-grid article{border-top:2px solid #9ac3b5;padding-top:20px}
+.gx-product-grid article>span{font-size:11px;color:var(--gx-accent);font-weight:600}.gx-product-grid h3{font-size:21px}
+.gx-screen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;padding:32px;background:#f0f5f2;border-radius:22px}
+.gx-screen-grid figure,.gx-commerce-grid figure{margin:0;min-width:0}.gx-screen-grid a,.gx-commerce-grid a{display:block}.gx-screen-grid .phone-device{width:100%;aspect-ratio:473/1024;max-width:205px;margin:auto}
+.gym-case .phone-device img{object-fit:contain}.gx-screen-grid figcaption{font-size:12px;line-height:1.6;color:var(--muted);margin-top:18px}.gx-screen-grid figcaption strong{display:block;color:var(--ink);margin-bottom:4px}
+.gx-demo-section{background:#edf4f0}.gym-case .gym-demo-panel{margin:0 auto;background:transparent;padding:0;border:0;grid-template-columns:1fr 285px;gap:80px}
+.gym-case .demo-phone{width:270px;height:auto;aspect-ratio:288/640}.gym-case .demo-phone video{object-fit:contain}.gym-case .demo-buttons{margin:24px 0}
+.gym-case .gx-small{font-size:12px;line-height:1.7}.gym-case .demo-buttons button{font-size:13px;padding:12px 20px}
+.gx-architecture{display:grid;grid-template-columns:1fr 1fr;gap:30px}.gx-architecture article{padding:28px;border:1px solid var(--line);border-radius:18px;background:white}.gx-architecture ul{padding-left:20px;margin:20px 0 0}.gx-architecture li{margin:14px 0}.gx-architecture strong{color:var(--ink)}
+.gym-case code{font-size:12px;overflow-wrap:anywhere}.gx-route{padding:13px;background:#edf4f0;border-radius:8px}
+.gx-details{margin-top:35px}.gx-details dl{display:grid;grid-template-columns:1fr 1fr;gap:25px 45px}.gx-details dt{font-size:14px;font-weight:600;color:var(--ink)}.gx-details dd{margin:8px 0 0;font-size:14px;line-height:1.8;color:var(--muted)}
+.gx-contribution-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:70px}.gx-contribution-grid aside{padding:30px;border-radius:18px;background:#edf4f0;align-self:start}
+.gx-commerce-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;max-width:800px;margin:35px auto}.gx-commerce-grid .phone-device{width:100%;max-width:215px;aspect-ratio:473/1024;margin:auto}.gx-commerce-grid figcaption{font-size:12px;text-align:center;margin-top:18px;color:var(--muted)}.gx-return{display:inline-block;margin-top:30px}
+.gym-case a:focus-visible,.gym-case button:focus-visible{outline:3px solid #2386a0;outline-offset:5px}
+@media(max-width:1000px){.gx-hero-grid{gap:30px}.gx-hero-visual{gap:15px}.gx-screen-grid{padding:24px;gap:18px}.gx-screen-grid .phone-device{border-width:4px;border-radius:20px}.gym-case .gym-demo-panel{gap:40px}.gx-contribution-grid{gap:35px}}
+@media(max-width:760px){.gx-hero{padding:35px 0 45px}.gx-hero-grid,.gx-architecture,.gx-contribution-grid{grid-template-columns:1fr}.gx-hero-visual{max-width:470px;margin:auto;gap:22px}.gx-hero-visual .phone-device{max-width:195px}.gx-product-grid{grid-template-columns:1fr;gap:20px}.gx-screen-grid{grid-template-columns:repeat(2,1fr);gap:30px 20px}.gx-screen-grid .phone-device{max-width:180px}.gx-section{padding:45px 0}.gym-case .gym-demo-panel{grid-template-columns:1fr;gap:30px}.gym-case .demo-phone{width:min(270px,100%);margin:auto}.gym-case .demo-buttons{flex-direction:row;flex-wrap:wrap}.gym-case .demo-buttons button{font-size:12px}.gx-details dl{grid-template-columns:1fr}.gx-commerce-grid{gap:16px}.gx-commerce-grid .phone-device{border-width:3px;border-radius:14px}.gx-commerce-grid .phone-device:before{height:4px;top:3px}.gx-commerce-grid .phone-device img{border-radius:10px}.gx-architecture article{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
