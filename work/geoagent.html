@@ -8,7 +8,7 @@
   <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/geoagent.css?v=1">
+  <link rel="stylesheet" href="../css/geoagent.css?v=2">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -38,7 +38,7 @@
           <p class="geo-eyebrow">Agentic AI / Research workspace</p>
           <h1 id="geo-title">GeoAgent<span>.</span></h1>
           <p class="geo-case-lede">Research you can follow.<br>Evidence you can inspect.</p>
-          <p>I built GeoAgent to connect the parts of research that usually live in different windows: observations, source documents, analysis, and the final explanation.</p>
+          <div class="geo-origin"><span>Built for my thesis workflow</span><p>My thesis investigates vegetation stress in satellite time series. I built GeoAgent to compare observations, retrieve research context, and keep the evidence attached to each analysis.</p></div>
           <div class="project-tech"><span>React + TypeScript</span><span>Python + FastAPI</span><span>LangGraph + MCP</span></div>
           <a class="project-case-link" href="#workflow">Explore the workflow <span aria-hidden="true">↓</span></a>
           <div class="geo-role"><span>My contribution</span><strong>Interface, backend, orchestration, analysis tools, and evaluation harness</strong></div>
@@ -48,44 +48,44 @@
     </section>
     <section class="geo-case-screen" id="workflow" aria-labelledby="workflow-title">
       <div class="wrap">
-        <header class="geo-section-head"><div><p class="geo-eyebrow">01 / The research problem</p><h2 id="workflow-title">One study. All the evidence.</h2></div><p>Inspired by my satellite vegetation-monitoring research, where comparing observations and finding source context are recurring tasks.</p></header>
+        <header class="geo-section-head"><div><p class="geo-eyebrow">01 / The workflow</p><h2 id="workflow-title">One study. All the evidence.</h2><p class="geo-section-intro">Bring your files, ask a focused question, and inspect the result.</p></div></header>
         <div class="geo-case-grid geo-workflow-grid">
           <figure class="geo-figure"><a href="../assets/geoagent/study.webp" target="_blank" rel="noopener"><img src="../assets/geoagent/study.webp" alt="Study workspace showing uploaded vegetation observations, field notes, and a focused research question" width="1440" height="1100" loading="lazy"></a><figcaption><span>02 / Evidence &amp; question</span><a href="../assets/geoagent/study.webp" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
           <div class="geo-steps">
-            <article><span>01</span><div><h3>Bring the study together</h3><p>Upload tabular observations and research sources. Preview the dataset and search papers or notes within the study.</p></div></article>
-            <article><span>02</span><div><h3>Ask a focused question</h3><p>Investigate a time-series change, retrieve supporting evidence, or inspect a dataset. Adapt the question to the files you uploaded.</p></div></article>
-            <article><span>03</span><div><h3>Review, then run</h3><p>Inspect the proposed plan when approval is requested. Registered tools perform the calculations and record their outputs.</p></div></article>
-            <article><span>04</span><div><h3>Leave with a cited brief</h3><p>Review charts, exact values, source passages, and limitations. Export the brief as Markdown for further research and editing.</p></div></article>
+            <article><span>01</span><div><h3>Bring the study together</h3><p>Upload observations, papers, and field notes into one study.</p></div></article>
+            <article><span>02</span><div><h3>Ask a focused question</h3><p>Compare sites over time, find source passages, or inspect a dataset.</p></div></article>
+            <article><span>03</span><div><h3>Review, then run</h3><p>Review the plan when requested. Analysis tools calculate and record the results.</p></div></article>
+            <article><span>04</span><div><h3>Leave with a cited brief</h3><p>Inspect charts, values, and citations. Export a Markdown brief.</p></div></article>
           </div>
         </div>
       </div>
     </section>
     <section class="geo-case-screen" id="results" aria-labelledby="results-title">
       <div class="wrap">
-        <header class="geo-section-head"><div><p class="geo-eyebrow">02 / Inside an analysis</p><h2 id="results-title">The answer comes with its workings.</h2></div><p>Calculated findings sit beside the chart and supporting sources. The plan, tool results, and run log remain available for inspection.</p></header>
+        <header class="geo-section-head"><div><p class="geo-eyebrow">02 / Inside an analysis</p><h2 id="results-title">See the change. Inspect the evidence.</h2><p class="geo-section-intro">Computed values, site-level charts, and source-linked findings.</p></div></header>
         <div class="geo-case-grid geo-results-grid">
           <div class="geo-result-copy">
             <span class="geo-demo-label">Synthetic sample study</span>
             <h3>Two sites.<br>One visible change.</h3>
-            <p>The included demonstration compares ten weekly NDVI observations at each of two sites. The North plot declines sharply before partially recovering; the South plot remains comparatively stable.</p>
+            <p>North declines, then partially recovers. South stays comparatively stable. GeoAgent computes the pattern and charts both sites.</p>
             <div class="geo-sample-facts"><div><strong>20</strong><span>observations</span></div><div><strong>2</strong><span>sites</span></div><div><strong>0.651</strong><span>computed mean NDVI</span></div></div>
-            <p>GeoAgent links the summary to recorded calculation steps and an excerpt from the uploaded notes, keeping the observations and their context together.</p>
+            <p>Each finding links back to its calculation steps and supporting notes.</p>
             <a class="project-case-link" href="../assets/geoagent/brief.webp" target="_blank" rel="noopener">Read the complete sample brief ↗</a>
-            <p class="geo-demo-note">This is a deterministic offline demonstration with synthetic data and real analysis tools. It demonstrates the workflow, not live LLM reasoning or validated forest conditions.</p>
+            <p class="geo-demo-note">Synthetic data. Deterministic planner. Real calculations. This sample demonstrates the workflow, not validated forest conditions.</p>
           </div>
-          <figure class="geo-figure geo-report-figure"><div class="geo-report-scroll" tabindex="0" role="region" aria-label="Scrollable screenshot of the completed research brief"><img src="../assets/geoagent/brief-screen.webp" alt="Completed research brief with calculated NDVI mean, site-level time-series chart, and inspectable analysis tabs" width="1440" height="1450" loading="lazy"></div><figcaption><span>03 / Analysis &amp; brief · Scroll to inspect</span><a href="../assets/geoagent/brief.webp" target="_blank" rel="noopener">Full brief ↗</a></figcaption></figure>
+          <figure class="geo-figure geo-report-figure"><a class="geo-report-result" href="../assets/geoagent/brief.webp" target="_blank" rel="noopener" aria-label="Open the complete research brief"><img src="../assets/geoagent/brief-screen.webp" alt="Completed research brief with calculated NDVI mean, site-level time-series chart, and inspectable analysis tabs" width="1440" height="1450" loading="lazy"></a><figcaption><span>03 / Computed result &amp; site comparison</span><a href="../assets/geoagent/brief.webp" target="_blank" rel="noopener">Full brief ↗</a></figcaption></figure>
         </div>
       </div>
     </section>
     <section class="geo-case-screen" id="engineering" aria-labelledby="engineering-title">
       <div class="wrap">
-        <header class="geo-section-head"><div><p class="geo-eyebrow">03 / Engineering decisions</p><h2 id="engineering-title">Built to make execution inspectable.</h2></div><p>The engineering challenge: connect planning, analysis, and reporting while preserving the evidence behind each result.</p></header>
-        <ol class="geo-pipeline" aria-label="Execution workflow"><li><span>01</span><strong>Plan</strong><small>Focused research task</small></li><li><span>02</span><strong>Review</strong><small>Approval when requested</small></li><li><span>03</span><strong>Execute</strong><small>Registered analysis tools</small></li><li><span>04</span><strong>Verify</strong><small>Implemented output checks</small></li><li><span>05</span><strong>Report</strong><small>Findings with sources</small></li></ol>
+        <header class="geo-section-head"><div><p class="geo-eyebrow">03 / Engineering decisions</p><h2 id="engineering-title">Every result has a trail.</h2><p class="geo-section-intro">A visible execution path, with the evidence preserved at each step.</p></div></header>
+        <div class="geo-execution"><span class="geo-execution-label">Execution path</span><ol class="geo-execution-steps" aria-label="Execution workflow"><li>Plan</li><li>Review</li><li>Execute</li><li>Verify</li><li>Report</li></ol></div>
         <div class="geo-engineering-grid">
-          <article><span class="geo-eyebrow">Orchestration</span><h3>Explicit workflow state</h3><p>LangGraph connects planning, execution, verification, and reporting. Persisted runs retain steps, approval decisions, errors, timing, and tool outputs.</p></article>
-          <article><span class="geo-eyebrow">Analysis &amp; retrieval</span><h3>Tools calculate. Sources explain.</h3><p>Python tools compute statistics and site-level time series. Retrieval attaches document excerpts and available page metadata to the research brief.</p></article>
-          <article><span class="geo-eyebrow">Service boundaries</span><h3>One registry, two interfaces</h3><p>FastAPI serves validated application contracts. The same registered tools are exposed through MCP for reuse outside the web interface.</p></article>
-          <article><span class="geo-eyebrow">Controlled execution</span><h3>Bounded data operations</h3><p>Tool argument validation, read-only DuckDB queries, path and size limits, and execution timeouts keep analysis operations constrained.</p></article>
+          <article><span class="geo-eyebrow">Orchestration</span><h3>Explicit workflow state</h3><p>LangGraph coordinates the workflow. Persisted runs retain tool outputs, approvals, errors, and timing.</p></article>
+          <article><span class="geo-eyebrow">Analysis &amp; retrieval</span><h3>Tools calculate. Sources explain.</h3><p>Python computes the statistics and charts. Retrieval attaches source excerpts and available page references.</p></article>
+          <article><span class="geo-eyebrow">Service boundaries</span><h3>One registry, two interfaces</h3><p>Validated FastAPI endpoints serve the app. MCP exposes the same tools for reuse by other clients.</p></article>
+          <article><span class="geo-eyebrow">Controlled execution</span><h3>Bounded data operations</h3><p>Validated inputs, read-only SQL, file limits, and timeouts constrain analysis operations.</p></article>
         </div>
         <details class="geo-technical-details"><summary>Implementation details &amp; evaluation</summary><div><p>React and TypeScript power the interface. FastAPI and SQLAlchemy persist sessions, runs, and tool results. SQLite supports the local demonstration; PostgreSQL and pgvector are supported for storage and retrieval.</p><p>A 50-task benchmark harness is included for evaluating a stated configuration. No aggregate success rate is claimed here. Optional OpenAI integration requires separate configuration and evaluation; the default planner and embeddings are deterministic.</p><p>Verification means the recorded outputs passed the application's implemented checks. It does not establish scientific validity or infer the cause of a vegetation change. GeoAgent supports evidence review; my satellite-model experiments remain a separate research project.</p></div></details>
         <div class="geo-case-end"><p>From scattered research inputs to a brief you can review.</p><a class="project-case-link" href="../index.html#geoagent">Back to selected work ↗</a></div>
@@ -96,4 +96,3 @@
   <script src="../js/main.js"></script>
 </body>
 </html>
-
