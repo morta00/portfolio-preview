@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="css/vision-case.css?v=1">
   <link rel="stylesheet" href="css/cptk-case.css?v=2">
   <link rel="stylesheet" href="css/systems-portfolio.css?v=2">
+  <link rel="stylesheet" href="css/career-polish.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -51,8 +52,8 @@
         <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
-        <a href="#play">Challenge</a>
         <a href="#about">Skills</a>
+        <a href="#play">Challenge</a>
       </nav>
       <div class="nav-side">
         <a data-resume-link href="resume.html">Resume</a>
@@ -89,6 +90,86 @@
       </div>
     </section>
 
+
+    <section class="projects-showcase" id="work" aria-label="Selected projects">
+<section class="project-feature-screen project-first-screen" id="asjai" aria-labelledby="asjai-title">
+        <header class="wrap projects-showcase-head">
+        <div>
+          <p class="section-label">01 / Selected projects</p>
+          <h2>Selected Projects</h2>
+        </div>
+        <p>AI applications, research tools, and machine learning systems I’ve built.</p>
+      </header>
+<div class="wrap project-feature-grid project-feature-reverse">
+          <a class="cptk-preview" href="work/asjai.html?v=2" aria-label="Explore CPTK Secure AI Casting Companion">
+            <img src="assets/cptk/public-storefront.webp" alt="Actual CPTK public homepage showing Casting Pros To Know and its private digital companion" width="1200" height="750" loading="lazy">
+            <span class="cptk-preview-caption">CPTK / Explore the engineering case study <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="project-feature-copy">
+            <p class="cptk-card-result">181 directory records · 65 automated checks passed</p>
+            <h2 id="asjai-title">CPTK: Secure AI Casting Companion</h2>
+            <p class="project-feature-description">Developed for Asjai Lou Casting, CPTK transforms a casting guide into a private digital platform with source-grounded AI guidance, purchase-gated membership, and administrative data management.</p>
+            <div class="project-tech"><span>TypeScript</span><span>React</span><span>Cloudflare Workers</span><span>SQLite</span><span>Groq</span><span>RAG</span></div>
+            <a class="project-case-link" href="work/asjai.html?v=2">Explore the case study <span aria-hidden="true">↗</span></a>
+            <p class="cptk-private-note">Company project · Private source code</p>
+          </div>
+        </div>
+      </section>
+<section class="project-feature-screen" id="vision" aria-labelledby="vision-title">
+        <div class="wrap project-feature-grid">
+          <a class="vision-preview" href="work/kaggle.html" aria-label="Explore the first-place image classification project">
+            <span class="vision-preview-head">Kaggle · Multiclass Classification Challenge (10C-W26) <span aria-hidden="true">↗</span></span>
+            <img src="assets/kaggle/leaderboard.png" alt="Leaderboard for Multiclass Classification Challenge (10C-W26), showing Mortadha Ghnimi in first place with score 0.934" width="799" height="418" loading="lazy">
+            <span class="vision-preview-foot"><strong>1st Place</strong><span>93.4% Competition Test Accuracy</span></span>
+          </a>
+          <div class="project-feature-copy">
+            <p class="vision-card-result">1st Place <span>·</span> 93.4% Competition Test Accuracy</p>
+            <h2 id="vision-title">From-Scratch CNN Ensemble</h2>
+            <p class="project-feature-description">I trained a three-model CNN ensemble from scratch on 16×16 RGB images, without pretrained weights. I combined complementary predictions through pseudo-labeling, test-time augmentation, and weighted probability ensembling.</p>
+            <p class="vision-card-scope">Kaggle · Multiclass Classification Challenge (10C-W26)</p>
+            <div class="project-tech"><span>TensorFlow · Keras</span><span>WideResNet · ResNet</span><span>Computer Vision</span></div>
+            <a class="project-case-link" href="work/kaggle.html">Explore the project <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+<section class="project-more-screen" id="engineering" aria-labelledby="more-work-title">
+        <div class="wrap project-more-inner">
+          <header class="project-more-heading">
+            <p class="project-feature-category">Applied ML &amp; Performance</p>
+            <h2 id="more-work-title">Better models. Faster systems.</h2>
+            <p class="section-focus-description">Two complementary strengths: faster ML computation and cost-aware predictive modeling.</p>
+          </header>
+          <div class="engineering-gallery engineering-gallery-two">
+            <a class="engineering-card systems-summary-card" id="autoencoder" href="work/ml-systems.html"><span id="hpc" class="systems-anchor"></span><div class="engineering-visual architecture-thumb"><img src="assets/cards/autoencoder.svg" alt="Autoencoder architecture with a sparse input layer and dense reconstruction" loading="lazy"></div><div class="engineering-copy"><p class="project-feature-category">01 / ML systems engineering</p><h3>ML Systems Optimization</h3><p>I optimized two CPU workloads: a sparse ML kernel and a complete autoencoder training epoch. The shared engineering story is memory layout, SIMD, parallelism, and correctness.</p><div class="systems-card-metrics"><span><strong>24.73×</strong> autoencoder epoch</span><span><strong>68.78×</strong> recorded kernel run</span></div><div class="engineering-bottom"><span>C++ · AVX · OpenMP</span><strong>Explore the engineering ↗</strong></div></div></a>
+            <a class="engineering-card" id="fraud" href="work/fraud.html"><div class="engineering-visual result-thumb"><img src="assets/fraud/roc-curves.png" alt="Actual study ROC curves comparing healthcare fraud classifiers" loading="lazy"><span>0.946 reported study ROC-AUC</span></div><div class="engineering-copy"><p class="project-feature-category">02 / Cost-sensitive machine learning</p><h3>Healthcare Fraud Detection</h3><p>I worked with my team to turn claims data into provider-level risk signals, comparing four classifiers and balancing missed fraud against investigation cost.</p><div class="systems-card-metrics"><span><strong>74</strong> engineered features</span><span><strong>200</strong> evaluated model fits</span></div><div class="engineering-bottom"><span>Python · scikit-learn · PCA</span><strong>Explore the study ↗</strong></div></div></a>
+          </div>
+        </div>
+      </section>
+<section class="project-feature-screen" id="geoagent" aria-labelledby="geoagent-title">      
+        <div class="wrap project-feature-grid">
+          <a class="geoagent-preview" href="work/geoagent.html" aria-label="Explore GeoAgent, a research workspace for satellite data">
+            <span class="geoagent-browserbar"><span class="geoagent-dots" aria-hidden="true">● ● ●</span><span>GeoAgent / Research workspace</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/geoagent/overview.webp" alt="GeoAgent interface with three workflows: investigate a change, find supporting evidence, and understand a dataset" width="1440" height="1100" loading="lazy">
+            <span class="geoagent-preview-footer"><span>Real product interface</span><strong>Data → analysis → cited brief</strong></span>
+          </a>
+          <div class="project-feature-copy">
+            <p class="project-feature-category">AI workflows · Full-stack research tooling</p>
+            <h2 id="geoagent-title">GeoAgent</h2>
+            <p class="geoagent-home-tagline">From satellite observations to evidence you can inspect.</p>
+            <p class="project-feature-description">I built a research workbench that brings time-series data, papers, and analysis into one workflow. GeoAgent calculates site-level patterns, retrieves supporting passages, and assembles a cited brief with an inspectable execution trail.</p>
+            <p class="project-capabilities-label">Built into the workflow</p>
+            <ul class="project-capabilities">
+              <li>Computed statistics and time-series charts</li>
+              <li>Source-linked findings and report export</li>
+              <li>Review gates and recorded tool execution</li>
+            </ul>
+            <div class="project-tech"><span>React · TypeScript</span><span>FastAPI</span><span>LangGraph · MCP</span></div>
+            <a class="project-case-link" href="work/geoagent.html">Inside GeoAgent <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+<section class="project-feature-screen" id="gymbox"><div class="wrap project-feature-grid"><a class="mobile-showcase" href="work/gymbox.html" aria-label="Explore GymBox and BoxAI case study, screenshots, and recorded demonstrations"><span class="mobile-glow" aria-hidden="true"></span><figure class="phone-device phone-left"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox activity dashboard" loading="lazy"></figure><figure class="phone-device phone-center"><img src="assets/gymbox/screens/boxai.png" alt="BoxAI fitness question and answer in the mobile app" loading="lazy"></figure><figure class="phone-device phone-right"><img src="assets/gymbox/screens/home.png" alt="BoxAI exercise and meal recommendation cards" loading="lazy"></figure><span class="mobile-caption">Original app screens · Recorded demos <span aria-hidden="true">↗</span></span></a><div class="project-feature-copy"><p class="project-feature-category">Mobile development · Applied AI</p><h2>GymBox + BoxAI</h2><p class="project-feature-description">AI coaching inside a mobile fitness app. I built BoxAI’s FastAPI backend and React Native integration, combining fitness knowledge retrieval with conversational guidance and profile-based exercise and meal recommendations.</p><p class="project-capabilities-label">My engineering contribution</p><ul class="project-capabilities"><li>FAISS retrieval + Gemma-powered Q&amp;A</li><li>Profile → structured workout and meal cards</li><li>AI backend connected to the mobile experience</li></ul><div class="project-tech"><span>React Native</span><span>FastAPI · LangChain</span><span>FAISS · Groq</span></div><a class="project-case-link" href="work/gymbox.html">Explore the project <span aria-hidden="true">↗</span></a></div></div></section>
+</section>
 <section class="build-section"><div class="wrap"><header class="center-head"><h2>What I Build</h2><p>Applied AI, machine learning, and research systems.</p></header>        <div class="expertise-cards" aria-label="Areas of expertise">
           <article class="expertise-card expertise-card-featured">
             <div class="expertise-icon" aria-hidden="true">
@@ -122,87 +203,6 @@
         </div>
 
 </div></section>
-    <section class="projects-showcase" id="work" aria-label="Selected projects">
-
-      <section class="project-feature-screen project-first-screen" id="geoagent" aria-labelledby="geoagent-title">      <header class="wrap projects-showcase-head">
-        <div>
-          <p class="section-label">01 / Selected projects</p>
-          <h2>Selected Projects</h2>
-        </div>
-        <p>AI applications, research tools, and machine learning systems I’ve built.</p>
-      </header>
-        <div class="wrap project-feature-grid">
-          <a class="geoagent-preview" href="work/geoagent.html" aria-label="Explore GeoAgent, a research workspace for satellite data">
-            <span class="geoagent-browserbar"><span class="geoagent-dots" aria-hidden="true">● ● ●</span><span>GeoAgent / Research workspace</span><span aria-hidden="true">↗</span></span>
-            <img src="assets/geoagent/overview.webp" alt="GeoAgent interface with three workflows: investigate a change, find supporting evidence, and understand a dataset" width="1440" height="1100" loading="lazy">
-            <span class="geoagent-preview-footer"><span>Real product interface</span><strong>Data → analysis → cited brief</strong></span>
-          </a>
-          <div class="project-feature-copy">
-            <p class="project-feature-category">Agentic AI · Full-stack research tooling</p>
-            <h2 id="geoagent-title">GeoAgent</h2>
-            <p class="geoagent-home-tagline">From satellite observations to evidence you can inspect.</p>
-            <p class="project-feature-description">I built a research workbench that brings time-series data, papers, and analysis into one workflow. GeoAgent calculates site-level patterns, retrieves supporting passages, and assembles a cited brief with an inspectable execution trail.</p>
-            <p class="project-capabilities-label">Built into the workflow</p>
-            <ul class="project-capabilities">
-              <li>Computed statistics and time-series charts</li>
-              <li>Source-linked findings and report export</li>
-              <li>Review gates and recorded tool execution</li>
-            </ul>
-            <div class="project-tech"><span>React · TypeScript</span><span>FastAPI</span><span>LangGraph · MCP</span></div>
-            <a class="project-case-link" href="work/geoagent.html">Inside GeoAgent <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-      <section class="project-feature-screen" id="asjai" aria-labelledby="asjai-title">
-        <div class="wrap project-feature-grid project-feature-reverse">
-          <a class="cptk-preview" href="work/asjai.html?v=2" aria-label="Explore CPTK Secure AI Casting Companion">
-            <img src="assets/cptk/public-storefront.webp" alt="Actual CPTK public homepage showing Casting Pros To Know and its private digital companion" width="1200" height="750" loading="lazy">
-            <span class="cptk-preview-caption">CPTK / Explore the engineering case study <span aria-hidden="true">↗</span></span>
-          </a>
-          <div class="project-feature-copy">
-            <p class="cptk-card-result">181 directory records · 65 automated checks passed</p>
-            <h2 id="asjai-title">CPTK &mdash; Secure AI Casting Companion</h2>
-            <p class="project-feature-description">Developed for Asjai Lou Casting, CPTK transforms a casting guide into a private digital platform with source-grounded AI guidance, purchase-gated membership, and administrative data management.</p>
-            <div class="project-tech"><span>TypeScript</span><span>React</span><span>Cloudflare Workers</span><span>SQLite</span><span>Groq</span><span>RAG</span></div>
-            <a class="project-case-link" href="work/asjai.html?v=2">Explore the case study <span aria-hidden="true">↗</span></a>
-            <p class="cptk-private-note">Company project · Private source code</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="project-feature-screen" id="vision" aria-labelledby="vision-title">
-        <div class="wrap project-feature-grid">
-          <a class="vision-preview" href="work/kaggle.html" aria-label="Explore the first-place image classification project">
-            <span class="vision-preview-head">Kaggle · Multiclass Classification Challenge (10C-W26) <span aria-hidden="true">↗</span></span>
-            <img src="assets/kaggle/leaderboard.png" alt="Leaderboard for Multiclass Classification Challenge (10C-W26), showing Mortadha Ghnimi in first place with score 0.934" width="799" height="418" loading="lazy">
-            <span class="vision-preview-foot"><strong>1st Place</strong><span>93.4% Competition Test Accuracy</span></span>
-          </a>
-          <div class="project-feature-copy">
-            <p class="vision-card-result">1st Place <span>·</span> 93.4% Competition Test Accuracy</p>
-            <h2 id="vision-title">From-Scratch CNN Ensemble</h2>
-            <p class="project-feature-description">I trained a three-model CNN ensemble from scratch on 16×16 RGB images, without pretrained weights. I combined complementary predictions through pseudo-labeling, test-time augmentation, and weighted probability ensembling.</p>
-            <p class="vision-card-scope">Kaggle · Multiclass Classification Challenge (10C-W26)</p>
-            <div class="project-tech"><span>TensorFlow · Keras</span><span>WideResNet · ResNet</span><span>Computer Vision</span></div>
-            <a class="project-case-link" href="work/kaggle.html">Explore the project <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </section>
-
-<section class="project-feature-screen" id="gymbox"><div class="wrap project-feature-grid"><a class="mobile-showcase" href="work/gymbox.html" aria-label="Explore GymBox and BoxAI case study, screenshots, and recorded demonstrations"><span class="mobile-glow" aria-hidden="true"></span><figure class="phone-device phone-left"><img src="assets/gymbox/screens/home-dashboard.png" alt="GymBox activity dashboard" loading="lazy"></figure><figure class="phone-device phone-center"><img src="assets/gymbox/screens/boxai.png" alt="BoxAI fitness question and answer in the mobile app" loading="lazy"></figure><figure class="phone-device phone-right"><img src="assets/gymbox/screens/home.png" alt="BoxAI exercise and meal recommendation cards" loading="lazy"></figure><span class="mobile-caption">Original app screens · Recorded demos <span aria-hidden="true">↗</span></span></a><div class="project-feature-copy"><p class="project-feature-category">Mobile development · Applied AI</p><h2>GymBox + BoxAI</h2><p class="project-feature-description">AI coaching inside a mobile fitness app. I built BoxAI’s FastAPI backend and React Native integration, combining fitness knowledge retrieval with conversational guidance and profile-based exercise and meal recommendations.</p><p class="project-capabilities-label">My engineering contribution</p><ul class="project-capabilities"><li>FAISS retrieval + Gemma-powered Q&amp;A</li><li>Profile → structured workout and meal cards</li><li>AI backend connected to the mobile experience</li></ul><div class="project-tech"><span>React Native</span><span>FastAPI · LangChain</span><span>FAISS · Groq</span></div><a class="project-case-link" href="work/gymbox.html">Explore the project <span aria-hidden="true">↗</span></a></div></div></section>      <section class="project-more-screen" id="engineering" aria-labelledby="more-work-title">
-        <div class="wrap project-more-inner">
-          <header class="project-more-heading">
-            <p class="project-feature-category">Applied ML &amp; Performance</p>
-            <h2 id="more-work-title">Better models. Faster systems.</h2>
-            <p class="section-focus-description">Two complementary strengths: faster ML computation and cost-aware predictive modeling.</p>
-          </header>
-          <div class="engineering-gallery engineering-gallery-two">
-            <a class="engineering-card systems-summary-card" id="autoencoder" href="work/ml-systems.html"><span id="hpc" class="systems-anchor"></span><div class="engineering-visual architecture-thumb"><img src="assets/cards/autoencoder.svg" alt="Autoencoder architecture with a sparse input layer and dense reconstruction" loading="lazy"></div><div class="engineering-copy"><p class="project-feature-category">01 / ML systems engineering</p><h3>ML Systems Optimization</h3><p>I optimized two CPU workloads: a sparse ML kernel and a complete autoencoder training epoch. The shared engineering story is memory layout, SIMD, parallelism, and correctness.</p><div class="systems-card-metrics"><span><strong>24.73×</strong> autoencoder epoch</span><span><strong>68.78×</strong> recorded kernel run</span></div><div class="engineering-bottom"><span>C++ · AVX · OpenMP</span><strong>Explore the engineering ↗</strong></div></div></a>
-            <a class="engineering-card" id="fraud" href="work/fraud.html"><div class="engineering-visual result-thumb"><img src="assets/fraud/roc-curves.png" alt="Actual study ROC curves comparing healthcare fraud classifiers" loading="lazy"><span>0.946 reported study ROC-AUC</span></div><div class="engineering-copy"><p class="project-feature-category">02 / Cost-sensitive machine learning</p><h3>Healthcare Fraud Detection</h3><p>I worked with my team to turn claims data into provider-level risk signals, comparing four classifiers and balancing missed fraud against investigation cost.</p><div class="systems-card-metrics"><span><strong>74</strong> engineered features</span><span><strong>200</strong> evaluated model fits</span></div><div class="engineering-bottom"><span>Python · scikit-learn · PCA</span><strong>Explore the study ↗</strong></div></div></a>
-          </div>
-        </div>
-      </section>
-    </section>
 
     <section class="research-portfolio research-sequence" aria-label="Research and publications">
       <section class="research-screen-v10" id="research" aria-labelledby="satellite-section-title">
@@ -262,7 +262,7 @@
       </section>
     </section>
 
-<section class="pitch-section"><div class="wrap pitch-grid"><div class="pitch-photo"><img src="assets/hero/pitch-research.png" alt="Mortadha explaining satellite inputs and AI during his GVSU pitch" loading="lazy"></div><div><p class="section-label">Research communication</p><h2>From satellite data<br>to a story on stage.</h2><p>I presented my satellite vegetation-monitoring research at a GVSU pitch competition, where I was a finalist.</p><span class="recognition-badge">GVSU Pitch Competition · Finalist</span><a class="project-case-link" href="#research">Explore the research ↗</a></div></div></section>    <section class="clean-experience" id="experience">
+    <section class="clean-experience" id="experience">
       <div class="wrap clean-section">
         <header class="clean-section-head">
           <p class="section-label">04 / Experience</p>
@@ -273,15 +273,15 @@
         </header>
 
         <div class="experience-timeline">
-<details class="experience-card experience-accordion" open><span class="experience-node" aria-hidden="true">01</span><summary><div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026–Present</span></div><h3>Graduate Research Assistant</h3><p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Researching vegetation-stress monitoring from multisensor satellite time series and foundation-model representations.</p>
+<details class="experience-card experience-accordion" open><span class="experience-node" aria-hidden="true">01</span><summary><div class="experience-card-top"><p>Graduate research · Current</p><span class="experience-date">2026–Present</span></div><h3>Graduate Research Assistant</h3><p class="experience-organization">Grand Valley State University <span>·</span> Grand Rapids, MI</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Built a satellite time-series pipeline across 12,000 pixels in four parks. I compare Random Forest estimates with Presto-augmented estimates, reserving 2026 for unseen-year evaluation.</p>
             <div class="experience-tags"><span>Satellite time series</span><span>Vegetation monitoring</span><span>Temporal representations</span></div>
             <a class="experience-link" href="#research">See current research <span aria-hidden="true">↑</span></a>
           </div></details>
-<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">02</span><summary><div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div><h3>AI & Automation Intern</h3><p class="experience-organization">Asjai Lou Casting <span>·</span> Remote / New York</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Built a deployed commerce and knowledge platform integrating APIs, webhooks, secure workflows, retrieval, and backend services.</p>
+<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">02</span><summary><div class="experience-card-top"><p>Applied AI</p><span class="experience-date">2026</span></div><h3>AI & Automation Intern</h3><p class="experience-organization">Asjai Lou Casting <span>·</span> Remote / New York</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Built CPTK’s member application, source-grounded RAG, admin tools, and transactional account activation. Imported 181 records and verified 65 automated checks. Purchase workflows are tested with synthetic orders; live payment and email connections are pending.</p>
             <div class="experience-tags"><span>APIs + webhooks</span><span>Commerce automation</span><span>Grounded RAG</span></div>
             <a class="experience-link" href="work/asjai.html">View the platform case study <span aria-hidden="true">↗</span></a>
           </div></details>
-<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">03</span><summary><div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div><h3>AI & Mobile Developer</h3><p class="experience-organization">Smart It Partner <span>·</span> Tunis</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Integrated RAG and recommendation workflows into a mobile product and built computer-vision capabilities for wildlife monitoring.</p>
+<details class="experience-card experience-accordion"><span class="experience-node" aria-hidden="true">03</span><summary><div class="experience-card-top"><p>Product engineering</p><span class="experience-date">2025</span></div><h3>AI & Mobile Developer</h3><p class="experience-organization">Smart It Partner <span>·</span> Tunis</p><span class="experience-expand" aria-hidden="true">+</span></summary><div class="experience-body"><p class="experience-description">Built BoxAI’s FastAPI service and connected retrieval-based Q&amp;A and profile-based recommendations to GymBox’s React Native app. I also contributed member-facing screens and developed a separate wildlife-classification system.</p>
             <div class="experience-tags"><span>RAG systems</span><span>Recommendations</span><span>Computer vision</span></div>
             <a class="experience-link" href="work/gymbox.html">Explore related work <span aria-hidden="true">↗</span></a>
           </div></details>
@@ -290,7 +290,8 @@
       </div>
     </section>
 
-    <section class="education-screen" id="education" aria-labelledby="education-title">
+    <span id="recognition" class="recognition-anchor" aria-hidden="true"></span>
+<section class="education-screen" id="education" aria-labelledby="education-title">
       <div class="wrap education-layout">
         <header class="education-intro">
           <p class="section-label">05 / Education</p>
@@ -303,7 +304,7 @@
             <h3>M.S. in Artificial Intelligence</h3>
             <p class="education-school">Grand Valley State University</p>
             <div class="education-detail"><span class="education-badge">In progress</span><span>Expected graduation: Fall 2027</span></div>
-            <p class="education-summary">Graduate research in satellite-based vegetation monitoring and applied machine learning.</p>
+            <p class="education-summary">Merit-supported graduate assistantship, with research in satellite-based vegetation monitoring and applied machine learning.</p>
           </article></li>
           <li><span class="education-node" aria-hidden="true"></span><article class="education-card">
             <div class="education-card-top"><span class="education-level">Undergraduate foundation</span><span class="education-date">2022–2025</span></div>
@@ -349,14 +350,7 @@ languages = [<span class="code-string">"Python"</span>, <span class="code-string
 compute = [<span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>, <span class="code-string">"Sparse kernels"</span>]
 validation = [<span class="code-string">"Temporal splits"</span>, <span class="code-string">"Leakage checks"</span>]</code></pre><div class="terminal-footer"><span class="terminal-prompt">❯</span> Build APIs, ship services, and accelerate workloads<span class="terminal-cursor" aria-hidden="true"></span></div></article></div>      </div>
     </section>
-    <section class="recognition-screen" id="recognition" aria-labelledby="recognition-title"><div class="wrap"><header class="center-head"><p class="section-label">Selected recognition</p><h2 id="recognition-title">Work that earned its place.</h2><p>Competition results, published research, and academic milestones.</p></header><div class="recognition-cards">
-<div><span class="recognition-symbol">01</span><div><small>Machine learning competition</small><h3>1st place</h3><p>Three-model image-classification ensemble · 93.4% test accuracy</p></div></div>
-<div><span class="recognition-symbol">02</span><div><small>ML systems benchmark</small><h3>68.78× recorded run</h3><p>Sparse kernel optimization · 6/6 correctness checks</p></div></div>
-<div><span class="recognition-symbol">03</span><div><small>Peer-reviewed research</small><h3>Springer co-author</h3><p>Explainable medical AI · ICR’26 proceedings</p></div></div>
-<div><span class="recognition-symbol">04</span><div><small>GVSU pitch competition</small><h3>Finalist</h3><p>Presenting AI for satellite vegetation monitoring</p></div></div>
-<div><span class="recognition-symbol">05</span><div><small>Grand Valley State University</small><h3>Graduate assistantship</h3><p>Merit-supported graduate study and applied AI research</p></div></div>
-<div><span class="recognition-symbol">06</span><div><small>Faculty of Sciences of Bizerte</small><h3>Top-ranked graduate</h3><p>Computer Science · Ranked first across all bachelor years</p></div></div>
-</div></div></section>
+    
 
 <section class="portfolio-play game-page-v4" id="play" data-embedded-games aria-labelledby="play-title">
       <span id="challenge" class="challenge-anchor" aria-hidden="true"></span>

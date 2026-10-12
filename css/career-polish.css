@@ -1,0 +1,46 @@
+/* Final recruiter presentation. Preserve the shared portfolio design. */
+.recognition-anchor{display:block;height:0;scroll-margin-top:76px}
+#asjai.project-first-screen{display:flex;flex-direction:column;justify-content:center}
+#asjai .projects-showcase-head{margin-bottom:26px}
+#asjai .projects-showcase-head h2{margin-bottom:10px}
+#asjai .projects-showcase-head:after{margin-top:14px}
+@media(min-width:901px){
+ #experience{padding-block:30px;box-sizing:border-box}
+ #experience .clean-section-head{margin-bottom:24px}
+ #experience .clean-section-head h2{margin-bottom:12px}
+ #experience .clean-section-head:after{margin-top:15px}
+ #experience .experience-accordion{margin-bottom:10px;padding:0}
+ #experience .experience-accordion:last-child{margin-bottom:0}
+ #experience .experience-accordion summary{padding:15px 26px}
+ #experience .experience-accordion summary h3{font-size:19px;margin:6px 0 4px}
+ #experience .experience-body{padding:0 26px 17px}
+ #experience .experience-description{font-size:12px;line-height:1.65;margin-bottom:10px}
+ #experience .experience-tags{margin-top:8px;margin-bottom:10px}
+ #verification.cp-evidence-screen{padding-block:30px;box-sizing:border-box}
+ #verification .cp-section-head{margin-bottom:23px}
+ #verification .cp-evidence-grid{grid-template-columns:.95fr 1.05fr;gap:30px}
+ #verification .cp-evidence-grid .cp-figure img{max-height:315px;object-fit:contain}
+ #verification .cp-metrics{gap:18px;margin-bottom:16px}
+ #verification .cp-evidence-copy{line-height:1.7}
+ #verification .cp-automation{padding-top:20px;margin-top:22px;gap:28px}
+ #verification .cp-automation h3{margin-block:7px 9px}
+ #verification .cp-automation p{line-height:1.65}
+ #verification .cp-project-footer{margin-top:20px;padding-top:15px}
+}
+@media(min-width:901px) and (max-height:800px){
+ #experience{padding-block:22px}
+ #experience .clean-section-head{margin-bottom:16px}
+ #experience .clean-section-head:after{display:none}
+ #experience .experience-accordion summary{padding-block:12px}
+ #experience .experience-accordion summary h3{font-size:18px}
+ #experience .experience-body{padding-bottom:12px}
+ #verification .cp-section-head{margin-bottom:17px}
+ #verification .cp-section-head h2{font-size:30px}
+ #verification .cp-evidence-grid .cp-figure img{max-height:245px}
+ #verification .cp-metrics dd{font-size:28px}
+ #verification .cp-automation{margin-top:17px;padding-top:16px}
+ #verification .cp-project-footer{margin-top:15px;padding-top:12px}
+ #asjai .projects-showcase-head{margin-bottom:20px}
+ #asjai .projects-showcase-head:after{display:none}
+}
+@media(max-width:680px){#asjai .projects-showcase-head{margin-bottom:26px}}
