@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="css/geoagent.css?v=4">
   <link rel="stylesheet" href="css/vision-case.css?v=1">
   <link rel="stylesheet" href="css/cptk-case.css?v=2">
+  <link rel="stylesheet" href="css/systems-portfolio.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -193,12 +194,11 @@
           <header class="project-more-heading">
             <p class="project-feature-category">Applied ML &amp; Performance</p>
             <h2 id="more-work-title">Better models. Faster systems.</h2>
-            <p class="section-focus-description">Cost-aware fraud detection, optimized sparse ML kernels, and faster autoencoder training.</p>
+            <p class="section-focus-description">Two complementary strengths: faster ML computation and cost-aware predictive modeling.</p>
           </header>
-          <div class="engineering-gallery">
-            <a class="engineering-card" id="autoencoder" href="work/autoencoder.html"><div class="engineering-visual architecture-thumb"><img src="assets/cards/autoencoder.svg" alt="Autoencoder architecture: 13,714 inputs, 256 hidden units, 32 latent units, 256 hidden units, 13,714 reconstructed outputs" loading="lazy"><span>24.73× faster epoch</span></div><div class="engineering-copy"><p class="project-feature-category">01 / Training systems</p><h3>High-Performance Autoencoder</h3><p>A fixed network. The same reference loss. A training epoch accelerated through sparse operations, SIMD, and careful memory layout.</p><div class="engineering-bottom"><span>C++ · AVX · OpenMP</span><strong>View project ↗</strong></div></div></a>
-            <a class="engineering-card" id="fraud" href="work/fraud.html"><div class="engineering-visual result-thumb"><img src="assets/fraud/roc-curves.png" alt="Actual ROC curves comparing healthcare fraud detection models" loading="lazy"><span>0.946 ROC-AUC</span></div><div class="engineering-copy"><p class="project-feature-category">02 / Applied machine learning</p><h3>Healthcare Fraud Detection</h3><p>Detecting rare provider fraud with 74 engineered features and cost-aware decisions that balance missed cases against investigation effort.</p><div class="engineering-bottom"><span>Classification · Decision costs</span><strong>View results ↗</strong></div></div></a>
-            <a class="engineering-card" id="hpc" href="work/hpc.html"><div class="engineering-visual"><img src="assets/cards/hpc.svg" alt="Sparse machine learning computation optimized with data layout, cache blocking, and SIMD" loading="lazy"><span>68.78× geometric-mean speedup</span></div><div class="engineering-copy"><p class="project-feature-category">03 / Performance engineering</p><h3>Sparse ML Kernel Optimization</h3><p>Turning a sparse transcriptomics workload into an efficient CPU kernel. First place through cache-aware layout and vectorized execution.</p><div class="engineering-bottom"><span>Memory layout · SIMD</span><strong>See the benchmark ↗</strong></div></div></a>
+          <div class="engineering-gallery engineering-gallery-two">
+            <a class="engineering-card systems-summary-card" id="autoencoder" href="work/ml-systems.html"><span id="hpc" class="systems-anchor"></span><div class="engineering-visual architecture-thumb"><img src="assets/cards/autoencoder.svg" alt="Autoencoder architecture with a sparse input layer and dense reconstruction" loading="lazy"></div><div class="engineering-copy"><p class="project-feature-category">01 / ML systems engineering</p><h3>ML Systems Optimization</h3><p>I optimized two CPU workloads: a sparse ML kernel and a complete autoencoder training epoch. The shared engineering story is memory layout, SIMD, parallelism, and correctness.</p><div class="systems-card-metrics"><span><strong>24.73×</strong> autoencoder epoch</span><span><strong>68.78×</strong> recorded kernel run</span></div><div class="engineering-bottom"><span>C++ · AVX · OpenMP</span><strong>Explore the engineering ↗</strong></div></div></a>
+            <a class="engineering-card" id="fraud" href="work/fraud.html"><div class="engineering-visual result-thumb"><img src="assets/fraud/roc-curves.png" alt="Actual study ROC curves comparing healthcare fraud classifiers" loading="lazy"><span>0.946 reported study ROC-AUC</span></div><div class="engineering-copy"><p class="project-feature-category">02 / Cost-sensitive machine learning</p><h3>Healthcare Fraud Detection</h3><p>I worked with my team to turn claims data into provider-level risk signals, comparing four classifiers and balancing missed fraud against investigation cost.</p><div class="systems-card-metrics"><span><strong>74</strong> engineered features</span><span><strong>200</strong> evaluated model fits</span></div><div class="engineering-bottom"><span>Python · scikit-learn · PCA</span><strong>Explore the study ↗</strong></div></div></a>
           </div>
         </div>
       </section>
@@ -351,7 +351,7 @@ validation = [<span class="code-string">"Temporal splits"</span>, <span class="c
     </section>
     <section class="recognition-screen" id="recognition" aria-labelledby="recognition-title"><div class="wrap"><header class="center-head"><p class="section-label">Selected recognition</p><h2 id="recognition-title">Work that earned its place.</h2><p>Competition results, published research, and academic milestones.</p></header><div class="recognition-cards">
 <div><span class="recognition-symbol">01</span><div><small>Machine learning competition</small><h3>1st place</h3><p>Three-model image-classification ensemble · 93.4% test accuracy</p></div></div>
-<div><span class="recognition-symbol">02</span><div><small>HPC leaderboard</small><h3>1st place</h3><p>Sparse kernel optimization · 68.78× geometric-mean speedup</p></div></div>
+<div><span class="recognition-symbol">02</span><div><small>ML systems benchmark</small><h3>68.78× recorded run</h3><p>Sparse kernel optimization · 6/6 correctness checks</p></div></div>
 <div><span class="recognition-symbol">03</span><div><small>Peer-reviewed research</small><h3>Springer co-author</h3><p>Explainable medical AI · ICR’26 proceedings</p></div></div>
 <div><span class="recognition-symbol">04</span><div><small>GVSU pitch competition</small><h3>Finalist</h3><p>Presenting AI for satellite vegetation monitoring</p></div></div>
 <div><span class="recognition-symbol">05</span><div><small>Grand Valley State University</small><h3>Graduate assistantship</h3><p>Merit-supported graduate study and applied AI research</p></div></div>
