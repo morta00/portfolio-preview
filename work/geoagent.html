@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GeoAgent | Mortadha Ghnimi</title>
-  <meta name="description" content="GeoAgent is an in-progress agentic AI platform for multi-step research and data-analysis workflows.">
+  <meta name="description" content="GeoAgent brings satellite time series, research sources, calculated charts, and cited briefs into an inspectable research workflow.">
   <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=15">
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/geoagent.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -29,60 +30,70 @@
       </div>
     </div>
   </header>
-  <main id="main" class="wrap prose">
-    <header class="page-hero">
-      <a class="back" href="../index.html#work">← Selected work</a>
-      <div class="badge-row" style="margin-top:1rem"><span class="badge progress">Active build</span></div>
-      <h1>GeoAgent</h1>
-      <p class="subtitle">Agentic AI research and data-analysis platform</p>
-    </header>
-    <h2>Overview</h2>
-    <p>GeoAgent is an autonomous AI platform I am building for multi-step research and data-analysis workflows. The goal is a system that can plan, choose tools, execute, verify, and write a grounded report, with retrieval, Python analytics, and SQL available inside the workflow.</p>
-    <h2>Problem</h2>
-    <p>Useful analysis rarely fits in one model call. A researcher has to retrieve context, query data, run code, check the result, and only then write the answer. GeoAgent is the attempt to put that loop into an explicit agent workflow instead of a single chat prompt.</p>
-    <h2>What I am building</h2>
-    <p>There is no public repository for GeoAgent yet, so I am not listing these pieces as finished. They are the parts currently being built:</p>
-    <ul>
-      <li>Planner, executor, and verifier roles</li>
-      <li>Tool calling and a tool router</li>
-      <li>RAG over stored context</li>
-      <li>Persistent workflow state</li>
-      <li>Failure recovery and replanning</li>
-      <li>Human approval for sensitive actions</li>
-      <li>Grounded reporting</li>
-      <li>Python analytics and SQL analysis</li>
-      <li>An evaluation framework</li>
-    </ul>
-    <h2 id="architecture">Architecture</h2>
-    <div class="diagram">
-      <div class="flow">
-        <div class="flow-step"><b>01</b> User request</div>
-        <div class="flow-step"><b>02</b> Planner</div>
-        <div class="flow-step"><b>03</b> Tool router</div>
-        <div class="flow-step"><b>04</b> Executor</div>
-        <div class="flow-step"><b>05</b> Verifier</div>
-        <div class="flow-step"><b>06</b> Report</div>
+  <main id="main" class="geo-case">
+    <section class="geo-case-screen geo-case-hero" aria-labelledby="geo-title">
+      <div class="wrap geo-case-grid">
+        <div class="geo-case-copy">
+          <a class="geo-back" href="../index.html#geoagent">← Selected work</a>
+          <p class="geo-eyebrow">Agentic AI / Research workspace</p>
+          <h1 id="geo-title">GeoAgent<span>.</span></h1>
+          <p class="geo-case-lede">Research you can follow.<br>Evidence you can inspect.</p>
+          <p>I built GeoAgent to connect the parts of research that usually live in different windows: observations, source documents, analysis, and the final explanation.</p>
+          <div class="project-tech"><span>React + TypeScript</span><span>Python + FastAPI</span><span>LangGraph + MCP</span></div>
+          <a class="project-case-link" href="#workflow">Explore the workflow <span aria-hidden="true">↓</span></a>
+          <div class="geo-role"><span>My contribution</span><strong>Interface, backend, orchestration, analysis tools, and evaluation harness</strong></div>
+        </div>
+        <figure class="geo-figure"><a href="../assets/geoagent/overview.webp" target="_blank" rel="noopener"><img src="../assets/geoagent/overview.webp" alt="GeoAgent overview with guided research workflows" width="1440" height="1100"></a><figcaption><span>01 / The workspace</span><a href="../assets/geoagent/overview.webp" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
       </div>
-      <div class="side-tools">
-        <span class="chip">RAG</span><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">MCP tools</span><span class="chip">Human approval</span>
+    </section>
+    <section class="geo-case-screen" id="workflow" aria-labelledby="workflow-title">
+      <div class="wrap">
+        <header class="geo-section-head"><div><p class="geo-eyebrow">01 / The research problem</p><h2 id="workflow-title">One study. All the evidence.</h2></div><p>Inspired by my satellite vegetation-monitoring research, where comparing observations and finding source context are recurring tasks.</p></header>
+        <div class="geo-case-grid geo-workflow-grid">
+          <figure class="geo-figure"><a href="../assets/geoagent/study.webp" target="_blank" rel="noopener"><img src="../assets/geoagent/study.webp" alt="Study workspace showing uploaded vegetation observations, field notes, and a focused research question" width="1440" height="1100" loading="lazy"></a><figcaption><span>02 / Evidence &amp; question</span><a href="../assets/geoagent/study.webp" target="_blank" rel="noopener">View full screenshot ↗</a></figcaption></figure>
+          <div class="geo-steps">
+            <article><span>01</span><div><h3>Bring the study together</h3><p>Upload tabular observations and research sources. Preview the dataset and search papers or notes within the study.</p></div></article>
+            <article><span>02</span><div><h3>Ask a focused question</h3><p>Investigate a time-series change, retrieve supporting evidence, or inspect a dataset. Adapt the question to the files you uploaded.</p></div></article>
+            <article><span>03</span><div><h3>Review, then run</h3><p>Inspect the proposed plan when approval is requested. Registered tools perform the calculations and record their outputs.</p></div></article>
+            <article><span>04</span><div><h3>Leave with a cited brief</h3><p>Review charts, exact values, source passages, and limitations. Export the brief as Markdown for further research and editing.</p></div></article>
+          </div>
+        </div>
       </div>
-    </div>
-    <h2>Engineering decisions</h2>
-    <p>The stack is chosen so planning, retrieval, and data access stay separate: LangGraph for the workflow, MCP for tools, FastAPI for the service boundary, PostgreSQL and pgvector for state and retrieval, and Docker for running the pieces together.</p>
-    <h2>Current progress</h2>
-    <p>Design and implementation are underway. I will replace this section with measured results only after the evaluation framework has numbers worth reporting. No accuracy, latency, or user metrics are claimed yet.</p>
-    <h2>Stack</h2>
-    <div class="tech-row"><span class="chip">Python</span><span class="chip">LangGraph</span><span class="chip">MCP</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">pgvector</span><span class="chip">Docker</span><span class="chip">RAG</span><span class="chip">SQL</span></div>
-    <h2>What this is forcing me to learn</h2>
-    <p>How to keep an agent inspectable: separate planning from execution, make tool use visible, and require a check before a result is treated as an answer.</p>
-    <h2>Links</h2>
-    <p>No public GitHub repository yet. A repository link will be added here when the project is ready to share.</p>
-    <div class="related">
-      <p><a class="arrow-link" href="asjai.html">Related · AI Automation Platform <span>→</span></a></p>
-      <p><a class="back" href="../index.html#work">← Back to work</a></p>
-    </div>
+    </section>
+    <section class="geo-case-screen" id="results" aria-labelledby="results-title">
+      <div class="wrap">
+        <header class="geo-section-head"><div><p class="geo-eyebrow">02 / Inside an analysis</p><h2 id="results-title">The answer comes with its workings.</h2></div><p>Calculated findings sit beside the chart and supporting sources. The plan, tool results, and run log remain available for inspection.</p></header>
+        <div class="geo-case-grid geo-results-grid">
+          <div class="geo-result-copy">
+            <span class="geo-demo-label">Synthetic sample study</span>
+            <h3>Two sites.<br>One visible change.</h3>
+            <p>The included demonstration compares ten weekly NDVI observations at each of two sites. The North plot declines sharply before partially recovering; the South plot remains comparatively stable.</p>
+            <div class="geo-sample-facts"><div><strong>20</strong><span>observations</span></div><div><strong>2</strong><span>sites</span></div><div><strong>0.651</strong><span>computed mean NDVI</span></div></div>
+            <p>GeoAgent links the summary to recorded calculation steps and an excerpt from the uploaded notes, keeping the observations and their context together.</p>
+            <a class="project-case-link" href="../assets/geoagent/brief.webp" target="_blank" rel="noopener">Read the complete sample brief ↗</a>
+            <p class="geo-demo-note">This is a deterministic offline demonstration with synthetic data and real analysis tools. It demonstrates the workflow, not live LLM reasoning or validated forest conditions.</p>
+          </div>
+          <figure class="geo-figure geo-report-figure"><div class="geo-report-scroll" tabindex="0" role="region" aria-label="Scrollable screenshot of the completed research brief"><img src="../assets/geoagent/brief-screen.webp" alt="Completed research brief with calculated NDVI mean, site-level time-series chart, and inspectable analysis tabs" width="1440" height="1450" loading="lazy"></div><figcaption><span>03 / Analysis &amp; brief · Scroll to inspect</span><a href="../assets/geoagent/brief.webp" target="_blank" rel="noopener">Full brief ↗</a></figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <section class="geo-case-screen" id="engineering" aria-labelledby="engineering-title">
+      <div class="wrap">
+        <header class="geo-section-head"><div><p class="geo-eyebrow">03 / Engineering decisions</p><h2 id="engineering-title">Built to make execution inspectable.</h2></div><p>The engineering challenge: connect planning, analysis, and reporting while preserving the evidence behind each result.</p></header>
+        <ol class="geo-pipeline" aria-label="Execution workflow"><li><span>01</span><strong>Plan</strong><small>Focused research task</small></li><li><span>02</span><strong>Review</strong><small>Approval when requested</small></li><li><span>03</span><strong>Execute</strong><small>Registered analysis tools</small></li><li><span>04</span><strong>Verify</strong><small>Implemented output checks</small></li><li><span>05</span><strong>Report</strong><small>Findings with sources</small></li></ol>
+        <div class="geo-engineering-grid">
+          <article><span class="geo-eyebrow">Orchestration</span><h3>Explicit workflow state</h3><p>LangGraph connects planning, execution, verification, and reporting. Persisted runs retain steps, approval decisions, errors, timing, and tool outputs.</p></article>
+          <article><span class="geo-eyebrow">Analysis &amp; retrieval</span><h3>Tools calculate. Sources explain.</h3><p>Python tools compute statistics and site-level time series. Retrieval attaches document excerpts and available page metadata to the research brief.</p></article>
+          <article><span class="geo-eyebrow">Service boundaries</span><h3>One registry, two interfaces</h3><p>FastAPI serves validated application contracts. The same registered tools are exposed through MCP for reuse outside the web interface.</p></article>
+          <article><span class="geo-eyebrow">Controlled execution</span><h3>Bounded data operations</h3><p>Tool argument validation, read-only DuckDB queries, path and size limits, and execution timeouts keep analysis operations constrained.</p></article>
+        </div>
+        <details class="geo-technical-details"><summary>Implementation details &amp; evaluation</summary><div><p>React and TypeScript power the interface. FastAPI and SQLAlchemy persist sessions, runs, and tool results. SQLite supports the local demonstration; PostgreSQL and pgvector are supported for storage and retrieval.</p><p>A 50-task benchmark harness is included for evaluating a stated configuration. No aggregate success rate is claimed here. Optional OpenAI integration requires separate configuration and evaluation; the default planner and embeddings are deterministic.</p><p>Verification means the recorded outputs passed the application's implemented checks. It does not establish scientific validity or infer the cause of a vegetation change. GeoAgent supports evidence review; my satellite-model experiments remain a separate research project.</p></div></details>
+        <div class="geo-case-end"><p>From scattered research inputs to a brief you can review.</p><a class="project-case-link" href="../index.html#geoagent">Back to selected work ↗</a></div>
+      </div>
+    </section>
   </main>
   <script src="../js/site.config.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>
+

@@ -34,6 +34,7 @@
     ]
   }
   </script>
+  <link rel="stylesheet" href="css/geoagent.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -128,22 +129,24 @@
         <p>AI applications, research tools, and machine learning systems I’ve built.</p>
       </header>
         <div class="wrap project-feature-grid">
-          <a class="project-feature-media" href="work/geoagent.html" aria-label="Open GeoAgent case study">
-            <span class="project-feature-kicker">Featured project · 01</span>
-            <img src="assets/cards/geoagent.svg" alt="GeoAgent workflow connecting planning, retrieval, tools, and verification" loading="lazy">
+          <a class="geoagent-preview" href="work/geoagent.html" aria-label="Explore GeoAgent, a research workspace for satellite data">
+            <span class="geoagent-browserbar"><span class="geoagent-dots" aria-hidden="true">● ● ●</span><span>GeoAgent / Research workspace</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/geoagent/overview.webp" alt="GeoAgent interface with three workflows: investigate a change, find supporting evidence, and understand a dataset" width="1440" height="1100" loading="lazy">
+            <span class="geoagent-preview-footer"><span>Real product interface</span><strong>Data → analysis → cited brief</strong></span>
           </a>
           <div class="project-feature-copy">
-            <p class="project-feature-category">Agentic AI · Research tools</p>
+            <p class="project-feature-category">Agentic AI · Full-stack research tooling</p>
             <h2 id="geoagent-title">GeoAgent</h2>
-            <p class="project-feature-description">A research workspace in development that turns a question, datasets, and papers into a checked analysis. It coordinates retrieval, Python, and SQL through a visible agent workflow.</p>
-            <p class="project-capabilities-label">Key capabilities</p>
+            <p class="geoagent-home-tagline">From satellite observations to evidence you can inspect.</p>
+            <p class="project-feature-description">I built a research workbench that brings time-series data, papers, and analysis into one workflow. GeoAgent calculates site-level patterns, retrieves supporting passages, and assembles a cited brief with an inspectable execution trail.</p>
+            <p class="project-capabilities-label">Built into the workflow</p>
             <ul class="project-capabilities">
-              <li>Breaks research requests into clear steps</li>
-              <li>Chooses tools to retrieve and analyze evidence</li>
-              <li>Checks results before producing a report</li>
+              <li>Computed statistics and time-series charts</li>
+              <li>Source-linked findings and report export</li>
+              <li>Review gates and recorded tool execution</li>
             </ul>
-            <div class="project-tech"><span>Python</span><span>LangGraph</span><span>MCP</span></div>
-            <a class="project-case-link" href="work/geoagent.html">Explore the case study <span aria-hidden="true">↗</span></a>
+            <div class="project-tech"><span>React · TypeScript</span><span>FastAPI</span><span>LangGraph · MCP</span></div>
+            <a class="project-case-link" href="work/geoagent.html">Inside GeoAgent <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -407,3 +410,4 @@ validation = [<span class="code-string">"Temporal splits"</span>, <span class="c
   <script src="js/career-fair.js?v=5"></script>
 </body>
 </html>
+
