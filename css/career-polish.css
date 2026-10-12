@@ -5,7 +5,7 @@
 #asjai .projects-showcase-head h2{margin-bottom:10px}
 #asjai .projects-showcase-head:after{margin-top:14px}
 @media(min-width:901px){
- #experience{padding-block:30px;box-sizing:border-box}
+ #experience{padding-block:24px;box-sizing:border-box}
  #experience .clean-section-head{margin-bottom:24px}
  #experience .clean-section-head h2{margin-bottom:12px}
  #experience .clean-section-head:after{margin-top:15px}
