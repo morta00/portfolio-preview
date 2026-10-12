@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asjai Lou Casting | Mortadha Ghnimi</title>
-  <meta name="description" content="Private AI commerce and knowledge platform in development for Asjai Lou Casting. No confidential implementation details.">
+  <title>CPTK Secure AI Casting Companion | Mortadha Ghnimi</title>
+  <meta name="description" content="CPTK: a private casting companion for Asjai Lou Casting, with authorized retrieval, purchase-gated membership, and verified account controls.">
   <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
-  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=15">
+  <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/portfolio.css?v=20">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/cptk-case.css?v=1">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -29,59 +30,62 @@
       </div>
     </div>
   </header>
-  <main id="main" class="wrap prose">
-    <header class="page-hero">
-      <a class="back" href="../index.html#work">← Selected work</a>
-      <div class="badge-row" style="margin-top:1rem">
-        <span class="badge done">Private deployed system</span>
-        <span class="badge progress">Active development</span>
+  <main id="main" class="cptk-case">
+    <section class="cp-screen cp-hero" aria-labelledby="cp-title">
+      <div class="wrap cp-hero-grid">
+        <div class="cp-hero-copy">
+          <a class="cp-back" href="../index.html#asjai">← Selected work</a>
+          <p class="cp-eyebrow">Asjai Lou Casting / Company project</p>
+          <h1 id="cp-title">CPTK<span>Secure AI Casting Companion</span></h1>
+          <div class="cp-story"><span>The problem</span><p>A physical casting guide holds valuable expertise and proprietary directory information. I extended it into a useful digital experience while keeping that information private.</p></div>
+          <div class="cp-story"><span>My contribution</span><p>I built the public website, authenticated member application, RAG chatbot, account-activation workflow, admin tools, and verification suite.</p></div>
+          <div class="project-tech"><span>TypeScript · React</span><span>Cloudflare Workers · SQLite</span><span>Groq · RAG</span></div>
+          <p class="cptk-private-note">Company project · Private source code</p>
+        </div>
+        <figure class="cp-figure cp-storefront"><a href="../assets/cptk/public-storefront.webp" target="_blank" rel="noopener noreferrer" aria-label="View the original public homepage screenshot"><img src="../assets/cptk/public-storefront.webp" alt="CPTK public homepage with the original company branding, Casting Pros To Know book, and private digital companion" width="1200" height="750"></a><figcaption><span>Actual public homepage</span><a href="../assets/cptk/public-storefront.webp" target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption></figure>
       </div>
-      <h1>AI Automation Platform at Asjai Lou Casting</h1>
-    </header>
-    <p class="note">Private system. Source code and internal product access are not public due to confidentiality. This page does not include endpoints, credentials, customer data, schemas, or private screenshots.</p>
-    <h2>Overview</h2>
-    <p>This is a private commerce and knowledge platform that is deployed. It connects store operations, customer workflows, fulfillment, and a curated casting-industry knowledge base. I am still extending it with agentic behavior.</p>
-    <h2>What the deployed platform covers</h2>
-    <ul>
-      <li>Shopify and TikTok Shop workflows</li>
-      <li>API and webhook automation</li>
-      <li>Customer account activation, including single-use activation tokens</li>
-      <li>Idempotent order processing and fulfillment tracking</li>
-      <li>Content workflows, RAG, backend APIs, testing, and deployment</li>
-    </ul>
-    <h2>Still in development</h2>
-    <p>These agentic pieces are not presented as finished:</p>
-    <ul>
-      <li>Tool use and context-aware workflow decisions</li>
-      <li>Failure detection, retry, and recovery</li>
-      <li>Human approval for sensitive operations</li>
-    </ul>
-    <h2 id="architecture">Architecture</h2>
-    <div class="diagram">
-      <div class="flow">
-        <div class="flow-step"><b>01</b> Commerce</div>
-        <div class="flow-step"><b>02</b> Workflow automation</div>
-        <div class="flow-step"><b>03</b> Customer platform</div>
-        <div class="flow-step"><b>04</b> Knowledge base</div>
-        <div class="flow-step"><b>05</b> RAG / agentic AI</div>
+    </section>
+    <section class="cp-screen" id="membership" aria-labelledby="cp-membership-title">
+      <div class="wrap">
+        <header class="cp-section-head"><p class="cp-eyebrow">01 / Product experience &amp; account security</p><h2 id="cp-membership-title">A public introduction. A private member experience.</h2></header>
+        <div class="cp-access-grid">
+          <article><span class="cp-small-label">Visitors</span><h3>Discover the guide</h3><p>I keep the public website focused on general promotional information about the book and companion.</p></article>
+          <article><span class="cp-small-label">Registered members</span><h3>Use the purchased collection</h3><p>I give members access to their purchased directory, chatbot, saved references, and preparation tools.</p></article>
+        </div>
+        <div class="cp-subhead"><h3>One purchase key. One account.</h3><p>I enforce activation in the database, so account creation and key consumption succeed together.</p></div>
+        <ol class="cp-flow" aria-label="Account activation workflow">
+          <li><span>01</span><strong>Check the key</strong><p>I validate the purchase key before allowing account creation.</p></li>
+          <li><span>02</span><strong>Verify identity</strong><p>I confirm that the identity matches the purchase email.</p></li>
+          <li><span>03</span><strong>Create atomically</strong><p>I consume the key and create the account in one database transaction.</p></li>
+          <li><span>04</span><strong>Prevent reuse</strong><p>I use unique constraints to reject key replay and second-account creation.</p></li>
+        </ol>
+        <p class="cp-key-consequence">The consequence: a checked key cannot be reused to create another account, and proprietary records stay behind authenticated access.</p>
       </div>
-      <div class="side-tools">
-        <span class="chip">APIs</span><span class="chip">Webhooks</span><span class="chip">Tool use</span><span class="chip">Human approval</span><span class="chip">Deployment</span>
+    </section>
+    <section class="cp-screen" id="ai-engineering" aria-labelledby="cp-ai-title">
+      <div class="wrap">
+        <header class="cp-section-head"><p class="cp-eyebrow">02 / AI engineering &amp; administration</p><h2 id="cp-ai-title">Authorization comes before generation.</h2><p>I scope retrieval to the member's authorized collection before Groq generates an answer.</p></header>
+        <div class="cp-rag-flow" role="group" aria-label="Authorized retrieval and answer validation"><div><span>01 / Retrieve</span><strong>Authorized evidence</strong><p>Only the member's collection enters the retrieval scope.</p></div><span class="cp-flow-arrow" aria-hidden="true">→</span><div><span>02 / Generate</span><strong>Groq response</strong><p>Retrieved evidence supplies the context for the answer.</p></div><span class="cp-flow-arrow" aria-hidden="true">→</span><div><span>03 / Validate</span><strong>Attributed answer</strong><p>Source identifiers are checked before references are retained.</p></div></div>
+        <div class="cp-decision-grid">
+          <article><span class="cp-small-label">Grounding &amp; failure handling</span><h3>Keep the answer tied to its sources.</h3><p>I retain source attribution, validate source identifiers, and withhold unsupported claims. If generation fails, I fall back to scoped retrieval so the member can still inspect relevant evidence.</p></article>
+          <article><span class="cp-small-label">Authorized administration</span><h3>Maintain the directory and approved knowledge.</h3><p>I built tools for authorized admins to add, edit, and archive professional records and approved knowledge. Member access does not grant administrative editing rights.</p></article>
+        </div>
       </div>
-    </div>
-    <p class="note">Product UI withheld for client confidentiality. The diagram is the public view of the system.</p>
-    <h2>Engineering decisions</h2>
-    <p>Commerce events stay on the API and webhook boundary. Retrieval is limited to a curated knowledge base. Sensitive actions are meant to stop for a person instead of running unattended. I am not publishing the internal design beyond that.</p>
-    <h2>Current progress</h2>
-    <p>The internship ran May 2026 through August 2026. The platform is still evolving, so this page does not list launch metrics or a public demo.</p>
-    <h2>Stack</h2>
-    <div class="tech-row"><span class="chip">Agentic AI</span><span class="chip">RAG</span><span class="chip">APIs</span><span class="chip">Webhooks</span><span class="chip">E-commerce</span><span class="chip">Backend</span><span class="chip">Automation</span></div>
-    <h2>Links</h2>
-    <p>No public repository. That is intentional.</p>
-    <div class="related">
-      <p><a class="arrow-link" href="geoagent.html">Related · GeoAgent <span>→</span></a></p>
-      <p><a class="back" href="../index.html#work">← Back to work</a></p>
-    </div>
+    </section>
+    <section class="cp-screen cp-evidence-screen" id="verification" aria-labelledby="cp-evidence-title">
+      <div class="wrap">
+        <header class="cp-section-head"><p class="cp-eyebrow">03 / Verification evidence</p><h2 id="cp-evidence-title">Concrete checks behind the experience.</h2></header>
+        <div class="cp-evidence-grid">
+          <div>
+            <dl class="cp-metrics"><div><dt>Imported records</dt><dd>181<span>across two collections</span></dd></div><div><dt>Automated checks</dt><dd>65<span>passed</span></dd></div><div><dt>Hosted Groq smoke checks</dt><dd>3<span>generation &amp; citation validation passed</span></dd></div></dl>
+            <p class="cp-evidence-copy">I verified account boundaries, purchase identity, private-record access, administrative authorization, and the purchase lifecycle. The three hosted Groq checks exercised generation and citation validation; they are smoke checks, not a reliability benchmark.</p>
+          </div>
+          <figure class="cp-figure"><a href="../assets/cptk/engineering-evidence.webp" target="_blank" rel="noopener noreferrer" aria-label="View the engineering test evidence graphic"><img src="../assets/cptk/engineering-evidence.webp" alt="Engineering test evidence graphic showing 65 automated checks passed, account and authorization checks, and three hosted Groq smoke checks" width="1600" height="1000" loading="lazy"></a><figcaption><span>Test evidence graphic · Not an application screenshot</span><a href="../assets/cptk/engineering-evidence.webp" target="_blank" rel="noopener noreferrer">View full image ↗</a></figcaption></figure>
+        </div>
+        <div class="cp-automation"><div><span class="cp-small-label">Implemented &amp; verified</span><h3>Purchase lifecycle with synthetic orders</h3><p>I implemented duplicate-order handling, key issuance, registration, and refund revocation, and verified these paths using synthetic orders.</p></div><div><span class="cp-small-label">Awaiting connection</span><h3>Live commerce and email</h3><p>Live Shopify/TikTok payment processing and email delivery await connection. Synthetic-order verification does not establish a completed live payment integration.</p></div></div>
+        <footer class="cp-project-footer"><p>Developed for Asjai Lou Casting. The repository and proprietary source code are private and are not publicly distributed.</p></footer>
+      </div>
+    </section>
   </main>
   <script src="../js/site.config.js"></script>
   <script src="../js/main.js"></script>
