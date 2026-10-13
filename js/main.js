@@ -144,12 +144,12 @@ function depthPrefix() {
 
 function applySiteUrl() {
   const configured = window.SITE && window.SITE.siteUrl;
-  const preview = location.pathname.includes('/portfolio-preview');
-  const base = configured || (location.origin + (preview ? '/portfolio-preview' : ''));
+  const base = configured || location.origin;
+  const pagePath = location.pathname.replace(/index\.html$/, '');
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical) canonical.href = base.replace(/\/$/, '') + '/';
+  if (canonical) canonical.href = base.replace(/\/$/, '') + pagePath;
   const ogUrl = document.querySelector('meta[property="og:url"]');
-  if (ogUrl) ogUrl.setAttribute('content', base.replace(/\/$/, '') + '/');
+  if (ogUrl) ogUrl.setAttribute('content', base.replace(/\/$/, '') + pagePath);
   document.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach((meta) => {
     const value = meta.getAttribute('content') || '';
     if (value && !value.startsWith('http')) {

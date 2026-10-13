@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://morta00.github.io/portfolio-preview/sitemap.xml
+Sitemap: https://mortadhaghnimi.github.io/sitemap.xml

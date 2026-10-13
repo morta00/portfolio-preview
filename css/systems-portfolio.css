@@ -8,18 +8,15 @@
  #engineering .project-more-head{margin-bottom:24px}
  #engineering .project-more-head h2{margin-block:0 12px}
  #engineering .project-more-head>p:last-child{margin-bottom:0}
- .engineering-gallery-two .engineering-visual{height:clamp(140px,22svh,208px)}
- .engineering-gallery-two .engineering-copy{padding:20px 22px}
- .engineering-gallery-two .engineering-copy>.project-feature-category{min-height:0;margin-bottom:10px}
- .engineering-gallery-two .engineering-copy>p:not(.project-feature-category){min-height:0;margin-bottom:12px}
- .engineering-gallery-two .systems-card-metrics{margin-top:0;padding-block:12px}
- .engineering-gallery-two .engineering-bottom{padding-top:12px}
+ .engineering-gallery-two .engineering-visual{height:190px}
+ .engineering-gallery-two .engineering-copy>.project-feature-category{min-height:0;margin-bottom:8px}
+ .engineering-gallery-two .engineering-copy>p:not(.project-feature-category){min-height:0;margin-bottom:0}
+ .engineering-gallery-two .systems-card-metrics{margin-top:16px;padding-block:14px 0}
+ .engineering-gallery-two .engineering-bottom{padding-top:18px}
 }
 @media(min-width:901px) and (max-height:800px){
  #engineering{padding-block:24px}
  #engineering .project-more-head{margin-bottom:18px}
- .engineering-gallery-two .engineering-visual{height:150px}
- .engineering-gallery-two .engineering-copy{padding:16px 20px}
  .engineering-gallery-two .engineering-copy h3{font-size:20px;margin-bottom:10px}
  .systems-case .vc-screen,.fraud-study .vc-screen{padding-block:28px;box-sizing:border-box}
  .systems-case .vc-section-head,.fraud-study .vc-section-head{margin-bottom:22px}
@@ -32,4 +29,32 @@
  .fraud-study .vc-evidence img{max-height:260px}
  .fraud-study .systems-figure img{max-height:270px}
  .fraud-study .systems-decisions{gap:16px}
+}
+
+.systems-benchmarks .systems-flagship strong{font-size:clamp(29px,3.2vw,43px)}.systems-benchmarks .systems-foundation{padding-block:18px;background:#fafbf7}.systems-benchmarks .systems-foundation strong{font-size:28px;margin:8px 0}.systems-evidence-link{display:inline-block;margin-top:14px;font-size:11px;color:#356349}.systems-path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 30px}.systems-path li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:15px 0;border-top:1px solid #dce6d4}.systems-path li>span{font-size:11px;font-family:monospace;color:#73916c;margin-top:4px}.systems-path h3{font-size:17px;margin:0 0 8px;line-height:1.4}.systems-path p{font-size:12px;line-height:1.8;color:#687c64;margin:0}.systems-path li:last-child{grid-column:1/-1;max-width:860px}.systems-progression{margin-top:22px;padding:17px 21px;background:#eff5e8;border:1px solid #dce6d3;border-radius:12px}.systems-progression>span{font-size:10px;color:#687c64}.systems-progression p{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:9px 0 0;font-size:18px;color:#416b48}.systems-progression i{font-style:normal;color:#829274}.systems-leaderboard{margin-top:27px}.systems-leaderboard img{max-height:none!important}.systems-measurement-section{min-height:0;background:#f6f9f2}.systems-measurement-section .vc-section-head{margin-bottom:20px}.systems-summary-card .engineering-visual img{object-fit:contain}
+@media(max-width:680px){.systems-path{grid-template-columns:1fr;gap:0}.systems-path li:last-child{grid-column:auto}.systems-progression p{font-size:16px;gap:8px}.systems-leaderboard a{display:block;overflow-x:auto}.systems-leaderboard img{min-width:740px;width:100%;max-width:none}.systems-leaderboard figcaption{font-size:10px}}
+@media(max-width:380px){body{overflow-x:clip}.terminal-window pre{max-width:100%;min-width:0;overflow-x:auto}}
+
+#engineering .engineering-gallery-two{align-items:stretch}
+#engineering .engineering-gallery-two .engineering-card{min-width:0}
+#engineering .engineering-gallery-two .engineering-visual{height:190px}
+#engineering .engineering-gallery-two .architecture-thumb{display:grid;place-items:center;padding:14px 18px;box-sizing:border-box}
+#engineering .engineering-gallery-two .architecture-thumb img{height:100%;min-height:0;max-height:100%;object-fit:contain}
+#engineering .engineering-gallery-two .engineering-copy{padding:21px 24px 22px}
+#engineering .engineering-gallery-two .engineering-copy h3{margin-bottom:10px}
+#engineering .engineering-gallery-two .engineering-copy>p:not(.project-feature-category){min-height:0;margin:0;line-height:1.6}
+#engineering .engineering-gallery-two .systems-card-metrics{align-items:start;gap:16px;margin-top:24px;padding:16px 0 0;border-top:1px solid #dde7df}
+#engineering .engineering-gallery-two .systems-card-metrics>span{min-width:0;gap:3px}
+#engineering .engineering-gallery-two .engineering-bottom{flex-direction:row;flex-wrap:wrap;align-items:center;margin-top:auto;padding:18px 0 0}
+#engineering .engineering-gallery-two .engineering-bottom strong{white-space:normal}
+#engineering #fraud .systems-card-metrics{margin-top:30px;padding-top:14px}
+#engineering #fraud .systems-card-metrics>span{font-size:10px}
+#engineering #fraud .systems-card-metrics strong{font-size:19px}
+
+@media(max-width:680px){
+ #engineering .engineering-gallery-two{gap:24px}
+ #engineering .engineering-gallery-two .engineering-visual{height:180px}
+ #engineering .engineering-gallery-two .engineering-copy{padding:21px 20px 22px}
+ #engineering .engineering-gallery-two .engineering-copy>p:not(.project-feature-category){min-height:0}
+ #engineering .engineering-gallery-two .engineering-bottom{margin-top:18px}
 }
